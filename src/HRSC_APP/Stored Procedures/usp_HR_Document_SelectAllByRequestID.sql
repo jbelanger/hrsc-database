@@ -1,0 +1,21 @@
+﻿
+
+
+
+
+CREATE     PROCEDURE [HRSC_APP].[usp_HR_Document_SelectAllByRequestID]
+@pRequestID bigint
+WITH EXEC AS CALLER
+AS
+select  D.HR_DOCUMENT_ID as ID,
+        D.HR_DOCUMENT_NAME as NAME,
+        D.PUBLIC_DOCUMENT_IND AS PUBLIC_IND,
+        D.HR_REQUEST_ID,
+        D.DOCUMENT_TYPE_ID,
+        D.HR_DOCUMENT_DESC_EN as MYDESC,
+        D.USER_CREATED,
+        D.DATE_CREATED,
+		D.FILE_SIZE
+
+from HRSC.HR_DOCUMENT D
+where D.HR_REQUEST_ID = @pRequestID

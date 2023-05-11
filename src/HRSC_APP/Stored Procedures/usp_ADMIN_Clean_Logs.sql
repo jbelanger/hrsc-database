@@ -1,0 +1,10 @@
+﻿
+
+
+
+CREATE   PROCEDURE [HRSC_APP].[usp_ADMIN_Clean_Logs]
+@pDate datetime
+WITH EXEC AS CALLER
+AS
+delete HRSC.HRSC_TRANSACTION_LOG 
+where  TRANSACTION_LOG_TIMESTAMP < @pDate

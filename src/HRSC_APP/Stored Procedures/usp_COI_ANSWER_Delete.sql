@@ -1,0 +1,11 @@
+﻿
+
+
+
+CREATE   PROCEDURE [HRSC_APP].[usp_COI_ANSWER_Delete]
+		@COI_ID bigint
+
+WITH EXEC AS CALLER
+AS
+
+	Delete [HRSC].[COI_ANSWER] where [COI_ID] = @COI_ID;

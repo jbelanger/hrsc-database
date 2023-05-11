@@ -1,0 +1,10 @@
+﻿
+
+
+CREATE   PROCEDURE [HRSC_APP].[usp_HR_Contract_Delete]
+@pHrContractID bigint
+WITH EXEC AS CALLER
+AS
+
+DELETE FROM HRSC.HR_CONTRACT
+WHERE HR_CONTRACT_ID = @pHrContractID;

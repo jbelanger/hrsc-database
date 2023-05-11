@@ -1,0 +1,6 @@
+﻿ALTER ROLE [db_datareader] ADD MEMBER [HRSCREADER2];
+GO
+
+
+ALTER ROLE [db_datareader] ADD MEMBER [HRSCREADER1];
+GO

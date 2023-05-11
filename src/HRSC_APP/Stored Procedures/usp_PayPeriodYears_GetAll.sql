@@ -1,0 +1,15 @@
+﻿
+
+
+
+CREATE   PROCEDURE [HRSC_APP].[usp_PayPeriodYears_GetAll]
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT DISTINCT([YEAR_NUMBER])
+      FROM [HRSC].[PAY_PERIOD]
+      ORDER BY [YEAR_NUMBER] ASC;
+
+END
+

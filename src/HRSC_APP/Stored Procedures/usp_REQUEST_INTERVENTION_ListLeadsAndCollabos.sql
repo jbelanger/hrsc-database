@@ -1,0 +1,28 @@
+﻿
+
+
+
+CREATE   PROCEDURE [HRSC_APP].[usp_REQUEST_INTERVENTION_ListLeadsAndCollabos]
+@lngId bigint
+WITH EXEC AS CALLER
+AS
+------------------------------------------------------
+-- REQUEST_INTERVENTION_ListLeads
+-- 
+-- Eric Nolet 2012-02-18
+------------------------------------------------------
+/** Modified for SQL Server 2016 François Girouard ***/
+
+SELECT  EMP.EMPLOYEE_GIVEN_NAME + ' ' + EMP.EMPLOYEE_SURNAME Emp_Name,
+        EMP.EMPLOYEE_ID AS ID
+FROM    HRSC.HR_RQST_INTRVNT_HRSC_USER REQUSER
+        INNER JOIN HRSC.EMPLOYEE EMP ON EMP.EMPLOYEE_ID = REQUSER.EMPLOYEE_ID
+WHERE   REQUEST_INTERVENTION_ID = @lngId and
+        employee_role_id = (SELECT role.EMPLOYEE_ROLE_ID from HRSC.CD_EMPLOYEE_ROLE role where role.EMPLOYEE_ROLE_CODE = 'LEAD')
+        
+SELECT  EMP.EMPLOYEE_GIVEN_NAME + ' ' + EMP.EMPLOYEE_SURNAME Emp_Name,
+        EMP.EMPLOYEE_ID AS ID
+FROM    HRSC.HR_RQST_INTRVNT_HRSC_USER REQUSER 
+		INNER JOIN HRSC.EMPLOYEE EMP ON EMP.EMPLOYEE_ID = REQUSER.EMPLOYEE_ID
+WHERE   REQUEST_INTERVENTION_ID = @lngId and
+        employee_role_id = (SELECT role.EMPLOYEE_ROLE_ID from HRSC.CD_EMPLOYEE_ROLE role where role.EMPLOYEE_ROLE_CODE = 'COL')

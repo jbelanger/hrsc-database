@@ -1,0 +1,54 @@
+﻿CREATE TABLE [HRSC].[HR_REQUEST_DRAFT] (
+    [HR_REQUEST_DRAFT_ID]       BIGINT                     IDENTITY (1, 1) NOT NULL,
+    [SUBJECT_TEXT]              NVARCHAR (250)             NULL,
+    [KEYWORDS_TEXT]             NVARCHAR (250)             NULL,
+    [REQUEST_DESCRIPTION_TEXT]  NVARCHAR (4000)            NULL,
+    [RESERVED_IND]              BIT                        NULL,
+    [EMAIL_IND]                 BIT                        NULL,
+    [REQUEST_CATEGORY_ID]       BIGINT                     NULL,
+    [REQUEST_SUB_CATEGORY_ID]   BIGINT                     NULL,
+    [PRIORITY_REQUEST_ID]       BIGINT                     NULL,
+    [REGION_ID]                 BIGINT                     NULL,
+    [RC_CODE]                   NVARCHAR (10)              NULL,
+    [BUSINESS_CENTER_ID]        BIGINT                     NULL,
+    [ORGANIZATION_ID]           BIGINT                     NULL,
+    [SUB_ORGANIZATION_ID]       BIGINT                     NULL,
+    [MODE_OF_RECEIPT_ID]        BIGINT                     NULL,
+    [LANG_CORRESPONDENCE_ID]    BIGINT                     NULL,
+    [LANG_OFFICIAL_DOCUMENT_ID] BIGINT                     NULL,
+    [TEMPLATE_IND]              BIT                        CONSTRAINT [DF_TEMPL] DEFAULT ((0)) NOT NULL,
+    [EXPIRY_DATE]               DATETIME                   NULL,
+    [USER_CREATED]              NVARCHAR (120)             NOT NULL,
+    [USER_UPDATED]              NVARCHAR (120)             NULL,
+    [DATE_CREATED]              DATETIME                   CONSTRAINT [DF__HR_REQUES__DATE___117F9D94] DEFAULT (getdate()) NOT NULL,
+    [DATE_UPDATED]              DATETIME                   NULL,
+    [POSITION_DRAFT_ID]         [HRSC].[IDENTIFIER_BIGINT] NULL,
+    [HR_REQUEST_TYPE_ID]        [HRSC].[IDENTIFIER_BIGINT] NULL,
+    [POSITION_ID]               [HRSC].[IDENTIFIER_BIGINT] NULL,
+    [SEPARATION_CLEARANCE_ID]   [HRSC].[IDENTIFIER_BIGINT] NULL,
+    [FORM_VERSION]              TINYINT                    CONSTRAINT [DF__HR_REQUES__FORM___3D89085B] DEFAULT ((0)) NOT NULL,
+    [EFFECTIVE_DATE]            DATE                       NULL,
+    [FORM_TYPE_IND]             BIT                        CONSTRAINT [DF__HR_REQUES__FORM___6BD9E2F0] DEFAULT ((1)) NOT NULL,
+    [EMPLOYEE_ID]               BIGINT                     NOT NULL,
+    [COI_ID]                    BIGINT                     NULL,
+    [SLE_REQUEST_ID]            BIGINT                     NULL,
+    [SLE_REQUEST_DRAFT_ID]      BIGINT                     NULL,
+    [DRAFT]                     NVARCHAR (MAX)             NULL,
+    CONSTRAINT [HRRQSDRF_PK] PRIMARY KEY CLUSTERED ([HR_REQUEST_DRAFT_ID] ASC) WITH (FILLFACTOR = 80, DATA_COMPRESSION = ROW),
+    CONSTRAINT [HRRQSDRF_CK] CHECK ([FORM_TYPE_IND]=(0) OR [FORM_TYPE_IND]=(1)),
+    CONSTRAINT [HRRQSDRF_EMPLY_FK] FOREIGN KEY ([EMPLOYEE_ID]) REFERENCES [HRSC].[EMPLOYEE] ([EMPLOYEE_ID]),
+    CONSTRAINT [HRRQSDRF_SEPCLRNC_FK] FOREIGN KEY ([SEPARATION_CLEARANCE_ID]) REFERENCES [HRSC].[SEPARATION_CLEARANCE] ([SEPARATION_CLEARANCE_ID]),
+    CONSTRAINT [HRRQSDRF_SLEREQST_FK] FOREIGN KEY ([SLE_REQUEST_ID]) REFERENCES [HRSC].[SLE_REQUEST] ([SLE_REQUEST_ID]),
+    CONSTRAINT [HRRQSDRF_SLEREQST_FK2] FOREIGN KEY ([SLE_REQUEST_DRAFT_ID]) REFERENCES [HRSC].[SLE_REQUEST] ([SLE_REQUEST_ID])
+);
+
+
+GO
+CREATE NONCLUSTERED INDEX [HRRQSDRF_POSDRAFT_FK_I]
+    ON [HRSC].[HR_REQUEST_DRAFT]([POSITION_DRAFT_ID] ASC) WITH (FILLFACTOR = 80);
+
+
+GO
+CREATE NONCLUSTERED INDEX [HRRQSDRF_HRRQSTTP_FK_I]
+    ON [HRSC].[HR_REQUEST_DRAFT]([HR_REQUEST_TYPE_ID] ASC) WITH (FILLFACTOR = 80);
+

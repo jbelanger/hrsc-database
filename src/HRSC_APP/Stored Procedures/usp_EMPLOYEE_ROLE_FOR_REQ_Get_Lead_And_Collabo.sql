@@ -1,0 +1,60 @@
+﻿
+
+
+
+CREATE   PROCEDURE [HRSC_APP].[usp_EMPLOYEE_ROLE_FOR_REQ_Get_Lead_And_Collabo]
+@pRequestID bigint
+WITH EXEC AS CALLER
+AS
+------------------------------------------------------
+-- usp_EMPLOYEE_ROLE_FOR_REQ_Get_Lead_And_Collabo
+-- Retreive Leads and Collabo for a Request.
+-- Eric Nolet 2012-01-12
+-- Gaétan Demers 2012-03-03 Modify for Leads and Collabo
+-- MT 2018-10-25
+------------------------------------------------------
+
+
+DECLARE @StatusID bigint;
+
+-- This variable is used to exclude Lead and Collabo from the list if their intervention have the status NO ACTION, reference Work Item 158815
+Set @StatusID = (Select REQUEST_STATUS_ID from HRSC.CD_REQUEST_STATUS where REQUEST_STATUS_CODE = 'NOACT');
+
+
+-- Get the list of Leads
+SELECT 
+  IU.HR_RQST_INTRVNT_HRSC_USER_ID,
+  iu.EMPLOYEE_ID,
+  iu.EMPLOYEE_ROLE_ID,
+  E.EMPLOYEE_EMAIL_ADDRESS,
+  E.DISPLAY_NAME,
+  E.USER_AD_GUID,
+  i.BUSINESS_CENTER_ID,
+  E.EMPLOYEE_GIVEN_NAME + ' ' + E.EMPLOYEE_SURNAME AS FULLNAME  
+FROM hrsc.HR_RQST_INTRVNT_HRSC_USER IU 
+  INNER JOIN hrsc.EMPLOYEE E ON iu.EMPLOYEE_ID = e.EMPLOYEE_ID
+  INNER JOIN  hrsc.CD_EMPLOYEE_ROLE R ON iu.EMPLOYEE_ROLE_ID = r.EMPLOYEE_ROLE_ID 
+  INNER JOIN   hrsc.HR_REQUEST_INTERVENTION I ON IU.REQUEST_INTERVENTION_ID = i.HR_REQUEST_INTERVENTION_ID
+WHERE  
+  r.EMPLOYEE_ROLE_CODE = 'LEAD' and
+  i.HR_REQUEST_ID  = @pRequestID and 
+  i.REQUEST_STATUS_ID <> @StatusID 
+  
+-- Get the list of Collaborators
+SELECT 
+  IU.HR_RQST_INTRVNT_HRSC_USER_ID,
+  iu.EMPLOYEE_ID,
+  iu.EMPLOYEE_ROLE_ID,
+  E.EMPLOYEE_EMAIL_ADDRESS,
+  E.DISPLAY_NAME,
+  E.USER_AD_GUID,
+  i.BUSINESS_CENTER_ID,
+  E.EMPLOYEE_GIVEN_NAME + ' ' + E.EMPLOYEE_SURNAME AS FULLNAME
+FROM hrsc.HR_RQST_INTRVNT_HRSC_USER IU 
+  INNER JOIN hrsc.EMPLOYEE E ON iu.EMPLOYEE_ID = e.EMPLOYEE_ID
+  INNER JOIN  hrsc.CD_EMPLOYEE_ROLE R ON iu.EMPLOYEE_ROLE_ID = r.EMPLOYEE_ROLE_ID 
+  INNER JOIN   hrsc.HR_REQUEST_INTERVENTION I ON IU.REQUEST_INTERVENTION_ID = i.HR_REQUEST_INTERVENTION_ID
+WHERE  
+  r.EMPLOYEE_ROLE_CODE = 'COL' and
+  i.HR_REQUEST_ID  = @pRequestID and
+  i.REQUEST_STATUS_ID <> @StatusID

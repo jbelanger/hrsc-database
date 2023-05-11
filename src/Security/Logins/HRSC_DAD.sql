@@ -1,0 +1,3 @@
+﻿CREATE LOGIN [HRSC_DAD]
+    WITH PASSWORD = N'uvsclplkdbl>o=kht^fgib{;msFT7_&#$!~<iwIxdm9votff', SID = 0x2D58EA195B3BF147BE00AE2434338988, DEFAULT_DATABASE = [HRSC], DEFAULT_LANGUAGE = [us_english];
+

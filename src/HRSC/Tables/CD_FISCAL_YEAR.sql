@@ -1,0 +1,14 @@
+﻿CREATE TABLE [HRSC].[CD_FISCAL_YEAR] (
+    [FISCAL_YEAR_ID]         [HRSC].[IDENTIFIER_BIGINT] IDENTITY (1, 1) NOT NULL,
+    [FISCAL_YEAR]            VARCHAR (10)               NOT NULL,
+    [FISCAL_YEAR_START_DATE] DATETIME                   NULL,
+    [FISCAL_YEAR_END_DATE]   DATETIME                   NULL,
+    [EXPIRY_DATE]            DATETIME                   NULL,
+    [USER_CREATED]           VARCHAR (50)               NOT NULL,
+    [DATE_CREATED]           [HRSC].[DEFAULT_SYSDATE]   DEFAULT (getdate()) NOT NULL,
+    [USER_UPDATED]           VARCHAR (50)               NULL,
+    [DATE_UPDATED]           DATETIME                   NULL,
+    CONSTRAINT [FISCYR_PK] PRIMARY KEY CLUSTERED ([FISCAL_YEAR_ID] ASC),
+    CONSTRAINT [FISCYR_UK] UNIQUE NONCLUSTERED ([FISCAL_YEAR] ASC, [EXPIRY_DATE] ASC)
+);
+

@@ -1,0 +1,655 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>hrsc_database</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{30fd4606-475b-47be-8cf4-50ef80367220}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>hrsc_database</RootNamespace>
+    <AssemblyName>hrsc_database</AssemblyName>
+    <ModelCollation>1033,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>Latin1_General_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+    <GenerateCreateScript>True</GenerateCreateScript>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="HRSC\" />
+    <Folder Include="HRSC\Tables\" />
+    <Folder Include="Security\" />
+    <Folder Include="HRSC_APP\" />
+    <Folder Include="HRSC_APP\Functions\" />
+    <Folder Include="HRSC_APP\Stored Procedures\" />
+    <Folder Include="HRSC\Stored Procedures\" />
+    <Folder Include="HRSC_AGENT\" />
+    <Folder Include="HRSC_AGENT\Stored Procedures\" />
+    <Folder Include="HRSC\User Defined Types\" />
+    <Folder Include="HRSC_APP\User Defined Types\" />
+    <Folder Include="Scripts" />
+    <Folder Include="Scripts\Seed" />
+    <Folder Include="Security\Logins" />
+    <Folder Include="Security\Roles" />
+    <Folder Include="Security\Schemas" />
+    <Folder Include="Security\Users" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="HRSC\Tables\CD_LANGUAGE.sql" />
+    <Build Include="HRSC\Tables\REQUEST_RELATED.sql" />
+    <Build Include="HRSC\Tables\CD_PRIORITY_TYPE.sql" />
+    <Build Include="HRSC\Tables\REQ_STATUS_JUSTIFICATION.sql" />
+    <Build Include="HRSC\Tables\CD_LANG_PROFICIENCY.sql" />
+    <Build Include="HRSC\Tables\CD_PRIORITY_OF_REQUEST.sql" />
+    <Build Include="HRSC\Tables\CD_HRSC_USER_ROLE.sql" />
+    <Build Include="HRSC\Tables\HR_REQUEST.sql" />
+    <Build Include="HRSC\Tables\HR_INTERVENTION_NOTE.sql" />
+    <Build Include="HRSC\Tables\CD_HR_REQUEST_TYPE.sql" />
+    <Build Include="HRSC\Tables\HR_GUIDE_CONTENT.sql" />
+    <Build Include="HRSC\Tables\HR_GUIDE.sql" />
+    <Build Include="HRSC\Tables\CD_HR_JUSTIFICATION.sql" />
+    <Build Include="HRSC\Tables\CD_HR_GUIDE_TYPE.sql" />
+    <Build Include="HRSC\Tables\HR_DOCUMENT.sql" />
+    <Build Include="HRSC\Tables\HR_CONTRACT.sql" />
+    <Build Include="HRSC\Tables\CD_GD_ACCOUNT_TYPE.sql" />
+    <Build Include="HRSC\Tables\HR_AGREEMENT_TERM.sql" />
+    <Build Include="HRSC\Tables\HR_AGREEMENT_REQUEST_TYPE.sql" />
+    <Build Include="HRSC\Tables\CD_FISCAL_YEAR.sql" />
+    <Build Include="HRSC\Tables\GD_ACCOUNT_EMAIL.sql" />
+    <Build Include="HRSC\Tables\CD_EXCLUSION_OPTION.sql" />
+    <Build Include="HRSC\Tables\EMPLOYEE_SUB_DELEGATED.sql" />
+    <Build Include="HRSC\Tables\CD_EMPLOYEE_TYPE.sql" />
+    <Build Include="HRSC\Tables\EMPLOYEE_ROLE_FOR_REQUEST.sql" />
+    <Build Include="HRSC\Tables\EMPLOYEE_PREVIOUS_POSITION.sql" />
+    <Build Include="HRSC\Tables\EMPLOYEE_EXTRACT.sql" />
+    <Build Include="HRSC\Tables\CD_EMPLOYEE_ROLE.sql" />
+    <Build Include="HRSC\Tables\CD_DEPARTMENT.sql" />
+    <Build Include="HRSC\Tables\EMPLOYEE_EXTENDED.sql" />
+    <Build Include="HRSC\Tables\CD_COMMUNICATION_REQ.sql" />
+    <Build Include="HRSC\Tables\EMPLOYEE.sql" />
+    <Build Include="HRSC\Tables\CD_EMAIL_TEMPLATE_TYPE.sql" />
+    <Build Include="HRSC\Tables\APP_SEARCH_QUERY.sql" />
+    <Build Include="HRSC\Tables\EMAIL_TEMPLATE.sql" />
+    <Build Include="HRSC\Tables\CD_COI_QUESTION.sql" />
+    <Build Include="HRSC\Tables\ELS_Request_TEMP.sql" />
+    <Build Include="HRSC\Tables\CD_DOUBLE_BANKING.sql" />
+    <Build Include="HRSC\Tables\COI_ANSWER.sql" />
+    <Build Include="HRSC\Tables\CD_COI_DECLARATION_TYPE.sql" />
+    <Build Include="HRSC\Tables\STORED_RESULT.sql" />
+    <Build Include="HRSC\Tables\COI.sql" />
+    <Build Include="HRSC\Tables\CD_DOCUMENT_TYPE.sql" />
+    <Build Include="HRSC\Tables\CMS_EXTRACT_ERRORS.sql" />
+    <Build Include="HRSC\Tables\CMS_EXTRACT.sql" />
+    <Build Include="HRSC\Tables\CD_CLASSIFICATION_SUB_GROUP.sql" />
+    <Build Include="HRSC\Tables\CD_WORK_TYPE.sql" />
+    <Build Include="HRSC\Tables\CD_DEPLOYMENT_TYPE.sql" />
+    <Build Include="HRSC\Tables\CD_CLASSIFICATION_LEVEL.sql" />
+    <Build Include="HRSC\Tables\REPORTING_REQUEST.sql" />
+    <Build Include="HRSC\Tables\PROVINCE.sql" />
+    <Build Include="HRSC\Tables\CD_VERSION.sql" />
+    <Build Include="HRSC\Tables\CD_CLASSIFICATION_GROUP.sql" />
+    <Build Include="HRSC\Tables\CD_TYPE_OF_STAFFING_ACTION.sql" />
+    <Build Include="HRSC\Tables\POSITION_LANGUAGE_PROFILE.sql" />
+    <Build Include="HRSC\Tables\CD_CHKLST_STATUS.sql" />
+    <Build Include="HRSC\Tables\POSITION_COMM_REQ.sql" />
+    <Build Include="HRSC\Tables\POSITION_CLASSIFICATION.sql" />
+    <Build Include="HRSC\Tables\CD_TENURE_TYPE.sql" />
+    <Build Include="HRSC\Tables\POSITION.sql" />
+    <Build Include="HRSC\Tables\CD_SUNSET_FUNDING_TYPE.sql" />
+    <Build Include="HRSC\Tables\CD_BUSINESS_CENTER.sql" />
+    <Build Include="HRSC\Tables\PAY_PERIOD.sql" />
+    <Build Include="HRSC\Tables\CD_SUBMITTER_TYPE.sql" />
+    <Build Include="HRSC\Tables\OFFICE_SITE.sql" />
+    <Build Include="HRSC\Tables\MUNICIPALITY.sql" />
+    <Build Include="HRSC\Tables\CD_ANNOUNCEMENT_TYPE.sql" />
+    <Build Include="HRSC\Tables\CD_SUB_ORGANIZATION.sql" />
+    <Build Include="HRSC\Tables\LANGUAGE_PROFILE.sql" />
+    <Build Include="HRSC\Tables\CD_ACTION_TYPE.sql" />
+    <Build Include="HRSC\Tables\LANG_CHNGE_OBLIGATION.sql" />
+    <Build Include="HRSC\Tables\CD_STUDENT_PROGRAM.sql" />
+    <Build Include="HRSC\Tables\CD_ACCOMODATION_REQUIRED.sql" />
+    <Build Include="HRSC\Tables\HRSC_USER_ROLE_BC.sql" />
+    <Build Include="HRSC\Tables\CD_STAFFING_PROCESS_STATUS.sql" />
+    <Build Include="HRSC\Tables\HRSC_TRANSACTION_LOG.sql" />
+    <Build Include="HRSC\Tables\CD_SERVICE.sql" />
+    <Build Include="HRSC\Tables\CD_ACADEMIC_LEVEL.sql" />
+    <Build Include="HRSC\Tables\HRSC_ANNOUNCEMENTS.sql" />
+    <Build Include="HRSC\Tables\CD_SEPARATION_TYPE.sql" />
+    <Build Include="HRSC\Tables\HR_RQST_INTRVNT_HRSC_USER.sql" />
+    <Build Include="HRSC\Tables\BC_CATEGORY.sql" />
+    <Build Include="HRSC\Tables\HR_REQUEST_STATUS.sql" />
+    <Build Include="HRSC\Tables\CD_SEPARATION_CHCKLST.sql" />
+    <Build Include="HRSC\Tables\ASRF_FORMS_ATTACHMENTS.sql" />
+    <Build Include="HRSC\Tables\HR_REQUEST_NOTE.sql" />
+    <Build Include="HRSC\Tables\ASRF_FORMS.sql" />
+    <Build Include="HRSC\Tables\HR_REQUEST_INTERVENTION.sql" />
+    <Build Include="HRSC\Tables\ASRF_ATTACHMENTS.sql" />
+    <Build Include="HRSC\Tables\HR_REQUEST_GUIDE.sql" />
+    <Build Include="HRSC\Tables\CD_SECURITY_CLEARANCE.sql" />
+    <Build Include="HRSC\Tables\HR_REQUEST_DRAFT.sql" />
+    <Build Include="HRSC\Tables\CD_REQUEST_SUB_CATEGORY.sql" />
+    <Build Include="HRSC\Tables\ACTION_HISTORY.sql" />
+    <Build Include="HRSC\Tables\HR_REQUEST_CLIENT.sql" />
+    <Build Include="HRSC\Tables\CD_POSITION_REQUEST_TYPE.sql" />
+    <Build Include="HRSC\Tables\CD_REQUEST_STATUS.sql" />
+    <Build Include="HRSC\Tables\CD_PAY_STATUS.sql" />
+    <Build Include="HRSC\Tables\Unicode_Load_Stage.sql" />
+    <Build Include="HRSC\Tables\TRANSLATION.sql" />
+    <Build Include="HRSC\Tables\STG_OP_CORPTAB_ORG.sql" />
+    <Build Include="HRSC\Tables\CD_REQUEST_CATEGORY.sql" />
+    <Build Include="HRSC\Tables\CD_ORGANIZATION.sql" />
+    <Build Include="HRSC\Tables\STAFFING_PROCESS_MUNICIPALITY.sql" />
+    <Build Include="HRSC\Tables\STAFFING_PROCESS_LANG_PROFILE.sql" />
+    <Build Include="HRSC\Tables\CD_REPORT_REQUEST_TYPE.sql" />
+    <Build Include="HRSC\Tables\CD_NOTE_TYPE.sql" />
+    <Build Include="HRSC\Tables\STAFFING_PROCESS_CLASSIFICATION.sql" />
+    <Build Include="HRSC\Tables\CD_RELOCATION_EXPENSE.sql" />
+    <Build Include="HRSC\Tables\CD_MODE_OF_RECEIPT.sql" />
+    <Build Include="HRSC\Tables\STAFFING_PROCESS.sql" />
+    <Build Include="HRSC\Tables\CD_REGION.sql" />
+    <Build Include="HRSC\Tables\SLE_REQUEST.sql" />
+    <Build Include="HRSC\Tables\CD_LEAVE_WITHOUT_PAY.sql" />
+    <Build Include="HRSC\Tables\SEPARATION_GD_ACCOUNT.sql" />
+    <Build Include="HRSC\Tables\CD_REASON_TYPE.sql" />
+    <Build Include="HRSC\Tables\SEPARATION_CLRNCE_CHKLST.sql" />
+    <Build Include="HRSC\Tables\CD_LANGUAGE_LEVEL.sql" />
+    <Build Include="HRSC\Tables\SEPARATION_CLEARANCE.sql" />
+    <Build Include="HRSC\Tables\CD_REASON_FOR_SLE.sql" />
+    <Build Include="HRSC\Tables\SEPARATION_CHKLST_TYPE.sql" />
+    <Build Include="Security\RoleMemberships.sql" />
+    <Build Include="HRSC_APP\Functions\CheckForAttachedDocuments.sql" />
+    <Build Include="HRSC_APP\Functions\CheckIfUserHasAccessToProtectedRequest.sql" />
+    <Build Include="HRSC_APP\Functions\ConvertTimeToHHMMSS.sql" />
+    <Build Include="HRSC_APP\Functions\GenerateRequestNumber.sql" />
+    <Build Include="HRSC_APP\Functions\GetBusinessHours.sql" />
+    <Build Include="HRSC_APP\Functions\GetCOIClassification.sql" />
+    <Build Include="HRSC_APP\Functions\GetCOIQuestionAndAnswer.sql" />
+    <Build Include="HRSC_APP\Functions\GetCOIQuestionAndAnswerEN.sql" />
+    <Build Include="HRSC_APP\Functions\GetCOIQuestionAndAnswerFR.sql" />
+    <Build Include="HRSC_APP\Functions\GetCOIWorkLocation.sql" />
+    <Build Include="HRSC_APP\Functions\GetCollDisplayName.sql" />
+    <Build Include="HRSC_APP\Functions\GetContactName.sql" />
+    <Build Include="HRSC_APP\Functions\GetContactSurname.sql" />
+    <Build Include="HRSC_APP\Functions\GetContractNumber.sql" />
+    <Build Include="HRSC_APP\Functions\GetEmployeeEmail.sql" />
+    <Build Include="HRSC_APP\Functions\GetEmployeeName.sql" />
+    <Build Include="HRSC_APP\Functions\GetEmployeePRI.sql" />
+    <Build Include="HRSC_APP\Functions\GetEmployeeSurname.sql" />
+    <Build Include="HRSC_APP\Functions\GetHomeClassification.sql" />
+    <Build Include="HRSC_APP\Functions\GetHostClassification.sql" />
+    <Build Include="HRSC_APP\Functions\GetInterventionAgentsString.sql" />
+    <Build Include="HRSC_APP\Functions\GetLanguage.sql" />
+    <Build Include="HRSC_APP\Functions\GetlatestStatus.sql" />
+    <Build Include="HRSC_APP\Functions\GetLeadDisplayName.sql" />
+    <Build Include="HRSC_APP\Functions\GetManagerEmail.sql" />
+    <Build Include="HRSC_APP\Functions\GetManagerID.sql" />
+    <Build Include="HRSC_APP\Functions\GetManagerName.sql" />
+    <Build Include="HRSC_APP\Functions\GetManagerName2.sql" />
+    <Build Include="HRSC_APP\Functions\GetManagerSurname.sql" />
+    <Build Include="HRSC_APP\Functions\GetNumberContractSigned.sql" />
+    <Build Include="HRSC_APP\Functions\GetNumberOfReqRelated.sql" />
+    <Build Include="HRSC_APP\Functions\GetOvertimeGroupTypeID.sql" />
+    <Build Include="HRSC_APP\Functions\GetPreviousStatus.sql" />
+    <Build Include="HRSC_APP\Functions\GetPreviousStatusAll.sql" />
+    <Build Include="HRSC_APP\Functions\GetRelatedInterventionUsersString.sql" />
+    <Build Include="HRSC_APP\Functions\GetRelatedInterventionUsersString2.sql" />
+    <Build Include="HRSC_APP\Functions\GetRelatedRolesForRequestString.sql" />
+    <Build Include="HRSC_APP\Functions\GetRelatedRolesForRequestString2.sql" />
+    <Build Include="HRSC_APP\Functions\GetRelatedStatusesString.sql" />
+    <Build Include="HRSC_APP\Functions\GetRequestAgentsString.sql" />
+    <Build Include="HRSC_APP\Functions\GetRequestAgentsString2.sql" />
+    <Build Include="HRSC_APP\Functions\GetRequestStatusDateByCode.sql" />
+    <Build Include="HRSC_APP\Functions\GetWeekends.sql" />
+    <Build Include="HRSC_APP\Functions\GetWorkingDays.sql" />
+    <Build Include="HRSC_APP\Functions\RemoveExtraChars.sql" />
+    <Build Include="HRSC_APP\Functions\Split.sql" />
+    <Build Include="HRSC_APP\Functions\udfMonthsForFiscalYear.sql" />
+    <Build Include="HRSC_APP\Functions\udf_TABLE_DATE.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_LanguageChangeJustification_Delete.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_Announcements_Get.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_UpdateEmployeeFromCMSExtract.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_LanguageChangeJustification_Insert.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_Announcements_GetAllActive.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_Update_Alternate_Contact_Manager.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_Language_Profile_Insert.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_Announcements_GetAllActiveByType.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\USP_WorkbenchListEmp.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_Language_Profile_Update.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_Announcements_GetList.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\USP_WorkBenchLoopXML.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_LANG_CHNGE_OBLIGATION_GetById.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_Announcements_Insert.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\USP_WorkbenchMain.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_LANG_CHNGE_OBLIGATION_GetById_ForDisplay.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_Announcements_Insert_With_Identity.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\USP_WorkbenchMainBC.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\USP_ManagerDashboardExpanded.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_Announcements_Update.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\USP_ManagerDashboardLoopXML.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_ASRF_GetAttachments.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\USP_ManagerDashboardMain.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_ASRF_GetHistory.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_PayPeriodYears_GetAll.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_ASRF_GetOneAttachment.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_PayPeriod_Delete.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_ASRF_GetSelectedByID.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_PayPeriod_Get.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_ASRF_SearchByFID.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_PayPeriod_Insert.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_ASRF_SearchByName.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_PayPeriod_Update.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_ASRF_SearchByPRI.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_PositionCommunicationReq_Delete.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_ASRF_SearchBySubDelegatedManager.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_PositionCommunicationReq_Insert.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_BC_Category_Get.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_PositionLanguageProfiles_InsertUpdate.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_BC_Category_Management_XMl.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_PositionLanguageProfile_SelectByID.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_CD_Announcement_Type_Get.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_PositionLanguageProfile_SelectByIDForDisplay.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_CD_Announcement_Type_GetList.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_Position_Classification_ByPositionID.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_CD_Announcement_Type_GetListActive.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_Position_Insert.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_CD_BusinessCenter_Insert.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_Position_SelectByID.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_CD_Business_Center_Update.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_Position_SelectByIDForDisplay.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_CD_CHKLST_STATUS_SelectRecoveredV2.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_Position_SelectByIDForDisplayISP.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_CD_CHKLST_STATUS_SelectWithExclusion.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_Position_Update.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_CD_CHKLST_STATUS_SelectWithExclusionV2.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_ReportingRequest_Insert.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_CD_EmailTemplateType_Delete.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_ReportingRequest_SelectByID.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_CD_EmailTemplateType_Insert.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_ReportingRequest_SelectByIDForDisplay.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_CD_EmailTemplateType_SelectActive.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_ReportingRequest_Update.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_CD_EmailTemplateType_SelectAll.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_Report_InterventionSubCategoryByStatus.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_CD_EmailTemplateType_SelectByID.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_Report_ListAllActiveInterventionsWithConditions.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_CD_EmailTemplateType_Update.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_RequestCategory_SelectAll.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_CD_HrRequestType_SelectAll.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_RequestCategory_SelectForARequestType.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_CD_HrscUserRole_byRole.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_RequestCategory_SelectForSurvey.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_CD_ModeOfReceiptValidate_CODE.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_RequestSubCategoryGetList_ByRequestType.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_CD_ModeofReceipt_Get.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_RequestSubCategory_Delete.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_CD_ModeOfReceipt_GetList.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_RequestsUpdateProcessingWindow.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_CD_ModeOfReceipt_Insert.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_Request_AddRelation.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_CD_ModeofReceipt_Update.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_CATEGORY_SelectByID.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_CD_Organization_GetList.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_CATEGORY_Update.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_CD_Organization_Insert.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_Change_Category_SubCategory.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_CD_Organization_Report.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_CheckIfLeaderOrCollCanEdit.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_CD_Organization_SelectByID.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_Request_CheckIfRelationAlreadyExists.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_CD_Organization_Update.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_CLIENT_Insert.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_CD_PSCPriorityType_SelectAll.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_CLIENT_Update.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_CD_PSCPriorityType_SelectAll_V2.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_Request_DeleteRelation.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_CD_Region_Insert.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_DRAFT_Delete.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_CD_Region_Update.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_DRAFT_Insert.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_CD_RequestCategory_Delete.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_DRAFT_Update.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_CD_RequestCategory_Insert.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_GetBcForRequest.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_CD_RequestSubCategory_Insert.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_GetNextNumber.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_CD_SubOrganization_GetList.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_Request_GetRelatedRequests.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_CD_SubOrganization_Insert.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_GetRequestType.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_CD_SubOrganization_SelectByID.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_GetSubmitter.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_CD_SubOrganization_Update.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_Get_ART34_IND.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_CD_VERSION_SelectAll.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_HISTORY.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_CD_WorkLocation_SelectAll.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_Insert.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_COI_ANSWER_Delete.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_INTERVENTION_Cancel.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_COI_ANSWER_DELETE_FOR_COIID.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_INTERVENTION_GetLastOne.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_COI_ANSWER_Insert.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_Request_Intervention_Insert.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_COI_ANSWER_Insert_from_XML.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_INTERVENTION_Insert_from_XML.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_COI_Insert.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_INTERVENTION_Insert_New_from_XML.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_COI_SelectByRequestID.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_INTERVENTION_ListForARequest.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_COI_Update.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_INTERVENTION_ListLeadsAndCollabos.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_ELS_GetSelectedByID.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_INTERVENTION_SelectMyAssigned_Active.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_ELS_SearchByID.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_INTERVENTION_SelectOne.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_ELS_SearchByName.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_INTERVENTION_SelectRecall.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_ELS_SearchByPRI.sql" />
+    <Build Include="HRSC\Stored Procedures\usp_PS_MESSAGE_QUEUE_Insert.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_INTERVENTION_SelectStatus.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_ELS_SearchBySubDelegatedManager.sql" />
+    <Build Include="HRSC_AGENT\Stored Procedures\usp_CMSExtract.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_INTERVENTION_Update.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_EMAIL_TEMPLATE_Update.sql" />
+    <Build Include="HRSC_AGENT\Stored Procedures\usp_UpdateEmployeeFromCMSExtract.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_INTERVENTION_Update2.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_EmployeePreviousPosition_InsertUpdate.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_INTERVENTION_UpdateStatus.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_EmployeePreviousPosition_SelectByID.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_INTERVENTION_UpdateStatus_ConcurrencySafe.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_EmployeeRoleForRequest_Insert.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_INTERVENTION_Validate_Cancel.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_Employee_CheckIfExist.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_NOTE_Delete.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_Employee_Extended_Update_by_Id.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_NOTE_Insert.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_Employee_GetEmployeeIDandPRIWithGuid.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_NOTE_Insert2.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_Employee_GetEmployeeIDWithGuid.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_Note_InsertBulk.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_Employee_GetNamesfromEmpExtendedWithPRI.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_Note_Insert_AssignToLeadAndCollaborator_XML.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_Employee_GetUserProfileByGuid.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_Note_Insert_forStatusChange.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_Employee_GetUserProfileByID.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_Note_Insert_SystemNote.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_Employee_InsertOrUpdate.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_Note_Insert_SystemNote_ConcatenateWithNoteValues.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_Employee_List.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_Note_Insert_SystemNote_withNoteValues.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_EMPLOYEE_ROLE_FOR_REQUEST_Delete.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_NOTE_SelectForARequest.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_EMPLOYEE_ROLE_FOR_REQ_DeleteByRequest.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_SearchByEmployeeName.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_EMPLOYEE_ROLE_FOR_REQ_DeleteEmployeesInRole.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_SearchByEmployeeNameAll.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_EMPLOYEE_ROLE_FOR_REQ_Get_Lead_And_Collabo.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_SearchByEmployeeNameCOI.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_EMPLOYEE_ROLE_FOR_REQ_Get_Manager_And_Alts.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_SearchByPRI.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_EMPLOYEE_ROLE_FOR_REQ_Insert.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_SearchByPRI_All.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_EMPLOYEE_ROLE_FOR_REQ_InsertForRequestID.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_SearchByPRI_COI.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_EMPLOYEE_SearchManagersByNames.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_SearchNoFilters_ForAManager.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_EMPLOYEE_SelectForaBC.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_Search_ForAManager.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_Employee_SubDel_Insert.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_SelectAllNotAssigned.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_Employee_SubDel_Update_ReadOnly.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_SelectByID.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_Employee_UpdateUserInfo.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_SelectOneByID.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_Employee_UpdateUserProfileFromAD.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_SelectOneByIdentifier.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_FiscalYear.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_SelectOneByIdentifier_ByBC_WO_Arrays.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_FiscalYearList.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_SendEmailReminderThread.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_FiscalYear_Delete.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_SendEmailReminderThreadCleanup.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_FiscalYear_Insert.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_SendEmailReminderUpdate.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_GetAllPayPeriodsForYear.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_STATUS_History.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_GetStatusByRequestID.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_Request_Status_Insert.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_GET_BusinessCenter_By_EmployeeId.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_SUBCATEGORY_GetList.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_GET_SURVEY_IND.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_SUBCATEGORY_SelectByID.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_HrRequestStatus_CancelRequest.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_SUBCATEGORY_Update.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_HRSC_List_GD_Account.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_Update.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_HRSC_User_Roles_Insert.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_UpdateEffectiveDate.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_HRSC_User_Role_DELETE.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_UpdatePriority.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_HRSC_User_Role_Get.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_UpdateStatus.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_HRSC_User_Role_GetByGUID.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_UpdateStatusOnly.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_HR_Contract_Delete.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_UpdateStatus_WithJustification.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_HR_Contract_GetFileContentByID.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_Update_ART34_IND.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_HR_Contract_Insert.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_Update_New.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_HR_CONTRACT_Update.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_Update_New2.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_HR_Document_Delete.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_SEND_NPC_EMAIL.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_HR_Document_GetFileContentByID.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_SeparationClearance_CheckList_Save.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_HR_Document_Insert.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_SeparationClearance_Insert.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_HR_Document_SelectAllByRequestID.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_SeparationClearence_Update.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_HR_Document_SelectAllByRequestID_WithFlag.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_Separation_GD_Account_SelectOne.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_HR_DOCUMENT_Update.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_SLE_Request_Insert.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_HR_Guide_Delete.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\ups_Valid_Status.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_SLE_Request_SelectByID.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_HR_Guide_GetFileContentByID.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\ups_Valid_Status_for_Pending_signature.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_SLE_Request_SelectByIDForDisplay.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_HR_Guide_GetFileContentLinkByID.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_ActionHistory_Delete.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_SLE_Request_Update.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_HR_Guide_Insert.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_ActionHistory_Insert.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_StaffingProcessClassification_Delete.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_HR_Guide_SelectByGuideID.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_ADMIN_Check_Last_Status_Intervention.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_StaffingProcessClassification_Insert.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_HR_Guide_SelectByTypeID.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_ADMIN_Check_Last_Status_Request.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_StaffingProcessLangProfile_Delete.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_HR_Guide_Update.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_ADMIN_Clean_Logs.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_StaffingProcessLangProfile_Insert.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_HR_Justification_Delete.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_ADMIN_SQL.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_StaffingProcess_InsertUpdate.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_HR_Justification_GetListAll.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_ADMIN_Update_Last_Status_Intervention.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_Staffing_Language_Profile_ForDisplay.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_HR_Justification_Insert.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_ADMIN_Update_Last_Status_Request.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_STAFFING_PROCESS_Classification_ForDisplay.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_HR_Justification_RequestStatus_Get.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_AgreementTerms_Delete.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_TRANSACTION_LOG_Add.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_HR_Justification_Update.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_AgreementTerms_GetByCode.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_TRANSLATION_Delete.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_INTERVENTION_AssignToLeadAndCollaborator_XML.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_AgreementTerms_GetList.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_TRANSLATION_GetFile.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_INTERVENTION_USER_Insert.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_AgreementTerms_Insert.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_TRANSLATION_Insert.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_INTERVENTION_USER_InsertBulk.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_AgreementTerms_Update.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_TRANSLATION_SelectAll.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_ISBChangeRegion.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_Announcements_Delete.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_TRANSLATION_SelectMostRecent.sql" />
+    <Build Include="HRSC\User Defined Types\SUBJECT_TEXT.sql" />
+    <Build Include="HRSC\User Defined Types\KEYWORDS_TEXT.sql" />
+    <Build Include="HRSC\User Defined Types\INDICATOR_BIT.sql" />
+    <Build Include="HRSC\User Defined Types\IDENTIFIER_BIGINT.sql" />
+    <Build Include="HRSC\User Defined Types\DEFAULT_SYSDATE.sql" />
+    <Build Include="HRSC\User Defined Types\BLOB_VARBINARY_MAX.sql" />
+    <Build Include="HRSC\User Defined Types\TEXT_60.sql" />
+    <Build Include="HRSC\User Defined Types\TEXT_4000.sql" />
+    <Build Include="HRSC\User Defined Types\TEXT_30.sql" />
+    <Build Include="HRSC\User Defined Types\TEXT_255.sql" />
+    <Build Include="HRSC\User Defined Types\TEXT_250.sql" />
+    <Build Include="HRSC\User Defined Types\TEXT_05.sql" />
+    <Build Include="HRSC\User Defined Types\LIST_OF_BIGINT.sql" />
+    <Build Include="HRSC\User Defined Types\udtProfilePosition.sql" />
+    <Build Include="HRSC\User Defined Types\udtClassificationPosition.sql" />
+    <Build Include="HRSC_APP\User Defined Types\udtCodeArray.sql" />
+    <Build Include="Security\Permissions.sql" />
+    <None Include="Scripts\Seed\HRSC.BC_CATEGORY.Table.sql" />
+    <None Include="Scripts\Seed\HRSC.CD_ACADEMIC_LEVEL.Table.sql" />
+    <None Include="Scripts\Seed\HRSC.CD_ACCOMODATION_REQUIRED.Table.sql" />
+    <None Include="Scripts\Seed\HRSC.CD_ACTION_TYPE.Table.sql" />
+    <None Include="Scripts\Seed\HRSC.CD_ANNOUNCEMENT_TYPE.Table.sql" />
+    <None Include="Scripts\Seed\HRSC.CD_BUSINESS_CENTER.Table.sql" />
+    <None Include="Scripts\Seed\HRSC.CD_CHKLST_STATUS.Table.sql" />
+    <None Include="Scripts\Seed\HRSC.CD_CLASSIFICATION_GROUP.Table.sql" />
+    <None Include="Scripts\Seed\HRSC.CD_CLASSIFICATION_LEVEL.Table.sql" />
+    <None Include="Scripts\Seed\HRSC.CD_CLASSIFICATION_SUB_GROUP.Table.sql" />
+    <None Include="Scripts\Seed\HRSC.CD_COI_DECLARATION_TYPE.Table.sql" />
+    <None Include="Scripts\Seed\HRSC.CD_COI_QUESTION.Table.sql" />
+    <None Include="Scripts\Seed\HRSC.CD_COMMUNICATION_REQ.Table.sql" />
+    <None Include="Scripts\Seed\HRSC.CD_DEPARTMENT.Table.sql" />
+    <None Include="Scripts\Seed\HRSC.CD_DEPLOYMENT_TYPE.Table.sql" />
+    <None Include="Scripts\Seed\HRSC.CD_DOCUMENT_TYPE.Table.sql" />
+    <None Include="Scripts\Seed\HRSC.CD_DOUBLE_BANKING.Table.sql" />
+    <None Include="Scripts\Seed\HRSC.CD_EMAIL_TEMPLATE_TYPE.Table.sql" />
+    <None Include="Scripts\Seed\HRSC.CD_EMPLOYEE_ROLE.Table.sql" />
+    <None Include="Scripts\Seed\HRSC.CD_EMPLOYEE_TYPE.Table.sql" />
+    <None Include="Scripts\Seed\HRSC.CD_EXCLUSION_OPTION.Table.sql" />
+    <None Include="Scripts\Seed\HRSC.CD_FISCAL_YEAR.Table.sql" />
+    <None Include="Scripts\Seed\HRSC.CD_GD_ACCOUNT_TYPE.Table.sql" />
+    <None Include="Scripts\Seed\HRSC.CD_HR_GUIDE_TYPE.Table.sql" />
+    <None Include="Scripts\Seed\HRSC.CD_HR_JUSTIFICATION.Table.sql" />
+    <None Include="Scripts\Seed\HRSC.CD_HR_REQUEST_TYPE.Table.sql" />
+    <None Include="Scripts\Seed\HRSC.CD_HRSC_USER_ROLE.Table.sql" />
+    <None Include="Scripts\Seed\HRSC.CD_LANG_PROFICIENCY.Table.sql" />
+    <None Include="Scripts\Seed\HRSC.CD_LANGUAGE.Table.sql" />
+    <None Include="Scripts\Seed\HRSC.CD_LANGUAGE_LEVEL.Table.sql" />
+    <None Include="Scripts\Seed\HRSC.CD_LEAVE_WITHOUT_PAY.Table.sql" />
+    <None Include="Scripts\Seed\HRSC.CD_MODE_OF_RECEIPT.Table.sql" />
+    <None Include="Scripts\Seed\HRSC.CD_NOTE_TYPE.Table.sql" />
+    <None Include="Scripts\Seed\HRSC.CD_ORGANIZATION.Table.sql" />
+    <None Include="Scripts\Seed\HRSC.CD_PAY_STATUS.Table.sql" />
+    <None Include="Scripts\Seed\HRSC.CD_POSITION_REQUEST_TYPE.Table.sql" />
+    <None Include="Scripts\Seed\HRSC.CD_PRIORITY_OF_REQUEST.Table.sql" />
+    <None Include="Scripts\Seed\HRSC.CD_PRIORITY_TYPE.Table.sql" />
+    <None Include="Scripts\Seed\HRSC.CD_REASON_FOR_SLE.Table.sql" />
+    <None Include="Scripts\Seed\HRSC.CD_REASON_TYPE.Table.sql" />
+    <None Include="Scripts\Seed\HRSC.CD_REGION.Table.sql" />
+    <None Include="Scripts\Seed\HRSC.CD_RELOCATION_EXPENSE.Table.sql" />
+    <None Include="Scripts\Seed\HRSC.CD_REPORT_REQUEST_TYPE.Table.sql" />
+    <None Include="Scripts\Seed\HRSC.CD_REQUEST_CATEGORY.Table.sql" />
+    <None Include="Scripts\Seed\HRSC.CD_REQUEST_STATUS.Table.sql" />
+    <None Include="Scripts\Seed\HRSC.CD_REQUEST_SUB_CATEGORY.Table.sql" />
+    <None Include="Scripts\Seed\HRSC.CD_SECURITY_CLEARANCE.Table.sql" />
+    <None Include="Scripts\Seed\HRSC.CD_SEPARATION_CHCKLST.Table.sql" />
+    <None Include="Scripts\Seed\HRSC.CD_SEPARATION_TYPE.Table.sql" />
+    <None Include="Scripts\Seed\HRSC.CD_SERVICE.Table.sql" />
+    <None Include="Scripts\Seed\HRSC.CD_STAFFING_PROCESS_STATUS.Table.sql" />
+    <None Include="Scripts\Seed\HRSC.CD_STUDENT_PROGRAM.Table.sql" />
+    <None Include="Scripts\Seed\HRSC.CD_SUB_ORGANIZATION.Table.sql" />
+    <None Include="Scripts\Seed\HRSC.CD_SUBMITTER_TYPE.Table.sql" />
+    <None Include="Scripts\Seed\HRSC.CD_SUNSET_FUNDING_TYPE.Table.sql" />
+    <None Include="Scripts\Seed\HRSC.CD_TENURE_TYPE.Table.sql" />
+    <None Include="Scripts\Seed\HRSC.CD_TYPE_OF_STAFFING_ACTION.Table.sql" />
+    <None Include="Scripts\Seed\HRSC.CD_VERSION.Table.sql" />
+    <None Include="Scripts\Seed\HRSC.CD_WORK_TYPE.Table.sql" />
+    <None Include="Scripts\Seed\HRSC.EMAIL_TEMPLATE.Table.sql" />
+    <None Include="Scripts\Seed\HRSC.GD_ACCOUNT_EMAIL.Table.sql" />
+    <None Include="Scripts\Seed\HRSC.HR_AGREEMENT_TERM.Table.sql" />
+    <None Include="Scripts\Seed\HRSC.MUNICIPALITY.Table.sql" />
+    <None Include="Scripts\Seed\HRSC.OFFICE_SITE.Table.sql" />
+    <None Include="Scripts\Seed\HRSC.PROVINCE.Table.sql" />
+    <None Include="Scripts\Seed\HRSC.SEPARATION_CHKLST_TYPE.Table.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_generate_merge.sql" />
+    <Build Include="Security\Logins\HRSC_DAD.sql" />
+    <Build Include="Security\Logins\HRSC_USER.sql" />
+    <Build Include="Security\Logins\HRSCREADER1.sql" />
+    <Build Include="Security\Logins\HRSCREADER2.sql" />
+    <Build Include="Security\Roles\db_executor.sql" />
+    <Build Include="Security\Schemas\HRSC.sql" />
+    <Build Include="Security\Schemas\HRSC_AGENT.sql" />
+    <Build Include="Security\Schemas\HRSC_APP.sql" />
+    <Build Include="Security\Users\HRSC.sql" />
+    <Build Include="Security\Users\HRSC_DAD.sql" />
+    <Build Include="Security\Users\HRSCREADER1.sql" />
+    <Build Include="Security\Users\HRSCREADER2.sql" />
+    <None Include="Scripts\Seed\HRSC.REQ_STATUS_JUSTIFICATION.Table.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\Db Changes.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Scripts\PostDeployment.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <SqlCmdVariable Include="Release">
+      <DefaultValue>4.13</DefaultValue>
+      <Value>$(SqlCmdVar__1)</Value>
+    </SqlCmdVariable>
+  </ItemGroup>
+</Project>

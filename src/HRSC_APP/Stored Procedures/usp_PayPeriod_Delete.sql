@@ -1,0 +1,16 @@
+﻿
+
+
+
+CREATE   PROCEDURE [HRSC_APP].[usp_PayPeriod_Delete]
+    (
+    @pI_PAY_PERIOD_ID BIGINT
+    )
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    DELETE [HRSC].[PAY_PERIOD]
+    WHERE [HRSC].[PAY_PERIOD].[PAY_PERIOD_ID] = @pI_PAY_PERIOD_ID;
+
+END

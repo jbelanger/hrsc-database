@@ -1,0 +1,22 @@
+﻿
+
+
+
+CREATE   PROCEDURE [HRSC_APP].[usp_RequestCategory_SelectForARequestType]
+	
+	@pRequestTypeID bigint
+	
+WITH EXEC AS CALLER
+AS
+
+select distinct c.REQUEST_CATEGORY_ID, c.REQUEST_CATEGORY_NAME_EN, c.REQUEST_CATEGORY_NAME_FR, c.REQUEST_CATEGORY_DESC_EN, 
+                         c.REQUEST_CATEGORY_DESC_FR, c.EFFECTIVE_DATE, c.EXPIRY_DATE, c.USER_CREATED, c.USER_UPDATED, c.DATE_CREATED, c.DATE_UPDATED, 
+                         c.REQUEST_CATEGORY_CODE, c.EMPLOYEE_CATEGORY_IND, c.MANAGER_CATEGORY_IND, c.REQUEST_CATEGORY_ACR_FR, 
+                         c.REQUEST_CATEGORY_ACR_EN
+ 
+from HRSC.CD_REQUEST_CATEGORY c 
+	inner join hrsc.cd_request_sub_category sc 
+		on sc.REQUEST_CATEGORY_ID = c.REQUEST_CATEGORY_ID
+where sc.HR_REQUEST_TYPE_ID =  @pRequestTypeID and sc.EXPIRY_DATE is NULL
+
+

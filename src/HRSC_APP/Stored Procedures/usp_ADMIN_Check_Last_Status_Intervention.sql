@@ -1,0 +1,32 @@
+﻿
+
+
+
+CREATE   PROCEDURE [HRSC_APP].[usp_ADMIN_Check_Last_Status_Intervention]
+WITH EXEC AS CALLER
+AS
+-- ENO
+-- List the intervention that have a last status different then the Max status from the Status table.
+
+DECLARE @intCount bigint;
+
+  SELECT @intCount = count(i.HR_REQUEST_INTERVENTION_ID)
+  FROM HRSC.HR_REQUEST_INTERVENTION i
+  WHERE i.REQUEST_STATUS_ID <> (select HRSC.HR_REQUEST_STATUS.REQUEST_STATUS_ID  from HRSC.HR_REQUEST_STATUS where HR_REQUEST_STATUS_ID = (select MAX(HR_REQUEST_STATUS_ID) from HRSC.HR_REQUEST_STATUS where REQUEST_INTERVENTION_ID = I.HR_REQUEST_INTERVENTION_ID))
+
+  if @intCount < 100
+    begin
+      if @intCount = 0
+        select @intCount as RecordCount;
+      else
+
+        SELECT i.HR_REQUEST_INTERVENTION_ID,
+               i.REQUEST_STATUS_ID,
+               (select HRSC.HR_REQUEST_STATUS.REQUEST_STATUS_ID  from HRSC.HR_REQUEST_STATUS where HR_REQUEST_STATUS_ID = (select MAX(HR_REQUEST_STATUS_ID) from HRSC.HR_REQUEST_STATUS where REQUEST_INTERVENTION_ID = I.HR_REQUEST_INTERVENTION_ID)) as Max_Status
+
+        FROM HRSC.HR_REQUEST_INTERVENTION i
+
+        WHERE i.REQUEST_STATUS_ID <> (select HRSC.HR_REQUEST_STATUS.REQUEST_STATUS_ID  from HRSC.HR_REQUEST_STATUS where HR_REQUEST_STATUS_ID = (select MAX(HR_REQUEST_STATUS_ID) from HRSC.HR_REQUEST_STATUS where REQUEST_INTERVENTION_ID = I.HR_REQUEST_INTERVENTION_ID));
+    end;
+  else
+   select @intCount as RecordCount;

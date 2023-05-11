@@ -1,0 +1,38 @@
+﻿
+
+
+
+CREATE   PROCEDURE [HRSC_APP].[usp_HR_Guide_SelectByGuideID]
+	@GuideID bigint
+	WITH EXEC AS CALLER
+	AS
+------------------------------------------------------
+-- usp_HR_Guide_SelectByGuideID
+-- Retreives Guide by GuideID
+-- Oksana Zhukova 2013-01-11
+------------------------------------------------------
+/** Modified for SQL Server 2016 François Girouard ***/
+
+ SELECT G.HR_GUIDE_TYPE_ID AS GuideTypeID,
+		G.HR_GUIDE_ID AS GudeID,
+		G.HR_GUIDE_NAME_EN AS NameEN,
+		G.HR_GUIDE_NAME_FR AS NameFR,
+		G.HR_GUIDE_DESC_EN AS DescEN,
+        G.HR_GUIDE_DESC_FR AS DescFR    
+FROM	HRSC.HR_GUIDE G
+WHERE	G.HR_GUIDE_ID = @GuideID
+
+SELECT	G.HR_GUIDE_TYPE_ID AS GuideTypeID,
+		G.HR_GUIDE_ID AS GudeID,
+		RG.HR_REQUEST_TYPE_ID AS id,
+		RT.HR_REQUEST_TYPE_NAME_EN AS name_en,
+		RT.HR_REQUEST_TYPE_NAME_FR AS name_fr,
+		RT.HR_REQUEST_TYPE_DESC_EN AS desc_en,
+        RT.HR_REQUEST_TYPE_DESC_FR AS desc_fr,
+        RG.EXPIRY_DATE AS ExpiryDate
+FROM	HRSC.HR_GUIDE G
+		INNER JOIN HRSC.CD_HR_GUIDE_TYPE GT ON G.HR_GUIDE_TYPE_ID = GT.HR_GUIDE_TYPE_ID
+		INNER JOIN HRSC.HR_REQUEST_GUIDE RG ON G.HR_GUIDE_ID = RG.HR_GUIDE_ID
+		INNER JOIN HRSC.CD_HR_REQUEST_TYPE RT ON RT.HR_REQUEST_TYPE_ID = RG.HR_REQUEST_TYPE_ID
+WHERE	G.HR_GUIDE_ID = @GuideID AND
+		RG.EXPIRY_DATE IS NULL

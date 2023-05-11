@@ -1,0 +1,13 @@
+﻿
+
+
+
+CREATE   PROCEDURE [HRSC_APP].[usp_ADMIN_Update_Last_Status_Request]
+WITH EXEC AS CALLER
+AS
+-- ENO
+-- Update the Requests with the last status from the Status table.
+
+UPDATE R
+SET R.REQUEST_STATUS_ID = (select REQUEST_STATUS_ID from HRSC.HR_REQUEST_STATUS where HR_REQUEST_STATUS_ID = (select MAX(HR_REQUEST_STATUS_ID) from HRSC.HR_REQUEST_STATUS where HR_REQUEST_ID = R.HR_REQUEST_ID))
+FROM  HRSC.HR_REQUEST R

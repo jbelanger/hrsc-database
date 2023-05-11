@@ -1,0 +1,16 @@
+﻿CREATE TABLE [HRSC].[CMS_EXTRACT_ERRORS] (
+    [TENURE]       NVARCHAR (1)  NULL,
+    [PRI]          NVARCHAR (9)  NULL,
+    [FIRST_NAME]   NVARCHAR (10) NULL,
+    [INITIALS]     NVARCHAR (3)  NULL,
+    [LAST_NAME]    NVARCHAR (20) NULL,
+    [PAY_OFFICE]   INT           NULL,
+    [PAY_LIST]     INT           NULL,
+    [LANGUAGE]     INT           NULL,
+    [MANAGER1]     NVARCHAR (1)  NULL,
+    [MANAGER2]     NVARCHAR (1)  NULL,
+    [PAYCYCLE2]    NVARCHAR (1)  NULL,
+    [PAYCYCLE]     NVARCHAR (1)  NULL,
+    [DATE_CREATED] DATETIME      DEFAULT (getdate()) NULL
+);
+

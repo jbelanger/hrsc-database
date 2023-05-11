@@ -1,0 +1,79 @@
+﻿
+ CREATE   PROCEDURE [HRSC_APP].[usp_EMPLOYEE_SelectForaBC]
+@lngBCID bigint
+WITH EXEC AS CALLER
+AS
+------------------------------------------------------
+-- EMPLOYEE_SelectForaBC
+-- Gets a list of employee that are BC employee or BC Managers
+-- Eric Nolet 2012-02-02
+------------------------------------------------------
+--DECLARE @Error int;
+
+--BEGIN TRANSACTION;
+
+--  Begin
+--Select  emp.EMPLOYEE_ID as ID,
+--      emp.EMPLOYEE_SURNAME + ', ' + emp.EMPLOYEE_GIVEN_NAME as Name,
+--      emp.EMPLOYEE_GIVEN_NAME as GIVEN_NAME, 
+--      emp.EMPLOYEE_SURNAME as SURNAME,
+--      emp.WORK_PHONE_NUMBER as PHONE,
+--      emp.EMPLOYEE_EMAIL_ADDRESS as EMAIL,
+--      emp.LANGUAGE_ID,
+--      CDLANG.LANGUAGE_CODE
+      
+
+--      from  HRSC.employee emp, 
+--            HRSC.CD_HRSC_USER_ROLE role, 
+--            HRSC.HRSC_USER_ROLE_BC RBC,
+--            HRSC.CD_BUSINESS_CENTER BC,
+--            HRSC.CD_LANGUAGE CDLANG
+
+--where emp.EMPLOYEE_ID = rbc.EMPLOYEE_ID and
+--    role.HRSC_USER_ROLE_ID = RBC.HRSC_USER_ROLE_ID and 
+--    RBC.BUSINESS_CENTER_ID = BC.BUSINESS_CENTER_ID and
+--    emp.LANGUAGE_ID = CDLANG.LANGUAGE_ID and
+--    BC.BUSINESS_CENTER_ID = @lngBCID
+--    and   (role.HRSC_USER_ROLE_ID = (select HRSC_USER_ROLE_ID from HRSC.CD_HRSC_USER_ROLE where HRSC_USER_ROLE_CODE = 'ADMIN') or
+--           role.HRSC_USER_ROLE_ID = (select HRSC_USER_ROLE_ID from HRSC.CD_HRSC_USER_ROLE where HRSC_USER_ROLE_CODE = 'BCE') or
+--           role.HRSC_USER_ROLE_ID = (select HRSC_USER_ROLE_ID from HRSC.CD_HRSC_USER_ROLE where HRSC_USER_ROLE_CODE = 'BCM'))
+--    and RBC.EXPIRY_DATE is null
+--    and role.EXPIRY_DATE is null
+--    and BC.EXPIRY_DATE is null
+--    and emp.EXPIRY_DATE is null
+--	and emp.ASSIGNED_IND <> 'False'
+
+--order by emp.EMPLOYEE_SURNAME, emp.EMPLOYEE_GIVEN_NAME
+SELECT  
+	E.EMPLOYEE_ID AS ID,
+	E.EMPLOYEE_SURNAME + ', ' + E.EMPLOYEE_GIVEN_NAME AS Name,
+	E.EMPLOYEE_GIVEN_NAME AS GIVEN_NAME, 
+	E.EMPLOYEE_SURNAME AS SURNAME,
+	E.WORK_PHONE_NUMBER AS PHONE,
+	E.EMPLOYEE_EMAIL_ADDRESS AS EMAIL,
+	E.LANGUAGE_ID,
+	L.LANGUAGE_CODE
+FROM HRSC.CD_HRSC_USER_ROLE R
+JOIN HRSC.HRSC_USER_ROLE_BC RBC ON R.HRSC_USER_ROLE_ID = RBC.HRSC_USER_ROLE_ID
+JOIN HRSC.EMPLOYEE E  ON E.EMPLOYEE_ID = RBC.EMPLOYEE_ID
+JOIN HRSC.CD_BUSINESS_CENTER BC ON RBC.BUSINESS_CENTER_ID = BC.BUSINESS_CENTER_ID
+JOIN HRSC.CD_LANGUAGE L ON E.LANGUAGE_ID = L.LANGUAGE_ID
+JOIN HRSC.CD_HRSC_USER_ROLE UR ON R.HRSC_USER_ROLE_ID = UR.HRSC_USER_ROLE_ID
+WHERE BC.BUSINESS_CENTER_ID = @lngBCID
+	AND UR.HRSC_USER_ROLE_CODE IN ('ADMIN','BCE','BCM')
+    AND RBC.EXPIRY_DATE IS NULL
+    AND R.EXPIRY_DATE IS NULL
+    AND BC.EXPIRY_DATE IS NULL
+    AND E.EXPIRY_DATE IS NULL
+	--AND E.ASSIGNED_IND != 'False'
+ORDER BY E.EMPLOYEE_SURNAME, E.EMPLOYEE_GIVEN_NAME
+     --Select @Error = @@Error;
+     
+  --End
+
+  --Begin
+    -- If @Error = 0
+      --  set @pReturnCode = 0;
+     --else
+       -- set @pReturnCode = @ERROR;
+  --End 

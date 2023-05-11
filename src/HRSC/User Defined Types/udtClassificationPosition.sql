@@ -1,0 +1,11 @@
+﻿CREATE TYPE [HRSC].[udtClassificationPosition] AS TABLE (
+    [POSITION_ID]                 BIGINT NOT NULL,
+    [CLASSIFICATION_GROUP_ID]     BIGINT NULL,
+    [CLASSIFICATION_LEVEL_ID]     BIGINT NULL,
+    [CLASSIFICATION_SUB_GROUP_ID] BIGINT NULL);
+
+
+GO
+GRANT REFERENCES
+    ON TYPE::[HRSC].[udtClassificationPosition] TO [db_executor];
+

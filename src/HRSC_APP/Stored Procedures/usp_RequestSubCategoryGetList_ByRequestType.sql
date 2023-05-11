@@ -1,0 +1,31 @@
+﻿
+
+
+
+CREATE   PROCEDURE [HRSC_APP].[usp_RequestSubCategoryGetList_ByRequestType]
+	@pRequest_Category_ID bigint,
+	@pHrRequestTypeID bigint,
+	@pSURVEY_IND BIT
+WITH EXEC AS CALLER
+AS
+------------------------------------------------------
+-- RequestSubCategory_GetListByHrRequestType
+-- Retreives a list of sub-category for a specific Category and Hr Request Type
+-- Jonathan Lefebvre July 15 2015
+-- MT 2019-09-07
+------------------------------------------------------
+IF @pSURVEY_IND = 0
+ 
+	SELECT REQUEST_SUB_CATEGORY_ID, 
+		REQUEST_SUB_CATEGORY_NAME_EN +'/'+ REQUEST_SUB_CATEGORY_NAME_FR as SUBCATEGORY_NAME,
+		REQUEST_SUB_CATEGORY_NAME_FR +'/'+ REQUEST_SUB_CATEGORY_NAME_EN as SUBCATEGORY_NAME_FR
+	from HRSC.CD_REQUEST_SUB_CATEGORY
+	WHERE REQUEST_CATEGORY_ID = @pRequest_Category_ID AND HR_REQUEST_TYPE_ID = @pHrRequestTypeID	
+	ORDER BY SUBCATEGORY_NAME
+ELSE IF @pSURVEY_IND = 1
+	SELECT REQUEST_SUB_CATEGORY_ID, 
+		REQUEST_SUB_CATEGORY_NAME_EN +'/'+ REQUEST_SUB_CATEGORY_NAME_FR as SUBCATEGORY_NAME,
+		REQUEST_SUB_CATEGORY_NAME_FR +'/'+ REQUEST_SUB_CATEGORY_NAME_EN as SUBCATEGORY_NAME_FR
+	FROM HRSC.CD_REQUEST_SUB_CATEGORY
+	WHERE REQUEST_CATEGORY_ID = @pRequest_Category_ID AND HR_REQUEST_TYPE_ID = @pHrRequestTypeID AND SURVEY_IND = @pSURVEY_IND
+	ORDER BY SUBCATEGORY_NAME

@@ -1,0 +1,59 @@
+﻿
+
+
+CREATE   FUNCTION [HRSC_APP].[GetCOIWorkLocation]
+(@COIID bigint, @bitEnglish bit)
+RETURNS nvarchar(MAX)
+WITH EXEC AS CALLER
+AS
+BEGIN
+DECLARE @munID AS VARCHAR(100) = '', @munNameEn AS VARCHAR(100) = '', @munNameFr AS VARCHAR(100) = '',@provCode AS CHAR(2) = '', @Street VARCHAR(250) = '', @COI_WORK_LOCATION NVARCHAR(MAX);
+
+
+	IF (SELECT ISNULL(OFFICE_SITE_ID,0)
+		FROM HRSC.COI COI 
+		WHERE COI_ID = @COIID AND COI.CURRENT_OFFICE_LOCATION != '') = 0
+		BEGIN
+
+			set @munID = ''
+			set @Street = ''
+			SELECT 
+				@munID = COI.MUNICIPALITY_ID,
+				@Street = COI.CURRENT_OFFICE_LOCATION
+
+			FROM HRSC.COI COI 
+			WHERE COI_ID = @COIID and COI_ORIGINAL_ID IS NULL
+
+			SELECT 
+				@provCode = ISNULL(PROVINCE_CODE,''), 
+				@munNameEn = ISNULL(M.MUNICIPALITY_NAME,''),
+				@munNameFr = ISNULL(COALESCE(M.ACCENTED_NAME,M.MUNICIPALITY_NAME),'') 
+			FROM HRSC.PROVINCE P
+			JOIN HRSC.MUNICIPALITY M ON M.PROVINCE_ID = P.PROVINCE_ID 
+			WHERE MUNICIPALITY_ID  = CONVERT(BIGINT,@munID)
+			IF @bitEnglish = 1
+				SET @COI_WORK_LOCATION = @Street + ', ' + @munNameEn + ' ' + @provCode;
+			ELSE
+				SET @COI_WORK_LOCATION = @Street + ', ' + @munNameFr + ' ' + @provCode; 
+		END;
+	ELSE
+		SELECT 
+			@COI_WORK_LOCATION = (CASE  
+									WHEN @bitEnglish = 1 THEN OFFICE_SITE_NAME 
+									WHEN @bitEnglish = 0 THEN OFFICE_SITE_NAME_FR
+									ELSE OFFICE_SITE_NAME
+								 END)
+		FROM HRSC.COI
+		JOIN HRSC.OFFICE_SITE OS ON OS.OFFICE_SITE_ID = COI.OFFICE_SITE_ID
+		WHERE COI.COI_ID = @COIID
+
+		
+			
+	if @COI_WORK_LOCATION is Null 
+		begin
+		set @COI_WORK_LOCATION = '';
+		end;
+
+		  
+	return @COI_WORK_LOCATION;
+END

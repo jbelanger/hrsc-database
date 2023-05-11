@@ -1,0 +1,4 @@
+﻿CREATE TYPE [HRSC_APP].[udtCodeArray] AS TABLE (
+    [n] NVARCHAR (5) NOT NULL,
+    PRIMARY KEY CLUSTERED ([n] ASC));
+

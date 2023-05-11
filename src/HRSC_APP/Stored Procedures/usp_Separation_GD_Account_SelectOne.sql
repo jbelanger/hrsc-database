@@ -1,0 +1,25 @@
+﻿
+
+
+
+
+CREATE   PROCEDURE [HRSC_APP].[usp_Separation_GD_Account_SelectOne] (
+	@RegionID BIGINT,
+    @Separation_Type_ID BIGINT,
+    @Email_Type_Code Varchar(5), -- CandB, CFOB and ISB
+    @Email_Address Varchar(100) OUTPUT
+)
+WITH EXEC AS CALLER
+AS
+/*
+	 usp_Separation_GD_Account_SelectOne: select GD email Address
+	 Yves Robichaud 2013-06-21
+*/
+
+SELECT @Email_Address = GD.GD_ACCOUNT_EMAIL
+FROM HRSC.SEPARATION_GD_ACCOUNT SEPGD
+JOIN HRSC.GD_ACCOUNT_EMAIL GD ON GD.GD_ACCOUNT_EMAIL_ID = SEPGD.GD_ACCOUNT_EMAIL_ID
+JOIN HRSC.CD_GD_ACCOUNT_TYPE SEPGDTYPE ON SEPGDTYPE.GD_ACCOUNT_TYPE_ID = GD.GD_ACCOUNT_TYPE_ID
+WHERE SEPGD.REGION_ID = @RegionID AND SEPGD.SEPARATION_TYPE_ID = @Separation_Type_ID
+       AND SEPGDTYPE.GD_ACCOUNT_TYPE_CODE = @Email_Type_Code
+

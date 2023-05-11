@@ -1,0 +1,33 @@
+﻿
+
+
+
+CREATE   PROCEDURE [HRSC_APP].[usp_GetAllPayPeriodsForYear]
+(
+    --@pI_PAY_PERIOD_CALENDAR_ID BIGINT,
+    @pI_YEAR INT
+)
+AS
+BEGIN
+
+    SET NOCOUNT ON;
+
+    SELECT [PAY_PERIOD_ID]
+          --,[PAY_PERIOD_CALENDAR_ID]
+          ,[YEAR_NUMBER]
+          ,[PAY_PERIOD_NUMBER]
+          ,[EFFECTIVE_FROM_DATE]
+          ,[EFFECTIVE_TO_DATE]
+          ,[PROCESSING_OPEN_DATE]
+          ,[PROCESSING_CLOSE_DATE]
+          ,[DATE_CREATED]
+          ,[USER_CREATED]
+          ,[DATE_UPDATED]
+          ,[USER_UPDATED]
+      FROM [HRSC].[PAY_PERIOD]
+      WHERE --[PAY_PERIOD_CALENDAR_ID] = @pI_PAY_PERIOD_CALENDAR_ID 
+            [YEAR_NUMBER] = @pI_YEAR
+      ORDER BY [PAY_PERIOD_NUMBER];
+
+END
+

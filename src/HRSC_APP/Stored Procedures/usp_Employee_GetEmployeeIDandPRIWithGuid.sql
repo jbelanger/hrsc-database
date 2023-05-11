@@ -1,0 +1,16 @@
+﻿
+
+
+
+CREATE   PROCEDURE [HRSC_APP].[usp_Employee_GetEmployeeIDandPRIWithGuid]
+@pGuid nvarchar(50),
+@pEmployeeID BIGINT OUTPUT,
+@pPRI BIGINT OUTPUT
+
+WITH EXEC AS CALLER
+AS
+select @pEmployeeID = EMP.EMPLOYEE_ID,
+	   @pPRI = EMP_EXT.PRI
+from HRSC.EMPLOYEE EMP
+left join HRSC.EMPLOYEE_EXTENDED AS EMP_EXT ON EMP_EXT.GUID = EMP.USER_AD_GUID
+where EMP.USER_AD_GUID = @pGuid
