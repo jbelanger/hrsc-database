@@ -1,0 +1,20 @@
+﻿
+
+
+
+CREATE   PROCEDURE [HRSC_APP].[usp_REQUEST_APPROVAL_RestorePending] (
+	@pHrRequestId bigint, 
+	@pEmployeeId bigint,
+	@pUserUpdated nvarchar(30)
+)
+
+WITH EXEC AS CALLER
+AS
+
+	UPDATE HRSC.HR_REQUEST_APPROVAL SET 
+		IS_APPROVED= NULL,
+		DATE_VALIDATED= NULL,
+		DECLINE_REASON= NULL,
+        USER_UPDATED=@pUserUpdated,
+		DATE_UPDATED=GETDATE()
+	WHERE HR_REQUEST_ID = @pHrRequestId AND EMPLOYEE_ID = @pEmployeeID;

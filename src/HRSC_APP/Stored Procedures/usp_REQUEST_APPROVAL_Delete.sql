@@ -1,0 +1,12 @@
+﻿
+
+
+
+CREATE   PROCEDURE [HRSC_APP].[usp_REQUEST_APPROVAL_Delete] (
+	@pRequestApprovalId bigint
+)
+
+WITH EXEC AS CALLER
+AS
+	DELETE HRSC.HR_REQUEST_APPROVAL 
+	WHERE HR_REQUEST_APPROVAL_ID = @pRequestApprovalId;

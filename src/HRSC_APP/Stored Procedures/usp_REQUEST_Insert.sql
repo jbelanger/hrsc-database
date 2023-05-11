@@ -38,7 +38,9 @@ CREATE     PROCEDURE [HRSC_APP].[usp_REQUEST_Insert]
 	@pIsProtected bit,
 	@pNewRowID bigint OUTPUT,
 	@pRequestIdentifier nvarchar(16) OUTPUT,
-	@SELECTION_PROCESS_NUMBER nvarchar(30)
+	@SELECTION_PROCESS_NUMBER nvarchar(30),
+    @pWmcNumber nvarchar(10),
+    @pCandidateTypeId bigint
 WITH EXEC AS CALLER
 AS
 
@@ -82,7 +84,9 @@ AS
 		   ,[HR_REQUEST_CLIENT_ID]
 		   ,[TEMP_DATA]
 		   ,[IS_PROTECTED]
-		   ,[STAFFING_PROCESS_NUMBER])
+		   ,[STAFFING_PROCESS_NUMBER]
+           ,[WMC_NUMBER]
+           ,[CANDIDATE_TYPE_ID])
      VALUES (
            @pRequestIdentifier,
            @pSubjectText,
@@ -120,6 +124,8 @@ AS
 		   @pRequestClientId,
 		   @pTempData,
 		   @pIsProtected,
-		   @SELECTION_PROCESS_NUMBER);
+		   @SELECTION_PROCESS_NUMBER,
+           @pWmcNumber,
+           @pCandidateTypeId);
 
   set @pNewRowID = @@IDENTITY;

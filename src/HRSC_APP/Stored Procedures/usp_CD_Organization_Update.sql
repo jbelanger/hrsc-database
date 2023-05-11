@@ -1,7 +1,6 @@
 ﻿
 
 
-
 CREATE   PROCEDURE [HRSC_APP].[usp_CD_Organization_Update]
 	@pOrganization_ID bigint,
 	@pName_en nvarchar(250),
@@ -12,20 +11,12 @@ CREATE   PROCEDURE [HRSC_APP].[usp_CD_Organization_Update]
 	@pDesc_fr nvarchar(4000),
 	@pActive_IND bit,
 	@pCode nvarchar(5),
-	@pUser nvarchar(30),
-	@ReturnCode int OUTPUT
+	@pUser nvarchar(30)
+	
 
 		
 WITH EXEC AS CALLER
 AS
-------------------------------------------------------
--- UPDATE Category
--- UPDATE an existing Category for request in DB 
--- Tony Paradis 2011-12-18 
-------------------------------------------------------
--- Declare our variables
-DECLARE @Error int
-
 	
 	UPDATE HRSC.CD_ORGANIZATION
 	
@@ -41,14 +32,4 @@ DECLARE @Error int
 			USER_UPDATED    = @pUser				,
 			DATE_UPDATED    = GETDATE()			
 
-			WHERE ORGANIZATION_ID = @pOrganization_ID  		    
-    
-			
-
-		SELECT @Error = @@ERROR
-
--- A Stored Proc always return 0 if no error.
-IF @Error != 0
-  set @ReturnCode = @@ERROR
-else
-  set @ReturnCode = 0
+			WHERE ORGANIZATION_ID = @pOrganization_ID

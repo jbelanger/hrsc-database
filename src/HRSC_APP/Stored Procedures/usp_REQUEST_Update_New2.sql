@@ -32,7 +32,9 @@ CREATE   PROCEDURE [HRSC_APP].[usp_REQUEST_Update_New2]
 	@pTempData varchar(4000),
 	@pIsProtected bit,
 	@pIsRecalled bit,
-	@SELECTION_PROCESS_NUMBER varchar(30)
+	@SELECTION_PROCESS_NUMBER varchar(30),
+	@pWmcNumber nvarchar(10),
+	@pCandidateTypeId bigint
 
 WITH EXEC AS CALLER
 AS
@@ -66,5 +68,8 @@ AS
 	  TEMP_DATA = @pTempData,
 	  IS_PROTECTED = @pIsProtected,
 	  IS_RECALLED = @pIsRecalled,
-	  [STAFFING_PROCESS_NUMBER] = @SELECTION_PROCESS_NUMBER
+	  [STAFFING_PROCESS_NUMBER] = @SELECTION_PROCESS_NUMBER,
+	  [WMC_NUMBER] = @pWmcNumber,
+	  [CANDIDATE_TYPE_ID] = @pCandidateTypeId
+
   where HR_REQUEST_ID = @pRequestID;

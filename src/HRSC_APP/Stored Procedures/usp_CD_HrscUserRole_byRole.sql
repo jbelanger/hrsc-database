@@ -3,7 +3,7 @@
 
 
 CREATE   PROCEDURE [HRSC_APP].[usp_CD_HrscUserRole_byRole]
-@pRoleCode as varchar(5)
+@pRoleCode as varchar(10)
 WITH EXEC AS CALLER
 AS
 ------------------------------------------------------
@@ -12,7 +12,7 @@ AS
 -- Gaétan Demers  2011-12-13
 -- Eric Nolet     2011-12-15 Added Aliases
 ------------------------------------------------------
-if @pRoleCode = 'BCM' 
+if @pRoleCode = 'Management' 
 
 SELECT  hrsc_user_role_id AS id,
         hrsc_user_role_name_en AS name_en,
@@ -29,7 +29,7 @@ SELECT  hrsc_user_role_id AS id,
 FROM    hrsc.cd_hrsc_user_role
 WHERE  Upper(cd_hrsc_user_role.hrsc_user_role_code) = 'BCE'
 
-Else if @pRoleCode = 'ADMIN' 
+Else if @pRoleCode = 'Admin' 
 
 SELECT  hrsc_user_role_id AS id,
         hrsc_user_role_name_en AS name_en,

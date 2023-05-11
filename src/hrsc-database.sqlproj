@@ -111,14 +111,12 @@
     <Build Include="HRSC\Tables\CD_COMMUNICATION_REQ.sql" />
     <Build Include="HRSC\Tables\EMPLOYEE.sql" />
     <Build Include="HRSC\Tables\CD_EMAIL_TEMPLATE_TYPE.sql" />
-    <Build Include="HRSC\Tables\APP_SEARCH_QUERY.sql" />
     <Build Include="HRSC\Tables\EMAIL_TEMPLATE.sql" />
     <Build Include="HRSC\Tables\CD_COI_QUESTION.sql" />
     <Build Include="HRSC\Tables\ELS_Request_TEMP.sql" />
     <Build Include="HRSC\Tables\CD_DOUBLE_BANKING.sql" />
     <Build Include="HRSC\Tables\COI_ANSWER.sql" />
     <Build Include="HRSC\Tables\CD_COI_DECLARATION_TYPE.sql" />
-    <Build Include="HRSC\Tables\STORED_RESULT.sql" />
     <Build Include="HRSC\Tables\COI.sql" />
     <Build Include="HRSC\Tables\CD_DOCUMENT_TYPE.sql" />
     <Build Include="HRSC\Tables\CMS_EXTRACT_ERRORS.sql" />
@@ -625,7 +623,6 @@
     <None Include="Scripts\Seed\HRSC.OFFICE_SITE.Table.sql" />
     <None Include="Scripts\Seed\HRSC.PROVINCE.Table.sql" />
     <None Include="Scripts\Seed\HRSC.SEPARATION_CHKLST_TYPE.Table.sql" />
-    <Build Include="HRSC_APP\Stored Procedures\usp_generate_merge.sql" />
     <Build Include="Security\Logins\HRSC_DAD.sql" />
     <Build Include="Security\Logins\HRSC_USER.sql" />
     <Build Include="Security\Logins\HRSCREADER1.sql" />
@@ -639,6 +636,17 @@
     <Build Include="Security\Users\HRSCREADER1.sql" />
     <Build Include="Security\Users\HRSCREADER2.sql" />
     <None Include="Scripts\Seed\HRSC.REQ_STATUS_JUSTIFICATION.Table.sql" />
+    <Build Include="HRSC\Tables\HR_REQUEST_APPROVAL.sql" />
+    <Build Include="HRSC\Tables\CD_CANDIDATE_TYPE.sql" />
+    <Build Include="HRSC\Tables\CD_ATTRIBUTE.sql" />
+    <Build Include="HRSC\Tables\BUSINESS_CENTER_ATTR.sql" />
+    <Build Include="HRSC\Tables\APPROVAL_TRANSFER_RULE.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_APPROVAL_Update.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_APPROVAL_RestorePending.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_APPROVAL_Insert.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_APPROVAL_Delete.sql" />
+    <Build Include="HRSC_AGENT\Stored Procedures\usp_CORPTABDATATRANSFER.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_generate_merge.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\Db Changes.sql" />
