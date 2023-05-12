@@ -13,6 +13,8 @@ CREATE TYPE [HRSC].[udtProfilePosition] AS TABLE (
 
 
 
+
+
 GO
 GRANT REFERENCES
     ON TYPE::[HRSC].[udtProfilePosition] TO [db_executor];

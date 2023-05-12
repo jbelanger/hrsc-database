@@ -13,7 +13,12 @@
     [DATE_CREATED]                DATETIME                   DEFAULT (getdate()) NOT NULL,
     [DATE_UPDATED]                DATETIME                   NULL,
     [ANNOUNCEMENT_TYPE_ID]        [HRSC].[IDENTIFIER_BIGINT] NULL,
+    [ICON]                        NVARCHAR (120)             NULL,
+    [ICON_LEVEL]                  NVARCHAR (120)             NULL,
+    [SORT_ORDER]                  BIGINT                     DEFAULT ((1)) NOT NULL,
     CONSTRAINT [HRSCANCM_PK] PRIMARY KEY CLUSTERED ([HRSC_ANNOUNCEMENTS_ID] ASC) WITH (FILLFACTOR = 100),
     CONSTRAINT [HRSCANCM_ANNTP_FK] FOREIGN KEY ([ANNOUNCEMENT_TYPE_ID]) REFERENCES [HRSC].[CD_ANNOUNCEMENT_TYPE] ([ANNOUNCEMENT_TYPE_ID])
 );
+
+
 

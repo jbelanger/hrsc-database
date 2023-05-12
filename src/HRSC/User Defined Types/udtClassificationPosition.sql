@@ -9,6 +9,8 @@ CREATE TYPE [HRSC].[udtClassificationPosition] AS TABLE (
 
 
 
+
+
 GO
 GRANT REFERENCES
     ON TYPE::[HRSC].[udtClassificationPosition] TO [db_executor];
