@@ -1508,6 +1508,53 @@ Vous pouvez visualiser les demandes à partir de l’application Web du CSRH : http
 Merci d’avoir utilisé l’application web du Centre de services en ressources humaines (CSRH).
 
 Pour toute question ou commentaire concernant cette demande, nous vous invitons à contacter le leader assigné à votre demande..','2019-07-29T00:00:00',NULL,N'Girouard, Francois F [NC]',N'Robichaud, Martin M [NC]','2019-07-29T09:48:57.147','2020-04-14T14:08:51.403',57)
+ ,(10102,N'HRSC ID [IDENTIFIER] - Action required: Waiting for approval - [SUBJECT] - Employee:[EMP_NAME]',N'CSRH ID [IDENTIFIER] - Action requise: En attente d''approbation - [SUBJECT] - Employé:[EMP_NAME]',N'Your requests waiting for approval.
+
+You can view the request online on the HRSC Web Application: http://hrsc-csrh.prv/webforms/clientrequestsdelegate.aspx
+
+ Thank you for using the Human Resources Services Centre (HRSC) Web Application.
+
+If you have any questions or concerns, please contact the lead assigned to your request.',N'Votre demande est en attente d''approbation.
+
+Vous pouvez visualiser les demandes à partir de l’application Web du CSRH : http://hrsc-csrh.prv/webforms/clientrequestsdelegate.aspx
+
+ Merci d’avoir utilisé l’application web du Centre de services en ressources humaines (CSRH).
+
+Pour toute question ou commentaire concernant cette demande, nous vous invitons à contacter le leader assigné à votre demande..','2023-01-01T00:00:00',NULL,N'HRSC 4.13',N'HRSC 4.13','2023-01-19T09:48:57.147','2023-01-19T09:08:51.403',58)
+ ,(10103,N'HRSC ID [IDENTIFIER] - Request Approuved - [SUBJECT] - Employee Name:[EMP_NAME]',N'CSRH ID [IDENTIFIER] - Demande approuvée - [SUBJECT] - Nom d''employé:[EMP_NAME]',N'This requests has been approved.
+
+You can view the request online on the HRSC Web Application: [REQUEST_LINK]',N'Cette demande a été approuvée.
+
+Vous pouvez visualiser les demandes à partir de l’application Web du CSRH : [REQUEST_LINK]','2023-01-01T00:00:00',NULL,N'HRSC 4.13',N'HRSC 4.13','2023-01-19T09:48:57.147','2023-01-19T09:08:51.403',59)
+ ,(10104,N'HRSC ID [IDENTIFIER] - Request Declined - [SUBJECT] - Employee Name:[EMP_NAME]',N'CSRH ID [IDENTIFIER] - Demande déclinée - [SUBJECT] - Nom d''employé:[EMP_NAME]',N'This requests has been Declined.
+
+You can view the request online on the HRSC Web Application: [REQUEST_LINK]',N'Cette demande a été déclinée.
+
+Vous pouvez visualiser les demandes à partir de l’application Web du CSRH : [REQUEST_LINK]','2023-01-01T00:00:00',NULL,N'HRSC 4.13',N'HRSC 4.13','2023-01-19T09:48:57.147','2023-01-19T09:08:51.403',60)
+ ,(10105,N'HRSC ID [IDENTIFIER] - Request Pending Signature - [SUBJECT] - Employee:[EMP_NAME]',N'CSRH ID [IDENTIFIER] - Demande en attente de signature - [SUBJECT] - Employé:[EMP_NAME]',N'This requests is waithing for signature.
+
+You can view the request online on the HRSC Web Application: [REQUEST_LINK]',N'Cette demande est en attente de signature.
+
+Vous pouvez visualiser les demandes à partir de l’application Web du CSRH : [REQUEST_LINK]','2023-01-01T00:00:00',NULL,N'HRSC 4.13',N'HRSC 4.13','2023-01-19T09:48:57.147','2023-01-19T09:08:51.403',61)
+ ,(10106,N'HRSC ID [IDENTIFIER] - Request Resolved - [SUBJECT] - Employee:[EMP_NAME]',N'CSRH ID [IDENTIFIER] - Demande résolue - [SUBJECT] - Employé:[EMP_NAME]',N'This requests is Resolved. 
+
+You can view the request online on the HRSC Web Application: [REQUEST_LINK]',N'Cette demande est résolue.
+
+Vous pouvez visualiser les demandes à partir de l’application Web du CSRH : [REQUEST_LINK]','2023-01-01T00:00:00',NULL,N'HRSC 4.13',N'HRSC 4.13','2023-01-19T09:48:57.147','2023-01-19T09:08:51.403',62)
+ ,(10107,N'HRSC ID [IDENTIFIER] - Request Resolve by SFT - [SUBJECT] - Employee:[EMP_NAME]',N'CSRH ID [IDENTIFIER] - Demande Résolue par SFT - [SUBJECT] - Employé:[EMP_NAME]',N'This requests been resolved by SFT. 
+
+You can view the request online on the HRSC Web Application: [REQUEST_LINK]',N'Cette demande a été résolue par SFT.
+
+Vous pouvez visualiser les demandes à partir de l’application Web du CSRH : [REQUEST_LINK]','2023-01-01T00:00:00',NULL,N'HRSC 4.13',N'HRSC 4.13','2023-01-19T09:48:57.147','2023-01-19T09:08:51.403',63)
+ ,(10108,N'HRSC ID [IDENTIFIER] - Request Resolve by SFT - [SUBJECT] - Employee:[EMP_NAME]',N'CSRH ID [IDENTIFIER] - Demande Résolue par SFT - [SUBJECT] - Employé:[EMP_NAME]',N'This requests been resolved by SFT. 
+
+ To be able to transfert to HRSB you need resolve your intervent. 
+
+ You can view the request online on the HRSC Web Application: [REQUEST_LINK]',N'Cette demande a été résolue par SFT.
+
+ Pour que la demande soit transférée à HRSB vous devez résoudre votre intervention. 
+
+ Vous pouvez visualiser les demandes à partir de l’application Web du CSRH : [REQUEST_LINK]','2023-01-01T00:00:00',NULL,N'HRSC 4.13',N'HRSC 4.13','2023-01-19T09:48:57.147','2023-01-19T09:08:51.403',64)
 ) AS [Source] ([EMAIL_TEMPLATE_ID],[EMAIL_TEMPLATE_SUBJECT_EN],[EMAIL_TEMPLATE_SUBJECT_FR],[EMAIL_TEMPLATE_BODY_EN],[EMAIL_TEMPLATE_BODY_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[USER_UPDATED],[DATE_CREATED],[DATE_UPDATED],[EMAIL_TEMPLATE_TYPE_ID])
 ON ([Target].[EMAIL_TEMPLATE_ID] = [Source].[EMAIL_TEMPLATE_ID])
 WHEN MATCHED AND (
@@ -1537,8 +1584,6 @@ WHEN MATCHED AND (
 WHEN NOT MATCHED BY TARGET THEN
  INSERT([EMAIL_TEMPLATE_ID],[EMAIL_TEMPLATE_SUBJECT_EN],[EMAIL_TEMPLATE_SUBJECT_FR],[EMAIL_TEMPLATE_BODY_EN],[EMAIL_TEMPLATE_BODY_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[USER_UPDATED],[DATE_CREATED],[DATE_UPDATED],[EMAIL_TEMPLATE_TYPE_ID])
  VALUES([Source].[EMAIL_TEMPLATE_ID],[Source].[EMAIL_TEMPLATE_SUBJECT_EN],[Source].[EMAIL_TEMPLATE_SUBJECT_FR],[Source].[EMAIL_TEMPLATE_BODY_EN],[Source].[EMAIL_TEMPLATE_BODY_FR],[Source].[EFFECTIVE_DATE],[Source].[EXPIRY_DATE],[Source].[USER_CREATED],[Source].[USER_UPDATED],[Source].[DATE_CREATED],[Source].[DATE_UPDATED],[Source].[EMAIL_TEMPLATE_TYPE_ID])
-WHEN NOT MATCHED BY SOURCE THEN 
- DELETE
 OUTPUT $action INTO @mergeOutput1922105888;
 
 DECLARE @mergeError1922105888 int,

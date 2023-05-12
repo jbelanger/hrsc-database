@@ -660,4 +660,7 @@
       <Value>$(SqlCmdVar__1)</Value>
     </SqlCmdVariable>
   </ItemGroup>
+  <ItemGroup>
+    <PreDeploy Include="Scripts\PreDeployment.sql" />
+  </ItemGroup>
 </Project>

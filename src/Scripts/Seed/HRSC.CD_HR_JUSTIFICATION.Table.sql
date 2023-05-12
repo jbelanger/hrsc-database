@@ -117,6 +117,8 @@ Si vous avez complété les étapes requises dans le processus d’escalader votre de
 •	Questions générales sur l’application PeopleSoft
 
 "Vous êtes invité à consulter la page d’information de MonEDSC RH sur iService : ‘https://iservice.prv/fra/prsh/pro_ps/sujets/monesdc-rh.shtml"','2022-11-28T00:00:00','2023-07-01T00:00:00',N'Robichaud, Martin M [NC]','2022-11-10T08:33:01.543',N'Robichaud, Martin M [NC]','2022-11-27T10:59:37.227')
+ ,(98,N'RTRMF',N'Returned by RM - insufficient funding',N'Retourné par RM - financement insuffisant ',N'Please cancel the request due to insufficient funding',N'Veuillez svp annuler la demande en raison de fonds insuffisants','2023-02-01T09:00:00',NULL,N'HRSC 4.13','2022-02-01T09:00:00',NULL,NULL)
+ ,(99,N'RTRMC',N'Returned by RM - client request',N'Retourné par RM - demande du client',N'At the client''s request',N'À la demande du client','2023-02-01T09:00:00',NULL,N'HRSC 4.13','2022-02-01T09:00:00',NULL,NULL)
 ) AS [Source] ([HR_JUSTIFICATION_ID],[HR_JUSTIFICATION_CODE],[HR_JUSTIFICATION_NAME_EN],[HR_JUSTIFICATION_NAME_FR],[HR_JUSTIFICATION_DESC_EN],[HR_JUSTIFICATION_DESC_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[DATE_CREATED],[USER_UPDATED],[DATE_UPDATED])
 ON ([Target].[HR_JUSTIFICATION_ID] = [Source].[HR_JUSTIFICATION_ID])
 WHEN MATCHED AND (
@@ -146,8 +148,6 @@ WHEN MATCHED AND (
 WHEN NOT MATCHED BY TARGET THEN
  INSERT([HR_JUSTIFICATION_ID],[HR_JUSTIFICATION_CODE],[HR_JUSTIFICATION_NAME_EN],[HR_JUSTIFICATION_NAME_FR],[HR_JUSTIFICATION_DESC_EN],[HR_JUSTIFICATION_DESC_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[DATE_CREATED],[USER_UPDATED],[DATE_UPDATED])
  VALUES([Source].[HR_JUSTIFICATION_ID],[Source].[HR_JUSTIFICATION_CODE],[Source].[HR_JUSTIFICATION_NAME_EN],[Source].[HR_JUSTIFICATION_NAME_FR],[Source].[HR_JUSTIFICATION_DESC_EN],[Source].[HR_JUSTIFICATION_DESC_FR],[Source].[EFFECTIVE_DATE],[Source].[EXPIRY_DATE],[Source].[USER_CREATED],[Source].[DATE_CREATED],[Source].[USER_UPDATED],[Source].[DATE_UPDATED])
-WHEN NOT MATCHED BY SOURCE THEN 
- DELETE
 OUTPUT $action INTO @mergeOutput1701581100;
 
 DECLARE @mergeError1701581100 int,

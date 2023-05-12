@@ -10,7 +10,7 @@ function Invoke-GenerateMergeProcedure {
     )
 
     # Define the connection string
-    $connectionString = "Data Source=N35025502\SQLEXPRESS;Initial Catalog=HRSC_4124EF;Integrated Security=true"
+    $connectionString = "Data Source=N35025502\SQLEXPRESS;Initial Catalog=HRSC_413EF;Integrated Security=true"
 
     # Create a new SqlConnection object
     $connection = New-Object System.Data.SqlClient.SqlConnection($connectionString)
@@ -48,6 +48,10 @@ function Invoke-GenerateMergeProcedure {
         $paramResultsToText = New-Object System.Data.SqlClient.SqlParameter("@results_to_text", [System.Data.SqlDbType]::Bit)
         $paramResultsToText.Value = $false
         $command.Parameters.Add($paramResultsToText) | Out-Null 
+		
+		$paramDeleteIfNotMatched = New-Object System.Data.SqlClient.SqlParameter("@delete_if_not_matched", [System.Data.SqlDbType]::Bit)
+        $paramDeleteIfNotMatched.Value = $false
+        $command.Parameters.Add($paramDeleteIfNotMatched) | Out-Null 
 		
         # Execute the stored procedure and retrieve the result as XML
         $xmlResult = $command.ExecuteScalar() 		

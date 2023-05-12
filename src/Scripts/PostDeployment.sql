@@ -85,6 +85,7 @@ end
 
 
 begin
-    PRINT '4.13 Post-deployment script'
+    PRINT 'BEGIN Post-deployment script'
     :r ./"Db Changes.sql"
+    PRINT 'END Post-deployment script'
 end
