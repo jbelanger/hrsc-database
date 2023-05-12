@@ -5,20 +5,20 @@
 
 SET NOCOUNT ON
 
-DECLARE @mergeOutput661577395 TABLE ( [DMLAction] VARCHAR(6) );
+DECLARE @mergeOutput466100701 TABLE ( [DMLAction] VARCHAR(6) );
 MERGE INTO [HRSC].[CD_ACADEMIC_LEVEL] AS [Target]
 USING (VALUES
-  (1,N'SEC',N'FSWEP - Seconday School (99815)',N'PFETE - École Secondaire (99815)',NULL,NULL,'2015-03-30',NULL,N'1',NULL,'2015-03-30',NULL)
- ,(2,N'CEGEP',N'FSWEP - College (99821)',N'PFETE - Cégep (99821)',NULL,NULL,'2015-03-30',NULL,N'1',NULL,'2015-03-30',NULL)
- ,(3,N'UNIPC',N'FSWEP- University Undergraduate (99822)',N'PFETE - Université premier cycle (99822)',NULL,NULL,'2015-03-30',NULL,N'1',NULL,'2015-03-30',NULL)
- ,(4,N'UNIM',N'FSWEP - University Master (99823)',N'PFETE - Université Maîtrise (98823)',NULL,NULL,'2015-03-30',NULL,N'1',NULL,'2015-03-30',NULL)
- ,(5,N'UNID',N'FSWEP - University Doctorate (99824)',N'PFETE - Université Doctorat (99824)',NULL,NULL,'2015-03-30',NULL,N'1',NULL,'2015-03-30',NULL)
- ,(6,N'STCOL',N'Co-op/Internship - College (99825)',N'Co-op / Stage - Collège (99825)',NULL,NULL,'2015-03-30',NULL,N'1',NULL,'2015-03-30',NULL)
+  (1,N'SEC',N'FSWEP - Seconday School (99815)',N'PFETE - ?cole Secondaire (99815)',NULL,NULL,'2015-03-30',NULL,N'1',NULL,'2015-03-30',NULL)
+ ,(2,N'CEGEP',N'FSWEP - College (99821)',N'PFETE - C?gep (99821)',NULL,NULL,'2015-03-30',NULL,N'1',NULL,'2015-03-30',NULL)
+ ,(3,N'UNIPC',N'FSWEP- University Undergraduate (99822)',N'PFETE - Universit? premier cycle (99822)',NULL,NULL,'2015-03-30',NULL,N'1',NULL,'2015-03-30',NULL)
+ ,(4,N'UNIM',N'FSWEP - University Master (99823)',N'PFETE - Universit? Ma?trise (98823)',NULL,NULL,'2015-03-30',NULL,N'1',NULL,'2015-03-30',NULL)
+ ,(5,N'UNID',N'FSWEP - University Doctorate (99824)',N'PFETE - Universit? Doctorat (99824)',NULL,NULL,'2015-03-30',NULL,N'1',NULL,'2015-03-30',NULL)
+ ,(6,N'STCOL',N'Co-op/Internship - College (99825)',N'Co-op / Stage - Coll?ge (99825)',NULL,NULL,'2015-03-30',NULL,N'1',NULL,'2015-03-30',NULL)
  ,(7,N'STUPC',N'Co-op/Internship - Univ. Undrgrad (99826)',N'Co-op / Stage - Univ. premier cycle (99826)',NULL,NULL,'2015-03-30',NULL,N'1',NULL,'2015-03-30',NULL)
- ,(8,N'STUM',N'Co-op/Internship - Univ. Master (99827)',N'Co-op / Stage - Univ. Maîtrise (99827)',NULL,NULL,'2015-03-30',NULL,N'1',NULL,'2015-03-30',NULL)
+ ,(8,N'STUM',N'Co-op/Internship - Univ. Master (99827)',N'Co-op / Stage - Univ. Ma?trise (99827)',NULL,NULL,'2015-03-30',NULL,N'1',NULL,'2015-03-30',NULL)
  ,(9,N'STUD',N'Co-op/Internship - Univ. Doctorat (99828)',N'Co-op / Stage - Univ. Doctorat (99828)',NULL,NULL,'2015-03-30',NULL,N'1',NULL,'2015-03-30',NULL)
  ,(10,N'PAR',N'RAP - RAP Program (99814)',N'PAR - Programme PAR (99814)',NULL,NULL,'2015-03-30',NULL,N'1',NULL,'2015-03-30',NULL)
- ,(11,N'PEI',N'Internal Exchange Program (99820)',N'Programme d''échange interne (99820)',NULL,NULL,'2015-03-30',NULL,N'1',NULL,'2015-03-30',NULL)
+ ,(11,N'PEI',N'Internal Exchange Program (99820)',N'Programme d''?change interne (99820)',NULL,NULL,'2015-03-30',NULL,N'1',NULL,'2015-03-30',NULL)
 ) AS [Source] ([ACADEMIC_LEVEL_ID],[ACADEMIC_LEVEL_CODE],[ACADEMIC_LEVEL_NAME_EN],[ACADEMIC_LEVEL_NAME_FR],[ACADEMIC_LEVEL_DESC_EN],[ACADEMIC_LEVEL_DESC_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[USER_UPDATED],[DATE_CREATED],[DATE_UPDATED])
 ON ([Target].[ACADEMIC_LEVEL_ID] = [Source].[ACADEMIC_LEVEL_ID])
 WHEN MATCHED AND (
@@ -48,22 +48,22 @@ WHEN MATCHED AND (
 WHEN NOT MATCHED BY TARGET THEN
  INSERT([ACADEMIC_LEVEL_ID],[ACADEMIC_LEVEL_CODE],[ACADEMIC_LEVEL_NAME_EN],[ACADEMIC_LEVEL_NAME_FR],[ACADEMIC_LEVEL_DESC_EN],[ACADEMIC_LEVEL_DESC_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[USER_UPDATED],[DATE_CREATED],[DATE_UPDATED])
  VALUES([Source].[ACADEMIC_LEVEL_ID],[Source].[ACADEMIC_LEVEL_CODE],[Source].[ACADEMIC_LEVEL_NAME_EN],[Source].[ACADEMIC_LEVEL_NAME_FR],[Source].[ACADEMIC_LEVEL_DESC_EN],[Source].[ACADEMIC_LEVEL_DESC_FR],[Source].[EFFECTIVE_DATE],[Source].[EXPIRY_DATE],[Source].[USER_CREATED],[Source].[USER_UPDATED],[Source].[DATE_CREATED],[Source].[DATE_UPDATED])
-OUTPUT $action INTO @mergeOutput661577395;
+OUTPUT $action INTO @mergeOutput466100701;
 
-DECLARE @mergeError661577395 int,
-@mergeCount661577395 int,
-@mergeCountIns661577395 int,
-@mergeCountUpd661577395 int,
-@mergeCountDel661577395 int
-SELECT @mergeError661577395 = @@ERROR
-SELECT @mergeCount661577395 = COUNT(1), @mergeCountIns661577395 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd661577395 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel661577395 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput661577395
-IF @mergeError661577395 != 0
+DECLARE @mergeError466100701 int,
+@mergeCount466100701 int,
+@mergeCountIns466100701 int,
+@mergeCountUpd466100701 int,
+@mergeCountDel466100701 int
+SELECT @mergeError466100701 = @@ERROR
+SELECT @mergeCount466100701 = COUNT(1), @mergeCountIns466100701 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd466100701 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel466100701 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput466100701
+IF @mergeError466100701 != 0
  BEGIN
- PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_ACADEMIC_LEVEL]. Rows affected: ' + CAST(@mergeCount661577395 AS VARCHAR(100)); -- SQL should always return zero rows affected
+ PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_ACADEMIC_LEVEL]. Rows affected: ' + CAST(@mergeCount466100701 AS VARCHAR(100)); -- SQL should always return zero rows affected
  END
 ELSE
  BEGIN
- PRINT '[HRSC].[CD_ACADEMIC_LEVEL] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount661577395,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns661577395,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd661577395,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel661577395,0) AS VARCHAR(100)) + ')' ;
+ PRINT '[HRSC].[CD_ACADEMIC_LEVEL] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount466100701,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns466100701,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd466100701,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel466100701,0) AS VARCHAR(100)) + ')' ;
  END
 
 

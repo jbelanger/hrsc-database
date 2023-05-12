@@ -7,29 +7,29 @@ SET NOCOUNT ON
 
 SET IDENTITY_INSERT [HRSC].[CD_REASON_TYPE] ON
 
-DECLARE @mergeOutput354100302 TABLE ( [DMLAction] VARCHAR(6) );
+DECLARE @mergeOutput885578193 TABLE ( [DMLAction] VARCHAR(6) );
 MERGE INTO [HRSC].[CD_REASON_TYPE] AS [Target]
 USING (VALUES
   (1,N'N/A',N'N/A',N'N/A',N'N/A',NULL,N'SYTEM',NULL,'2016-07-12T08:36:19.260',NULL,N'NA','2016-04-15T00:00:00')
  ,(2,N'Pay Action Request form is incomplete',N'Formulaire de demande d''intervention de paye incomplet',N'Pay Action Request form is incomplete',N'Formulaire de demande d''intervention de paye incomplet',NULL,N'SYTEM',NULL,'2016-07-12T08:36:19.280',NULL,N'1','2016-04-15T00:00:00')
  ,(3,N'Wrong version of the Pay Action Request form',N'Mauvaise version du formulaire de demande d''intervention de paye (DIP)',N'Wrong version of the Pay Action Request form',N'Mauvaise version du formulaire de demande d''intervention de paye (DIP)',NULL,N'SYTEM',NULL,'2016-07-12T08:36:19.283',NULL,N'2','2016-04-15T00:00:00')
- ,(4,N'Transaction Processing Requests Received with Multiple Employees ',N'Demandes de mouvement reçues visant plus d’un employé ',N'Transaction Processing Requests Received with Multiple Employees ',N'Demandes de mouvement reçues visant plus d’un employé ',NULL,N'SYTEM',NULL,'2016-07-12T08:36:19.287',NULL,N'3','2016-04-15T00:00:00')
- ,(5,N'Incorrect E-mail/Fax/Mailbox ',N'Courriel, adresse postale ou numéro de télécopieur incorrect ',N'Incorrect E-mail/Fax/Mailbox ',N'Courriel, adresse postale ou numéro de télécopieur incorrect ',NULL,N'SYTEM',NULL,'2016-07-12T08:36:19.290',NULL,N'4','2016-04-15T00:00:00')
+ ,(4,N'Transaction Processing Requests Received with Multiple Employees ',N'Demandes de mouvement re?ues visant plus d?un employ? ',N'Transaction Processing Requests Received with Multiple Employees ',N'Demandes de mouvement re?ues visant plus d?un employ? ',NULL,N'SYTEM',NULL,'2016-07-12T08:36:19.287',NULL,N'3','2016-04-15T00:00:00')
+ ,(5,N'Incorrect E-mail/Fax/Mailbox ',N'Courriel, adresse postale ou num?ro de t?l?copieur incorrect ',N'Incorrect E-mail/Fax/Mailbox ',N'Courriel, adresse postale ou num?ro de t?l?copieur incorrect ',NULL,N'SYTEM',NULL,'2016-07-12T08:36:19.290',NULL,N'4','2016-04-15T00:00:00')
  ,(6,N'Invalid or Corrupt File Type ',N'Fichier de format invalide ou corrompu ',N'Invalid or Corrupt File Type ',N'Fichier de format invalide ou corrompu ',NULL,N'SYTEM',NULL,'2016-07-12T08:36:19.293',NULL,N'5','2016-04-15T00:00:00')
- ,(7,N'Oversized Attachment or File size ',N'Pièce jointe ou fichier de trop grande taille ',N'Oversized Attachment or File size ',N'Pièce jointe ou fichier de trop grande taille ',NULL,N'SYTEM',NULL,'2016-07-12T08:36:19.297',NULL,N'6','2016-04-15T00:00:00')
- ,(8,N'Attachment Exceeds Page Limit ',N'Pièce jointe dépassant le nombre limite de pages ',N'Attachment Exceeds Page Limit ',N'Pièce jointe dépassant le nombre limite de pages ',NULL,N'SYTEM',NULL,'2016-07-12T08:36:19.297',NULL,N'7','2016-04-15T00:00:00')
- ,(9,N'Limit of employees per request ',N'Limite d’employées par demande ',N'Limit of employees per request ',N'Limite d’employées par demande ',NULL,N'SYTEM',NULL,'2016-07-12T08:36:19.297',NULL,N'8','2016-04-15T00:00:00')
- ,(10,N'Encryption Issue ',N'Problème de chiffrement ',N'Encryption Issue ',N'Problème de chiffrement ',NULL,N'SYTEM',NULL,'2016-07-12T08:36:19.300',NULL,N'9','2016-04-15T00:00:00')
- ,(11,N'Missing Supporting Documentation ',N'Absence de document à l’appui ',N'Missing Supporting Documentation ',N'Absence de document à l’appui ',NULL,N'SYTEM',NULL,'2016-07-12T08:36:19.300',NULL,N'10','2016-04-15T00:00:00')
- ,(12,N'Double-sided Documentation ',N'Document imprimé recto verso ',N'Double-sided Documentation ',N'Document imprimé recto verso ',NULL,N'SYTEM',NULL,'2016-07-12T08:36:19.300',NULL,N'11','2016-04-15T00:00:00')
- ,(13,N'Employee is not serviced by the Pay Centre ',N'Employé non desservi par le Centre des services de paye ',N'Employee is not serviced by the Pay Centre ',N'Employé non desservi par le Centre des services de paye ',NULL,N'SYTEM',NULL,'2016-07-12T08:36:19.303',NULL,N'12','2016-04-15T00:00:00')
- ,(14,N'Trusted Source Check Failure ',N'Échec de la vérification de la source fiable ',N'Trusted Source Check Failure ',N'Échec de la vérification de la source fiable ',NULL,N'SYTEM',NULL,'2016-07-12T08:36:19.303',NULL,N'13','2016-04-15T00:00:00')
- ,(15,N'Authorized Signature Check Failure ',N'Échec de la vérification de la signature d’autorisation ',N'Authorized Signature Check Failure ',N'Échec de la vérification de la signature d’autorisation ',NULL,N'SYTEM',NULL,'2016-07-12T08:36:19.307',NULL,N'14','2016-04-15T00:00:00')
- ,(16,N'HRMS Check Failure ',N'Échec de la vérification dans le SGRH ',N'HRMS Check Failure ',N'Échec de la vérification dans le SGRH ',NULL,N'SYTEM',NULL,'2016-07-12T08:36:19.310',NULL,N'15','2016-04-15T00:00:00')
- ,(17,N'Wrong documentation ',N'Documentation erronée ',N'Wrong documentation ',N'Documentation erronée ',NULL,N'SYTEM',NULL,'2016-07-12T08:36:19.310',NULL,N'16','2016-04-15T00:00:00')
- ,(18,N'Request Type or Subtype incorrect or missing',N'Type ou sous-type erroné ou manquant',N'Request Type or Subtype incorrect or missing',N'Type ou sous-type erroné ou manquant',NULL,N'SYTEM',NULL,'2016-07-12T08:36:19.310',NULL,N'17','2016-04-15T00:00:00')
+ ,(7,N'Oversized Attachment or File size ',N'Pi?ce jointe ou fichier de trop grande taille ',N'Oversized Attachment or File size ',N'Pi?ce jointe ou fichier de trop grande taille ',NULL,N'SYTEM',NULL,'2016-07-12T08:36:19.297',NULL,N'6','2016-04-15T00:00:00')
+ ,(8,N'Attachment Exceeds Page Limit ',N'Pi?ce jointe d?passant le nombre limite de pages ',N'Attachment Exceeds Page Limit ',N'Pi?ce jointe d?passant le nombre limite de pages ',NULL,N'SYTEM',NULL,'2016-07-12T08:36:19.297',NULL,N'7','2016-04-15T00:00:00')
+ ,(9,N'Limit of employees per request ',N'Limite d?employ?es par demande ',N'Limit of employees per request ',N'Limite d?employ?es par demande ',NULL,N'SYTEM',NULL,'2016-07-12T08:36:19.297',NULL,N'8','2016-04-15T00:00:00')
+ ,(10,N'Encryption Issue ',N'Probl?me de chiffrement ',N'Encryption Issue ',N'Probl?me de chiffrement ',NULL,N'SYTEM',NULL,'2016-07-12T08:36:19.300',NULL,N'9','2016-04-15T00:00:00')
+ ,(11,N'Missing Supporting Documentation ',N'Absence de document ? l?appui ',N'Missing Supporting Documentation ',N'Absence de document ? l?appui ',NULL,N'SYTEM',NULL,'2016-07-12T08:36:19.300',NULL,N'10','2016-04-15T00:00:00')
+ ,(12,N'Double-sided Documentation ',N'Document imprim? recto verso ',N'Double-sided Documentation ',N'Document imprim? recto verso ',NULL,N'SYTEM',NULL,'2016-07-12T08:36:19.300',NULL,N'11','2016-04-15T00:00:00')
+ ,(13,N'Employee is not serviced by the Pay Centre ',N'Employ? non desservi par le Centre des services de paye ',N'Employee is not serviced by the Pay Centre ',N'Employ? non desservi par le Centre des services de paye ',NULL,N'SYTEM',NULL,'2016-07-12T08:36:19.303',NULL,N'12','2016-04-15T00:00:00')
+ ,(14,N'Trusted Source Check Failure ',N'?chec de la v?rification de la source fiable ',N'Trusted Source Check Failure ',N'?chec de la v?rification de la source fiable ',NULL,N'SYTEM',NULL,'2016-07-12T08:36:19.303',NULL,N'13','2016-04-15T00:00:00')
+ ,(15,N'Authorized Signature Check Failure ',N'?chec de la v?rification de la signature d?autorisation ',N'Authorized Signature Check Failure ',N'?chec de la v?rification de la signature d?autorisation ',NULL,N'SYTEM',NULL,'2016-07-12T08:36:19.307',NULL,N'14','2016-04-15T00:00:00')
+ ,(16,N'HRMS Check Failure ',N'?chec de la v?rification dans le SGRH ',N'HRMS Check Failure ',N'?chec de la v?rification dans le SGRH ',NULL,N'SYTEM',NULL,'2016-07-12T08:36:19.310',NULL,N'15','2016-04-15T00:00:00')
+ ,(17,N'Wrong documentation ',N'Documentation erron?e ',N'Wrong documentation ',N'Documentation erron?e ',NULL,N'SYTEM',NULL,'2016-07-12T08:36:19.310',NULL,N'16','2016-04-15T00:00:00')
+ ,(18,N'Request Type or Subtype incorrect or missing',N'Type ou sous-type erron? ou manquant',N'Request Type or Subtype incorrect or missing',N'Type ou sous-type erron? ou manquant',NULL,N'SYTEM',NULL,'2016-07-12T08:36:19.310',NULL,N'17','2016-04-15T00:00:00')
  ,(19,N'Documents required by the Pay Center for this action',N'Documents requis par le Centre de paye pour cette action',N'Documents required by the Pay Center for this action',N'Documents requis par le Centre de paye pour cette action',NULL,N'yves.robichaud',N'michel.tardif','2017-07-06T12:49:13.493','2017-07-14T09:49:11.077',N'18','2017-07-06T00:00:00')
- ,(20,N'Documents not required by the Pay Center for this action',N'Aucun document requis pour l’action du Centre de paye ',N'Documents not required by the Pay Center for this action',N'Aucun document requis pour l’action du Centre de paye ',NULL,N'yves.robichaud',N'michel.tardif','2017-07-06T12:49:38.910','2017-07-14T09:50:00.437',N'19','2017-07-06T00:00:00')
+ ,(20,N'Documents not required by the Pay Center for this action',N'Aucun document requis pour l?action du Centre de paye ',N'Documents not required by the Pay Center for this action',N'Aucun document requis pour l?action du Centre de paye ',NULL,N'yves.robichaud',N'michel.tardif','2017-07-06T12:49:38.910','2017-07-14T09:50:00.437',N'19','2017-07-06T00:00:00')
 ) AS [Source] ([REASON_TYPE_ID],[REASON_TYPE_NAME_EN],[REASON_TYPE_NAME_FR],[REASON_TYPE_DESC_EN],[REASON_TYPE_DESC_FR],[EXPIRY_DATE],[USER_CREATED],[USER_UPDATED],[DATE_CREATED],[DATE_UPDATED],[REASON_TYPE_CODE],[EFFECTIVE_DATE])
 ON ([Target].[REASON_TYPE_ID] = [Source].[REASON_TYPE_ID])
 WHEN MATCHED AND (
@@ -59,22 +59,22 @@ WHEN MATCHED AND (
 WHEN NOT MATCHED BY TARGET THEN
  INSERT([REASON_TYPE_ID],[REASON_TYPE_NAME_EN],[REASON_TYPE_NAME_FR],[REASON_TYPE_DESC_EN],[REASON_TYPE_DESC_FR],[EXPIRY_DATE],[USER_CREATED],[USER_UPDATED],[DATE_CREATED],[DATE_UPDATED],[REASON_TYPE_CODE],[EFFECTIVE_DATE])
  VALUES([Source].[REASON_TYPE_ID],[Source].[REASON_TYPE_NAME_EN],[Source].[REASON_TYPE_NAME_FR],[Source].[REASON_TYPE_DESC_EN],[Source].[REASON_TYPE_DESC_FR],[Source].[EXPIRY_DATE],[Source].[USER_CREATED],[Source].[USER_UPDATED],[Source].[DATE_CREATED],[Source].[DATE_UPDATED],[Source].[REASON_TYPE_CODE],[Source].[EFFECTIVE_DATE])
-OUTPUT $action INTO @mergeOutput354100302;
+OUTPUT $action INTO @mergeOutput885578193;
 
-DECLARE @mergeError354100302 int,
-@mergeCount354100302 int,
-@mergeCountIns354100302 int,
-@mergeCountUpd354100302 int,
-@mergeCountDel354100302 int
-SELECT @mergeError354100302 = @@ERROR
-SELECT @mergeCount354100302 = COUNT(1), @mergeCountIns354100302 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd354100302 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel354100302 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput354100302
-IF @mergeError354100302 != 0
+DECLARE @mergeError885578193 int,
+@mergeCount885578193 int,
+@mergeCountIns885578193 int,
+@mergeCountUpd885578193 int,
+@mergeCountDel885578193 int
+SELECT @mergeError885578193 = @@ERROR
+SELECT @mergeCount885578193 = COUNT(1), @mergeCountIns885578193 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd885578193 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel885578193 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput885578193
+IF @mergeError885578193 != 0
  BEGIN
- PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_REASON_TYPE]. Rows affected: ' + CAST(@mergeCount354100302 AS VARCHAR(100)); -- SQL should always return zero rows affected
+ PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_REASON_TYPE]. Rows affected: ' + CAST(@mergeCount885578193 AS VARCHAR(100)); -- SQL should always return zero rows affected
  END
 ELSE
  BEGIN
- PRINT '[HRSC].[CD_REASON_TYPE] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount354100302,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns354100302,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd354100302,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel354100302,0) AS VARCHAR(100)) + ')' ;
+ PRINT '[HRSC].[CD_REASON_TYPE] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount885578193,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns885578193,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd885578193,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel885578193,0) AS VARCHAR(100)) + ')' ;
  END
 
 

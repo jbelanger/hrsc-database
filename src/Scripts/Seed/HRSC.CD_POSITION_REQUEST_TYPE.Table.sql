@@ -7,23 +7,23 @@ SET NOCOUNT ON
 
 SET IDENTITY_INSERT [HRSC].[CD_POSITION_REQUEST_TYPE] ON
 
-DECLARE @mergeOutput114099447 TABLE ( [DMLAction] VARCHAR(6) );
+DECLARE @mergeOutput1861581670 TABLE ( [DMLAction] VARCHAR(6) );
 MERGE INTO [HRSC].[CD_POSITION_REQUEST_TYPE] AS [Target]
 USING (VALUES
   (1,N'INIT',N'Initial appointment',N'Nomination initiale',N'Initial appointment',N'Nomination initiale','2012-01-30T00:00:00',NULL,N'EA','2013-01-30T00:00:00',NULL,NULL)
  ,(2,N'EXTEN',N'Extension',N'Prolongation',N'Extension',N'Prolongation','2012-01-30T00:00:00',NULL,N'EA','2013-01-30T00:00:00',NULL,NULL)
- ,(3,N'REEMP',N'Re-employment',N'Réemploi',N'Re-employment',N'Réemploi','2013-01-31T00:00:00',NULL,N'EA','2013-01-31T00:00:00',NULL,NULL)
- ,(10,N'INTAD',N'Internal Advertised',N'Interne annoncé',N'Internal Advertised',N'Interne annoncé','2013-02-19T14:05:28.247',NULL,N'HRDC-DRHC\oksana.zhukova','2013-02-19T14:05:28.247',NULL,NULL)
- ,(11,N'EXTAD',N'External Advertised',N'Externe annoncé',N'External Advertised',N'Externe annoncé','2013-02-19T14:07:02.460',NULL,N'HRDC-DRHC\oksana.zhukova','2013-02-19T14:07:02.460',NULL,NULL)
- ,(12,N'INNAD',N'Internal Non-Advertised',N'Interne non-annoncé',N'Internal Non-Advertised',N'Interne non-annoncé','2017-07-14T07:42:44.093',NULL,N'paradis.tony','2017-07-14T07:42:44.093',NULL,NULL)
- ,(13,N'EXNAD',N'External Non-Advertised',N'Externe non-annoncé',N'External Non-Advertised',N'Externe non-annoncé','2017-07-14T07:42:44.103',NULL,N'paradis.tony','2017-07-14T07:42:44.103',NULL,NULL)
- ,(14,N'ACIN',N'Acting Non-advertised',N'Intérimaire non-annoncé',N'Acting Non-advertised',N'Intérimaire non-annoncé','2020-01-17T09:12:09.107',NULL,N'HRSC 4.9','2020-01-17T09:12:09.107',NULL,NULL)
- ,(15,N'ACIN',N'Acting Non-advertised',N'Intérimaire non-annoncé',N'Acting Non-advertised',N'Intérimaire non-annoncé','2020-01-17T09:12:09.107',NULL,N'HRSC 4.9','2020-01-17T09:12:09.107',NULL,NULL)
- ,(16,N'2',N'Deployment (Advertised)',N'Mutation (Annoncé)',N'Deployment (Advertised)',N'Mutation (Annoncé)','2020-01-17T09:14:59.020','2020-01-17T09:14:59.020',N'ISL_INSERT','2020-01-17T09:14:59.020',NULL,NULL)
- ,(17,N'3',N'Acting - More than 4 Months (A',N'Intérimaire – plus de 4 mois (',N'Acting - More than 4 Months (Advertised)',N'Intérimaire – plus de 4 mois (annoncé)','2020-01-17T09:14:59.020','2020-01-17T09:14:59.020',N'ISL_INSERT','2020-01-17T09:14:59.020',NULL,NULL)
- ,(18,N'21',N'Other Dept Pool (Int Advertise',N'Bassin hors du ministière (int',N'Other Dept Pool (Int Advertised)',N'Bassin hors du ministière (interne)','2020-01-17T09:14:59.020','2020-01-17T09:14:59.020',N'ISL_INSERT','2020-01-17T09:14:59.020',NULL,NULL)
- ,(19,N'22',N'Other Dept Pool (Ext Advertise',N'Bassin hors du ministière (ext',N'Other Dept Pool (Ext Advertised)',N'Bassin hors du ministière (externe)','2020-01-17T09:14:59.020','2020-01-17T09:14:59.020',N'ISL_INSERT','2020-01-17T09:14:59.020',NULL,NULL)
- ,(20,N'EXL4M',N'Extension of an appointment of less than 4 months',N'Prolongation d’une nomination de moins de 4 mois',N'Extension of an appointment of less than 4 months',N'Prolongation d’une nomination de moins de 4 mois','2021-10-30T06:51:07.537',NULL,N'system','2021-10-30T06:51:07.537',NULL,NULL)
+ ,(3,N'REEMP',N'Re-employment',N'R?emploi',N'Re-employment',N'R?emploi','2013-01-31T00:00:00',NULL,N'EA','2013-01-31T00:00:00',NULL,NULL)
+ ,(10,N'INTAD',N'Internal Advertised',N'Interne annonc?',N'Internal Advertised',N'Interne annonc?','2013-02-19T14:05:28.247',NULL,N'HRDC-DRHC\oksana.zhukova','2013-02-19T14:05:28.247',NULL,NULL)
+ ,(11,N'EXTAD',N'External Advertised',N'Externe annonc?',N'External Advertised',N'Externe annonc?','2013-02-19T14:07:02.460',NULL,N'HRDC-DRHC\oksana.zhukova','2013-02-19T14:07:02.460',NULL,NULL)
+ ,(12,N'INNAD',N'Internal Non-Advertised',N'Interne non-annonc?',N'Internal Non-Advertised',N'Interne non-annonc?','2017-07-14T07:42:44.093',NULL,N'paradis.tony','2017-07-14T07:42:44.093',NULL,NULL)
+ ,(13,N'EXNAD',N'External Non-Advertised',N'Externe non-annonc?',N'External Non-Advertised',N'Externe non-annonc?','2017-07-14T07:42:44.103',NULL,N'paradis.tony','2017-07-14T07:42:44.103',NULL,NULL)
+ ,(14,N'ACIN',N'Acting Non-advertised',N'Int?rimaire non-annonc?',N'Acting Non-advertised',N'Int?rimaire non-annonc?','2020-01-17T09:12:09.107',NULL,N'HRSC 4.9','2020-01-17T09:12:09.107',NULL,NULL)
+ ,(15,N'ACIN',N'Acting Non-advertised',N'Int?rimaire non-annonc?',N'Acting Non-advertised',N'Int?rimaire non-annonc?','2020-01-17T09:12:09.107',NULL,N'HRSC 4.9','2020-01-17T09:12:09.107',NULL,NULL)
+ ,(16,N'2',N'Deployment (Advertised)',N'Mutation (Annonc?)',N'Deployment (Advertised)',N'Mutation (Annonc?)','2020-01-17T09:14:59.020','2020-01-17T09:14:59.020',N'ISL_INSERT','2020-01-17T09:14:59.020',NULL,NULL)
+ ,(17,N'3',N'Acting - More than 4 Months (A',N'Int?rimaire ? plus de 4 mois (',N'Acting - More than 4 Months (Advertised)',N'Int?rimaire ? plus de 4 mois (annonc?)','2020-01-17T09:14:59.020','2020-01-17T09:14:59.020',N'ISL_INSERT','2020-01-17T09:14:59.020',NULL,NULL)
+ ,(18,N'21',N'Other Dept Pool (Int Advertise',N'Bassin hors du ministi?re (int',N'Other Dept Pool (Int Advertised)',N'Bassin hors du ministi?re (interne)','2020-01-17T09:14:59.020','2020-01-17T09:14:59.020',N'ISL_INSERT','2020-01-17T09:14:59.020',NULL,NULL)
+ ,(19,N'22',N'Other Dept Pool (Ext Advertise',N'Bassin hors du ministi?re (ext',N'Other Dept Pool (Ext Advertised)',N'Bassin hors du ministi?re (externe)','2020-01-17T09:14:59.020','2020-01-17T09:14:59.020',N'ISL_INSERT','2020-01-17T09:14:59.020',NULL,NULL)
+ ,(20,N'EXL4M',N'Extension of an appointment of less than 4 months',N'Prolongation d?une nomination de moins de 4 mois',N'Extension of an appointment of less than 4 months',N'Prolongation d?une nomination de moins de 4 mois','2021-10-30T06:51:07.537',NULL,N'system','2021-10-30T06:51:07.537',NULL,NULL)
 ) AS [Source] ([POSITION_REQUEST_TYPE_ID],[POSITION_REQUEST_TYPE_CODE],[POSITION_REQUEST_TYPE_NAME_EN],[POSITION_REQUEST_TYPE_NAME_FR],[POSITION_REQUEST_TYPE_DESC_EN],[POSITION_REQUEST_TYPE_DESC_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[DATE_CREATED],[USER_UPDATED],[DATE_UPDATED])
 ON ([Target].[POSITION_REQUEST_TYPE_ID] = [Source].[POSITION_REQUEST_TYPE_ID])
 WHEN MATCHED AND (
@@ -53,22 +53,22 @@ WHEN MATCHED AND (
 WHEN NOT MATCHED BY TARGET THEN
  INSERT([POSITION_REQUEST_TYPE_ID],[POSITION_REQUEST_TYPE_CODE],[POSITION_REQUEST_TYPE_NAME_EN],[POSITION_REQUEST_TYPE_NAME_FR],[POSITION_REQUEST_TYPE_DESC_EN],[POSITION_REQUEST_TYPE_DESC_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[DATE_CREATED],[USER_UPDATED],[DATE_UPDATED])
  VALUES([Source].[POSITION_REQUEST_TYPE_ID],[Source].[POSITION_REQUEST_TYPE_CODE],[Source].[POSITION_REQUEST_TYPE_NAME_EN],[Source].[POSITION_REQUEST_TYPE_NAME_FR],[Source].[POSITION_REQUEST_TYPE_DESC_EN],[Source].[POSITION_REQUEST_TYPE_DESC_FR],[Source].[EFFECTIVE_DATE],[Source].[EXPIRY_DATE],[Source].[USER_CREATED],[Source].[DATE_CREATED],[Source].[USER_UPDATED],[Source].[DATE_UPDATED])
-OUTPUT $action INTO @mergeOutput114099447;
+OUTPUT $action INTO @mergeOutput1861581670;
 
-DECLARE @mergeError114099447 int,
-@mergeCount114099447 int,
-@mergeCountIns114099447 int,
-@mergeCountUpd114099447 int,
-@mergeCountDel114099447 int
-SELECT @mergeError114099447 = @@ERROR
-SELECT @mergeCount114099447 = COUNT(1), @mergeCountIns114099447 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd114099447 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel114099447 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput114099447
-IF @mergeError114099447 != 0
+DECLARE @mergeError1861581670 int,
+@mergeCount1861581670 int,
+@mergeCountIns1861581670 int,
+@mergeCountUpd1861581670 int,
+@mergeCountDel1861581670 int
+SELECT @mergeError1861581670 = @@ERROR
+SELECT @mergeCount1861581670 = COUNT(1), @mergeCountIns1861581670 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd1861581670 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel1861581670 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput1861581670
+IF @mergeError1861581670 != 0
  BEGIN
- PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_POSITION_REQUEST_TYPE]. Rows affected: ' + CAST(@mergeCount114099447 AS VARCHAR(100)); -- SQL should always return zero rows affected
+ PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_POSITION_REQUEST_TYPE]. Rows affected: ' + CAST(@mergeCount1861581670 AS VARCHAR(100)); -- SQL should always return zero rows affected
  END
 ELSE
  BEGIN
- PRINT '[HRSC].[CD_POSITION_REQUEST_TYPE] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount114099447,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns114099447,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd114099447,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel114099447,0) AS VARCHAR(100)) + ')' ;
+ PRINT '[HRSC].[CD_POSITION_REQUEST_TYPE] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount1861581670,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns1861581670,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd1861581670,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel1861581670,0) AS VARCHAR(100)) + ')' ;
  END
 
 

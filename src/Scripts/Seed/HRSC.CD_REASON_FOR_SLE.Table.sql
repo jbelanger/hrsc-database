@@ -7,17 +7,17 @@ SET NOCOUNT ON
 
 SET IDENTITY_INSERT [HRSC].[CD_REASON_FOR_SLE] ON
 
-DECLARE @mergeOutput306100131 TABLE ( [DMLAction] VARCHAR(6) );
+DECLARE @mergeOutput693577509 TABLE ( [DMLAction] VARCHAR(6) );
 MERGE INTO [HRSC].[CD_REASON_FOR_SLE] AS [Target]
 USING (VALUES
-  (1,N'REA01',N'Bilingual Imperative staffing action',N'Action de dotation bilingue impérative',N'Bilingual Imperative staffing action',N'Action de dotation bilingue impérative','2017-07-14T07:42:44.417',NULL,N'tony.paradis','2017-07-14T07:42:44.417',NULL,NULL)
- ,(2,N'REA02',N'Language training (Full-Time from the Canada School of Public Service)',N'Formation linguistique à temps plein offerte par l’École de la fonction publique du Canada',N'Language training (Full-Time from the Canada School of Public Service)',N'Formation linguistique à temps plein offerte par l’École de la fonction publique du Canada','2017-07-14T07:42:44.417',NULL,N'tony.paradis','2017-07-14T07:42:44.417',NULL,NULL)
- ,(3,N'REA03',N'Language training (Full-Time from a departmental program)',N'Formation linguistique à temps plein offerte par les ministères',N'Language training (Full-Time from a departmental program)',N'Formation linguistique à temps plein offerte par les ministères','2017-07-14T07:42:44.417',NULL,N'tony.paradis','2017-07-14T07:42:44.417',NULL,NULL)
- ,(4,N'REA04',N'Language training (Part-Time from the Canada School of Public Service)',N'Formation linguistique à temps partiel dispensée par l’École de la fonction publique du Canada',N'Language training (Part-Time from the Canada School of Public Service)',N'Formation linguistique à temps partiel dispensée par l’École de la fonction publique du Canada','2017-07-14T07:42:44.417',NULL,N'tony.paradis','2017-07-14T07:42:44.417',NULL,NULL)
- ,(5,N'REA05',N'Language training (Part-Time from departmental program)',N'Formation linguistique à temps partiel offerte par les ministères',N'Language training (Part-Time from departmental program)',N'Formation linguistique à temps partiel offerte par les ministères','2017-07-14T07:42:44.417',NULL,N'tony.paradis','2017-07-14T07:42:44.417',NULL,NULL)
+  (1,N'REA01',N'Bilingual Imperative staffing action',N'Action de dotation bilingue imp?rative',N'Bilingual Imperative staffing action',N'Action de dotation bilingue imp?rative','2017-07-14T07:42:44.417',NULL,N'tony.paradis','2017-07-14T07:42:44.417',NULL,NULL)
+ ,(2,N'REA02',N'Language training (Full-Time from the Canada School of Public Service)',N'Formation linguistique ? temps plein offerte par l??cole de la fonction publique du Canada',N'Language training (Full-Time from the Canada School of Public Service)',N'Formation linguistique ? temps plein offerte par l??cole de la fonction publique du Canada','2017-07-14T07:42:44.417',NULL,N'tony.paradis','2017-07-14T07:42:44.417',NULL,NULL)
+ ,(3,N'REA03',N'Language training (Full-Time from a departmental program)',N'Formation linguistique ? temps plein offerte par les minist?res',N'Language training (Full-Time from a departmental program)',N'Formation linguistique ? temps plein offerte par les minist?res','2017-07-14T07:42:44.417',NULL,N'tony.paradis','2017-07-14T07:42:44.417',NULL,NULL)
+ ,(4,N'REA04',N'Language training (Part-Time from the Canada School of Public Service)',N'Formation linguistique ? temps partiel dispens?e par l??cole de la fonction publique du Canada',N'Language training (Part-Time from the Canada School of Public Service)',N'Formation linguistique ? temps partiel dispens?e par l??cole de la fonction publique du Canada','2017-07-14T07:42:44.417',NULL,N'tony.paradis','2017-07-14T07:42:44.417',NULL,NULL)
+ ,(5,N'REA05',N'Language training (Part-Time from departmental program)',N'Formation linguistique ? temps partiel offerte par les minist?res',N'Language training (Part-Time from departmental program)',N'Formation linguistique ? temps partiel offerte par les minist?res','2017-07-14T07:42:44.417',NULL,N'tony.paradis','2017-07-14T07:42:44.417',NULL,NULL)
  ,(6,N'REA06',N'Bilingualism bonus',N'Prime au bilinguisme',N'Bilingualism bonus',N'Prime au bilinguisme','2017-07-14T07:42:44.417',NULL,N'tony.paradis','2017-07-14T07:42:44.417',NULL,NULL)
- ,(7,N'REA07',N'Bilingual non-Imperative staffing action',N'Action de dotation bilingue non-impérative',N'Bilingual non-Imperative staffing action',N'Action de dotation bilingue non-impérative','2017-07-14T07:42:44.417',NULL,N'tony.paradis','2017-07-14T07:42:44.417',NULL,NULL)
- ,(8,N'REA08',N'Re-identification',N'Réidentification',N'Re-identification',N'Réidentification','2017-07-14T07:42:44.417',NULL,N'tony.paradis','2017-07-14T07:42:44.417',NULL,NULL)
+ ,(7,N'REA07',N'Bilingual non-Imperative staffing action',N'Action de dotation bilingue non-imp?rative',N'Bilingual non-Imperative staffing action',N'Action de dotation bilingue non-imp?rative','2017-07-14T07:42:44.417',NULL,N'tony.paradis','2017-07-14T07:42:44.417',NULL,NULL)
+ ,(8,N'REA08',N'Re-identification',N'R?identification',N'Re-identification',N'R?identification','2017-07-14T07:42:44.417',NULL,N'tony.paradis','2017-07-14T07:42:44.417',NULL,NULL)
  ,(9,N'REA09',N'Other',N'Autre',N'Other',N'Autre','2017-07-14T07:42:44.417',NULL,N'tony.paradis','2017-07-14T07:42:44.417',NULL,NULL)
  ,(10,N'REA10',N'COVID-19 or Essential Service',N'COVID-19 ou Service essentiel',N'COVID-19 or Essential Service',N'COVID-19 ou Service essentiel',NULL,'2022-10-18T13:45:44.663',N'HRSC_DAD','2020-10-20T13:20:33.347',NULL,NULL)
 ) AS [Source] ([REASON_FOR_SLE_ID],[REASON_FOR_SLE_CODE],[REASON_FOR_SLE_NAME_EN],[REASON_FOR_SLE_NAME_FR],[REASON_FOR_SLE_DESC_EN],[REASON_FOR_SLE_DESC_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[DATE_CREATED],[USER_UPDATED],[DATE_UPDATED])
@@ -49,22 +49,22 @@ WHEN MATCHED AND (
 WHEN NOT MATCHED BY TARGET THEN
  INSERT([REASON_FOR_SLE_ID],[REASON_FOR_SLE_CODE],[REASON_FOR_SLE_NAME_EN],[REASON_FOR_SLE_NAME_FR],[REASON_FOR_SLE_DESC_EN],[REASON_FOR_SLE_DESC_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[DATE_CREATED],[USER_UPDATED],[DATE_UPDATED])
  VALUES([Source].[REASON_FOR_SLE_ID],[Source].[REASON_FOR_SLE_CODE],[Source].[REASON_FOR_SLE_NAME_EN],[Source].[REASON_FOR_SLE_NAME_FR],[Source].[REASON_FOR_SLE_DESC_EN],[Source].[REASON_FOR_SLE_DESC_FR],[Source].[EFFECTIVE_DATE],[Source].[EXPIRY_DATE],[Source].[USER_CREATED],[Source].[DATE_CREATED],[Source].[USER_UPDATED],[Source].[DATE_UPDATED])
-OUTPUT $action INTO @mergeOutput306100131;
+OUTPUT $action INTO @mergeOutput693577509;
 
-DECLARE @mergeError306100131 int,
-@mergeCount306100131 int,
-@mergeCountIns306100131 int,
-@mergeCountUpd306100131 int,
-@mergeCountDel306100131 int
-SELECT @mergeError306100131 = @@ERROR
-SELECT @mergeCount306100131 = COUNT(1), @mergeCountIns306100131 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd306100131 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel306100131 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput306100131
-IF @mergeError306100131 != 0
+DECLARE @mergeError693577509 int,
+@mergeCount693577509 int,
+@mergeCountIns693577509 int,
+@mergeCountUpd693577509 int,
+@mergeCountDel693577509 int
+SELECT @mergeError693577509 = @@ERROR
+SELECT @mergeCount693577509 = COUNT(1), @mergeCountIns693577509 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd693577509 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel693577509 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput693577509
+IF @mergeError693577509 != 0
  BEGIN
- PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_REASON_FOR_SLE]. Rows affected: ' + CAST(@mergeCount306100131 AS VARCHAR(100)); -- SQL should always return zero rows affected
+ PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_REASON_FOR_SLE]. Rows affected: ' + CAST(@mergeCount693577509 AS VARCHAR(100)); -- SQL should always return zero rows affected
  END
 ELSE
  BEGIN
- PRINT '[HRSC].[CD_REASON_FOR_SLE] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount306100131,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns306100131,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd306100131,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel306100131,0) AS VARCHAR(100)) + ')' ;
+ PRINT '[HRSC].[CD_REASON_FOR_SLE] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount693577509,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns693577509,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd693577509,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel693577509,0) AS VARCHAR(100)) + ')' ;
  END
 
 

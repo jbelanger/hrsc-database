@@ -7,34 +7,34 @@ SET NOCOUNT ON
 
 SET IDENTITY_INSERT [HRSC].[CD_COI_QUESTION] ON
 
-DECLARE @mergeOutput1566628624 TABLE ( [DMLAction] VARCHAR(6) );
+DECLARE @mergeOutput302624121 TABLE ( [DMLAction] VARCHAR(6) );
 MERGE INTO [HRSC].[CD_COI_QUESTION] AS [Target]
 USING (VALUES
-  (1,5,N'Q1AL',2,N'What is the nature of your current public service duties within your organization?',N'Quelle est la nature de vos fonctions officielles au sein de la fonction publique fédérale?','2016-11-04T08:03:55.717',NULL,N'System',NULL,'2016-11-04T08:03:55.717',NULL)
+  (1,5,N'Q1AL',2,N'What is the nature of your current public service duties within your organization?',N'Quelle est la nature de vos fonctions officielles au sein de la fonction publique f?d?rale?','2016-11-04T08:03:55.717',NULL,N'System',NULL,'2016-11-04T08:03:55.717',NULL)
  ,(2,5,N'Q2AL',2,N'What is the nature of the asset, liability or trust?',N'Quelle est la nature de vos actifs, passifs?','2016-11-04T08:03:55.717',NULL,N'System',NULL,'2016-11-04T08:03:55.717',NULL)
  ,(3,5,N'Q3AL',2,N'Under what circumstances did you acquire this asset, liability, or trust?',N'Dans quelles circonstances avez-vous acquis ces actifs, ou passifs?','2016-11-04T08:03:55.717',NULL,N'System',NULL,'2016-11-04T08:03:55.717',NULL)
- ,(4,1,N'Q1OEA',2,N'What is the nature of your current public service duties within your organization?',N'Quelle est la nature de vos fonctions officielles au sein de la fonction publique fédérale?','2016-11-04T08:03:55.717',NULL,N'System',NULL,'2016-11-04T08:03:55.717',NULL)
- ,(5,1,N'Q2OEA',2,N'What is the nature of the outside activity?',N'Quelle est la nature de vos activités extérieurs?','2016-11-04T08:03:55.717',NULL,N'System',NULL,'2016-11-04T08:03:55.717',NULL)
- ,(6,1,N'Q3OEA',2,N'What are your responsibilities in your outside employment or activity?',N'Quelles sont vos responsabilités dans vos activités extérieurs?','2016-11-04T08:03:55.717',NULL,N'System',NULL,'2016-11-04T08:03:55.717',NULL)
- ,(7,2,N'Q1PA',2,N'What is the nature of your current public service duties within your organizational context?',N'Quelle est la nature de vos fonctions officielles au sein de la fonction publique fédérale?','2016-11-04T08:03:55.717',NULL,N'System',NULL,'2016-11-04T08:03:55.717',NULL)
- ,(8,2,N'Q2PA',2,N'What is the nature of the political activity?',N'Quelle est la nature de vos activités politiques?','2016-11-04T08:03:55.717',NULL,N'System',NULL,'2016-11-04T08:03:55.717',NULL)
- ,(9,2,N'Q3PA',2,N'What will be your personal visibility during this political activity?',N'Quel sera votre degrés de visibilité au sein de vos activités politiques?','2016-11-04T08:03:55.717',NULL,N'System',NULL,'2016-11-04T08:03:55.717',NULL)
- ,(10,3,N'Q1NPA',2,N'What is the nature of your current public service duties within your organization?',N'Quelle est la nature de vos fonctions officielles au sein de la fonction publique fédérale?','2016-11-04T08:03:55.717',NULL,N'System',NULL,'2016-11-04T08:03:55.717',NULL)
- ,(11,3,N'Q2NPA',2,N'What is the nature of the non-partisan activity in connection with elections?',N'Quelle est la nature de l’activité non-partisane dans le cadre des élections?','2016-11-04T08:03:55.717',NULL,N'System',NULL,'2016-11-04T08:03:55.717',NULL)
- ,(12,3,N'Q3NPA',2,N'What will be your personal visibility during this non-partisan activity in connection with elections?',N'Quel sera votre degrés de visibilité dans le cadre des élections?','2016-11-04T08:03:55.717',NULL,N'System',NULL,'2016-11-04T08:03:55.717',NULL)
- ,(13,4,N'Q1GHO',2,N'What is the value of the gift, hospitality, or other benefit?',N'Quelle est la valeur du don, d''hospitalité ou tout autre avantage?','2016-11-04T08:03:55.717',NULL,N'System',NULL,'2016-11-04T08:03:55.717',NULL)
- ,(14,4,N'Q2GHO',2,N'Under what circumstances did you receive the gift, hospitality or other benefit?',N'Dans quelles circonstances avez-vous reçu le don, l''hospitalité ou tout autre avantage?','2016-11-04T08:03:55.717',NULL,N'System',NULL,'2016-11-04T08:03:55.717',NULL)
- ,(15,4,N'Q3GHO',2,N'What is the nature of the event in which you received the gift, hospitality or other benefit?',N'Quelle est la nature de l''événement dans lequel vous avez reçu le don, d''hospitalité ou tout autre avantage?','2016-11-04T08:03:55.717',NULL,N'System',NULL,'2016-11-04T08:03:55.717',NULL)
+ ,(4,1,N'Q1OEA',2,N'What is the nature of your current public service duties within your organization?',N'Quelle est la nature de vos fonctions officielles au sein de la fonction publique f?d?rale?','2016-11-04T08:03:55.717',NULL,N'System',NULL,'2016-11-04T08:03:55.717',NULL)
+ ,(5,1,N'Q2OEA',2,N'What is the nature of the outside activity?',N'Quelle est la nature de vos activit?s ext?rieurs?','2016-11-04T08:03:55.717',NULL,N'System',NULL,'2016-11-04T08:03:55.717',NULL)
+ ,(6,1,N'Q3OEA',2,N'What are your responsibilities in your outside employment or activity?',N'Quelles sont vos responsabilit?s dans vos activit?s ext?rieurs?','2016-11-04T08:03:55.717',NULL,N'System',NULL,'2016-11-04T08:03:55.717',NULL)
+ ,(7,2,N'Q1PA',2,N'What is the nature of your current public service duties within your organizational context?',N'Quelle est la nature de vos fonctions officielles au sein de la fonction publique f?d?rale?','2016-11-04T08:03:55.717',NULL,N'System',NULL,'2016-11-04T08:03:55.717',NULL)
+ ,(8,2,N'Q2PA',2,N'What is the nature of the political activity?',N'Quelle est la nature de vos activit?s politiques?','2016-11-04T08:03:55.717',NULL,N'System',NULL,'2016-11-04T08:03:55.717',NULL)
+ ,(9,2,N'Q3PA',2,N'What will be your personal visibility during this political activity?',N'Quel sera votre degr?s de visibilit? au sein de vos activit?s politiques?','2016-11-04T08:03:55.717',NULL,N'System',NULL,'2016-11-04T08:03:55.717',NULL)
+ ,(10,3,N'Q1NPA',2,N'What is the nature of your current public service duties within your organization?',N'Quelle est la nature de vos fonctions officielles au sein de la fonction publique f?d?rale?','2016-11-04T08:03:55.717',NULL,N'System',NULL,'2016-11-04T08:03:55.717',NULL)
+ ,(11,3,N'Q2NPA',2,N'What is the nature of the non-partisan activity in connection with elections?',N'Quelle est la nature de l?activit? non-partisane dans le cadre des ?lections?','2016-11-04T08:03:55.717',NULL,N'System',NULL,'2016-11-04T08:03:55.717',NULL)
+ ,(12,3,N'Q3NPA',2,N'What will be your personal visibility during this non-partisan activity in connection with elections?',N'Quel sera votre degr?s de visibilit? dans le cadre des ?lections?','2016-11-04T08:03:55.717',NULL,N'System',NULL,'2016-11-04T08:03:55.717',NULL)
+ ,(13,4,N'Q1GHO',2,N'What is the value of the gift, hospitality, or other benefit?',N'Quelle est la valeur du don, d''hospitalit? ou tout autre avantage?','2016-11-04T08:03:55.717',NULL,N'System',NULL,'2016-11-04T08:03:55.717',NULL)
+ ,(14,4,N'Q2GHO',2,N'Under what circumstances did you receive the gift, hospitality or other benefit?',N'Dans quelles circonstances avez-vous re?u le don, l''hospitalit? ou tout autre avantage?','2016-11-04T08:03:55.717',NULL,N'System',NULL,'2016-11-04T08:03:55.717',NULL)
+ ,(15,4,N'Q3GHO',2,N'What is the nature of the event in which you received the gift, hospitality or other benefit?',N'Quelle est la nature de l''?v?nement dans lequel vous avez re?u le don, d''hospitalit? ou tout autre avantage?','2016-11-04T08:03:55.717',NULL,N'System',NULL,'2016-11-04T08:03:55.717',NULL)
  ,(16,8,N'Q1SOC',2,N'What is the nature and purpose of the solicitation?',N'Quelle est la nature et le but de la sollicitation?','2016-11-04T08:03:55.717',NULL,N'System',NULL,'2016-11-04T08:03:55.717',NULL)
  ,(17,9,N'Q1LGC',2,N'What is the nature and purpose of the lottery or game of chance?',N'Quelle est la nature et le but de la loterie ou jeu de hasard?','2016-11-04T08:03:55.717',NULL,N'System',NULL,'2016-11-04T08:03:55.717',NULL)
- ,(18,9,N'Q2LGC',2,N'Have you obtained a provincial license to operate this lottery or game of chance?',N'Avez-vous obtenu une licence provinciale pour opérer cette loterie ou jeu de hasard?','2016-11-04T08:03:55.717',NULL,N'System',NULL,'2016-11-04T08:03:55.717',NULL)
- ,(19,7,N'Q1PT',2,N'Please provide the name of the individual, group of individuals or any other entity that you have a relationship with and specify the nature of the relationship.',N'Veuillez indiquer le nom de l''individu, du groupe d''individus ou de toute autre entité avec lesquels vous avez une relation et préciser la nature de cette relation.','2016-11-04T08:03:55.717',NULL,N'System',NULL,'2016-11-04T08:03:55.717',NULL)
- ,(20,7,N'Q2PT',2,N'Are you involved in a relationship within ESDC where you are directly or indirectly reporting to a family member, friend, or any other person or entity with whom you have a significant relationship?',N'Êtes-vous impliqué dans une relation au sein du ministère ou vous relevez directement ou indirectement d''un membre de votre famille, d''un ami ou de toute autre personne ou entité avec laquelle vous avez une relation importante?','2016-11-04T08:03:55.717',NULL,N'System',NULL,'2016-11-04T08:03:55.717',NULL)
+ ,(18,9,N'Q2LGC',2,N'Have you obtained a provincial license to operate this lottery or game of chance?',N'Avez-vous obtenu une licence provinciale pour op?rer cette loterie ou jeu de hasard?','2016-11-04T08:03:55.717',NULL,N'System',NULL,'2016-11-04T08:03:55.717',NULL)
+ ,(19,7,N'Q1PT',2,N'Please provide the name of the individual, group of individuals or any other entity that you have a relationship with and specify the nature of the relationship.',N'Veuillez indiquer le nom de l''individu, du groupe d''individus ou de toute autre entit? avec lesquels vous avez une relation et pr?ciser la nature de cette relation.','2016-11-04T08:03:55.717',NULL,N'System',NULL,'2016-11-04T08:03:55.717',NULL)
+ ,(20,7,N'Q2PT',2,N'Are you involved in a relationship within ESDC where you are directly or indirectly reporting to a family member, friend, or any other person or entity with whom you have a significant relationship?',N'?tes-vous impliqu? dans une relation au sein du minist?re ou vous relevez directement ou indirectement d''un membre de votre famille, d''un ami ou de toute autre personne ou entit? avec laquelle vous avez une relation importante?','2016-11-04T08:03:55.717',NULL,N'System',NULL,'2016-11-04T08:03:55.717',NULL)
  ,(21,6,N'Q1PE',2,N'What is the nature of your current public service duties within your organization?',N'Quelle est la nature de vos fonctions de service public en cours, au sein de votre organisation?','2016-11-04T08:03:55.717',NULL,N'System',NULL,'2016-11-04T08:03:55.717',NULL)
- ,(22,6,N'Q2PE',2,N'What is the nature of the position you will be accepting after leaving your position with the public service?',N'Quelle est la nature de la position que vous acceptez après avoir quitté votre poste au sein de la fonction publique fédérale?','2016-11-04T08:03:55.717',NULL,N'System',NULL,'2016-11-04T08:03:55.717',NULL)
+ ,(22,6,N'Q2PE',2,N'What is the nature of the position you will be accepting after leaving your position with the public service?',N'Quelle est la nature de la position que vous acceptez apr?s avoir quitt? votre poste au sein de la fonction publique f?d?rale?','2016-11-04T08:03:55.717',NULL,N'System',NULL,'2016-11-04T08:03:55.717',NULL)
  ,(23,10,N'Q1DEC',1,N'Description of Assets',N'Description des actifs','2016-11-22T00:00:00',NULL,N'eric.nolet',NULL,'2016-11-22T14:17:42.637',NULL)
- ,(24,10,N'Q2DEC',1,N'Description of Liabilities',N'Description des exigibilités','2016-11-22T00:00:00',NULL,N'eric.nolet',NULL,'2016-11-22T14:18:05.227',NULL)
- ,(25,10,N'Q3DEC',1,N'Description of Outside Activities',N'Description des activités externes','2016-11-22T00:00:00',NULL,N'eric.nolet',NULL,'2016-11-22T14:18:23.973',NULL)
+ ,(24,10,N'Q2DEC',1,N'Description of Liabilities',N'Description des exigibilit?s','2016-11-22T00:00:00',NULL,N'eric.nolet',NULL,'2016-11-22T14:18:05.227',NULL)
+ ,(25,10,N'Q3DEC',1,N'Description of Outside Activities',N'Description des activit?s externes','2016-11-22T00:00:00',NULL,N'eric.nolet',NULL,'2016-11-22T14:18:23.973',NULL)
 ) AS [Source] ([COI_QUESTION_ID],[COI_DECLARATION_TYPE_ID],[COI_QUESTION_TYPE_CODE],[VERSION_ID],[COI_QUESTION_EN],[COI_QUESTION_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[USER_UPDATED],[DATE_CREATED],[DATE_UPDATED])
 ON ([Target].[COI_QUESTION_ID] = [Source].[COI_QUESTION_ID])
 WHEN MATCHED AND (
@@ -64,22 +64,22 @@ WHEN MATCHED AND (
 WHEN NOT MATCHED BY TARGET THEN
  INSERT([COI_QUESTION_ID],[COI_DECLARATION_TYPE_ID],[COI_QUESTION_TYPE_CODE],[VERSION_ID],[COI_QUESTION_EN],[COI_QUESTION_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[USER_UPDATED],[DATE_CREATED],[DATE_UPDATED])
  VALUES([Source].[COI_QUESTION_ID],[Source].[COI_DECLARATION_TYPE_ID],[Source].[COI_QUESTION_TYPE_CODE],[Source].[VERSION_ID],[Source].[COI_QUESTION_EN],[Source].[COI_QUESTION_FR],[Source].[EFFECTIVE_DATE],[Source].[EXPIRY_DATE],[Source].[USER_CREATED],[Source].[USER_UPDATED],[Source].[DATE_CREATED],[Source].[DATE_UPDATED])
-OUTPUT $action INTO @mergeOutput1566628624;
+OUTPUT $action INTO @mergeOutput302624121;
 
-DECLARE @mergeError1566628624 int,
-@mergeCount1566628624 int,
-@mergeCountIns1566628624 int,
-@mergeCountUpd1566628624 int,
-@mergeCountDel1566628624 int
-SELECT @mergeError1566628624 = @@ERROR
-SELECT @mergeCount1566628624 = COUNT(1), @mergeCountIns1566628624 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd1566628624 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel1566628624 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput1566628624
-IF @mergeError1566628624 != 0
+DECLARE @mergeError302624121 int,
+@mergeCount302624121 int,
+@mergeCountIns302624121 int,
+@mergeCountUpd302624121 int,
+@mergeCountDel302624121 int
+SELECT @mergeError302624121 = @@ERROR
+SELECT @mergeCount302624121 = COUNT(1), @mergeCountIns302624121 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd302624121 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel302624121 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput302624121
+IF @mergeError302624121 != 0
  BEGIN
- PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_COI_QUESTION]. Rows affected: ' + CAST(@mergeCount1566628624 AS VARCHAR(100)); -- SQL should always return zero rows affected
+ PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_COI_QUESTION]. Rows affected: ' + CAST(@mergeCount302624121 AS VARCHAR(100)); -- SQL should always return zero rows affected
  END
 ELSE
  BEGIN
- PRINT '[HRSC].[CD_COI_QUESTION] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount1566628624,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns1566628624,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd1566628624,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel1566628624,0) AS VARCHAR(100)) + ')' ;
+ PRINT '[HRSC].[CD_COI_QUESTION] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount302624121,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns302624121,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd302624121,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel302624121,0) AS VARCHAR(100)) + ')' ;
  END
 
 

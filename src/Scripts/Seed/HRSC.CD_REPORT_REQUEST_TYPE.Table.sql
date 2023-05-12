@@ -7,16 +7,16 @@ SET NOCOUNT ON
 
 SET IDENTITY_INSERT [HRSC].[CD_REPORT_REQUEST_TYPE] ON
 
-DECLARE @mergeOutput498100815 TABLE ( [DMLAction] VARCHAR(6) );
+DECLARE @mergeOutput1397580017 TABLE ( [DMLAction] VARCHAR(6) );
 MERGE INTO [HRSC].[CD_REPORT_REQUEST_TYPE] AS [Target]
 USING (VALUES
-  (1,N'RRT1',N'Re-run/ minor change to an existing report',N'Exécuter un changement mineur à un rapport existant',N'Re-run/ minor change to an existing report',N'Exécuter un changement mineur à un rapport existant','2018-06-13T07:21:20.850','2018-06-13T07:21:20.850',N'System',NULL,NULL,'2018-06-13T07:21:20.850')
- ,(2,N'RRT2',N'Create routine customized report or add a column to an existing report',N'Créez une routine de rapport personnalisé ou ajouter une colonne à un rapport existant',N'Create routine customized report or add a column to an existing report',N'Créez une routine de rapport personnalisé ou ajouter une colonne à un rapport existant','2018-06-13T00:00:00','2018-06-13T07:21:20.850',N'System',NULL,N'alejandra.tobargarzo','2018-08-17T10:29:11.653')
- ,(3,N'RRT3',N'Complex customized report',N'Complexe rapport personnalisé',N'Complex customized report',N'Complexe rapport personnalisé','2018-06-13T07:21:20.850','2018-06-13T07:21:20.850',N'System',NULL,NULL,'2018-06-13T07:21:20.850')
+  (1,N'RRT1',N'Re-run/ minor change to an existing report',N'Ex?cuter un changement mineur ? un rapport existant',N'Re-run/ minor change to an existing report',N'Ex?cuter un changement mineur ? un rapport existant','2018-06-13T07:21:20.850','2018-06-13T07:21:20.850',N'System',NULL,NULL,'2018-06-13T07:21:20.850')
+ ,(2,N'RRT2',N'Create routine customized report or add a column to an existing report',N'Cr?ez une routine de rapport personnalis? ou ajouter une colonne ? un rapport existant',N'Create routine customized report or add a column to an existing report',N'Cr?ez une routine de rapport personnalis? ou ajouter une colonne ? un rapport existant','2018-06-13T00:00:00','2018-06-13T07:21:20.850',N'System',NULL,N'alejandra.tobargarzo','2018-08-17T10:29:11.653')
+ ,(3,N'RRT3',N'Complex customized report',N'Complexe rapport personnalis?',N'Complex customized report',N'Complexe rapport personnalis?','2018-06-13T07:21:20.850','2018-06-13T07:21:20.850',N'System',NULL,NULL,'2018-06-13T07:21:20.850')
  ,(4,N'RRT4',N'Parliamentary questions',N'Les questions parlementaires',N'Parliamentary questions',N'Les questions parlementaires','2018-08-07T00:00:00','2018-08-07T14:08:38.493',N'yves.robichaud',NULL,NULL,'2018-08-07T14:08:38.493')
  ,(5,N'RRT5',N'ATIP',N'AIPRP',N'ATIP',N'AIPRP','2018-08-07T00:00:00','2018-08-07T14:08:54.503',N'yves.robichaud',NULL,NULL,'2018-08-07T14:08:54.503')
- ,(6,N'RRT6',N'Access to Cognos (IRIS) Reporting: Self-service',N'Accès au Cognos (SIRI) Rapports – Libre-Service',N'Access to Cognos (IRIS) Reporting: Self-service',N'Accès au Cognos (SIRI) Rapports – Libre-Service','2018-08-07T00:00:00','2018-08-07T14:09:09.327',N'yves.robichaud',NULL,N'alejandra.tobargarzo','2018-08-17T10:59:12.673')
- ,(7,N'UNUZD',N'Unused',N'Non utilisé',N'Unused',N'Non utilisé','2020-01-17T09:12:09.107','2020-01-17T09:12:09.107',N'HRSC 4.9',NULL,NULL,'2020-01-17T09:12:09.107')
+ ,(6,N'RRT6',N'Access to Cognos (IRIS) Reporting: Self-service',N'Acc?s au Cognos (SIRI) Rapports ? Libre-Service',N'Access to Cognos (IRIS) Reporting: Self-service',N'Acc?s au Cognos (SIRI) Rapports ? Libre-Service','2018-08-07T00:00:00','2018-08-07T14:09:09.327',N'yves.robichaud',NULL,N'alejandra.tobargarzo','2018-08-17T10:59:12.673')
+ ,(7,N'UNUZD',N'Unused',N'Non utilis?',N'Unused',N'Non utilis?','2020-01-17T09:12:09.107','2020-01-17T09:12:09.107',N'HRSC 4.9',NULL,NULL,'2020-01-17T09:12:09.107')
 ) AS [Source] ([REPORT_REQUEST_TYPE_ID],[REPORT_REQUEST_TYPE_CODE],[REPORT_REQUEST_TYPE_NAME_EN],[REPORT_REQUEST_TYPE_NAME_FR],[REPORT_REQUEST_TYPE_DESC_EN],[REPORT_REQUEST_TYPE_DESC_FR],[EFFECTIVE_DATE],[DATE_CREATED],[USER_CREATED],[EXPIRY_DATE],[USER_UPDATED],[DATE_UPDATED])
 ON ([Target].[REPORT_REQUEST_TYPE_ID] = [Source].[REPORT_REQUEST_TYPE_ID])
 WHEN MATCHED AND (
@@ -46,22 +46,22 @@ WHEN MATCHED AND (
 WHEN NOT MATCHED BY TARGET THEN
  INSERT([REPORT_REQUEST_TYPE_ID],[REPORT_REQUEST_TYPE_CODE],[REPORT_REQUEST_TYPE_NAME_EN],[REPORT_REQUEST_TYPE_NAME_FR],[REPORT_REQUEST_TYPE_DESC_EN],[REPORT_REQUEST_TYPE_DESC_FR],[EFFECTIVE_DATE],[DATE_CREATED],[USER_CREATED],[EXPIRY_DATE],[USER_UPDATED],[DATE_UPDATED])
  VALUES([Source].[REPORT_REQUEST_TYPE_ID],[Source].[REPORT_REQUEST_TYPE_CODE],[Source].[REPORT_REQUEST_TYPE_NAME_EN],[Source].[REPORT_REQUEST_TYPE_NAME_FR],[Source].[REPORT_REQUEST_TYPE_DESC_EN],[Source].[REPORT_REQUEST_TYPE_DESC_FR],[Source].[EFFECTIVE_DATE],[Source].[DATE_CREATED],[Source].[USER_CREATED],[Source].[EXPIRY_DATE],[Source].[USER_UPDATED],[Source].[DATE_UPDATED])
-OUTPUT $action INTO @mergeOutput498100815;
+OUTPUT $action INTO @mergeOutput1397580017;
 
-DECLARE @mergeError498100815 int,
-@mergeCount498100815 int,
-@mergeCountIns498100815 int,
-@mergeCountUpd498100815 int,
-@mergeCountDel498100815 int
-SELECT @mergeError498100815 = @@ERROR
-SELECT @mergeCount498100815 = COUNT(1), @mergeCountIns498100815 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd498100815 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel498100815 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput498100815
-IF @mergeError498100815 != 0
+DECLARE @mergeError1397580017 int,
+@mergeCount1397580017 int,
+@mergeCountIns1397580017 int,
+@mergeCountUpd1397580017 int,
+@mergeCountDel1397580017 int
+SELECT @mergeError1397580017 = @@ERROR
+SELECT @mergeCount1397580017 = COUNT(1), @mergeCountIns1397580017 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd1397580017 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel1397580017 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput1397580017
+IF @mergeError1397580017 != 0
  BEGIN
- PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_REPORT_REQUEST_TYPE]. Rows affected: ' + CAST(@mergeCount498100815 AS VARCHAR(100)); -- SQL should always return zero rows affected
+ PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_REPORT_REQUEST_TYPE]. Rows affected: ' + CAST(@mergeCount1397580017 AS VARCHAR(100)); -- SQL should always return zero rows affected
  END
 ELSE
  BEGIN
- PRINT '[HRSC].[CD_REPORT_REQUEST_TYPE] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount498100815,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns498100815,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd498100815,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel498100815,0) AS VARCHAR(100)) + ')' ;
+ PRINT '[HRSC].[CD_REPORT_REQUEST_TYPE] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount1397580017,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns1397580017,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd1397580017,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel1397580017,0) AS VARCHAR(100)) + ')' ;
  END
 
 

@@ -5,32 +5,32 @@
 
 SET NOCOUNT ON
 
-DECLARE @mergeOutput2021582240 TABLE ( [DMLAction] VARCHAR(6) );
+DECLARE @mergeOutput965578478 TABLE ( [DMLAction] VARCHAR(6) );
 MERGE INTO [HRSC].[CD_LEAVE_WITHOUT_PAY] AS [Target]
 USING (VALUES
-  (3,N'604',N'Sick Leave (604)',N'Congé de maladie (604)',N'Sick Leave (604)',N'Congé de maladie (604)','2013-07-03T00:00:00',NULL,N'yves.robichaud','2013-07-03T00:00:00',NULL,NULL)
- ,(4,N'605',N'Unauthorized Leave (605)',N'Absence non autorisée (605)',N'Unauthorized Leave (605)',N'Absence non autorisée (605)','2013-07-03T00:00:00',NULL,N'yves.robichaud','2013-07-03T00:00:00',NULL,NULL)
- ,(5,N'606',N'Other Absence or Leave (606)',N'Autre absence ou congé (606)',N'Other Absence or Leave (606)',N'Autre absence ou congé (606)','2013-07-03T00:00:00',NULL,N'yves.robichaud','2013-07-03T00:00:00',NULL,NULL)
- ,(6,N'611',N'Maternity Leave (611)',N'Congé de maternité (611)',N'Maternity Leave (611)',N'Congé de maternité (611)','2013-07-03T00:00:00',NULL,N'yves.robichaud','2013-07-03T00:00:00',NULL,NULL)
- ,(7,N'618',N'Education Leave (618)',N'Congé d''études (618)',N'Education Leave (618)',N'Congé d''études (618)','2013-07-03T00:00:00',NULL,N'yves.robichaud','2013-07-03T00:00:00',NULL,NULL)
- ,(8,N'621',N'Legal Strike (621)',N'Absence rattachée à une grève légale (621)',N'Legal Strike (621)',N'Absence rattachée à une grève légale (621)','2013-07-03T00:00:00',NULL,N'yves.robichaud','2013-07-03T00:00:00',NULL,NULL)
- ,(9,N'622',N'Relocation of Spouse (622)',N'Congé en cas de réinstallation du conjoint (622)',N'Relocation of Spouse (622)',N'Congé en cas de réinstallation du conjoint (622)','2013-07-03T00:00:00',NULL,N'yves.robichaud','2013-07-03T00:00:00',NULL,NULL)
- ,(10,N'623',N'Illegal Strike (623)',N'Grève illégale (623)',N'Illegal Strike (623)',N'Grève illégale (623)','2013-07-03T00:00:00',NULL,N'yves.robichaud','2013-07-03T00:00:00',NULL,NULL)
- ,(11,N'624',N'Parental Leave (624)',N'Congé parental (624)',N'Parental Leave (624)',N'Congé parental (624)','2013-07-03T00:00:00',NULL,N'yves.robichaud','2013-07-03T00:00:00',NULL,NULL)
- ,(12,N'625',N'Personal Needs (Three Months) (625)',N'Congé pour obligations personnelles (trois mois) (625)',N'Personal Needs (Three Months) (625)',N'Congé pour obligations personnelles (trois mois) (625)','2013-07-03T00:00:00',NULL,N'yves.robichaud','2013-07-03T00:00:00',NULL,NULL)
- ,(13,N'633',N'Hours Scheduled but Not Worked (633)',N'Heures prévues à l''horaire, mais non travaillées (633)',N'Hours Scheduled but Not Worked (633)',N'Heures prévues à l''horaire, mais non travaillées (633)','2013-07-03T00:00:00',NULL,N'yves.robichaud','2013-07-03T00:00:00',NULL,NULL)
+  (3,N'604',N'Sick Leave (604)',N'Cong? de maladie (604)',N'Sick Leave (604)',N'Cong? de maladie (604)','2013-07-03T00:00:00',NULL,N'yves.robichaud','2013-07-03T00:00:00',NULL,NULL)
+ ,(4,N'605',N'Unauthorized Leave (605)',N'Absence non autoris?e (605)',N'Unauthorized Leave (605)',N'Absence non autoris?e (605)','2013-07-03T00:00:00',NULL,N'yves.robichaud','2013-07-03T00:00:00',NULL,NULL)
+ ,(5,N'606',N'Other Absence or Leave (606)',N'Autre absence ou cong? (606)',N'Other Absence or Leave (606)',N'Autre absence ou cong? (606)','2013-07-03T00:00:00',NULL,N'yves.robichaud','2013-07-03T00:00:00',NULL,NULL)
+ ,(6,N'611',N'Maternity Leave (611)',N'Cong? de maternit? (611)',N'Maternity Leave (611)',N'Cong? de maternit? (611)','2013-07-03T00:00:00',NULL,N'yves.robichaud','2013-07-03T00:00:00',NULL,NULL)
+ ,(7,N'618',N'Education Leave (618)',N'Cong? d''?tudes (618)',N'Education Leave (618)',N'Cong? d''?tudes (618)','2013-07-03T00:00:00',NULL,N'yves.robichaud','2013-07-03T00:00:00',NULL,NULL)
+ ,(8,N'621',N'Legal Strike (621)',N'Absence rattach?e ? une gr?ve l?gale (621)',N'Legal Strike (621)',N'Absence rattach?e ? une gr?ve l?gale (621)','2013-07-03T00:00:00',NULL,N'yves.robichaud','2013-07-03T00:00:00',NULL,NULL)
+ ,(9,N'622',N'Relocation of Spouse (622)',N'Cong? en cas de r?installation du conjoint (622)',N'Relocation of Spouse (622)',N'Cong? en cas de r?installation du conjoint (622)','2013-07-03T00:00:00',NULL,N'yves.robichaud','2013-07-03T00:00:00',NULL,NULL)
+ ,(10,N'623',N'Illegal Strike (623)',N'Gr?ve ill?gale (623)',N'Illegal Strike (623)',N'Gr?ve ill?gale (623)','2013-07-03T00:00:00',NULL,N'yves.robichaud','2013-07-03T00:00:00',NULL,NULL)
+ ,(11,N'624',N'Parental Leave (624)',N'Cong? parental (624)',N'Parental Leave (624)',N'Cong? parental (624)','2013-07-03T00:00:00',NULL,N'yves.robichaud','2013-07-03T00:00:00',NULL,NULL)
+ ,(12,N'625',N'Personal Needs (Three Months) (625)',N'Cong? pour obligations personnelles (trois mois) (625)',N'Personal Needs (Three Months) (625)',N'Cong? pour obligations personnelles (trois mois) (625)','2013-07-03T00:00:00',NULL,N'yves.robichaud','2013-07-03T00:00:00',NULL,NULL)
+ ,(13,N'633',N'Hours Scheduled but Not Worked (633)',N'Heures pr?vues ? l''horaire, mais non travaill?es (633)',N'Hours Scheduled but Not Worked (633)',N'Heures pr?vues ? l''horaire, mais non travaill?es (633)','2013-07-03T00:00:00',NULL,N'yves.robichaud','2013-07-03T00:00:00',NULL,NULL)
  ,(14,N'634',N'Suspension (634)',N'Suspension (634)',N'Suspension (634)',N'Suspension (634)','2013-07-03T00:00:00',NULL,N'yves.robichaud','2013-07-03T00:00:00',NULL,NULL)
- ,(15,N'642',N'Seasonal Time Off (642)',N'Congé saisonnier (642)',N'Seasonal Time Off (642)',N'Congé saisonnier (642)','2013-07-03T00:00:00',NULL,N'yves.robichaud','2013-07-03T00:00:00',NULL,NULL)
- ,(16,N'643',N'Union Business (643)',N'Congé pour affaires syndicales (643)',N'Union Business (643)',N'Congé pour affaires syndicales (643)','2013-07-03T00:00:00',NULL,N'yves.robichaud','2013-07-03T00:00:00',NULL,NULL)
- ,(17,N'648',N'Disability Insurance (648)',N'Congé  –assurance- invalidité (648)',N'Disability Insurance (648)',N'Congé  –assurance- invalidité (648)','2013-07-03T00:00:00',NULL,N'yves.robichaud','2013-07-03T00:00:00',NULL,NULL)
- ,(18,N'653',N'Long-term Care of Parent (653)',N'Congé pour les soins de longue durée à un parent (653)',N'Long-term Care of Parent (653)',N'Congé pour les soins de longue durée à un parent (653)','2013-07-03T00:00:00',NULL,N'yves.robichaud','2013-07-03T00:00:00',NULL,NULL)
- ,(19,N'655',N'Personal Needs (One Year) (655)',N'Congé pour obligations personnelles (un an) (655)',N'Personal Needs (One Year) (655)',N'Congé pour obligations personnelles (un an) (655)','2013-07-03T00:00:00',NULL,N'yves.robichaud','2013-07-03T00:00:00',NULL,NULL)
- ,(20,N'659',N'Care of Immediate Family (659)',N'Congé pour s''occuper de la proche famille (659)',N'Care of Immediate Family (659)',N'Congé pour s''occuper de la proche famille (659)','2013-07-03T00:00:00',NULL,N'yves.robichaud','2013-07-03T00:00:00',NULL,NULL)
- ,(21,N'660',N'Union Activities Not specified in Collective Agreement (660)',N'Congé pour affaires syndicales non prévues dans la convention collective (660)',N'Union Activities Not specified in Collective Agreement (660)',N'Congé pour affaires syndicales non prévues dans la convention collective (660)','2013-07-03T00:00:00',NULL,N'yves.robichaud','2013-07-03T00:00:00',NULL,NULL)
- ,(22,N'661',N'Pre-retirement Leave (661)',N'Congé de transition à la retraite (CTR) (661)',N'Pre-retirement Leave (661)',N'Congé de transition à la retraite (CTR) (661)','2013-07-03T00:00:00',NULL,N'yves.robichaud','2013-07-03T00:00:00',NULL,NULL)
- ,(23,N'662',N'Self-funded Leave (662)',N'Congé autofinancé (662)',N'Self-funded Leave (662)',N'Congé autofinancé (662)','2013-07-03T00:00:00',NULL,N'yves.robichaud','2013-07-03T00:00:00',NULL,NULL)
- ,(24,N'663',N'Leave with Income Averaging (663)',N'Congé avec étalement du revenu (CER) (663)',N'Leave with Income Averaging (663)',N'Congé avec étalement du revenu (CER) (663)','2013-07-03T00:00:00',NULL,N'yves.robichaud','2013-07-03T00:00:00',NULL,NULL)
- ,(25,N'664',N'Disability (664)',N'Congé – invalidité (664)',N'Disability (664)',N'Congé – invalidité (664)','2013-07-03T00:00:00',NULL,N'yves.robichaud','2013-07-03T00:00:00',NULL,NULL)
+ ,(15,N'642',N'Seasonal Time Off (642)',N'Cong? saisonnier (642)',N'Seasonal Time Off (642)',N'Cong? saisonnier (642)','2013-07-03T00:00:00',NULL,N'yves.robichaud','2013-07-03T00:00:00',NULL,NULL)
+ ,(16,N'643',N'Union Business (643)',N'Cong? pour affaires syndicales (643)',N'Union Business (643)',N'Cong? pour affaires syndicales (643)','2013-07-03T00:00:00',NULL,N'yves.robichaud','2013-07-03T00:00:00',NULL,NULL)
+ ,(17,N'648',N'Disability Insurance (648)',N'Cong?  ?assurance- invalidit? (648)',N'Disability Insurance (648)',N'Cong?  ?assurance- invalidit? (648)','2013-07-03T00:00:00',NULL,N'yves.robichaud','2013-07-03T00:00:00',NULL,NULL)
+ ,(18,N'653',N'Long-term Care of Parent (653)',N'Cong? pour les soins de longue dur?e ? un parent (653)',N'Long-term Care of Parent (653)',N'Cong? pour les soins de longue dur?e ? un parent (653)','2013-07-03T00:00:00',NULL,N'yves.robichaud','2013-07-03T00:00:00',NULL,NULL)
+ ,(19,N'655',N'Personal Needs (One Year) (655)',N'Cong? pour obligations personnelles (un an) (655)',N'Personal Needs (One Year) (655)',N'Cong? pour obligations personnelles (un an) (655)','2013-07-03T00:00:00',NULL,N'yves.robichaud','2013-07-03T00:00:00',NULL,NULL)
+ ,(20,N'659',N'Care of Immediate Family (659)',N'Cong? pour s''occuper de la proche famille (659)',N'Care of Immediate Family (659)',N'Cong? pour s''occuper de la proche famille (659)','2013-07-03T00:00:00',NULL,N'yves.robichaud','2013-07-03T00:00:00',NULL,NULL)
+ ,(21,N'660',N'Union Activities Not specified in Collective Agreement (660)',N'Cong? pour affaires syndicales non pr?vues dans la convention collective (660)',N'Union Activities Not specified in Collective Agreement (660)',N'Cong? pour affaires syndicales non pr?vues dans la convention collective (660)','2013-07-03T00:00:00',NULL,N'yves.robichaud','2013-07-03T00:00:00',NULL,NULL)
+ ,(22,N'661',N'Pre-retirement Leave (661)',N'Cong? de transition ? la retraite (CTR) (661)',N'Pre-retirement Leave (661)',N'Cong? de transition ? la retraite (CTR) (661)','2013-07-03T00:00:00',NULL,N'yves.robichaud','2013-07-03T00:00:00',NULL,NULL)
+ ,(23,N'662',N'Self-funded Leave (662)',N'Cong? autofinanc? (662)',N'Self-funded Leave (662)',N'Cong? autofinanc? (662)','2013-07-03T00:00:00',NULL,N'yves.robichaud','2013-07-03T00:00:00',NULL,NULL)
+ ,(24,N'663',N'Leave with Income Averaging (663)',N'Cong? avec ?talement du revenu (CER) (663)',N'Leave with Income Averaging (663)',N'Cong? avec ?talement du revenu (CER) (663)','2013-07-03T00:00:00',NULL,N'yves.robichaud','2013-07-03T00:00:00',NULL,NULL)
+ ,(25,N'664',N'Disability (664)',N'Cong? ? invalidit? (664)',N'Disability (664)',N'Cong? ? invalidit? (664)','2013-07-03T00:00:00',NULL,N'yves.robichaud','2013-07-03T00:00:00',NULL,NULL)
  ,(26,N'670',N'Injury on Duty (670)',N'Accident de travail (670)',N'Injury on Duty (670)',N'Accident de travail (670)','2013-07-03T00:00:00',NULL,N'yves.robichaud','2013-07-03T00:00:00',NULL,NULL)
  ,(27,N'673',N'Special, LWOP PRIM INT to Department EX (673)',N'CNP Special Int Av.Tout MIN-EX CNP (673)',N'Special, LWOP PRIM INT to Department EX (673)',N'CNP Special Int Av.Tout MIN-EX CNP (673)','2013-07-03T00:00:00',NULL,N'yves.robichaud','2013-07-03T00:00:00',NULL,NULL)
  ,(28,N'674',N'Special, LWOP PRIM INT to Employee EX (674)',N'CNP Special Int Av.Tout EMP-EX (674)',N'Special, LWOP PRIM INT to Employee EX (674)',N'CNP Special Int Av.Tout EMP-EX (674)','2013-07-03T00:00:00',NULL,N'yves.robichaud','2013-07-03T00:00:00',NULL,NULL)
@@ -64,22 +64,22 @@ WHEN MATCHED AND (
 WHEN NOT MATCHED BY TARGET THEN
  INSERT([LEAVE_WITHOUT_PAY_ID],[LEAVE_WITHOUT_PAY_CODE],[LEAVE_WITHOUT_PAY_NAME_EN],[LEAVE_WITHOUT_PAY_NAME_FR],[LEAVE_WITHOUT_PAY_DESC_EN],[LEAVE_WITHOUT_PAY_DESC_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[DATE_CREATED],[USER_UPDATED],[DATE_UPDATED])
  VALUES([Source].[LEAVE_WITHOUT_PAY_ID],[Source].[LEAVE_WITHOUT_PAY_CODE],[Source].[LEAVE_WITHOUT_PAY_NAME_EN],[Source].[LEAVE_WITHOUT_PAY_NAME_FR],[Source].[LEAVE_WITHOUT_PAY_DESC_EN],[Source].[LEAVE_WITHOUT_PAY_DESC_FR],[Source].[EFFECTIVE_DATE],[Source].[EXPIRY_DATE],[Source].[USER_CREATED],[Source].[DATE_CREATED],[Source].[USER_UPDATED],[Source].[DATE_UPDATED])
-OUTPUT $action INTO @mergeOutput2021582240;
+OUTPUT $action INTO @mergeOutput965578478;
 
-DECLARE @mergeError2021582240 int,
-@mergeCount2021582240 int,
-@mergeCountIns2021582240 int,
-@mergeCountUpd2021582240 int,
-@mergeCountDel2021582240 int
-SELECT @mergeError2021582240 = @@ERROR
-SELECT @mergeCount2021582240 = COUNT(1), @mergeCountIns2021582240 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd2021582240 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel2021582240 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput2021582240
-IF @mergeError2021582240 != 0
+DECLARE @mergeError965578478 int,
+@mergeCount965578478 int,
+@mergeCountIns965578478 int,
+@mergeCountUpd965578478 int,
+@mergeCountDel965578478 int
+SELECT @mergeError965578478 = @@ERROR
+SELECT @mergeCount965578478 = COUNT(1), @mergeCountIns965578478 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd965578478 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel965578478 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput965578478
+IF @mergeError965578478 != 0
  BEGIN
- PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_LEAVE_WITHOUT_PAY]. Rows affected: ' + CAST(@mergeCount2021582240 AS VARCHAR(100)); -- SQL should always return zero rows affected
+ PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_LEAVE_WITHOUT_PAY]. Rows affected: ' + CAST(@mergeCount965578478 AS VARCHAR(100)); -- SQL should always return zero rows affected
  END
 ELSE
  BEGIN
- PRINT '[HRSC].[CD_LEAVE_WITHOUT_PAY] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount2021582240,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns2021582240,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd2021582240,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel2021582240,0) AS VARCHAR(100)) + ')' ;
+ PRINT '[HRSC].[CD_LEAVE_WITHOUT_PAY] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount965578478,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns965578478,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd965578478,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel965578478,0) AS VARCHAR(100)) + ')' ;
  END
 
 

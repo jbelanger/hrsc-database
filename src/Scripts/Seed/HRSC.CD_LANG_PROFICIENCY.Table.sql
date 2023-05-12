@@ -7,32 +7,32 @@ SET NOCOUNT ON
 
 SET IDENTITY_INSERT [HRSC].[CD_LANG_PROFICIENCY] ON
 
-DECLARE @mergeOutput1861581670 TABLE ( [DMLAction] VARCHAR(6) );
+DECLARE @mergeOutput1886629764 TABLE ( [DMLAction] VARCHAR(6) );
 MERGE INTO [HRSC].[CD_LANG_PROFICIENCY] AS [Target]
 USING (VALUES
-  (1,N'BI',N'Bilingual Imperative',N'Bilingue impératif',N'Bilingual Imperative',N'Bilingue impératif','2013-01-10T11:10:27.570',NULL,N'HRDC-DRHC\elena.akhmentova',NULL,'2013-01-10T11:10:27.570',NULL)
- ,(2,N'BNI',N'Bilingual Non-Imperative',N'Bilingue non-impératif',N'Bilingual Non-Imperative',N'Bilingue non-impératif','2013-01-10T11:10:27.573',NULL,N'HRDC-DRHC\elena.akhmentova',NULL,'2013-01-10T11:10:27.573',NULL)
+  (1,N'BI',N'Bilingual Imperative',N'Bilingue imp?ratif',N'Bilingual Imperative',N'Bilingue imp?ratif','2013-01-10T11:10:27.570',NULL,N'HRDC-DRHC\elena.akhmentova',NULL,'2013-01-10T11:10:27.570',NULL)
+ ,(2,N'BNI',N'Bilingual Non-Imperative',N'Bilingue non-imp?ratif',N'Bilingual Non-Imperative',N'Bilingue non-imp?ratif','2013-01-10T11:10:27.573',NULL,N'HRDC-DRHC\elena.akhmentova',NULL,'2013-01-10T11:10:27.573',NULL)
  ,(3,N'EE',N'English Essential',N'Anglais essentiel',N'English Essential',N'Anglais essentiel','2013-01-10T11:10:27.573',NULL,N'HRDC-DRHC\elena.akhmentova',NULL,'2013-01-10T11:10:27.573',NULL)
- ,(4,N'FE',N'French Essential',N'Français essentiel',N'French Essential',N'Français essentiel','2013-01-10T11:10:27.573',NULL,N'HRDC-DRHC\elena.akhmentova',NULL,'2013-01-10T11:10:27.573',NULL)
- ,(5,N'EHTR',N'Either/or – English or French',N'Réversible – anglais ou français',N'Either/or – English or French',N'Réversible – anglais ou français','2013-02-19T00:00:00',NULL,N'HRDC-DRHC\oksana.zhukova',N'michel.tardif','2013-02-19T15:16:20.103','2018-05-15T14:59:56.760')
- ,(6,N'BLNG',N'Bilingual Imperative',N'Bilingue impératif',N'Bilingual Imperative',N'Bilingue impératif','2013-02-19T15:17:19.793',NULL,N'HRDC-DRHC\oksana.zhukova',N'Robichaud, Yves [NC]','2013-02-19T15:17:19.793','2013-11-20T07:20:38.217')
+ ,(4,N'FE',N'French Essential',N'Fran?ais essentiel',N'French Essential',N'Fran?ais essentiel','2013-01-10T11:10:27.573',NULL,N'HRDC-DRHC\elena.akhmentova',NULL,'2013-01-10T11:10:27.573',NULL)
+ ,(5,N'EHTR',N'Either/or ? English or French',N'R?versible ? anglais ou fran?ais',N'Either/or ? English or French',N'R?versible ? anglais ou fran?ais','2013-02-19T00:00:00',NULL,N'HRDC-DRHC\oksana.zhukova',N'michel.tardif','2013-02-19T15:16:20.103','2018-05-15T14:59:56.760')
+ ,(6,N'BLNG',N'Bilingual Imperative',N'Bilingue imp?ratif',N'Bilingual Imperative',N'Bilingue imp?ratif','2013-02-19T15:17:19.793',NULL,N'HRDC-DRHC\oksana.zhukova',N'Robichaud, Yves [NC]','2013-02-19T15:17:19.793','2013-11-20T07:20:38.217')
  ,(7,N'OTHER',N'Other',N'Autre',N'Other',N'Autre','2018-06-13T07:21:21.200',NULL,N'HRSC46',NULL,'2018-06-13T07:21:21.200',NULL)
- ,(8,N'1',N'Bilingual Imperative',N'Bilingue impératif',N'Bilingual Imperative',N'Bilingue impératif','2020-01-17T09:15:36.413','2020-01-17T09:15:36.413',N'ISL_INSERT',N'35','2020-01-17T09:15:36.413',NULL)
- ,(9,N'2',N'Bilingual Non-Imperative',N'Bilingue non impératif',N'Bilingual Non-Imperative',N'Bilingue non impératif','2020-01-17T09:15:36.413','2020-01-17T09:15:36.413',N'ISL_INSERT',N'36','2020-01-17T09:15:36.413',NULL)
- ,(10,N'3',N'English/French Essential',N'Anglais/Français Essentiel',N'English/French Essential',N'Anglais/Français Essentiel','2020-01-17T09:15:36.413','2020-01-17T09:15:36.413',N'ISL_INSERT',N'37','2020-01-17T09:15:36.413',NULL)
+ ,(8,N'1',N'Bilingual Imperative',N'Bilingue imp?ratif',N'Bilingual Imperative',N'Bilingue imp?ratif','2020-01-17T09:15:36.413','2020-01-17T09:15:36.413',N'ISL_INSERT',N'35','2020-01-17T09:15:36.413',NULL)
+ ,(9,N'2',N'Bilingual Non-Imperative',N'Bilingue non imp?ratif',N'Bilingual Non-Imperative',N'Bilingue non imp?ratif','2020-01-17T09:15:36.413','2020-01-17T09:15:36.413',N'ISL_INSERT',N'36','2020-01-17T09:15:36.413',NULL)
+ ,(10,N'3',N'English/French Essential',N'Anglais/Fran?ais Essentiel',N'English/French Essential',N'Anglais/Fran?ais Essentiel','2020-01-17T09:15:36.413','2020-01-17T09:15:36.413',N'ISL_INSERT',N'37','2020-01-17T09:15:36.413',NULL)
  ,(11,N'4',N'English Essential',N'Anglais essentiel',N'English Essential',N'Anglais essentiel','2020-01-17T09:15:36.413','2020-01-17T09:15:36.413',N'ISL_INSERT',N'38','2020-01-17T09:15:36.413',NULL)
- ,(12,N'5',N'French Essential ',N'Français essentiel',N'French Essential ',N'Français essentiel','2020-01-17T09:15:36.413','2020-01-17T09:15:36.413',N'ISL_INSERT',N'39','2020-01-17T09:15:36.413',NULL)
+ ,(12,N'5',N'French Essential ',N'Fran?ais essentiel',N'French Essential ',N'Fran?ais essentiel','2020-01-17T09:15:36.413','2020-01-17T09:15:36.413',N'ISL_INSERT',N'39','2020-01-17T09:15:36.413',NULL)
  ,(13,N'6',N'Various',N'Divers',N'Various',N'Divers','2020-01-17T09:15:36.413','2020-01-17T09:15:36.413',N'ISL_INSERT',N'40','2020-01-17T09:15:36.413',NULL)
- ,(14,N'20',N'Bilingual Imperative - BBB/BBB',N'Bilingue impératif - BBB/BBB',N'Bilingual Imperative - BBB/BBB',N'Bilingue impératif - BBB/BBB','2020-01-17T09:15:36.413','2020-01-17T09:15:36.413',N'ISL_INSERT',N'362','2020-01-17T09:15:36.413',NULL)
- ,(15,N'21',N'Bilingual Imperative - BBC/BBC',N'Bilingue impératif - BBC/BBC',N'Bilingual Imperative - BBC/BBC',N'Bilingue impératif - BBC/BBC','2020-01-17T09:15:36.413','2020-01-17T09:15:36.413',N'ISL_INSERT',N'363','2020-01-17T09:15:36.413',NULL)
- ,(16,N'22',N'Bilingual Imperative - CCC/CCC',N'Bilingue impératif - CCC/CCC',N'Bilingual Imperative - CCC/CCC',N'Bilingue impératif - CCC/CCC','2020-01-17T09:15:36.413','2020-01-17T09:15:36.413',N'ISL_INSERT',N'364','2020-01-17T09:15:36.413',NULL)
- ,(17,N'23',N'Bilingual Imperative - CBC/CBC',N'Bilingue impératif - CBC/CBC',N'Bilingual Imperative - CBC/CBC',N'Bilingue impératif - CBC/CBC','2020-01-17T09:15:36.413','2020-01-17T09:15:36.413',N'ISL_INSERT',N'365','2020-01-17T09:15:36.413',NULL)
- ,(18,N'24',N'Bilingual Imperative - PPC/PPC',N'Bilingue impératif - PPC/PPC',N'Bilingual Imperative - PPC/PPC',N'Bilingue impératif - PPC/PPC','2020-01-17T09:15:36.413','2020-01-17T09:15:36.413',N'ISL_INSERT',N'366','2020-01-17T09:15:36.413',NULL)
- ,(19,N'25',N'Bilingual Non-Imperative - BBB/BBB',N'Bilingue non impératif - BBB/BBB',N'Bilingual Non-Imperative - BBB/BBB',N'Bilingue non impératif - BBB/BBB','2020-01-17T09:15:36.413','2020-01-17T09:15:36.413',N'ISL_INSERT',N'367','2020-01-17T09:15:36.413',NULL)
- ,(20,N'26',N'Bilingual Non-Imperative - BBC/BBC',N'Bilingue non impératif - BBC/BBC',N'Bilingual Non-Imperative - BBC/BBC',N'Bilingue non impératif - BBC/BBC','2020-01-17T09:15:36.413','2020-01-17T09:15:36.413',N'ISL_INSERT',N'368','2020-01-17T09:15:36.413',NULL)
- ,(21,N'27',N'Bilingual Non-Imperative - CCC/CCC',N'Bilingue non impératif - CCC/CCC',N'Bilingual Non-Imperative - CCC/CCC',N'Bilingue non impératif - CCC/CCC','2020-01-17T09:15:36.413','2020-01-17T09:15:36.413',N'ISL_INSERT',N'369','2020-01-17T09:15:36.413',NULL)
- ,(22,N'28',N'Bilingual Non-Imperative - CBC/CBC',N'Bilingue non impératif - CBC/CBC',N'Bilingual Non-Imperative - CBC/CBC',N'Bilingue non impératif - CBC/CBC','2020-01-17T09:15:36.413','2020-01-17T09:15:36.413',N'ISL_INSERT',N'370','2020-01-17T09:15:36.413',NULL)
- ,(23,N'29',N'Bilingual Non-Imperative - PPC/PPC',N'Bilingue non impératif - PPC/PPC',N'Bilingual Non-Imperative - PPC/PPC',N'Bilingue non impératif - PPC/PPC','2020-01-17T09:15:36.413','2020-01-17T09:15:36.413',N'ISL_INSERT',N'371','2020-01-17T09:15:36.413',NULL)
+ ,(14,N'20',N'Bilingual Imperative - BBB/BBB',N'Bilingue imp?ratif - BBB/BBB',N'Bilingual Imperative - BBB/BBB',N'Bilingue imp?ratif - BBB/BBB','2020-01-17T09:15:36.413','2020-01-17T09:15:36.413',N'ISL_INSERT',N'362','2020-01-17T09:15:36.413',NULL)
+ ,(15,N'21',N'Bilingual Imperative - BBC/BBC',N'Bilingue imp?ratif - BBC/BBC',N'Bilingual Imperative - BBC/BBC',N'Bilingue imp?ratif - BBC/BBC','2020-01-17T09:15:36.413','2020-01-17T09:15:36.413',N'ISL_INSERT',N'363','2020-01-17T09:15:36.413',NULL)
+ ,(16,N'22',N'Bilingual Imperative - CCC/CCC',N'Bilingue imp?ratif - CCC/CCC',N'Bilingual Imperative - CCC/CCC',N'Bilingue imp?ratif - CCC/CCC','2020-01-17T09:15:36.413','2020-01-17T09:15:36.413',N'ISL_INSERT',N'364','2020-01-17T09:15:36.413',NULL)
+ ,(17,N'23',N'Bilingual Imperative - CBC/CBC',N'Bilingue imp?ratif - CBC/CBC',N'Bilingual Imperative - CBC/CBC',N'Bilingue imp?ratif - CBC/CBC','2020-01-17T09:15:36.413','2020-01-17T09:15:36.413',N'ISL_INSERT',N'365','2020-01-17T09:15:36.413',NULL)
+ ,(18,N'24',N'Bilingual Imperative - PPC/PPC',N'Bilingue imp?ratif - PPC/PPC',N'Bilingual Imperative - PPC/PPC',N'Bilingue imp?ratif - PPC/PPC','2020-01-17T09:15:36.413','2020-01-17T09:15:36.413',N'ISL_INSERT',N'366','2020-01-17T09:15:36.413',NULL)
+ ,(19,N'25',N'Bilingual Non-Imperative - BBB/BBB',N'Bilingue non imp?ratif - BBB/BBB',N'Bilingual Non-Imperative - BBB/BBB',N'Bilingue non imp?ratif - BBB/BBB','2020-01-17T09:15:36.413','2020-01-17T09:15:36.413',N'ISL_INSERT',N'367','2020-01-17T09:15:36.413',NULL)
+ ,(20,N'26',N'Bilingual Non-Imperative - BBC/BBC',N'Bilingue non imp?ratif - BBC/BBC',N'Bilingual Non-Imperative - BBC/BBC',N'Bilingue non imp?ratif - BBC/BBC','2020-01-17T09:15:36.413','2020-01-17T09:15:36.413',N'ISL_INSERT',N'368','2020-01-17T09:15:36.413',NULL)
+ ,(21,N'27',N'Bilingual Non-Imperative - CCC/CCC',N'Bilingue non imp?ratif - CCC/CCC',N'Bilingual Non-Imperative - CCC/CCC',N'Bilingue non imp?ratif - CCC/CCC','2020-01-17T09:15:36.413','2020-01-17T09:15:36.413',N'ISL_INSERT',N'369','2020-01-17T09:15:36.413',NULL)
+ ,(22,N'28',N'Bilingual Non-Imperative - CBC/CBC',N'Bilingue non imp?ratif - CBC/CBC',N'Bilingual Non-Imperative - CBC/CBC',N'Bilingue non imp?ratif - CBC/CBC','2020-01-17T09:15:36.413','2020-01-17T09:15:36.413',N'ISL_INSERT',N'370','2020-01-17T09:15:36.413',NULL)
+ ,(23,N'29',N'Bilingual Non-Imperative - PPC/PPC',N'Bilingue non imp?ratif - PPC/PPC',N'Bilingual Non-Imperative - PPC/PPC',N'Bilingue non imp?ratif - PPC/PPC','2020-01-17T09:15:36.413','2020-01-17T09:15:36.413',N'ISL_INSERT',N'371','2020-01-17T09:15:36.413',NULL)
 ) AS [Source] ([LANG_PROFICIENCY_ID],[LANG_PROFICIENCY_CODE],[LANG_PROFICIENCY_NAME_EN],[LANG_PROFICIENCY_NAME_FR],[LANG_PROFICIENCY_DESC_EN],[LANG_PROFICIENCY_DESC_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[USER_UPDATED],[DATE_CREATED],[DATE_UPDATED])
 ON ([Target].[LANG_PROFICIENCY_ID] = [Source].[LANG_PROFICIENCY_ID])
 WHEN MATCHED AND (
@@ -62,22 +62,22 @@ WHEN MATCHED AND (
 WHEN NOT MATCHED BY TARGET THEN
  INSERT([LANG_PROFICIENCY_ID],[LANG_PROFICIENCY_CODE],[LANG_PROFICIENCY_NAME_EN],[LANG_PROFICIENCY_NAME_FR],[LANG_PROFICIENCY_DESC_EN],[LANG_PROFICIENCY_DESC_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[USER_UPDATED],[DATE_CREATED],[DATE_UPDATED])
  VALUES([Source].[LANG_PROFICIENCY_ID],[Source].[LANG_PROFICIENCY_CODE],[Source].[LANG_PROFICIENCY_NAME_EN],[Source].[LANG_PROFICIENCY_NAME_FR],[Source].[LANG_PROFICIENCY_DESC_EN],[Source].[LANG_PROFICIENCY_DESC_FR],[Source].[EFFECTIVE_DATE],[Source].[EXPIRY_DATE],[Source].[USER_CREATED],[Source].[USER_UPDATED],[Source].[DATE_CREATED],[Source].[DATE_UPDATED])
-OUTPUT $action INTO @mergeOutput1861581670;
+OUTPUT $action INTO @mergeOutput1886629764;
 
-DECLARE @mergeError1861581670 int,
-@mergeCount1861581670 int,
-@mergeCountIns1861581670 int,
-@mergeCountUpd1861581670 int,
-@mergeCountDel1861581670 int
-SELECT @mergeError1861581670 = @@ERROR
-SELECT @mergeCount1861581670 = COUNT(1), @mergeCountIns1861581670 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd1861581670 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel1861581670 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput1861581670
-IF @mergeError1861581670 != 0
+DECLARE @mergeError1886629764 int,
+@mergeCount1886629764 int,
+@mergeCountIns1886629764 int,
+@mergeCountUpd1886629764 int,
+@mergeCountDel1886629764 int
+SELECT @mergeError1886629764 = @@ERROR
+SELECT @mergeCount1886629764 = COUNT(1), @mergeCountIns1886629764 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd1886629764 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel1886629764 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput1886629764
+IF @mergeError1886629764 != 0
  BEGIN
- PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_LANG_PROFICIENCY]. Rows affected: ' + CAST(@mergeCount1861581670 AS VARCHAR(100)); -- SQL should always return zero rows affected
+ PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_LANG_PROFICIENCY]. Rows affected: ' + CAST(@mergeCount1886629764 AS VARCHAR(100)); -- SQL should always return zero rows affected
  END
 ELSE
  BEGIN
- PRINT '[HRSC].[CD_LANG_PROFICIENCY] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount1861581670,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns1861581670,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd1861581670,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel1861581670,0) AS VARCHAR(100)) + ')' ;
+ PRINT '[HRSC].[CD_LANG_PROFICIENCY] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount1886629764,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns1886629764,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd1886629764,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel1886629764,0) AS VARCHAR(100)) + ')' ;
  END
 
 

@@ -7,20 +7,20 @@ SET NOCOUNT ON
 
 SET IDENTITY_INSERT [HRSC].[CD_EMPLOYEE_ROLE] ON
 
-DECLARE @mergeOutput1413580074 TABLE ( [DMLAction] VARCHAR(6) );
+DECLARE @mergeOutput718625603 TABLE ( [DMLAction] VARCHAR(6) );
 MERGE INTO [HRSC].[CD_EMPLOYEE_ROLE] AS [Target]
 USING (VALUES
-  (8,N'Development Administrator',N'Administrateur développement',N'Development Administrator',N'Administrateur développement','2011-12-09T00:00:00',NULL,N'Gaétan',NULL,'2011-12-09T00:00:00',NULL,N'1')
- ,(9,N'HR System Administrator',N'Administrateur de système RH',N'HR System Administrator',N'Administrateur de système RH','2011-12-09T00:00:00',NULL,N'Gaétan',NULL,'2011-12-09T00:00:00',NULL,N'2')
- ,(10,N'HRSC Manager',N'Gestionnaire CSRH',N'HRSC Manager',N'Gestionnaire CSRH','2011-12-09T00:00:00',NULL,N'Gaétan',NULL,'2011-12-09T00:00:00',NULL,N'3')
- ,(13,N'HRSC Dispatcher',N'Répartiteur SCRH',N'HRSC Dispatcher',N'Répartiteur SCRH','2011-12-09T00:00:00',NULL,N'Gaétan',NULL,'2011-12-09T00:00:00',NULL,N'6')
- ,(14,N'Client',N'Client',N'Client',N'Client','2011-12-09T00:00:00',NULL,N'Gaétan',NULL,'2011-12-09T00:00:00',NULL,N'CLI')
- ,(17,N'Manager',N'Gestionnaire',N'Manager',N'Gestionnaire','2012-01-11T00:00:00',NULL,N'Éric',NULL,'2012-01-11T00:00:00',NULL,N'MAN')
- ,(20,N'Contact',N'Contact',N'Contact',N'Contact','2012-01-11T00:00:00.580',NULL,N'Éric',NULL,'2012-01-11T00:00:00.580',NULL,N'AMAN')
- ,(21,N'Lead',N'Leader',N'Lead',N'Leader','2012-01-11T14:27:19.347',NULL,N'Éric',NULL,'2012-01-11T14:27:19.347',NULL,N'LEAD')
- ,(24,N'Collaborator',N'Collaborateur',N'Collaborator',N'Collaborateur','2012-01-11T00:00:00.547',NULL,N'Éric',NULL,'2012-01-11T00:00:00.547',NULL,N'COL')
- ,(28,N'Sub-Delegated Manager',N'Gestionnaire sous-délégué',N'Sub-Delegated Manager',N'Gestionnaire sous-délégué','2012-01-25T00:00:00',NULL,N'Alain',NULL,'2013-01-25T15:39:40.420',NULL,N'SDEL')
- ,(29,N'Host Manager',N'Gestionnaire de l’organisme d’accueil',N'Host Manager',N'Gestionnaire de l’organisme d’accueil','2012-01-28T00:00:00',NULL,N'Elena',NULL,'2012-01-28T00:00:00',NULL,N'HOST')
+  (8,N'Development Administrator',N'Administrateur d?veloppement',N'Development Administrator',N'Administrateur d?veloppement','2011-12-09T00:00:00',NULL,N'Ga?tan',NULL,'2011-12-09T00:00:00',NULL,N'1')
+ ,(9,N'HR System Administrator',N'Administrateur de syst?me RH',N'HR System Administrator',N'Administrateur de syst?me RH','2011-12-09T00:00:00',NULL,N'Ga?tan',NULL,'2011-12-09T00:00:00',NULL,N'2')
+ ,(10,N'HRSC Manager',N'Gestionnaire CSRH',N'HRSC Manager',N'Gestionnaire CSRH','2011-12-09T00:00:00',NULL,N'Ga?tan',NULL,'2011-12-09T00:00:00',NULL,N'3')
+ ,(13,N'HRSC Dispatcher',N'R?partiteur SCRH',N'HRSC Dispatcher',N'R?partiteur SCRH','2011-12-09T00:00:00',NULL,N'Ga?tan',NULL,'2011-12-09T00:00:00',NULL,N'6')
+ ,(14,N'Client',N'Client',N'Client',N'Client','2011-12-09T00:00:00',NULL,N'Ga?tan',NULL,'2011-12-09T00:00:00',NULL,N'CLI')
+ ,(17,N'Manager',N'Gestionnaire',N'Manager',N'Gestionnaire','2012-01-11T00:00:00',NULL,N'?ric',NULL,'2012-01-11T00:00:00',NULL,N'MAN')
+ ,(20,N'Contact',N'Contact',N'Contact',N'Contact','2012-01-11T00:00:00.580',NULL,N'?ric',NULL,'2012-01-11T00:00:00.580',NULL,N'AMAN')
+ ,(21,N'Lead',N'Leader',N'Lead',N'Leader','2012-01-11T14:27:19.347',NULL,N'?ric',NULL,'2012-01-11T14:27:19.347',NULL,N'LEAD')
+ ,(24,N'Collaborator',N'Collaborateur',N'Collaborator',N'Collaborateur','2012-01-11T00:00:00.547',NULL,N'?ric',NULL,'2012-01-11T00:00:00.547',NULL,N'COL')
+ ,(28,N'Sub-Delegated Manager',N'Gestionnaire sous-d?l?gu?',N'Sub-Delegated Manager',N'Gestionnaire sous-d?l?gu?','2012-01-25T00:00:00',NULL,N'Alain',NULL,'2013-01-25T15:39:40.420',NULL,N'SDEL')
+ ,(29,N'Host Manager',N'Gestionnaire de l?organisme d?accueil',N'Host Manager',N'Gestionnaire de l?organisme d?accueil','2012-01-28T00:00:00',NULL,N'Elena',NULL,'2012-01-28T00:00:00',NULL,N'HOST')
  ,(30,N'Submitted by',N'Soumis par',N'Submitted by',N'Soumis par','2013-01-31T00:00:00',NULL,N'Alain',NULL,'2013-01-31T00:00:00',NULL,N'SUBM')
  ,(31,N'Submitter',N'Appliquant',N'Submitter',N'Appliquant','2013-05-06T15:55:04.607',NULL,N'tony.paradis',NULL,'2013-05-06T15:55:04.607',NULL,N'SUBTR')
  ,(32,N'Administrative',N'Adjoint',N'Administrative',N'Adjoint','2013-05-06T15:55:49.990',NULL,N'tony.paradis',NULL,'2013-05-06T15:55:49.990',NULL,N'SBADM')
@@ -54,22 +54,22 @@ WHEN MATCHED AND (
 WHEN NOT MATCHED BY TARGET THEN
  INSERT([EMPLOYEE_ROLE_ID],[EMPLOYEE_ROLE_NAME_EN],[EMPLOYEE_ROLE_NAME_FR],[EMPLOYEE_ROLE_DESC_EN],[EMPLOYEE_ROLE_DESC_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[USER_UPDATED],[DATE_CREATED],[DATE_UPDATED],[EMPLOYEE_ROLE_CODE])
  VALUES([Source].[EMPLOYEE_ROLE_ID],[Source].[EMPLOYEE_ROLE_NAME_EN],[Source].[EMPLOYEE_ROLE_NAME_FR],[Source].[EMPLOYEE_ROLE_DESC_EN],[Source].[EMPLOYEE_ROLE_DESC_FR],[Source].[EFFECTIVE_DATE],[Source].[EXPIRY_DATE],[Source].[USER_CREATED],[Source].[USER_UPDATED],[Source].[DATE_CREATED],[Source].[DATE_UPDATED],[Source].[EMPLOYEE_ROLE_CODE])
-OUTPUT $action INTO @mergeOutput1413580074;
+OUTPUT $action INTO @mergeOutput718625603;
 
-DECLARE @mergeError1413580074 int,
-@mergeCount1413580074 int,
-@mergeCountIns1413580074 int,
-@mergeCountUpd1413580074 int,
-@mergeCountDel1413580074 int
-SELECT @mergeError1413580074 = @@ERROR
-SELECT @mergeCount1413580074 = COUNT(1), @mergeCountIns1413580074 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd1413580074 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel1413580074 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput1413580074
-IF @mergeError1413580074 != 0
+DECLARE @mergeError718625603 int,
+@mergeCount718625603 int,
+@mergeCountIns718625603 int,
+@mergeCountUpd718625603 int,
+@mergeCountDel718625603 int
+SELECT @mergeError718625603 = @@ERROR
+SELECT @mergeCount718625603 = COUNT(1), @mergeCountIns718625603 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd718625603 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel718625603 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput718625603
+IF @mergeError718625603 != 0
  BEGIN
- PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_EMPLOYEE_ROLE]. Rows affected: ' + CAST(@mergeCount1413580074 AS VARCHAR(100)); -- SQL should always return zero rows affected
+ PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_EMPLOYEE_ROLE]. Rows affected: ' + CAST(@mergeCount718625603 AS VARCHAR(100)); -- SQL should always return zero rows affected
  END
 ELSE
  BEGIN
- PRINT '[HRSC].[CD_EMPLOYEE_ROLE] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount1413580074,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns1413580074,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd1413580074,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel1413580074,0) AS VARCHAR(100)) + ')' ;
+ PRINT '[HRSC].[CD_EMPLOYEE_ROLE] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount718625603,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns718625603,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd718625603,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel718625603,0) AS VARCHAR(100)) + ')' ;
  END
 
 

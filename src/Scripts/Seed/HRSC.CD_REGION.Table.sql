@@ -7,14 +7,14 @@ SET NOCOUNT ON
 
 SET IDENTITY_INSERT [HRSC].[CD_REGION] ON
 
-DECLARE @mergeOutput402100473 TABLE ( [DMLAction] VARCHAR(6) );
+DECLARE @mergeOutput1077578877 TABLE ( [DMLAction] VARCHAR(6) );
 MERGE INTO [HRSC].[CD_REGION] AS [Target]
 USING (VALUES
-  (1,N'Quebec',N'Québec',N'QUebec Region',N'Région Québec','2011-12-13T11:19:57.313',NULL,N'Gaetan',N'System','2011-12-13T11:19:57.313','2012-02-03T10:43:58.710',N'QC')
- ,(2,N'NCR',N'RCN',N'National Capital Region',N'Région de la capitale Nationale','2012-01-05T13:43:43.683',NULL,N'System',N'Nguyen, David [NC]','2012-01-05T13:43:43.683','2012-10-30T11:29:36.897',N'ott')
- ,(3,N'West',N'Ouest',N'West Region',N'Région de l''Ouest','2012-01-24T14:01:05.120',NULL,N'System',N'Paradis, Tony [NC]','2012-01-24T14:01:05.120','2012-03-02T13:19:37.130',N'West')
- ,(4,N'Ontario',N'Ontario',N'Ontario Region',N'Région de l''Ontario','2012-02-01T14:33:56.860',NULL,N'System',N'System','2012-02-01T14:33:56.860','2012-02-10T13:00:32.580',N'ON')
- ,(5,N'Atlantic',N'Atlantique',N'Atlantic Region',N'Région de l''Atlantique','2012-02-01T14:34:22.947',NULL,N'System',NULL,'2012-02-01T14:34:22.947',NULL,N'ATL')
+  (1,N'Quebec',N'Qu?bec',N'QUebec Region',N'R?gion Qu?bec','2011-12-13T11:19:57.313',NULL,N'Gaetan',N'System','2011-12-13T11:19:57.313','2012-02-03T10:43:58.710',N'QC')
+ ,(2,N'NCR',N'RCN',N'National Capital Region',N'R?gion de la capitale Nationale','2012-01-05T13:43:43.683',NULL,N'System',N'Nguyen, David [NC]','2012-01-05T13:43:43.683','2012-10-30T11:29:36.897',N'ott')
+ ,(3,N'West',N'Ouest',N'West Region',N'R?gion de l''Ouest','2012-01-24T14:01:05.120',NULL,N'System',N'Paradis, Tony [NC]','2012-01-24T14:01:05.120','2012-03-02T13:19:37.130',N'West')
+ ,(4,N'Ontario',N'Ontario',N'Ontario Region',N'R?gion de l''Ontario','2012-02-01T14:33:56.860',NULL,N'System',N'System','2012-02-01T14:33:56.860','2012-02-10T13:00:32.580',N'ON')
+ ,(5,N'Atlantic',N'Atlantique',N'Atlantic Region',N'R?gion de l''Atlantique','2012-02-01T14:34:22.947',NULL,N'System',NULL,'2012-02-01T14:34:22.947',NULL,N'ATL')
  ,(9,N'COI Import',N'COI Import',N'COI Import',N'COI Import','2016-11-22T00:00:00','2016-11-22T14:23:07.500',N'eric.nolet',N'eric.nolet','2016-11-22T14:23:04.757','2016-11-22T14:23:07.500',N'COI')
  ,(10,N'North',N'Nord',N'North',N'Nord','2020-01-17T09:15:19.490','2020-01-20T12:10:55.310',N'Tony.Paradis',N'Girouard, Francois F [NC]','2020-01-17T09:15:19.490','2020-01-20T12:10:55.310',N'NORTH')
 ) AS [Source] ([REGION_ID],[REGION_NAME_EN],[REGION_NAME_FR],[REGION_DESC_EN],[REGION_DESC_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[USER_UPDATED],[DATE_CREATED],[DATE_UPDATED],[REGION_CODE])
@@ -46,22 +46,22 @@ WHEN MATCHED AND (
 WHEN NOT MATCHED BY TARGET THEN
  INSERT([REGION_ID],[REGION_NAME_EN],[REGION_NAME_FR],[REGION_DESC_EN],[REGION_DESC_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[USER_UPDATED],[DATE_CREATED],[DATE_UPDATED],[REGION_CODE])
  VALUES([Source].[REGION_ID],[Source].[REGION_NAME_EN],[Source].[REGION_NAME_FR],[Source].[REGION_DESC_EN],[Source].[REGION_DESC_FR],[Source].[EFFECTIVE_DATE],[Source].[EXPIRY_DATE],[Source].[USER_CREATED],[Source].[USER_UPDATED],[Source].[DATE_CREATED],[Source].[DATE_UPDATED],[Source].[REGION_CODE])
-OUTPUT $action INTO @mergeOutput402100473;
+OUTPUT $action INTO @mergeOutput1077578877;
 
-DECLARE @mergeError402100473 int,
-@mergeCount402100473 int,
-@mergeCountIns402100473 int,
-@mergeCountUpd402100473 int,
-@mergeCountDel402100473 int
-SELECT @mergeError402100473 = @@ERROR
-SELECT @mergeCount402100473 = COUNT(1), @mergeCountIns402100473 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd402100473 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel402100473 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput402100473
-IF @mergeError402100473 != 0
+DECLARE @mergeError1077578877 int,
+@mergeCount1077578877 int,
+@mergeCountIns1077578877 int,
+@mergeCountUpd1077578877 int,
+@mergeCountDel1077578877 int
+SELECT @mergeError1077578877 = @@ERROR
+SELECT @mergeCount1077578877 = COUNT(1), @mergeCountIns1077578877 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd1077578877 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel1077578877 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput1077578877
+IF @mergeError1077578877 != 0
  BEGIN
- PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_REGION]. Rows affected: ' + CAST(@mergeCount402100473 AS VARCHAR(100)); -- SQL should always return zero rows affected
+ PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_REGION]. Rows affected: ' + CAST(@mergeCount1077578877 AS VARCHAR(100)); -- SQL should always return zero rows affected
  END
 ELSE
  BEGIN
- PRINT '[HRSC].[CD_REGION] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount402100473,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns402100473,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd402100473,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel402100473,0) AS VARCHAR(100)) + ')' ;
+ PRINT '[HRSC].[CD_REGION] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount1077578877,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns1077578877,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd1077578877,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel1077578877,0) AS VARCHAR(100)) + ')' ;
  END
 
 

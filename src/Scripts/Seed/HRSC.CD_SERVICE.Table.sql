@@ -7,15 +7,15 @@ SET NOCOUNT ON
 
 SET IDENTITY_INSERT [HRSC].[CD_SERVICE] ON
 
-DECLARE @mergeOutput770101784 TABLE ( [DMLAction] VARCHAR(6) );
+DECLARE @mergeOutput514100872 TABLE ( [DMLAction] VARCHAR(6) );
 MERGE INTO [HRSC].[CD_SERVICE] AS [Target]
 USING (VALUES
   (1,N'SPUB',N'Services to the Public',N'Services au public',NULL,NULL,NULL,'2013-02-22T00:00:00',N'seddon','2013-02-22T00:00:00',NULL,NULL)
  ,(3,N'CSRV',N'Central Services',N'Services centraux',NULL,NULL,NULL,'2013-02-22T00:00:00',N'seddon','2013-02-22T00:00:00',NULL,NULL)
  ,(4,N'PSRV',N'Personal Services',N'Services personnels',NULL,NULL,NULL,'2013-02-22T00:00:00',N'seddon','2013-02-22T00:00:00',NULL,NULL)
  ,(5,N'SUPRF',N'Supervisory Functions (EX and non EX)',N'Fonctions de supervision (EX et non EX)',NULL,NULL,NULL,'2013-02-22T00:00:00',N'seddon','2013-02-22T00:00:00',NULL,NULL)
- ,(7,N'FRML',N'Formal level in grievance process',N'Palier officiel d’une procédure de griefs',NULL,NULL,NULL,'2013-02-22T00:00:00',N'seddon','2013-02-22T00:00:00',NULL,NULL)
- ,(8,N'ZOTH',N'Other, Please specify (attach annex if insufficient space):',N'Autre, veuillez préciser (ajouter une annexe si l’espace est insuffisante):',NULL,NULL,NULL,'2013-02-22T00:00:00',N'seddon','2013-02-22T00:00:00',NULL,NULL)
+ ,(7,N'FRML',N'Formal level in grievance process',N'Palier officiel d?une proc?dure de griefs',NULL,NULL,NULL,'2013-02-22T00:00:00',N'seddon','2013-02-22T00:00:00',NULL,NULL)
+ ,(8,N'ZOTH',N'Other, Please specify (attach annex if insufficient space):',N'Autre, veuillez pr?ciser (ajouter une annexe si l?espace est insuffisante):',NULL,NULL,NULL,'2013-02-22T00:00:00',N'seddon','2013-02-22T00:00:00',NULL,NULL)
 ) AS [Source] ([SERVICE_ID],[SERVICE_CODE],[SERVICE_NAME_EN],[SERVICE_NAME_FR],[SERVICE_DESC_EN],[SERVICE_DESC_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[DATE_CREATED],[USER_UPDATED],[DATE_UPDATED])
 ON ([Target].[SERVICE_ID] = [Source].[SERVICE_ID])
 WHEN MATCHED AND (
@@ -45,22 +45,22 @@ WHEN MATCHED AND (
 WHEN NOT MATCHED BY TARGET THEN
  INSERT([SERVICE_ID],[SERVICE_CODE],[SERVICE_NAME_EN],[SERVICE_NAME_FR],[SERVICE_DESC_EN],[SERVICE_DESC_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[DATE_CREATED],[USER_UPDATED],[DATE_UPDATED])
  VALUES([Source].[SERVICE_ID],[Source].[SERVICE_CODE],[Source].[SERVICE_NAME_EN],[Source].[SERVICE_NAME_FR],[Source].[SERVICE_DESC_EN],[Source].[SERVICE_DESC_FR],[Source].[EFFECTIVE_DATE],[Source].[EXPIRY_DATE],[Source].[USER_CREATED],[Source].[DATE_CREATED],[Source].[USER_UPDATED],[Source].[DATE_UPDATED])
-OUTPUT $action INTO @mergeOutput770101784;
+OUTPUT $action INTO @mergeOutput514100872;
 
-DECLARE @mergeError770101784 int,
-@mergeCount770101784 int,
-@mergeCountIns770101784 int,
-@mergeCountUpd770101784 int,
-@mergeCountDel770101784 int
-SELECT @mergeError770101784 = @@ERROR
-SELECT @mergeCount770101784 = COUNT(1), @mergeCountIns770101784 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd770101784 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel770101784 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput770101784
-IF @mergeError770101784 != 0
+DECLARE @mergeError514100872 int,
+@mergeCount514100872 int,
+@mergeCountIns514100872 int,
+@mergeCountUpd514100872 int,
+@mergeCountDel514100872 int
+SELECT @mergeError514100872 = @@ERROR
+SELECT @mergeCount514100872 = COUNT(1), @mergeCountIns514100872 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd514100872 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel514100872 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput514100872
+IF @mergeError514100872 != 0
  BEGIN
- PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_SERVICE]. Rows affected: ' + CAST(@mergeCount770101784 AS VARCHAR(100)); -- SQL should always return zero rows affected
+ PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_SERVICE]. Rows affected: ' + CAST(@mergeCount514100872 AS VARCHAR(100)); -- SQL should always return zero rows affected
  END
 ELSE
  BEGIN
- PRINT '[HRSC].[CD_SERVICE] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount770101784,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns770101784,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd770101784,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel770101784,0) AS VARCHAR(100)) + ')' ;
+ PRINT '[HRSC].[CD_SERVICE] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount514100872,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns514100872,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd514100872,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel514100872,0) AS VARCHAR(100)) + ')' ;
  END
 
 

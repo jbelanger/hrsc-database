@@ -7,17 +7,17 @@ SET NOCOUNT ON
 
 SET IDENTITY_INSERT [HRSC].[CD_STUDENT_PROGRAM] ON
 
-DECLARE @mergeOutput866102126 TABLE ( [DMLAction] VARCHAR(6) );
+DECLARE @mergeOutput754101727 TABLE ( [DMLAction] VARCHAR(6) );
 MERGE INTO [HRSC].[CD_STUDENT_PROGRAM] AS [Target]
 USING (VALUES
-  (3,N'COOP',N'COOP – Post-Secondary Coop/Internship Program',N'COOP – Programme postsecondaire d’enseignement coopératif/de stage',N'COOP – Post-Secondary Coop/Internship Program',N'COOP – Programme postsecondaire d’enseignement coopératif/de stage','2013-01-31T11:32:38.747',NULL,N'HRDC-DRHC\elena.akhmentova','2013-01-31T11:32:38.747',N'system','2021-10-30T05:25:09.983',2)
- ,(4,N'FSWEP',N'FSWEP – Federal Student Work Experience Program',N'PFETE - Programme fédéral d’expérience de travail étudiant',N'FSWEP – Federal Student Work Experience Program',N'PFETE - Programme fédéral d’expérience de travail étudiant','2013-01-31T11:32:38.747','2018-06-13T07:21:21.193',N'HRDC-DRHC\elena.akhmentova','2013-01-31T11:32:38.747',N'system','2021-10-30T05:25:09.983',1)
+  (3,N'COOP',N'COOP ? Post-Secondary Coop/Internship Program',N'COOP ? Programme postsecondaire d?enseignement coop?ratif/de stage',N'COOP ? Post-Secondary Coop/Internship Program',N'COOP ? Programme postsecondaire d?enseignement coop?ratif/de stage','2013-01-31T11:32:38.747',NULL,N'HRDC-DRHC\elena.akhmentova','2013-01-31T11:32:38.747',N'system','2021-10-30T05:25:09.983',2)
+ ,(4,N'FSWEP',N'FSWEP ? Federal Student Work Experience Program',N'PFETE - Programme f?d?ral d?exp?rience de travail ?tudiant',N'FSWEP ? Federal Student Work Experience Program',N'PFETE - Programme f?d?ral d?exp?rience de travail ?tudiant','2013-01-31T11:32:38.747','2018-06-13T07:21:21.193',N'HRDC-DRHC\elena.akhmentova','2013-01-31T11:32:38.747',N'system','2021-10-30T05:25:09.983',1)
  ,(5,N'RAP',N'RAP - Research Affiliate Program',N'PAR -  Programme des adjoints de recherche',N'RAP - Research Affiliate Program',N'PAR -  Programme des adjoints de recherche','2013-01-31T11:32:38.747',NULL,N'HRDC-DRHC\elena.akhmentova','2013-01-31T11:32:38.747',N'system','2021-10-30T05:25:09.987',3)
- ,(6,N'GI',N'FSWEP – General Student Recruitment Inventory',N'PFETE - Répertoire général de recrutement d’étudiants',N'FSWEP – General Student Recruitment Inventory',N'PFETE - Répertoire général de recrutement d’étudiants','2018-06-13T07:21:21.190',NULL,N'System','2018-06-13T07:21:21.190',N'system','2021-10-30T05:25:09.987',6)
- ,(7,N'YASEO',N'FSWEP – YASEO',N'PFETE - OEEAJ',N'FSWEP – YASEO',N'PFETE - OEEAJ','2018-06-13T07:21:21.190','2019-02-05T10:06:13.257',N'System','2018-06-13T07:21:21.190',N'michel.tardif','2019-02-05T10:06:13.257',1)
- ,(8,N'ISEO',N'ISEO - Indigenous Student Employment Opportunity',N'OEEA - Occasion d’emploi pour étudiants autochtones',N'ISEO - Indigenous Student Employment Opportunity',N'OEEA - Occasion d’emploi pour étudiants autochtones','2018-06-13T00:00:00',NULL,N'System','2018-06-13T07:21:21.190',N'system','2021-10-30T05:25:09.987',5)
- ,(9,N'EOSD',N'EOSD – Employment Opportunity for Students with Disabilities',N'OEESH - Occasion d’emploi pour étudiants en situation de handicap',N'EOSD – Employment Opportunity for Students with Disabilities',N'OEESH - Occasion d’emploi pour étudiants en situation de handicap','2019-02-05T00:00:00',NULL,N'michel.tardif','2019-02-05T10:06:06.850',N'system','2021-10-30T05:25:09.987',4)
- ,(10,N'CAFRS',N'Canadian Armed Forces Reservist Students Employment',N'Occasions d’emploi pour étudiants réservistes des Forces armées canadiennes',N'Canadian Armed Forces Reservist Students Employment',N'Occasions d’emploi pour étudiants réservistes des Forces armées canadiennes','2019-03-19T00:00:00','2021-10-30T05:25:26.987',N'michel.tardif','2019-03-19T09:30:43.687',N'5',NULL,1)
+ ,(6,N'GI',N'FSWEP ? General Student Recruitment Inventory',N'PFETE - R?pertoire g?n?ral de recrutement d??tudiants',N'FSWEP ? General Student Recruitment Inventory',N'PFETE - R?pertoire g?n?ral de recrutement d??tudiants','2018-06-13T07:21:21.190',NULL,N'System','2018-06-13T07:21:21.190',N'system','2021-10-30T05:25:09.987',6)
+ ,(7,N'YASEO',N'FSWEP ? YASEO',N'PFETE - OEEAJ',N'FSWEP ? YASEO',N'PFETE - OEEAJ','2018-06-13T07:21:21.190','2019-02-05T10:06:13.257',N'System','2018-06-13T07:21:21.190',N'michel.tardif','2019-02-05T10:06:13.257',1)
+ ,(8,N'ISEO',N'ISEO - Indigenous Student Employment Opportunity',N'OEEA - Occasion d?emploi pour ?tudiants autochtones',N'ISEO - Indigenous Student Employment Opportunity',N'OEEA - Occasion d?emploi pour ?tudiants autochtones','2018-06-13T00:00:00',NULL,N'System','2018-06-13T07:21:21.190',N'system','2021-10-30T05:25:09.987',5)
+ ,(9,N'EOSD',N'EOSD ? Employment Opportunity for Students with Disabilities',N'OEESH - Occasion d?emploi pour ?tudiants en situation de handicap',N'EOSD ? Employment Opportunity for Students with Disabilities',N'OEESH - Occasion d?emploi pour ?tudiants en situation de handicap','2019-02-05T00:00:00',NULL,N'michel.tardif','2019-02-05T10:06:06.850',N'system','2021-10-30T05:25:09.987',4)
+ ,(10,N'CAFRS',N'Canadian Armed Forces Reservist Students Employment',N'Occasions d?emploi pour ?tudiants r?servistes des Forces arm?es canadiennes',N'Canadian Armed Forces Reservist Students Employment',N'Occasions d?emploi pour ?tudiants r?servistes des Forces arm?es canadiennes','2019-03-19T00:00:00','2021-10-30T05:25:26.987',N'michel.tardif','2019-03-19T09:30:43.687',N'5',NULL,1)
 ) AS [Source] ([STUDENT_PROGRAM_ID],[STUDENT_PROGRAM_CODE],[STUDENT_PROGRAM_NAME_EN],[STUDENT_PROGRAM_NAME_FR],[STUDENT_PROGRAM_DESC_EN],[STUDENT_PROGRAM_DESC_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[DATE_CREATED],[USER_UPDATED],[DATE_UPDATED],[SORT_ORDER])
 ON ([Target].[STUDENT_PROGRAM_ID] = [Source].[STUDENT_PROGRAM_ID])
 WHEN MATCHED AND (
@@ -49,22 +49,22 @@ WHEN MATCHED AND (
 WHEN NOT MATCHED BY TARGET THEN
  INSERT([STUDENT_PROGRAM_ID],[STUDENT_PROGRAM_CODE],[STUDENT_PROGRAM_NAME_EN],[STUDENT_PROGRAM_NAME_FR],[STUDENT_PROGRAM_DESC_EN],[STUDENT_PROGRAM_DESC_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[DATE_CREATED],[USER_UPDATED],[DATE_UPDATED],[SORT_ORDER])
  VALUES([Source].[STUDENT_PROGRAM_ID],[Source].[STUDENT_PROGRAM_CODE],[Source].[STUDENT_PROGRAM_NAME_EN],[Source].[STUDENT_PROGRAM_NAME_FR],[Source].[STUDENT_PROGRAM_DESC_EN],[Source].[STUDENT_PROGRAM_DESC_FR],[Source].[EFFECTIVE_DATE],[Source].[EXPIRY_DATE],[Source].[USER_CREATED],[Source].[DATE_CREATED],[Source].[USER_UPDATED],[Source].[DATE_UPDATED],[Source].[SORT_ORDER])
-OUTPUT $action INTO @mergeOutput866102126;
+OUTPUT $action INTO @mergeOutput754101727;
 
-DECLARE @mergeError866102126 int,
-@mergeCount866102126 int,
-@mergeCountIns866102126 int,
-@mergeCountUpd866102126 int,
-@mergeCountDel866102126 int
-SELECT @mergeError866102126 = @@ERROR
-SELECT @mergeCount866102126 = COUNT(1), @mergeCountIns866102126 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd866102126 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel866102126 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput866102126
-IF @mergeError866102126 != 0
+DECLARE @mergeError754101727 int,
+@mergeCount754101727 int,
+@mergeCountIns754101727 int,
+@mergeCountUpd754101727 int,
+@mergeCountDel754101727 int
+SELECT @mergeError754101727 = @@ERROR
+SELECT @mergeCount754101727 = COUNT(1), @mergeCountIns754101727 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd754101727 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel754101727 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput754101727
+IF @mergeError754101727 != 0
  BEGIN
- PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_STUDENT_PROGRAM]. Rows affected: ' + CAST(@mergeCount866102126 AS VARCHAR(100)); -- SQL should always return zero rows affected
+ PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_STUDENT_PROGRAM]. Rows affected: ' + CAST(@mergeCount754101727 AS VARCHAR(100)); -- SQL should always return zero rows affected
  END
 ELSE
  BEGIN
- PRINT '[HRSC].[CD_STUDENT_PROGRAM] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount866102126,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns866102126,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd866102126,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel866102126,0) AS VARCHAR(100)) + ')' ;
+ PRINT '[HRSC].[CD_STUDENT_PROGRAM] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount754101727,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns754101727,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd754101727,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel754101727,0) AS VARCHAR(100)) + ')' ;
  END
 
 

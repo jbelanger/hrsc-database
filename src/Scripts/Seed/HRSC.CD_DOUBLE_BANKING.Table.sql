@@ -7,17 +7,17 @@ SET NOCOUNT ON
 
 SET IDENTITY_INSERT [HRSC].[CD_DOUBLE_BANKING] ON
 
-DECLARE @mergeOutput1317579732 TABLE ( [DMLAction] VARCHAR(6) );
+DECLARE @mergeOutput206623779 TABLE ( [DMLAction] VARCHAR(6) );
 MERGE INTO [HRSC].[CD_DOUBLE_BANKING] AS [Target]
 USING (VALUES
   (1,N'DBB01',N'Not a double banking situation',N'N''est pas une situation de jumelage',N'Not a double banking situation',N'N''est pas une situation de jumelage',NULL,N'Sytem',NULL,'2018-06-13T07:21:19.510',NULL,'2018-06-13T07:21:19.510')
- ,(2,N'DBB02',N'Incumbent is on leave for the duration of this staffing action',N'Le titulaire du poste est en congé pour la durée de cette action de dotation',N'Incumbent is on leave for the duration of this staffing action',N'Le  titulaire du poste est en congé pour la durée de cette action de dotation',NULL,N'Sytem',N'michel.tardif','2018-06-13T07:21:19.510','2018-09-24T15:07:27.933','2018-06-13T00:00:00')
- ,(3,N'DBB03',N'Incumbent is acting/seconded out/on assignment for the duration of this staffing action',N'Le  titulaire du poste est en intérimaire/affectation/détachement pour la durée de cette action de dotation',N'Incumbent is acting/seconded out/on assignment for the duration of this staffing action',N'Le titulaire du poste est en intérimaire/affectation/détachement pour la durée de cette action de dotation',NULL,N'Sytem',N'michel.tardif','2018-06-13T07:21:19.510','2018-09-24T15:08:00.077','2018-06-13T00:00:00')
- ,(4,N'DBB04',N'Incumbent is enrolled in full time language training for the duration of this staffing action',N'Le titulaire du poste est en formation linguistique pour la durée de cette action de dotation',N'Incumbent is enrolled in full time language training for the duration of this staffing action',N'Le titulaire du poste est en formation linguistique pour la durée de cette action de dotation',NULL,N'System',N'michel.tardif','2018-06-13T07:21:19.510','2018-09-24T15:08:28.830','2018-06-13T00:00:00')
- ,(5,N'DBB05',N'Incumbent has retired',N'Le titulaire du poste est à la retraite',N'Incumbent has retired',N'Le titulaire du poste est à la retraite',NULL,N'Sytem',N'michel.tardif','2018-06-13T07:21:19.510','2018-09-24T15:08:55.807','2018-06-13T00:00:00')
- ,(6,N'DBB06',N'Incumbent has been Appointed or deployed to another position',N'Le titulaire a été muté ou nommé dans un autre poste à l’intérieur du ministère',N'Incumbent has been Appointed or deployed to another position',N'Le titulaire a été muté ou nommé dans un autre poste à l’intérieur du ministère',NULL,N'Sytem',NULL,'2018-06-13T07:21:19.510',NULL,'2018-06-13T07:21:19.510')
- ,(7,N'DBB07',N'Incumbent has transferred out of our department',N'Le titulaire du poste a été nommé ou muté à l’extérieur du ministère',N'Incumbent has transferred out of our department',N'Le titulaire du poste a été nommé ou muté à l’extérieur du ministère',NULL,N'Sytem',NULL,'2018-06-13T07:21:19.510',NULL,'2018-06-13T07:21:19.510')
- ,(8,N'DBB08',N'Other justification, please explain in the comments section',N'Autre justification, veuillez préciser  dans la section commentaires',N'Other justification, please explain in the comments section',N'Autre justification, veuillez préciser  dans la section commentaires',NULL,N'Sytem',NULL,'2018-06-13T07:21:19.510',NULL,'2018-06-13T07:21:19.510')
+ ,(2,N'DBB02',N'Incumbent is on leave for the duration of this staffing action',N'Le titulaire du poste est en cong? pour la dur?e de cette action de dotation',N'Incumbent is on leave for the duration of this staffing action',N'Le  titulaire du poste est en cong? pour la dur?e de cette action de dotation',NULL,N'Sytem',N'michel.tardif','2018-06-13T07:21:19.510','2018-09-24T15:07:27.933','2018-06-13T00:00:00')
+ ,(3,N'DBB03',N'Incumbent is acting/seconded out/on assignment for the duration of this staffing action',N'Le  titulaire du poste est en int?rimaire/affectation/d?tachement pour la dur?e de cette action de dotation',N'Incumbent is acting/seconded out/on assignment for the duration of this staffing action',N'Le titulaire du poste est en int?rimaire/affectation/d?tachement pour la dur?e de cette action de dotation',NULL,N'Sytem',N'michel.tardif','2018-06-13T07:21:19.510','2018-09-24T15:08:00.077','2018-06-13T00:00:00')
+ ,(4,N'DBB04',N'Incumbent is enrolled in full time language training for the duration of this staffing action',N'Le titulaire du poste est en formation linguistique pour la dur?e de cette action de dotation',N'Incumbent is enrolled in full time language training for the duration of this staffing action',N'Le titulaire du poste est en formation linguistique pour la dur?e de cette action de dotation',NULL,N'System',N'michel.tardif','2018-06-13T07:21:19.510','2018-09-24T15:08:28.830','2018-06-13T00:00:00')
+ ,(5,N'DBB05',N'Incumbent has retired',N'Le titulaire du poste est ? la retraite',N'Incumbent has retired',N'Le titulaire du poste est ? la retraite',NULL,N'Sytem',N'michel.tardif','2018-06-13T07:21:19.510','2018-09-24T15:08:55.807','2018-06-13T00:00:00')
+ ,(6,N'DBB06',N'Incumbent has been Appointed or deployed to another position',N'Le titulaire a ?t? mut? ou nomm? dans un autre poste ? l?int?rieur du minist?re',N'Incumbent has been Appointed or deployed to another position',N'Le titulaire a ?t? mut? ou nomm? dans un autre poste ? l?int?rieur du minist?re',NULL,N'Sytem',NULL,'2018-06-13T07:21:19.510',NULL,'2018-06-13T07:21:19.510')
+ ,(7,N'DBB07',N'Incumbent has transferred out of our department',N'Le titulaire du poste a ?t? nomm? ou mut? ? l?ext?rieur du minist?re',N'Incumbent has transferred out of our department',N'Le titulaire du poste a ?t? nomm? ou mut? ? l?ext?rieur du minist?re',NULL,N'Sytem',NULL,'2018-06-13T07:21:19.510',NULL,'2018-06-13T07:21:19.510')
+ ,(8,N'DBB08',N'Other justification, please explain in the comments section',N'Autre justification, veuillez pr?ciser  dans la section commentaires',N'Other justification, please explain in the comments section',N'Autre justification, veuillez pr?ciser  dans la section commentaires',NULL,N'Sytem',NULL,'2018-06-13T07:21:19.510',NULL,'2018-06-13T07:21:19.510')
 ) AS [Source] ([DOUBLE_BANKING_ID],[DOUBLE_BANKING_CODE],[DOUBLE_BANKING_NAME_EN],[DOUBLE_BANKING_NAME_FR],[DOUBLE_BANKING_DESC_EN],[DOUBLE_BANKING_DESC_FR],[EXPIRY_DATE],[USER_CREATED],[USER_UPDATED],[DATE_CREATED],[DATE_UPDATED],[EFFECTIVE_DATE])
 ON ([Target].[DOUBLE_BANKING_ID] = [Source].[DOUBLE_BANKING_ID])
 WHEN MATCHED AND (
@@ -47,22 +47,22 @@ WHEN MATCHED AND (
 WHEN NOT MATCHED BY TARGET THEN
  INSERT([DOUBLE_BANKING_ID],[DOUBLE_BANKING_CODE],[DOUBLE_BANKING_NAME_EN],[DOUBLE_BANKING_NAME_FR],[DOUBLE_BANKING_DESC_EN],[DOUBLE_BANKING_DESC_FR],[EXPIRY_DATE],[USER_CREATED],[USER_UPDATED],[DATE_CREATED],[DATE_UPDATED],[EFFECTIVE_DATE])
  VALUES([Source].[DOUBLE_BANKING_ID],[Source].[DOUBLE_BANKING_CODE],[Source].[DOUBLE_BANKING_NAME_EN],[Source].[DOUBLE_BANKING_NAME_FR],[Source].[DOUBLE_BANKING_DESC_EN],[Source].[DOUBLE_BANKING_DESC_FR],[Source].[EXPIRY_DATE],[Source].[USER_CREATED],[Source].[USER_UPDATED],[Source].[DATE_CREATED],[Source].[DATE_UPDATED],[Source].[EFFECTIVE_DATE])
-OUTPUT $action INTO @mergeOutput1317579732;
+OUTPUT $action INTO @mergeOutput206623779;
 
-DECLARE @mergeError1317579732 int,
-@mergeCount1317579732 int,
-@mergeCountIns1317579732 int,
-@mergeCountUpd1317579732 int,
-@mergeCountDel1317579732 int
-SELECT @mergeError1317579732 = @@ERROR
-SELECT @mergeCount1317579732 = COUNT(1), @mergeCountIns1317579732 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd1317579732 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel1317579732 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput1317579732
-IF @mergeError1317579732 != 0
+DECLARE @mergeError206623779 int,
+@mergeCount206623779 int,
+@mergeCountIns206623779 int,
+@mergeCountUpd206623779 int,
+@mergeCountDel206623779 int
+SELECT @mergeError206623779 = @@ERROR
+SELECT @mergeCount206623779 = COUNT(1), @mergeCountIns206623779 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd206623779 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel206623779 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput206623779
+IF @mergeError206623779 != 0
  BEGIN
- PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_DOUBLE_BANKING]. Rows affected: ' + CAST(@mergeCount1317579732 AS VARCHAR(100)); -- SQL should always return zero rows affected
+ PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_DOUBLE_BANKING]. Rows affected: ' + CAST(@mergeCount206623779 AS VARCHAR(100)); -- SQL should always return zero rows affected
  END
 ELSE
  BEGIN
- PRINT '[HRSC].[CD_DOUBLE_BANKING] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount1317579732,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns1317579732,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd1317579732,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel1317579732,0) AS VARCHAR(100)) + ')' ;
+ PRINT '[HRSC].[CD_DOUBLE_BANKING] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount206623779,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns206623779,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd206623779,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel206623779,0) AS VARCHAR(100)) + ')' ;
  END
 
 

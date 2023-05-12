@@ -7,12 +7,12 @@ SET NOCOUNT ON
 
 SET IDENTITY_INSERT [HRSC].[CD_RELOCATION_EXPENSE] ON
 
-DECLARE @mergeOutput450100644 TABLE ( [DMLAction] VARCHAR(6) );
+DECLARE @mergeOutput1269579561 TABLE ( [DMLAction] VARCHAR(6) );
 MERGE INTO [HRSC].[CD_RELOCATION_EXPENSE] AS [Target]
 USING (VALUES
-  (1,N'Empee',N'Employee Requested',N'À la demande de l’employé ',N'Employee Requested',N'À la demande de l’employé ','2013-01-10T00:00:00','2020-01-17T09:12:09.043',N'HRDC-DRHC\elena.akhmentova','2013-01-10T11:35:30.930',N'michel.tardif','2018-09-24T15:17:39.810')
- ,(2,N'Emper',N'Employer Requested',N'À la demande de l''employeur',N'Employer Requested',N'À la demande de l''employeur','2013-01-10T11:35:30.957','2020-01-17T09:12:09.043',N'HRDC-DRHC\elena.akhmentova','2013-01-10T11:35:30.957',NULL,NULL)
- ,(4,N'NA',N'Not applicable',N'Sans objet',N'Not applicable',N'Sans objet','2013-02-01T00:00:00','2020-01-17T09:12:09.043',N'Alain Bélanger','2013-02-01T00:00:00',NULL,NULL)
+  (1,N'Empee',N'Employee Requested',N'? la demande de l?employ? ',N'Employee Requested',N'? la demande de l?employ? ','2013-01-10T00:00:00','2020-01-17T09:12:09.043',N'HRDC-DRHC\elena.akhmentova','2013-01-10T11:35:30.930',N'michel.tardif','2018-09-24T15:17:39.810')
+ ,(2,N'Emper',N'Employer Requested',N'? la demande de l''employeur',N'Employer Requested',N'? la demande de l''employeur','2013-01-10T11:35:30.957','2020-01-17T09:12:09.043',N'HRDC-DRHC\elena.akhmentova','2013-01-10T11:35:30.957',NULL,NULL)
+ ,(4,N'NA',N'Not applicable',N'Sans objet',N'Not applicable',N'Sans objet','2013-02-01T00:00:00','2020-01-17T09:12:09.043',N'Alain B?langer','2013-02-01T00:00:00',NULL,NULL)
  ,(5,N'No',N'No*',N'Non : *',N'No*',N'Non : *',NULL,NULL,N'dbo','2020-01-17T09:12:09.043',NULL,NULL)
  ,(6,N'Yes',N'Yes: You must attach the NRO email*',N'Oui : Vous devez joindre le courriel du BNR*',N'Yes: You must attach the NRO email*',N'Oui : Vous devez joindre le courriel du BNR*',NULL,NULL,N'dbo','2020-01-17T09:12:09.043',NULL,NULL)
 ) AS [Source] ([RELOCATION_EXPENSE_ID],[RELOCATION_EXPENSE_CODE],[RELOCATION_EXPENSE_NAME_EN],[RELOCATION_EXPENSE_NAME_FR],[RELOCATION_EXPENSE_DESC_EN],[RELOCATION_EXPENSE_DESC_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[DATE_CREATED],[USER_UPDATED],[DATE_UPDATED])
@@ -44,22 +44,22 @@ WHEN MATCHED AND (
 WHEN NOT MATCHED BY TARGET THEN
  INSERT([RELOCATION_EXPENSE_ID],[RELOCATION_EXPENSE_CODE],[RELOCATION_EXPENSE_NAME_EN],[RELOCATION_EXPENSE_NAME_FR],[RELOCATION_EXPENSE_DESC_EN],[RELOCATION_EXPENSE_DESC_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[DATE_CREATED],[USER_UPDATED],[DATE_UPDATED])
  VALUES([Source].[RELOCATION_EXPENSE_ID],[Source].[RELOCATION_EXPENSE_CODE],[Source].[RELOCATION_EXPENSE_NAME_EN],[Source].[RELOCATION_EXPENSE_NAME_FR],[Source].[RELOCATION_EXPENSE_DESC_EN],[Source].[RELOCATION_EXPENSE_DESC_FR],[Source].[EFFECTIVE_DATE],[Source].[EXPIRY_DATE],[Source].[USER_CREATED],[Source].[DATE_CREATED],[Source].[USER_UPDATED],[Source].[DATE_UPDATED])
-OUTPUT $action INTO @mergeOutput450100644;
+OUTPUT $action INTO @mergeOutput1269579561;
 
-DECLARE @mergeError450100644 int,
-@mergeCount450100644 int,
-@mergeCountIns450100644 int,
-@mergeCountUpd450100644 int,
-@mergeCountDel450100644 int
-SELECT @mergeError450100644 = @@ERROR
-SELECT @mergeCount450100644 = COUNT(1), @mergeCountIns450100644 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd450100644 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel450100644 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput450100644
-IF @mergeError450100644 != 0
+DECLARE @mergeError1269579561 int,
+@mergeCount1269579561 int,
+@mergeCountIns1269579561 int,
+@mergeCountUpd1269579561 int,
+@mergeCountDel1269579561 int
+SELECT @mergeError1269579561 = @@ERROR
+SELECT @mergeCount1269579561 = COUNT(1), @mergeCountIns1269579561 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd1269579561 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel1269579561 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput1269579561
+IF @mergeError1269579561 != 0
  BEGIN
- PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_RELOCATION_EXPENSE]. Rows affected: ' + CAST(@mergeCount450100644 AS VARCHAR(100)); -- SQL should always return zero rows affected
+ PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_RELOCATION_EXPENSE]. Rows affected: ' + CAST(@mergeCount1269579561 AS VARCHAR(100)); -- SQL should always return zero rows affected
  END
 ELSE
  BEGIN
- PRINT '[HRSC].[CD_RELOCATION_EXPENSE] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount450100644,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns450100644,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd450100644,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel450100644,0) AS VARCHAR(100)) + ')' ;
+ PRINT '[HRSC].[CD_RELOCATION_EXPENSE] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount1269579561,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns1269579561,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd1269579561,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel1269579561,0) AS VARCHAR(100)) + ')' ;
  END
 
 

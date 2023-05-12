@@ -7,14 +7,14 @@ SET NOCOUNT ON
 
 SET IDENTITY_INSERT [HRSC].[CD_EMPLOYEE_TYPE] ON
 
-DECLARE @mergeOutput1461580245 TABLE ( [DMLAction] VARCHAR(6) );
+DECLARE @mergeOutput894626230 TABLE ( [DMLAction] VARCHAR(6) );
 MERGE INTO [HRSC].[CD_EMPLOYEE_TYPE] AS [Target]
 USING (VALUES
-  (3,N'EMP',N'Employee (Indeterminate, Term, Casuals (90days), Students)',N'Employé(e) (Indéterminé, déterminé, occasionnel (90jours) et étudiant)',N'Employee (Indeterminate, Term, Casuals (90days), Students)',N'mployé(e) (Indéterminé, déterminé, occasionnel (90jours) et étudiant)',1,1,'2015-03-30T00:00:00',NULL,N'yves.robichaud',N'michel.tardif','2015-03-30T07:42:47.660','2018-05-15T13:17:04.740')
- ,(5,N'EX_A',N'Employee in the EX minus 1, EX-1, EX-2 or EX-3 groups and equivalents',N'Employé(e) dans le groupe de EX moins 1, EX-1, EX-2 ou EX-3 et équivalents',N'Employee in the EX minus 1, EX-1, EX-2 or EX-3 groups and equivalents',N'Employé(e) dans le groupe de EX moins 1, EX-1, EX-2 ou EX-3 et équivalents',2,1,'2015-03-30T07:42:47.763',NULL,N'yves.robichaud',NULL,'2015-03-30T07:42:47.763',NULL)
- ,(6,N'EX_B',N'Employee in the EX-4 or EX-5 groups and equivalents',N'Employé(e) dans le groupe de EX-4 ou EX-5 et équivalents',N'Employee in the EX-4 or EX-5 groups and equivalents',N'Employé(e) dans le groupe de EX-4 ou EX-5 et équivalents',3,1,'2015-03-30T07:42:47.770',NULL,N'yves.robichaud',NULL,'2015-03-30T07:42:47.770',NULL)
+  (3,N'EMP',N'Employee (Indeterminate, Term, Casuals (90days), Students)',N'Employ?(e) (Ind?termin?, d?termin?, occasionnel (90jours) et ?tudiant)',N'Employee (Indeterminate, Term, Casuals (90days), Students)',N'mploy?(e) (Ind?termin?, d?termin?, occasionnel (90jours) et ?tudiant)',1,1,'2015-03-30T00:00:00',NULL,N'yves.robichaud',N'michel.tardif','2015-03-30T07:42:47.660','2018-05-15T13:17:04.740')
+ ,(5,N'EX_A',N'Employee in the EX minus 1, EX-1, EX-2 or EX-3 groups and equivalents',N'Employ?(e) dans le groupe de EX moins 1, EX-1, EX-2 ou EX-3 et ?quivalents',N'Employee in the EX minus 1, EX-1, EX-2 or EX-3 groups and equivalents',N'Employ?(e) dans le groupe de EX moins 1, EX-1, EX-2 ou EX-3 et ?quivalents',2,1,'2015-03-30T07:42:47.763',NULL,N'yves.robichaud',NULL,'2015-03-30T07:42:47.763',NULL)
+ ,(6,N'EX_B',N'Employee in the EX-4 or EX-5 groups and equivalents',N'Employ?(e) dans le groupe de EX-4 ou EX-5 et ?quivalents',N'Employee in the EX-4 or EX-5 groups and equivalents',N'Employ?(e) dans le groupe de EX-4 ou EX-5 et ?quivalents',3,1,'2015-03-30T07:42:47.770',NULL,N'yves.robichaud',NULL,'2015-03-30T07:42:47.770',NULL)
  ,(8,N'CON',N'Consultant / Contractor (Professional Services)',N'Consultant(e) / Entrepreneur (services professionnels)',N'Consultant / Contractor (Professional Services)',N'Consultant(e) / Entrepreneur (services professionnels)',4,1,'2015-03-30T07:42:47.777',NULL,N'yves.robichaud',N'Robichaud, Yves [NC]','2015-03-30T07:42:47.777','2015-07-20T10:30:49.437')
- ,(9,N'NA',N'Not specified',N'Non spécifié',N'Not specified',N'Non spécifié',99,NULL,'2020-01-17T07:58:16.610','2020-01-17T07:58:16.610',N'HRSC 4.9',NULL,'2020-01-17T07:58:16.610',NULL)
+ ,(9,N'NA',N'Not specified',N'Non sp?cifi?',N'Not specified',N'Non sp?cifi?',99,NULL,'2020-01-17T07:58:16.610','2020-01-17T07:58:16.610',N'HRSC 4.9',NULL,'2020-01-17T07:58:16.610',NULL)
 ) AS [Source] ([EMPLOYEE_TYPE_ID],[EMPLOYEE_TYPE_CODE],[EMPLOYEE_TYPE_NAME_EN],[EMPLOYEE_TYPE_NAME_FR],[EMPLOYEE_TYPE_DESC_EN],[EMPLOYEE_TYPE_DESC_FR],[SORT_ORDER],[CATEGORY],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[USER_UPDATED],[DATE_CREATED],[DATE_UPDATED])
 ON ([Target].[EMPLOYEE_TYPE_ID] = [Source].[EMPLOYEE_TYPE_ID])
 WHEN MATCHED AND (
@@ -48,22 +48,22 @@ WHEN MATCHED AND (
 WHEN NOT MATCHED BY TARGET THEN
  INSERT([EMPLOYEE_TYPE_ID],[EMPLOYEE_TYPE_CODE],[EMPLOYEE_TYPE_NAME_EN],[EMPLOYEE_TYPE_NAME_FR],[EMPLOYEE_TYPE_DESC_EN],[EMPLOYEE_TYPE_DESC_FR],[SORT_ORDER],[CATEGORY],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[USER_UPDATED],[DATE_CREATED],[DATE_UPDATED])
  VALUES([Source].[EMPLOYEE_TYPE_ID],[Source].[EMPLOYEE_TYPE_CODE],[Source].[EMPLOYEE_TYPE_NAME_EN],[Source].[EMPLOYEE_TYPE_NAME_FR],[Source].[EMPLOYEE_TYPE_DESC_EN],[Source].[EMPLOYEE_TYPE_DESC_FR],[Source].[SORT_ORDER],[Source].[CATEGORY],[Source].[EFFECTIVE_DATE],[Source].[EXPIRY_DATE],[Source].[USER_CREATED],[Source].[USER_UPDATED],[Source].[DATE_CREATED],[Source].[DATE_UPDATED])
-OUTPUT $action INTO @mergeOutput1461580245;
+OUTPUT $action INTO @mergeOutput894626230;
 
-DECLARE @mergeError1461580245 int,
-@mergeCount1461580245 int,
-@mergeCountIns1461580245 int,
-@mergeCountUpd1461580245 int,
-@mergeCountDel1461580245 int
-SELECT @mergeError1461580245 = @@ERROR
-SELECT @mergeCount1461580245 = COUNT(1), @mergeCountIns1461580245 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd1461580245 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel1461580245 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput1461580245
-IF @mergeError1461580245 != 0
+DECLARE @mergeError894626230 int,
+@mergeCount894626230 int,
+@mergeCountIns894626230 int,
+@mergeCountUpd894626230 int,
+@mergeCountDel894626230 int
+SELECT @mergeError894626230 = @@ERROR
+SELECT @mergeCount894626230 = COUNT(1), @mergeCountIns894626230 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd894626230 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel894626230 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput894626230
+IF @mergeError894626230 != 0
  BEGIN
- PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_EMPLOYEE_TYPE]. Rows affected: ' + CAST(@mergeCount1461580245 AS VARCHAR(100)); -- SQL should always return zero rows affected
+ PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_EMPLOYEE_TYPE]. Rows affected: ' + CAST(@mergeCount894626230 AS VARCHAR(100)); -- SQL should always return zero rows affected
  END
 ELSE
  BEGIN
- PRINT '[HRSC].[CD_EMPLOYEE_TYPE] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount1461580245,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns1461580245,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd1461580245,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel1461580245,0) AS VARCHAR(100)) + ')' ;
+ PRINT '[HRSC].[CD_EMPLOYEE_TYPE] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount894626230,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns894626230,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd894626230,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel894626230,0) AS VARCHAR(100)) + ')' ;
  END
 
 

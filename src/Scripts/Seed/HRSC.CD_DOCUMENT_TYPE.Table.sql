@@ -7,14 +7,14 @@ SET NOCOUNT ON
 
 SET IDENTITY_INSERT [HRSC].[CD_DOCUMENT_TYPE] ON
 
-DECLARE @mergeOutput1269579561 TABLE ( [DMLAction] VARCHAR(6) );
+DECLARE @mergeOutput2098106515 TABLE ( [DMLAction] VARCHAR(6) );
 MERGE INTO [HRSC].[CD_DOCUMENT_TYPE] AS [Target]
 USING (VALUES
-  (1,N'MS-Word',N'MS-Word',N'Word file',N'Fichier Word',N'application/vnd.ms-word','2011-12-09T15:14:45.253',NULL,N'Gaétan',NULL,'2011-12-09T15:14:45.253',NULL,N'doc')
- ,(2,N'MS-Excel',N'MS-Excel',N'Excel file',N'Fichier Excel',N'application/vnd.ms-excel','2011-12-09T15:14:45.253',NULL,N'Gaétan',NULL,'2011-12-09T15:14:45.253',NULL,N'xls')
- ,(3,N'Adobe PDF',N'Adobe PDF',N'PDF file',N'Fichier PDF',N'application/pdf','2011-12-09T15:47:43.030',NULL,N'Gaétan',NULL,'2011-12-09T15:47:43.030',NULL,N'pdf')
- ,(4,N'MS-Visio',N'MS-Visio',N'Visio file',N'Fichier Visio',N'application/vnd.visio','2011-12-09T15:47:43.030',NULL,N'Gaétan',NULL,'2011-12-09T15:47:43.030',NULL,N'vsd')
- ,(7,N'Unknonwed',N'Unknonwed',N'Unknonwed',N'Unknonwed',N'Unknonwed','2012-03-02T15:18:01.813',NULL,N'Éric Nolet',NULL,'2012-03-02T15:18:01.813',NULL,N'UNK')
+  (1,N'MS-Word',N'MS-Word',N'Word file',N'Fichier Word',N'application/vnd.ms-word','2011-12-09T15:14:45.253',NULL,N'Ga?tan',NULL,'2011-12-09T15:14:45.253',NULL,N'doc')
+ ,(2,N'MS-Excel',N'MS-Excel',N'Excel file',N'Fichier Excel',N'application/vnd.ms-excel','2011-12-09T15:14:45.253',NULL,N'Ga?tan',NULL,'2011-12-09T15:14:45.253',NULL,N'xls')
+ ,(3,N'Adobe PDF',N'Adobe PDF',N'PDF file',N'Fichier PDF',N'application/pdf','2011-12-09T15:47:43.030',NULL,N'Ga?tan',NULL,'2011-12-09T15:47:43.030',NULL,N'pdf')
+ ,(4,N'MS-Visio',N'MS-Visio',N'Visio file',N'Fichier Visio',N'application/vnd.visio','2011-12-09T15:47:43.030',NULL,N'Ga?tan',NULL,'2011-12-09T15:47:43.030',NULL,N'vsd')
+ ,(7,N'Unknonwed',N'Unknonwed',N'Unknonwed',N'Unknonwed',N'Unknonwed','2012-03-02T15:18:01.813',NULL,N'?ric Nolet',NULL,'2012-03-02T15:18:01.813',NULL,N'UNK')
 ) AS [Source] ([DOCUMENT_TYPE_ID],[DOCUMENT_TYPE_NAME_EN],[DOCUMENT_TYPE_NAME_FR],[DOCUMENT_TYPE_DESC_EN],[DOCUMENT_TYPE_DESC_FR],[DOCUMENT_CONTENT_TYPE],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[USER_UPDATED],[DATE_CREATED],[DATE_UPDATED],[DOCUMENT_TYPE_CODE])
 ON ([Target].[DOCUMENT_TYPE_ID] = [Source].[DOCUMENT_TYPE_ID])
 WHEN MATCHED AND (
@@ -46,22 +46,22 @@ WHEN MATCHED AND (
 WHEN NOT MATCHED BY TARGET THEN
  INSERT([DOCUMENT_TYPE_ID],[DOCUMENT_TYPE_NAME_EN],[DOCUMENT_TYPE_NAME_FR],[DOCUMENT_TYPE_DESC_EN],[DOCUMENT_TYPE_DESC_FR],[DOCUMENT_CONTENT_TYPE],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[USER_UPDATED],[DATE_CREATED],[DATE_UPDATED],[DOCUMENT_TYPE_CODE])
  VALUES([Source].[DOCUMENT_TYPE_ID],[Source].[DOCUMENT_TYPE_NAME_EN],[Source].[DOCUMENT_TYPE_NAME_FR],[Source].[DOCUMENT_TYPE_DESC_EN],[Source].[DOCUMENT_TYPE_DESC_FR],[Source].[DOCUMENT_CONTENT_TYPE],[Source].[EFFECTIVE_DATE],[Source].[EXPIRY_DATE],[Source].[USER_CREATED],[Source].[USER_UPDATED],[Source].[DATE_CREATED],[Source].[DATE_UPDATED],[Source].[DOCUMENT_TYPE_CODE])
-OUTPUT $action INTO @mergeOutput1269579561;
+OUTPUT $action INTO @mergeOutput2098106515;
 
-DECLARE @mergeError1269579561 int,
-@mergeCount1269579561 int,
-@mergeCountIns1269579561 int,
-@mergeCountUpd1269579561 int,
-@mergeCountDel1269579561 int
-SELECT @mergeError1269579561 = @@ERROR
-SELECT @mergeCount1269579561 = COUNT(1), @mergeCountIns1269579561 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd1269579561 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel1269579561 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput1269579561
-IF @mergeError1269579561 != 0
+DECLARE @mergeError2098106515 int,
+@mergeCount2098106515 int,
+@mergeCountIns2098106515 int,
+@mergeCountUpd2098106515 int,
+@mergeCountDel2098106515 int
+SELECT @mergeError2098106515 = @@ERROR
+SELECT @mergeCount2098106515 = COUNT(1), @mergeCountIns2098106515 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd2098106515 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel2098106515 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput2098106515
+IF @mergeError2098106515 != 0
  BEGIN
- PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_DOCUMENT_TYPE]. Rows affected: ' + CAST(@mergeCount1269579561 AS VARCHAR(100)); -- SQL should always return zero rows affected
+ PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_DOCUMENT_TYPE]. Rows affected: ' + CAST(@mergeCount2098106515 AS VARCHAR(100)); -- SQL should always return zero rows affected
  END
 ELSE
  BEGIN
- PRINT '[HRSC].[CD_DOCUMENT_TYPE] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount1269579561,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns1269579561,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd1269579561,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel1269579561,0) AS VARCHAR(100)) + ')' ;
+ PRINT '[HRSC].[CD_DOCUMENT_TYPE] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount2098106515,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns2098106515,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd2098106515,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel2098106515,0) AS VARCHAR(100)) + ')' ;
  END
 
 

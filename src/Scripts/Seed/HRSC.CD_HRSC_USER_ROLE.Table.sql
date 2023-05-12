@@ -7,13 +7,13 @@ SET NOCOUNT ON
 
 SET IDENTITY_INSERT [HRSC].[CD_HRSC_USER_ROLE] ON
 
-DECLARE @mergeOutput1813581499 TABLE ( [DMLAction] VARCHAR(6) );
+DECLARE @mergeOutput1742629251 TABLE ( [DMLAction] VARCHAR(6) );
 MERGE INTO [HRSC].[CD_HRSC_USER_ROLE] AS [Target]
 USING (VALUES
-  (3,N'IITB Support',N'DGITT support',N'Innovation, Information and Technology Branch',N'Direction générale de l’innovation, de l’information et de la technologie ','2012-01-12T15:21:07.543',NULL,N'System',NULL,'2012-01-12T15:21:07.543',NULL,N'IITB')
+  (3,N'IITB Support',N'DGITT support',N'Innovation, Information and Technology Branch',N'Direction g?n?rale de l?innovation, de l?information et de la technologie ','2012-01-12T15:21:07.543',NULL,N'System',NULL,'2012-01-12T15:21:07.543',NULL,N'IITB')
  ,(4,N'HRSC management',N'Gestion CSRH',N'Super Administrator',N'Super administrateur','2012-01-12T15:23:14.380',NULL,N'System',NULL,'2012-01-12T15:23:14.380',NULL,N'ADMIN')
- ,(5,N'BC management',N'Gestion CA',N'report, manage user for his/their BC…',N'raport, gestion des usager pour ou leur centre d''affaire...','2012-01-12T15:24:59.750',NULL,N'System',NULL,'2012-01-12T15:24:59.750',NULL,N'BCM')
- ,(6,N'BC Employee',N'Employé CA',N'process request',N'processus des demandes','2012-01-12T15:26:26.903',NULL,N'System',NULL,'2012-01-12T15:26:26.903',NULL,N'BCE')
+ ,(5,N'BC management',N'Gestion CA',N'report, manage user for his/their BC?',N'raport, gestion des usager pour ou leur centre d''affaire...','2012-01-12T15:24:59.750',NULL,N'System',NULL,'2012-01-12T15:24:59.750',NULL,N'BCM')
+ ,(6,N'BC Employee',N'Employ? CA',N'process request',N'processus des demandes','2012-01-12T15:26:26.903',NULL,N'System',NULL,'2012-01-12T15:26:26.903',NULL,N'BCE')
 ) AS [Source] ([HRSC_USER_ROLE_ID],[HRSC_USER_ROLE_NAME_EN],[HRSC_USER_ROLE_NAME_FR],[HRSC_USER_ROLE_DESC_EN],[HRSC_USER_ROLE_DESC_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[USER_UPDATED],[DATE_CREATED],[DATE_UPDATED],[HRSC_USER_ROLE_CODE])
 ON ([Target].[HRSC_USER_ROLE_ID] = [Source].[HRSC_USER_ROLE_ID])
 WHEN MATCHED AND (
@@ -43,22 +43,22 @@ WHEN MATCHED AND (
 WHEN NOT MATCHED BY TARGET THEN
  INSERT([HRSC_USER_ROLE_ID],[HRSC_USER_ROLE_NAME_EN],[HRSC_USER_ROLE_NAME_FR],[HRSC_USER_ROLE_DESC_EN],[HRSC_USER_ROLE_DESC_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[USER_UPDATED],[DATE_CREATED],[DATE_UPDATED],[HRSC_USER_ROLE_CODE])
  VALUES([Source].[HRSC_USER_ROLE_ID],[Source].[HRSC_USER_ROLE_NAME_EN],[Source].[HRSC_USER_ROLE_NAME_FR],[Source].[HRSC_USER_ROLE_DESC_EN],[Source].[HRSC_USER_ROLE_DESC_FR],[Source].[EFFECTIVE_DATE],[Source].[EXPIRY_DATE],[Source].[USER_CREATED],[Source].[USER_UPDATED],[Source].[DATE_CREATED],[Source].[DATE_UPDATED],[Source].[HRSC_USER_ROLE_CODE])
-OUTPUT $action INTO @mergeOutput1813581499;
+OUTPUT $action INTO @mergeOutput1742629251;
 
-DECLARE @mergeError1813581499 int,
-@mergeCount1813581499 int,
-@mergeCountIns1813581499 int,
-@mergeCountUpd1813581499 int,
-@mergeCountDel1813581499 int
-SELECT @mergeError1813581499 = @@ERROR
-SELECT @mergeCount1813581499 = COUNT(1), @mergeCountIns1813581499 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd1813581499 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel1813581499 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput1813581499
-IF @mergeError1813581499 != 0
+DECLARE @mergeError1742629251 int,
+@mergeCount1742629251 int,
+@mergeCountIns1742629251 int,
+@mergeCountUpd1742629251 int,
+@mergeCountDel1742629251 int
+SELECT @mergeError1742629251 = @@ERROR
+SELECT @mergeCount1742629251 = COUNT(1), @mergeCountIns1742629251 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd1742629251 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel1742629251 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput1742629251
+IF @mergeError1742629251 != 0
  BEGIN
- PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_HRSC_USER_ROLE]. Rows affected: ' + CAST(@mergeCount1813581499 AS VARCHAR(100)); -- SQL should always return zero rows affected
+ PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_HRSC_USER_ROLE]. Rows affected: ' + CAST(@mergeCount1742629251 AS VARCHAR(100)); -- SQL should always return zero rows affected
  END
 ELSE
  BEGIN
- PRINT '[HRSC].[CD_HRSC_USER_ROLE] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount1813581499,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns1813581499,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd1813581499,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel1813581499,0) AS VARCHAR(100)) + ')' ;
+ PRINT '[HRSC].[CD_HRSC_USER_ROLE] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount1742629251,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns1742629251,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd1742629251,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel1742629251,0) AS VARCHAR(100)) + ')' ;
  END
 
 

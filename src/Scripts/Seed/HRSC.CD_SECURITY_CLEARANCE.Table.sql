@@ -7,16 +7,16 @@ SET NOCOUNT ON
 
 SET IDENTITY_INSERT [HRSC].[CD_SECURITY_CLEARANCE] ON
 
-DECLARE @mergeOutput626101271 TABLE ( [DMLAction] VARCHAR(6) );
+DECLARE @mergeOutput2053582354 TABLE ( [DMLAction] VARCHAR(6) );
 MERGE INTO [HRSC].[CD_SECURITY_CLEARANCE] AS [Target]
 USING (VALUES
   (1,N'Conf',N'Confidential',N'Confidentiel',N'Confidential',N'Confidentiel','2013-01-10T11:39:19.157','2018-06-13T07:21:21.197',N'HRDC-DRHC\elena.akhmentova','2013-01-10T11:39:19.157',NULL,NULL)
  ,(2,N'Secr',N'Secret',N'Secret',N'Secret',N'Secret','2013-01-10T11:39:19.157',NULL,N'HRDC-DRHC\elena.akhmentova','2013-01-10T11:39:19.157',NULL,NULL)
- ,(3,N'TopS',N'Top Secret',N'Très secret',N'Top Secret',N'Très secret','2013-01-10T11:39:19.157',NULL,N'HRDC-DRHC\elena.akhmentova','2013-01-10T11:39:19.157',NULL,NULL)
- ,(4,N'RelSt',N'Reliability Status',N'Cote de fiabilité',N'Reliability Status',N'Cote de fiabilité','2013-01-10T11:39:19.160',NULL,N'HRDC-DRHC\elena.akhmentova','2013-01-10T11:39:19.160',NULL,NULL)
- ,(5,N'ER',N'Enhanced reliability',N'Fiabilité approfondie',N'Enhanced reliability',N'Fiabilité approfondie','2020-01-09T13:30:15.733',NULL,N'System','2020-01-09T13:30:15.733',NULL,NULL)
+ ,(3,N'TopS',N'Top Secret',N'Tr?s secret',N'Top Secret',N'Tr?s secret','2013-01-10T11:39:19.157',NULL,N'HRDC-DRHC\elena.akhmentova','2013-01-10T11:39:19.157',NULL,NULL)
+ ,(4,N'RelSt',N'Reliability Status',N'Cote de fiabilit?',N'Reliability Status',N'Cote de fiabilit?','2013-01-10T11:39:19.160',NULL,N'HRDC-DRHC\elena.akhmentova','2013-01-10T11:39:19.160',NULL,NULL)
+ ,(5,N'ER',N'Enhanced reliability',N'Fiabilit? approfondie',N'Enhanced reliability',N'Fiabilit? approfondie','2020-01-09T13:30:15.733',NULL,N'System','2020-01-09T13:30:15.733',NULL,NULL)
  ,(6,N'ES',N'Enhanced secret',N'Secret approfondie',N'Enhanced secret',N'Secret approfondie','2020-01-09T13:30:15.733',NULL,N'System','2020-01-09T13:30:15.733',NULL,NULL)
- ,(7,N'ETS',N'Enhanced top secret',N'Très secret approfondie',N'Enhanced top secret',N'Très secret approfondie','2020-01-09T13:30:15.733',NULL,N'System','2020-01-09T13:30:15.733',NULL,NULL)
+ ,(7,N'ETS',N'Enhanced top secret',N'Tr?s secret approfondie',N'Enhanced top secret',N'Tr?s secret approfondie','2020-01-09T13:30:15.733',NULL,N'System','2020-01-09T13:30:15.733',NULL,NULL)
 ) AS [Source] ([SECURITY_CLEARANCE_ID],[SECURITY_CLEARANCE_CODE],[SECURITY_CLEARANCE_NAME_EN],[SECURITY_CLEARANCE_NAME_FR],[SECURITY_CLEARANCE_DESC_EN],[SECURITY_CLEARANCE_DESC_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[DATE_CREATED],[USER_UPDATED],[DATE_UPDATED])
 ON ([Target].[SECURITY_CLEARANCE_ID] = [Source].[SECURITY_CLEARANCE_ID])
 WHEN MATCHED AND (
@@ -46,22 +46,22 @@ WHEN MATCHED AND (
 WHEN NOT MATCHED BY TARGET THEN
  INSERT([SECURITY_CLEARANCE_ID],[SECURITY_CLEARANCE_CODE],[SECURITY_CLEARANCE_NAME_EN],[SECURITY_CLEARANCE_NAME_FR],[SECURITY_CLEARANCE_DESC_EN],[SECURITY_CLEARANCE_DESC_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[DATE_CREATED],[USER_UPDATED],[DATE_UPDATED])
  VALUES([Source].[SECURITY_CLEARANCE_ID],[Source].[SECURITY_CLEARANCE_CODE],[Source].[SECURITY_CLEARANCE_NAME_EN],[Source].[SECURITY_CLEARANCE_NAME_FR],[Source].[SECURITY_CLEARANCE_DESC_EN],[Source].[SECURITY_CLEARANCE_DESC_FR],[Source].[EFFECTIVE_DATE],[Source].[EXPIRY_DATE],[Source].[USER_CREATED],[Source].[DATE_CREATED],[Source].[USER_UPDATED],[Source].[DATE_UPDATED])
-OUTPUT $action INTO @mergeOutput626101271;
+OUTPUT $action INTO @mergeOutput2053582354;
 
-DECLARE @mergeError626101271 int,
-@mergeCount626101271 int,
-@mergeCountIns626101271 int,
-@mergeCountUpd626101271 int,
-@mergeCountDel626101271 int
-SELECT @mergeError626101271 = @@ERROR
-SELECT @mergeCount626101271 = COUNT(1), @mergeCountIns626101271 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd626101271 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel626101271 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput626101271
-IF @mergeError626101271 != 0
+DECLARE @mergeError2053582354 int,
+@mergeCount2053582354 int,
+@mergeCountIns2053582354 int,
+@mergeCountUpd2053582354 int,
+@mergeCountDel2053582354 int
+SELECT @mergeError2053582354 = @@ERROR
+SELECT @mergeCount2053582354 = COUNT(1), @mergeCountIns2053582354 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd2053582354 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel2053582354 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput2053582354
+IF @mergeError2053582354 != 0
  BEGIN
- PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_SECURITY_CLEARANCE]. Rows affected: ' + CAST(@mergeCount626101271 AS VARCHAR(100)); -- SQL should always return zero rows affected
+ PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_SECURITY_CLEARANCE]. Rows affected: ' + CAST(@mergeCount2053582354 AS VARCHAR(100)); -- SQL should always return zero rows affected
  END
 ELSE
  BEGIN
- PRINT '[HRSC].[CD_SECURITY_CLEARANCE] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount626101271,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns626101271,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd626101271,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel626101271,0) AS VARCHAR(100)) + ')' ;
+ PRINT '[HRSC].[CD_SECURITY_CLEARANCE] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount2053582354,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns2053582354,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd2053582354,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel2053582354,0) AS VARCHAR(100)) + ')' ;
  END
 
 
