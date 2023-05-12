@@ -7,7 +7,7 @@ SET NOCOUNT ON
 
 SET IDENTITY_INSERT [HRSC].[CD_NOTE_TYPE] ON
 
-DECLARE @mergeOutput2117582582 TABLE ( [DMLAction] VARCHAR(6) );
+DECLARE @mergeOutput875866187 TABLE ( [DMLAction] VARCHAR(6) );
 MERGE INTO [HRSC].[CD_NOTE_TYPE] AS [Target]
 USING (VALUES
   (1,N'NOTE',N'Note',N'Note',N'Note',N'Note','2015-05-27T07:39:58.560',NULL,N'yves.robichaud',NULL,'2015-05-27T07:39:58.560',NULL)
@@ -54,22 +54,22 @@ WHEN MATCHED AND (
 WHEN NOT MATCHED BY TARGET THEN
  INSERT([NOTE_TYPE_ID],[NOTE_TYPE_CODE],[NOTE_TYPE_NAME_EN],[NOTE_TYPE_NAME_FR],[NOTE_TYPE_NAME_DESC_EN],[NOTE_TYPE_NAME_DESC_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[USER_UPDATED],[DATE_CREATED],[DATE_UPDATED])
  VALUES([Source].[NOTE_TYPE_ID],[Source].[NOTE_TYPE_CODE],[Source].[NOTE_TYPE_NAME_EN],[Source].[NOTE_TYPE_NAME_FR],[Source].[NOTE_TYPE_NAME_DESC_EN],[Source].[NOTE_TYPE_NAME_DESC_FR],[Source].[EFFECTIVE_DATE],[Source].[EXPIRY_DATE],[Source].[USER_CREATED],[Source].[USER_UPDATED],[Source].[DATE_CREATED],[Source].[DATE_UPDATED])
-OUTPUT $action INTO @mergeOutput2117582582;
+OUTPUT $action INTO @mergeOutput875866187;
 
-DECLARE @mergeError2117582582 int,
-@mergeCount2117582582 int,
-@mergeCountIns2117582582 int,
-@mergeCountUpd2117582582 int,
-@mergeCountDel2117582582 int
-SELECT @mergeError2117582582 = @@ERROR
-SELECT @mergeCount2117582582 = COUNT(1), @mergeCountIns2117582582 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd2117582582 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel2117582582 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput2117582582
-IF @mergeError2117582582 != 0
+DECLARE @mergeError875866187 int,
+@mergeCount875866187 int,
+@mergeCountIns875866187 int,
+@mergeCountUpd875866187 int,
+@mergeCountDel875866187 int
+SELECT @mergeError875866187 = @@ERROR
+SELECT @mergeCount875866187 = COUNT(1), @mergeCountIns875866187 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd875866187 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel875866187 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput875866187
+IF @mergeError875866187 != 0
  BEGIN
- PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_NOTE_TYPE]. Rows affected: ' + CAST(@mergeCount2117582582 AS VARCHAR(100)); -- SQL should always return zero rows affected
+ PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_NOTE_TYPE]. Rows affected: ' + CAST(@mergeCount875866187 AS VARCHAR(100)); -- SQL should always return zero rows affected
  END
 ELSE
  BEGIN
- PRINT '[HRSC].[CD_NOTE_TYPE] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount2117582582,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns2117582582,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd2117582582,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel2117582582,0) AS VARCHAR(100)) + ')' ;
+ PRINT '[HRSC].[CD_NOTE_TYPE] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount875866187,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns875866187,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd875866187,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel875866187,0) AS VARCHAR(100)) + ')' ;
  END
 
 

@@ -7,7 +7,7 @@ SET NOCOUNT ON
 
 SET IDENTITY_INSERT [HRSC].[CD_WORK_TYPE] ON
 
-DECLARE @mergeOutput1186103266 TABLE ( [DMLAction] VARCHAR(6) );
+DECLARE @mergeOutput425768574 TABLE ( [DMLAction] VARCHAR(6) );
 MERGE INTO [HRSC].[CD_WORK_TYPE] AS [Target]
 USING (VALUES
   (9,N'EFull',N'Full-time',N'À plein temps',N'Full-time',N'À plein temps','2013-01-11T10:45:11.787',NULL,N'HRDC-DRHC\elena.akhmentova',N'Robichaud, Yves [NC]','2013-01-11T10:45:11.787','2015-03-30T07:42:48.427',1,0,NULL,1)
@@ -60,22 +60,22 @@ WHEN MATCHED AND (
 WHEN NOT MATCHED BY TARGET THEN
  INSERT([WORK_TYPE_ID],[WORK_TYPE_CODE],[WORK_TYPE_NAME_EN],[WORK_TYPE_NAME_FR],[WORK_TYPE_DESC_EN],[WORK_TYPE_DESC_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[USER_UPDATED],[DATE_CREATED],[DATE_UPDATED],[EMPLOYMENT_IND],[SCHEDULE_IND],[OVERTIME_SCHEDULE_IND],[OVERTIME_TIME_IND])
  VALUES([Source].[WORK_TYPE_ID],[Source].[WORK_TYPE_CODE],[Source].[WORK_TYPE_NAME_EN],[Source].[WORK_TYPE_NAME_FR],[Source].[WORK_TYPE_DESC_EN],[Source].[WORK_TYPE_DESC_FR],[Source].[EFFECTIVE_DATE],[Source].[EXPIRY_DATE],[Source].[USER_CREATED],[Source].[USER_UPDATED],[Source].[DATE_CREATED],[Source].[DATE_UPDATED],[Source].[EMPLOYMENT_IND],[Source].[SCHEDULE_IND],[Source].[OVERTIME_SCHEDULE_IND],[Source].[OVERTIME_TIME_IND])
-OUTPUT $action INTO @mergeOutput1186103266;
+OUTPUT $action INTO @mergeOutput425768574;
 
-DECLARE @mergeError1186103266 int,
-@mergeCount1186103266 int,
-@mergeCountIns1186103266 int,
-@mergeCountUpd1186103266 int,
-@mergeCountDel1186103266 int
-SELECT @mergeError1186103266 = @@ERROR
-SELECT @mergeCount1186103266 = COUNT(1), @mergeCountIns1186103266 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd1186103266 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel1186103266 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput1186103266
-IF @mergeError1186103266 != 0
+DECLARE @mergeError425768574 int,
+@mergeCount425768574 int,
+@mergeCountIns425768574 int,
+@mergeCountUpd425768574 int,
+@mergeCountDel425768574 int
+SELECT @mergeError425768574 = @@ERROR
+SELECT @mergeCount425768574 = COUNT(1), @mergeCountIns425768574 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd425768574 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel425768574 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput425768574
+IF @mergeError425768574 != 0
  BEGIN
- PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_WORK_TYPE]. Rows affected: ' + CAST(@mergeCount1186103266 AS VARCHAR(100)); -- SQL should always return zero rows affected
+ PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_WORK_TYPE]. Rows affected: ' + CAST(@mergeCount425768574 AS VARCHAR(100)); -- SQL should always return zero rows affected
  END
 ELSE
  BEGIN
- PRINT '[HRSC].[CD_WORK_TYPE] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount1186103266,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns1186103266,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd1186103266,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel1186103266,0) AS VARCHAR(100)) + ')' ;
+ PRINT '[HRSC].[CD_WORK_TYPE] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount425768574,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns425768574,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd425768574,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel425768574,0) AS VARCHAR(100)) + ')' ;
  END
 
 

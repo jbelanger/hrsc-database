@@ -7,7 +7,7 @@ SET NOCOUNT ON
 
 SET IDENTITY_INSERT [HRSC].[CD_EMPLOYEE_ROLE] ON
 
-DECLARE @mergeOutput1413580074 TABLE ( [DMLAction] VARCHAR(6) );
+DECLARE @mergeOutput1351675863 TABLE ( [DMLAction] VARCHAR(6) );
 MERGE INTO [HRSC].[CD_EMPLOYEE_ROLE] AS [Target]
 USING (VALUES
   (8,N'Development Administrator',N'Administrateur développement',N'Development Administrator',N'Administrateur développement','2011-12-09T00:00:00',NULL,N'Gaétan',NULL,'2011-12-09T00:00:00',NULL,N'1')
@@ -54,22 +54,22 @@ WHEN MATCHED AND (
 WHEN NOT MATCHED BY TARGET THEN
  INSERT([EMPLOYEE_ROLE_ID],[EMPLOYEE_ROLE_NAME_EN],[EMPLOYEE_ROLE_NAME_FR],[EMPLOYEE_ROLE_DESC_EN],[EMPLOYEE_ROLE_DESC_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[USER_UPDATED],[DATE_CREATED],[DATE_UPDATED],[EMPLOYEE_ROLE_CODE])
  VALUES([Source].[EMPLOYEE_ROLE_ID],[Source].[EMPLOYEE_ROLE_NAME_EN],[Source].[EMPLOYEE_ROLE_NAME_FR],[Source].[EMPLOYEE_ROLE_DESC_EN],[Source].[EMPLOYEE_ROLE_DESC_FR],[Source].[EFFECTIVE_DATE],[Source].[EXPIRY_DATE],[Source].[USER_CREATED],[Source].[USER_UPDATED],[Source].[DATE_CREATED],[Source].[DATE_UPDATED],[Source].[EMPLOYEE_ROLE_CODE])
-OUTPUT $action INTO @mergeOutput1413580074;
+OUTPUT $action INTO @mergeOutput1351675863;
 
-DECLARE @mergeError1413580074 int,
-@mergeCount1413580074 int,
-@mergeCountIns1413580074 int,
-@mergeCountUpd1413580074 int,
-@mergeCountDel1413580074 int
-SELECT @mergeError1413580074 = @@ERROR
-SELECT @mergeCount1413580074 = COUNT(1), @mergeCountIns1413580074 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd1413580074 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel1413580074 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput1413580074
-IF @mergeError1413580074 != 0
+DECLARE @mergeError1351675863 int,
+@mergeCount1351675863 int,
+@mergeCountIns1351675863 int,
+@mergeCountUpd1351675863 int,
+@mergeCountDel1351675863 int
+SELECT @mergeError1351675863 = @@ERROR
+SELECT @mergeCount1351675863 = COUNT(1), @mergeCountIns1351675863 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd1351675863 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel1351675863 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput1351675863
+IF @mergeError1351675863 != 0
  BEGIN
- PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_EMPLOYEE_ROLE]. Rows affected: ' + CAST(@mergeCount1413580074 AS VARCHAR(100)); -- SQL should always return zero rows affected
+ PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_EMPLOYEE_ROLE]. Rows affected: ' + CAST(@mergeCount1351675863 AS VARCHAR(100)); -- SQL should always return zero rows affected
  END
 ELSE
  BEGIN
- PRINT '[HRSC].[CD_EMPLOYEE_ROLE] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount1413580074,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns1413580074,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd1413580074,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel1413580074,0) AS VARCHAR(100)) + ')' ;
+ PRINT '[HRSC].[CD_EMPLOYEE_ROLE] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount1351675863,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns1351675863,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd1351675863,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel1351675863,0) AS VARCHAR(100)) + ')' ;
  END
 
 

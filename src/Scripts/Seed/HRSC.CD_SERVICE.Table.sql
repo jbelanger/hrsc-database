@@ -7,7 +7,7 @@ SET NOCOUNT ON
 
 SET IDENTITY_INSERT [HRSC].[CD_SERVICE] ON
 
-DECLARE @mergeOutput770101784 TABLE ( [DMLAction] VARCHAR(6) );
+DECLARE @mergeOutput281768061 TABLE ( [DMLAction] VARCHAR(6) );
 MERGE INTO [HRSC].[CD_SERVICE] AS [Target]
 USING (VALUES
   (1,N'SPUB',N'Services to the Public',N'Services au public',NULL,NULL,NULL,'2013-02-22T00:00:00',N'seddon','2013-02-22T00:00:00',NULL,NULL)
@@ -45,22 +45,22 @@ WHEN MATCHED AND (
 WHEN NOT MATCHED BY TARGET THEN
  INSERT([SERVICE_ID],[SERVICE_CODE],[SERVICE_NAME_EN],[SERVICE_NAME_FR],[SERVICE_DESC_EN],[SERVICE_DESC_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[DATE_CREATED],[USER_UPDATED],[DATE_UPDATED])
  VALUES([Source].[SERVICE_ID],[Source].[SERVICE_CODE],[Source].[SERVICE_NAME_EN],[Source].[SERVICE_NAME_FR],[Source].[SERVICE_DESC_EN],[Source].[SERVICE_DESC_FR],[Source].[EFFECTIVE_DATE],[Source].[EXPIRY_DATE],[Source].[USER_CREATED],[Source].[DATE_CREATED],[Source].[USER_UPDATED],[Source].[DATE_UPDATED])
-OUTPUT $action INTO @mergeOutput770101784;
+OUTPUT $action INTO @mergeOutput281768061;
 
-DECLARE @mergeError770101784 int,
-@mergeCount770101784 int,
-@mergeCountIns770101784 int,
-@mergeCountUpd770101784 int,
-@mergeCountDel770101784 int
-SELECT @mergeError770101784 = @@ERROR
-SELECT @mergeCount770101784 = COUNT(1), @mergeCountIns770101784 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd770101784 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel770101784 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput770101784
-IF @mergeError770101784 != 0
+DECLARE @mergeError281768061 int,
+@mergeCount281768061 int,
+@mergeCountIns281768061 int,
+@mergeCountUpd281768061 int,
+@mergeCountDel281768061 int
+SELECT @mergeError281768061 = @@ERROR
+SELECT @mergeCount281768061 = COUNT(1), @mergeCountIns281768061 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd281768061 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel281768061 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput281768061
+IF @mergeError281768061 != 0
  BEGIN
- PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_SERVICE]. Rows affected: ' + CAST(@mergeCount770101784 AS VARCHAR(100)); -- SQL should always return zero rows affected
+ PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_SERVICE]. Rows affected: ' + CAST(@mergeCount281768061 AS VARCHAR(100)); -- SQL should always return zero rows affected
  END
 ELSE
  BEGIN
- PRINT '[HRSC].[CD_SERVICE] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount770101784,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns770101784,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd770101784,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel770101784,0) AS VARCHAR(100)) + ')' ;
+ PRINT '[HRSC].[CD_SERVICE] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount281768061,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns281768061,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd281768061,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel281768061,0) AS VARCHAR(100)) + ')' ;
  END
 
 

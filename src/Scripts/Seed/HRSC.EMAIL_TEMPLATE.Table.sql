@@ -7,7 +7,7 @@ SET NOCOUNT ON
 
 SET IDENTITY_INSERT [HRSC].[EMAIL_TEMPLATE] ON
 
-DECLARE @mergeOutput1922105888 TABLE ( [DMLAction] VARCHAR(6) );
+DECLARE @mergeOutput644197345 TABLE ( [DMLAction] VARCHAR(6) );
 MERGE INTO [HRSC].[EMAIL_TEMPLATE] AS [Target]
 USING (VALUES
   (9,N'HRSC ID [IDENTIFIER] - Request Received - [SUBJECT] [EMP_NAME]',N'CSRH ID [IDENTIFIER] - Demande reçue - [SUBJECT] [EMP_NAME]',N'<font color="red"><i><p>Please note that the Human Resources Services Branch is experiencing a high volume of requests at this time, and the processing of your request may be delayed. We appreciate your patience and strive to ensure that all HR service requests are addressed as quickly as possible.</p>
@@ -1402,7 +1402,8 @@ Your confidential report has been received.
 
 You can view the confidential report online by clicking on the following link: [REQUEST_LINK]
 
-If you have any questions or concerns, please contact the lead assigned to your confidential report. You can also email the Office of Values and Ethics at NC-OVE-AC-BE@hrsdc-rhdcc.gc.ca.',N'<p><b><font color="red" size="4">*****Ce courriel est auto-généré à partir de l''environnement de formation de l''application web du CSRH*****</font></b></p>
+If you have any questions or concerns, please contact the lead assigned to your confidential report. You can also email the Office of Values and Ethics at NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca.
+',N'<p><b><font color="red" size="4">*****Ce courriel est auto-généré à partir de l''environnement de formation de l''application web du CSRH*****</font></b></p>
 
 <p><span style="background-color: #ffffff; color: #ff0000;"><em>Veuillez noter que le Bureau des valeurs et de l&rsquo;&eacute;thique conna&icirc;t actuellement un volume &eacute;lev&eacute; de demandes et que le traitement de votre demande pourrait &ecirc;tre retard&eacute;e. Nous vous remercions de votre patience et nous nous effor&ccedil;ons de faire en sorte que toutes d&eacute;clarations de conflit d&rsquo;int&eacute;r&ecirc;ts soient trait&eacute;es le plus rapidement possible.</em></span></p>
 
@@ -1412,7 +1413,8 @@ Nous accusons réception de votre rapport confidentiel.
 
 Vous pouvez accéder au rapport en cliquant sur le lien suivant : [REQUEST_LINK]
 
-Pour toute question ou commentaire concernant le rapport, nous vous invitons à contacter la personne assignée à votre rapport confidentiel. Vous pouvez également contacter le Bureau des valeurs et de l’éthique par courriel : NC-OVE-AC-BE@hrsdc-rhdcc.gc.ca','2016-11-04T00:00:00',NULL,N'System',N'Leblanc, Chantal x [NC]','2016-11-04T08:03:56','2022-03-17T15:07:27.047',53)
+Pour toute question ou commentaire concernant le rapport, nous vous invitons à contacter la personne assignée à votre rapport confidentiel. Vous pouvez également contacter le Bureau des valeurs et de l’éthique par courriel : NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca
+','2016-11-04T00:00:00',NULL,N'System',N'Brisebois, Joshua JJ [NC]','2016-11-04T08:03:56','2023-03-07T14:45:21.607',53)
  ,(98,N'HRSC ID [IDENTIFIER] - Resolved - Confidential Report - [EMP_NAME]',N'CSRH ID [IDENTIFIER]  - Résolu - Rapport Confidentiel - [EMP_NAME]',N'Thank you for using the Human Resources Services Centre (HRSC) Web Application.
 
 Your confidential report has been resolved. 
@@ -1584,22 +1586,22 @@ WHEN MATCHED AND (
 WHEN NOT MATCHED BY TARGET THEN
  INSERT([EMAIL_TEMPLATE_ID],[EMAIL_TEMPLATE_SUBJECT_EN],[EMAIL_TEMPLATE_SUBJECT_FR],[EMAIL_TEMPLATE_BODY_EN],[EMAIL_TEMPLATE_BODY_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[USER_UPDATED],[DATE_CREATED],[DATE_UPDATED],[EMAIL_TEMPLATE_TYPE_ID])
  VALUES([Source].[EMAIL_TEMPLATE_ID],[Source].[EMAIL_TEMPLATE_SUBJECT_EN],[Source].[EMAIL_TEMPLATE_SUBJECT_FR],[Source].[EMAIL_TEMPLATE_BODY_EN],[Source].[EMAIL_TEMPLATE_BODY_FR],[Source].[EFFECTIVE_DATE],[Source].[EXPIRY_DATE],[Source].[USER_CREATED],[Source].[USER_UPDATED],[Source].[DATE_CREATED],[Source].[DATE_UPDATED],[Source].[EMAIL_TEMPLATE_TYPE_ID])
-OUTPUT $action INTO @mergeOutput1922105888;
+OUTPUT $action INTO @mergeOutput644197345;
 
-DECLARE @mergeError1922105888 int,
-@mergeCount1922105888 int,
-@mergeCountIns1922105888 int,
-@mergeCountUpd1922105888 int,
-@mergeCountDel1922105888 int
-SELECT @mergeError1922105888 = @@ERROR
-SELECT @mergeCount1922105888 = COUNT(1), @mergeCountIns1922105888 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd1922105888 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel1922105888 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput1922105888
-IF @mergeError1922105888 != 0
+DECLARE @mergeError644197345 int,
+@mergeCount644197345 int,
+@mergeCountIns644197345 int,
+@mergeCountUpd644197345 int,
+@mergeCountDel644197345 int
+SELECT @mergeError644197345 = @@ERROR
+SELECT @mergeCount644197345 = COUNT(1), @mergeCountIns644197345 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd644197345 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel644197345 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput644197345
+IF @mergeError644197345 != 0
  BEGIN
- PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[EMAIL_TEMPLATE]. Rows affected: ' + CAST(@mergeCount1922105888 AS VARCHAR(100)); -- SQL should always return zero rows affected
+ PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[EMAIL_TEMPLATE]. Rows affected: ' + CAST(@mergeCount644197345 AS VARCHAR(100)); -- SQL should always return zero rows affected
  END
 ELSE
  BEGIN
- PRINT '[HRSC].[EMAIL_TEMPLATE] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount1922105888,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns1922105888,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd1922105888,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel1922105888,0) AS VARCHAR(100)) + ')' ;
+ PRINT '[HRSC].[EMAIL_TEMPLATE] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount644197345,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns644197345,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd644197345,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel644197345,0) AS VARCHAR(100)) + ')' ;
  END
 
 

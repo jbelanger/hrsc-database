@@ -7,13 +7,13 @@ SET NOCOUNT ON
 
 SET IDENTITY_INSERT [HRSC].[CD_DEPLOYMENT_TYPE] ON
 
-DECLARE @mergeOutput1221579390 TABLE ( [DMLAction] VARCHAR(6) );
+DECLARE @mergeOutput1757249315 TABLE ( [DMLAction] VARCHAR(6) );
 MERGE INTO [HRSC].[CD_DEPLOYMENT_TYPE] AS [Target]
 USING (VALUES
-  (2,NULL,N'Bran',N'Indeterminate deployment from within the same Branch or Service Canada Region',N'Mutation pour une période indéterminée au sein de la même direction générale ou région Service Canada',N'Indeterminate deployment from within the same Branch or Service Canada Region',N'Mutation pour une période indéterminée au sein de la même direction générale ou région Service Canada','2013-01-10T11:55:54.220',N'HRDC-DRHC\elena.akhmentova','2013-01-10T11:55:54.220',NULL,NULL)
- ,(3,NULL,N'HRSDC',N'Deployment from within the department',N'Mutation - à l''intérieur du ministère',N'Deployment from within the department',N'Mutation - à l''intérieur du ministère','2013-01-10T11:55:54.220',N'HRDC-DRHC\elena.akhmentova','2013-01-10T11:55:54.220',N'Robichaud, Yves [NC]','2015-03-30T07:42:48.447')
- ,(4,NULL,N'Other',N'Deployment - from another department/agency',N'Mutation - d''un autre ministère/agence',N'Deployment - from another department/agency',N'Mutation - d''un autre ministère/agence','2013-01-10T11:55:54.223',N'HRDC-DRHC\elena.akhmentova','2013-01-10T11:55:54.223',NULL,NULL)
-) AS [Source] ([DEPLOYMENT_TYPE_ID],[EXPIRY_DATE],[DEPLOYMENT_TYPE_CODE],[DEPLOYMENT_TYPE_NAME_EN],[DEPLOYMENT_TYPE_NAME_FR],[DEPLOYMENT_TYPE_DESC_EN],[DEPLOYMENT_TYPE_DESC_FR],[EFFECTIVE_DATE],[USER_CREATED],[DATE_CREATED],[USER_UPDATED],[DATE_UPDATED])
+  (NULL,2,N'Bran',N'Indeterminate deployment from within the same Branch or Service Canada Region',N'Mutation pour une période indéterminée au sein de la même direction générale ou région Service Canada',N'Indeterminate deployment from within the same Branch or Service Canada Region',N'Mutation pour une période indéterminée au sein de la même direction générale ou région Service Canada','2013-01-10T11:55:54.220',N'HRDC-DRHC\elena.akhmentova','2013-01-10T11:55:54.220',NULL,NULL)
+ ,(NULL,3,N'HRSDC',N'Deployment from within the department',N'Mutation - à l''intérieur du ministère',N'Deployment from within the department',N'Mutation - à l''intérieur du ministère','2013-01-10T11:55:54.220',N'HRDC-DRHC\elena.akhmentova','2013-01-10T11:55:54.220',N'Robichaud, Yves [NC]','2015-03-30T07:42:48.447')
+ ,(NULL,4,N'Other',N'Deployment - from another department/agency',N'Mutation - d''un autre ministère/agence',N'Deployment - from another department/agency',N'Mutation - d''un autre ministère/agence','2013-01-10T11:55:54.223',N'HRDC-DRHC\elena.akhmentova','2013-01-10T11:55:54.223',NULL,NULL)
+) AS [Source] ([EXPIRY_DATE],[DEPLOYMENT_TYPE_ID],[DEPLOYMENT_TYPE_CODE],[DEPLOYMENT_TYPE_NAME_EN],[DEPLOYMENT_TYPE_NAME_FR],[DEPLOYMENT_TYPE_DESC_EN],[DEPLOYMENT_TYPE_DESC_FR],[EFFECTIVE_DATE],[USER_CREATED],[DATE_CREATED],[USER_UPDATED],[DATE_UPDATED])
 ON ([Target].[DEPLOYMENT_TYPE_ID] = [Source].[DEPLOYMENT_TYPE_ID])
 WHEN MATCHED AND (
 	NULLIF([Source].[EXPIRY_DATE], [Target].[EXPIRY_DATE]) IS NOT NULL OR NULLIF([Target].[EXPIRY_DATE], [Source].[EXPIRY_DATE]) IS NOT NULL OR 
@@ -40,24 +40,24 @@ WHEN MATCHED AND (
   [Target].[USER_UPDATED] = [Source].[USER_UPDATED], 
   [Target].[DATE_UPDATED] = [Source].[DATE_UPDATED]
 WHEN NOT MATCHED BY TARGET THEN
- INSERT([DEPLOYMENT_TYPE_ID],[EXPIRY_DATE],[DEPLOYMENT_TYPE_CODE],[DEPLOYMENT_TYPE_NAME_EN],[DEPLOYMENT_TYPE_NAME_FR],[DEPLOYMENT_TYPE_DESC_EN],[DEPLOYMENT_TYPE_DESC_FR],[EFFECTIVE_DATE],[USER_CREATED],[DATE_CREATED],[USER_UPDATED],[DATE_UPDATED])
- VALUES([Source].[DEPLOYMENT_TYPE_ID],[Source].[EXPIRY_DATE],[Source].[DEPLOYMENT_TYPE_CODE],[Source].[DEPLOYMENT_TYPE_NAME_EN],[Source].[DEPLOYMENT_TYPE_NAME_FR],[Source].[DEPLOYMENT_TYPE_DESC_EN],[Source].[DEPLOYMENT_TYPE_DESC_FR],[Source].[EFFECTIVE_DATE],[Source].[USER_CREATED],[Source].[DATE_CREATED],[Source].[USER_UPDATED],[Source].[DATE_UPDATED])
-OUTPUT $action INTO @mergeOutput1221579390;
+ INSERT([EXPIRY_DATE],[DEPLOYMENT_TYPE_ID],[DEPLOYMENT_TYPE_CODE],[DEPLOYMENT_TYPE_NAME_EN],[DEPLOYMENT_TYPE_NAME_FR],[DEPLOYMENT_TYPE_DESC_EN],[DEPLOYMENT_TYPE_DESC_FR],[EFFECTIVE_DATE],[USER_CREATED],[DATE_CREATED],[USER_UPDATED],[DATE_UPDATED])
+ VALUES([Source].[EXPIRY_DATE],[Source].[DEPLOYMENT_TYPE_ID],[Source].[DEPLOYMENT_TYPE_CODE],[Source].[DEPLOYMENT_TYPE_NAME_EN],[Source].[DEPLOYMENT_TYPE_NAME_FR],[Source].[DEPLOYMENT_TYPE_DESC_EN],[Source].[DEPLOYMENT_TYPE_DESC_FR],[Source].[EFFECTIVE_DATE],[Source].[USER_CREATED],[Source].[DATE_CREATED],[Source].[USER_UPDATED],[Source].[DATE_UPDATED])
+OUTPUT $action INTO @mergeOutput1757249315;
 
-DECLARE @mergeError1221579390 int,
-@mergeCount1221579390 int,
-@mergeCountIns1221579390 int,
-@mergeCountUpd1221579390 int,
-@mergeCountDel1221579390 int
-SELECT @mergeError1221579390 = @@ERROR
-SELECT @mergeCount1221579390 = COUNT(1), @mergeCountIns1221579390 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd1221579390 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel1221579390 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput1221579390
-IF @mergeError1221579390 != 0
+DECLARE @mergeError1757249315 int,
+@mergeCount1757249315 int,
+@mergeCountIns1757249315 int,
+@mergeCountUpd1757249315 int,
+@mergeCountDel1757249315 int
+SELECT @mergeError1757249315 = @@ERROR
+SELECT @mergeCount1757249315 = COUNT(1), @mergeCountIns1757249315 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd1757249315 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel1757249315 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput1757249315
+IF @mergeError1757249315 != 0
  BEGIN
- PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_DEPLOYMENT_TYPE]. Rows affected: ' + CAST(@mergeCount1221579390 AS VARCHAR(100)); -- SQL should always return zero rows affected
+ PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_DEPLOYMENT_TYPE]. Rows affected: ' + CAST(@mergeCount1757249315 AS VARCHAR(100)); -- SQL should always return zero rows affected
  END
 ELSE
  BEGIN
- PRINT '[HRSC].[CD_DEPLOYMENT_TYPE] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount1221579390,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns1221579390,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd1221579390,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel1221579390,0) AS VARCHAR(100)) + ')' ;
+ PRINT '[HRSC].[CD_DEPLOYMENT_TYPE] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount1757249315,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns1757249315,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd1757249315,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel1757249315,0) AS VARCHAR(100)) + ')' ;
  END
 
 

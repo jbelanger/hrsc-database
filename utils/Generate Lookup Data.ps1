@@ -10,7 +10,7 @@ function Invoke-GenerateMergeProcedure {
     )
 
     # Define the connection string
-    $connectionString = "Data Source=N35025502\SQLEXPRESS;Initial Catalog=HRSC_413EF;Integrated Security=true"
+    $connectionString = "data source=MLAPESD5251.hrdc-drhc.net\MLDB16SATST01;initial catalog=HRSC_UAT;Persist Security Info=True;User ID=HRSC_DAD;Password=Passw0rd#12"
 
     # Create a new SqlConnection object
     $connection = New-Object System.Data.SqlClient.SqlConnection($connectionString)
@@ -91,12 +91,16 @@ if (-not (Test-Path -Path $path)) {
 }
 
 # Call the function with different table names
+Invoke-GenerateMergeProcedure -TableName "APPROVAL_TRANSFER_RULE" -OutputPath "$path"
 Invoke-GenerateMergeProcedure -TableName "BC_CATEGORY" -OutputPath "$path"
+Invoke-GenerateMergeProcedure -TableName "BUSINESS_CENTER_ATTR" -OutputPath "$path"
 Invoke-GenerateMergeProcedure -TableName "CD_ACADEMIC_LEVEL" -OutputPath "$path"
 Invoke-GenerateMergeProcedure -TableName "CD_ACCOMODATION_REQUIRED" -OutputPath "$path"
 Invoke-GenerateMergeProcedure -TableName "CD_ACTION_TYPE" -OutputPath "$path"
 Invoke-GenerateMergeProcedure -TableName "CD_ANNOUNCEMENT_TYPE" -OutputPath "$path"
+Invoke-GenerateMergeProcedure -TableName "CD_ATTRIBUTE" -OutputPath "$path"
 Invoke-GenerateMergeProcedure -TableName "CD_BUSINESS_CENTER" -OutputPath "$path"
+Invoke-GenerateMergeProcedure -TableName "CD_CANDIDATE_TYPE" -OutputPath "$path"
 Invoke-GenerateMergeProcedure -TableName "CD_CHKLST_STATUS" -OutputPath "$path"
 Invoke-GenerateMergeProcedure -TableName "CD_CLASSIFICATION_GROUP" -OutputPath "$path"
 Invoke-GenerateMergeProcedure -TableName "CD_CLASSIFICATION_LEVEL" -OutputPath "$path"

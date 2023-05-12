@@ -7,7 +7,7 @@ SET NOCOUNT ON
 
 SET IDENTITY_INSERT [HRSC].[CD_SUNSET_FUNDING_TYPE] ON
 
-DECLARE @mergeOutput978102525 TABLE ( [DMLAction] VARCHAR(6) );
+DECLARE @mergeOutput1927013946 TABLE ( [DMLAction] VARCHAR(6) );
 MERGE INTO [HRSC].[CD_SUNSET_FUNDING_TYPE] AS [Target]
 USING (VALUES
   (1,N'NO-01',N'No -  Does not apply to extension period nor to previous term employment period',N'Non - Ne s''applique pas à la période de prolongation ni à la période d''emploi précédente',NULL,NULL,'2017-05-11',NULL,N'michel.tardif','2017-05-11',NULL,NULL)
@@ -42,22 +42,22 @@ WHEN MATCHED AND (
 WHEN NOT MATCHED BY TARGET THEN
  INSERT([SUNSET_FUNDING_TYPE_ID],[SUNSET_FUNDING_TYPE_CODE],[SUNSET_FUNDING_TYPE_NAME_EN],[SUNSET_FUNDING_TYPE_NAME_FR],[SUNSET_FUNDING_TYPE_DESC_EN],[SUNSET_FUNDING_TYPE_DESC_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[DATE_CREATED],[USER_UPDATED],[DATE_UPDATED])
  VALUES([Source].[SUNSET_FUNDING_TYPE_ID],[Source].[SUNSET_FUNDING_TYPE_CODE],[Source].[SUNSET_FUNDING_TYPE_NAME_EN],[Source].[SUNSET_FUNDING_TYPE_NAME_FR],[Source].[SUNSET_FUNDING_TYPE_DESC_EN],[Source].[SUNSET_FUNDING_TYPE_DESC_FR],[Source].[EFFECTIVE_DATE],[Source].[EXPIRY_DATE],[Source].[USER_CREATED],[Source].[DATE_CREATED],[Source].[USER_UPDATED],[Source].[DATE_UPDATED])
-OUTPUT $action INTO @mergeOutput978102525;
+OUTPUT $action INTO @mergeOutput1927013946;
 
-DECLARE @mergeError978102525 int,
-@mergeCount978102525 int,
-@mergeCountIns978102525 int,
-@mergeCountUpd978102525 int,
-@mergeCountDel978102525 int
-SELECT @mergeError978102525 = @@ERROR
-SELECT @mergeCount978102525 = COUNT(1), @mergeCountIns978102525 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd978102525 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel978102525 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput978102525
-IF @mergeError978102525 != 0
+DECLARE @mergeError1927013946 int,
+@mergeCount1927013946 int,
+@mergeCountIns1927013946 int,
+@mergeCountUpd1927013946 int,
+@mergeCountDel1927013946 int
+SELECT @mergeError1927013946 = @@ERROR
+SELECT @mergeCount1927013946 = COUNT(1), @mergeCountIns1927013946 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd1927013946 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel1927013946 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput1927013946
+IF @mergeError1927013946 != 0
  BEGIN
- PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_SUNSET_FUNDING_TYPE]. Rows affected: ' + CAST(@mergeCount978102525 AS VARCHAR(100)); -- SQL should always return zero rows affected
+ PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_SUNSET_FUNDING_TYPE]. Rows affected: ' + CAST(@mergeCount1927013946 AS VARCHAR(100)); -- SQL should always return zero rows affected
  END
 ELSE
  BEGIN
- PRINT '[HRSC].[CD_SUNSET_FUNDING_TYPE] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount978102525,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns978102525,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd978102525,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel978102525,0) AS VARCHAR(100)) + ')' ;
+ PRINT '[HRSC].[CD_SUNSET_FUNDING_TYPE] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount1927013946,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns1927013946,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd1927013946,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel1927013946,0) AS VARCHAR(100)) + ')' ;
  END
 
 

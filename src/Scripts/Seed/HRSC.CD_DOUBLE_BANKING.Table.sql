@@ -7,7 +7,7 @@ SET NOCOUNT ON
 
 SET IDENTITY_INSERT [HRSC].[CD_DOUBLE_BANKING] ON
 
-DECLARE @mergeOutput1317579732 TABLE ( [DMLAction] VARCHAR(6) );
+DECLARE @mergeOutput1747537309 TABLE ( [DMLAction] VARCHAR(6) );
 MERGE INTO [HRSC].[CD_DOUBLE_BANKING] AS [Target]
 USING (VALUES
   (1,N'DBB01',N'Not a double banking situation',N'N''est pas une situation de jumelage',N'Not a double banking situation',N'N''est pas une situation de jumelage',NULL,N'Sytem',NULL,'2018-06-13T07:21:19.510',NULL,'2018-06-13T07:21:19.510')
@@ -47,22 +47,22 @@ WHEN MATCHED AND (
 WHEN NOT MATCHED BY TARGET THEN
  INSERT([DOUBLE_BANKING_ID],[DOUBLE_BANKING_CODE],[DOUBLE_BANKING_NAME_EN],[DOUBLE_BANKING_NAME_FR],[DOUBLE_BANKING_DESC_EN],[DOUBLE_BANKING_DESC_FR],[EXPIRY_DATE],[USER_CREATED],[USER_UPDATED],[DATE_CREATED],[DATE_UPDATED],[EFFECTIVE_DATE])
  VALUES([Source].[DOUBLE_BANKING_ID],[Source].[DOUBLE_BANKING_CODE],[Source].[DOUBLE_BANKING_NAME_EN],[Source].[DOUBLE_BANKING_NAME_FR],[Source].[DOUBLE_BANKING_DESC_EN],[Source].[DOUBLE_BANKING_DESC_FR],[Source].[EXPIRY_DATE],[Source].[USER_CREATED],[Source].[USER_UPDATED],[Source].[DATE_CREATED],[Source].[DATE_UPDATED],[Source].[EFFECTIVE_DATE])
-OUTPUT $action INTO @mergeOutput1317579732;
+OUTPUT $action INTO @mergeOutput1747537309;
 
-DECLARE @mergeError1317579732 int,
-@mergeCount1317579732 int,
-@mergeCountIns1317579732 int,
-@mergeCountUpd1317579732 int,
-@mergeCountDel1317579732 int
-SELECT @mergeError1317579732 = @@ERROR
-SELECT @mergeCount1317579732 = COUNT(1), @mergeCountIns1317579732 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd1317579732 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel1317579732 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput1317579732
-IF @mergeError1317579732 != 0
+DECLARE @mergeError1747537309 int,
+@mergeCount1747537309 int,
+@mergeCountIns1747537309 int,
+@mergeCountUpd1747537309 int,
+@mergeCountDel1747537309 int
+SELECT @mergeError1747537309 = @@ERROR
+SELECT @mergeCount1747537309 = COUNT(1), @mergeCountIns1747537309 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd1747537309 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel1747537309 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput1747537309
+IF @mergeError1747537309 != 0
  BEGIN
- PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_DOUBLE_BANKING]. Rows affected: ' + CAST(@mergeCount1317579732 AS VARCHAR(100)); -- SQL should always return zero rows affected
+ PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_DOUBLE_BANKING]. Rows affected: ' + CAST(@mergeCount1747537309 AS VARCHAR(100)); -- SQL should always return zero rows affected
  END
 ELSE
  BEGIN
- PRINT '[HRSC].[CD_DOUBLE_BANKING] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount1317579732,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns1317579732,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd1317579732,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel1317579732,0) AS VARCHAR(100)) + ')' ;
+ PRINT '[HRSC].[CD_DOUBLE_BANKING] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount1747537309,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns1747537309,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd1747537309,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel1747537309,0) AS VARCHAR(100)) + ')' ;
  END
 
 

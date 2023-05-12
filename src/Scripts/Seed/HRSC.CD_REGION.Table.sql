@@ -7,7 +7,7 @@ SET NOCOUNT ON
 
 SET IDENTITY_INSERT [HRSC].[CD_REGION] ON
 
-DECLARE @mergeOutput402100473 TABLE ( [DMLAction] VARCHAR(6) );
+DECLARE @mergeOutput20195122 TABLE ( [DMLAction] VARCHAR(6) );
 MERGE INTO [HRSC].[CD_REGION] AS [Target]
 USING (VALUES
   (1,N'Quebec',N'Québec',N'QUebec Region',N'Région Québec','2011-12-13T11:19:57.313',NULL,N'Gaetan',N'System','2011-12-13T11:19:57.313','2012-02-03T10:43:58.710',N'QC')
@@ -46,22 +46,22 @@ WHEN MATCHED AND (
 WHEN NOT MATCHED BY TARGET THEN
  INSERT([REGION_ID],[REGION_NAME_EN],[REGION_NAME_FR],[REGION_DESC_EN],[REGION_DESC_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[USER_UPDATED],[DATE_CREATED],[DATE_UPDATED],[REGION_CODE])
  VALUES([Source].[REGION_ID],[Source].[REGION_NAME_EN],[Source].[REGION_NAME_FR],[Source].[REGION_DESC_EN],[Source].[REGION_DESC_FR],[Source].[EFFECTIVE_DATE],[Source].[EXPIRY_DATE],[Source].[USER_CREATED],[Source].[USER_UPDATED],[Source].[DATE_CREATED],[Source].[DATE_UPDATED],[Source].[REGION_CODE])
-OUTPUT $action INTO @mergeOutput402100473;
+OUTPUT $action INTO @mergeOutput20195122;
 
-DECLARE @mergeError402100473 int,
-@mergeCount402100473 int,
-@mergeCountIns402100473 int,
-@mergeCountUpd402100473 int,
-@mergeCountDel402100473 int
-SELECT @mergeError402100473 = @@ERROR
-SELECT @mergeCount402100473 = COUNT(1), @mergeCountIns402100473 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd402100473 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel402100473 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput402100473
-IF @mergeError402100473 != 0
+DECLARE @mergeError20195122 int,
+@mergeCount20195122 int,
+@mergeCountIns20195122 int,
+@mergeCountUpd20195122 int,
+@mergeCountDel20195122 int
+SELECT @mergeError20195122 = @@ERROR
+SELECT @mergeCount20195122 = COUNT(1), @mergeCountIns20195122 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd20195122 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel20195122 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput20195122
+IF @mergeError20195122 != 0
  BEGIN
- PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_REGION]. Rows affected: ' + CAST(@mergeCount402100473 AS VARCHAR(100)); -- SQL should always return zero rows affected
+ PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_REGION]. Rows affected: ' + CAST(@mergeCount20195122 AS VARCHAR(100)); -- SQL should always return zero rows affected
  END
 ELSE
  BEGIN
- PRINT '[HRSC].[CD_REGION] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount402100473,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns402100473,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd402100473,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel402100473,0) AS VARCHAR(100)) + ')' ;
+ PRINT '[HRSC].[CD_REGION] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount20195122,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns20195122,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd20195122,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel20195122,0) AS VARCHAR(100)) + ')' ;
  END
 
 

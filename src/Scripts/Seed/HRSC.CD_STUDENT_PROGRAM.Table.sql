@@ -7,7 +7,7 @@ SET NOCOUNT ON
 
 SET IDENTITY_INSERT [HRSC].[CD_STUDENT_PROGRAM] ON
 
-DECLARE @mergeOutput866102126 TABLE ( [DMLAction] VARCHAR(6) );
+DECLARE @mergeOutput329768232 TABLE ( [DMLAction] VARCHAR(6) );
 MERGE INTO [HRSC].[CD_STUDENT_PROGRAM] AS [Target]
 USING (VALUES
   (3,N'COOP',N'COOP – Post-Secondary Coop/Internship Program',N'COOP – Programme postsecondaire d’enseignement coopératif/de stage',N'COOP – Post-Secondary Coop/Internship Program',N'COOP – Programme postsecondaire d’enseignement coopératif/de stage','2013-01-31T11:32:38.747',NULL,N'HRDC-DRHC\elena.akhmentova','2013-01-31T11:32:38.747',N'system','2021-10-30T05:25:09.983',2)
@@ -49,22 +49,22 @@ WHEN MATCHED AND (
 WHEN NOT MATCHED BY TARGET THEN
  INSERT([STUDENT_PROGRAM_ID],[STUDENT_PROGRAM_CODE],[STUDENT_PROGRAM_NAME_EN],[STUDENT_PROGRAM_NAME_FR],[STUDENT_PROGRAM_DESC_EN],[STUDENT_PROGRAM_DESC_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[DATE_CREATED],[USER_UPDATED],[DATE_UPDATED],[SORT_ORDER])
  VALUES([Source].[STUDENT_PROGRAM_ID],[Source].[STUDENT_PROGRAM_CODE],[Source].[STUDENT_PROGRAM_NAME_EN],[Source].[STUDENT_PROGRAM_NAME_FR],[Source].[STUDENT_PROGRAM_DESC_EN],[Source].[STUDENT_PROGRAM_DESC_FR],[Source].[EFFECTIVE_DATE],[Source].[EXPIRY_DATE],[Source].[USER_CREATED],[Source].[DATE_CREATED],[Source].[USER_UPDATED],[Source].[DATE_UPDATED],[Source].[SORT_ORDER])
-OUTPUT $action INTO @mergeOutput866102126;
+OUTPUT $action INTO @mergeOutput329768232;
 
-DECLARE @mergeError866102126 int,
-@mergeCount866102126 int,
-@mergeCountIns866102126 int,
-@mergeCountUpd866102126 int,
-@mergeCountDel866102126 int
-SELECT @mergeError866102126 = @@ERROR
-SELECT @mergeCount866102126 = COUNT(1), @mergeCountIns866102126 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd866102126 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel866102126 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput866102126
-IF @mergeError866102126 != 0
+DECLARE @mergeError329768232 int,
+@mergeCount329768232 int,
+@mergeCountIns329768232 int,
+@mergeCountUpd329768232 int,
+@mergeCountDel329768232 int
+SELECT @mergeError329768232 = @@ERROR
+SELECT @mergeCount329768232 = COUNT(1), @mergeCountIns329768232 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd329768232 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel329768232 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput329768232
+IF @mergeError329768232 != 0
  BEGIN
- PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_STUDENT_PROGRAM]. Rows affected: ' + CAST(@mergeCount866102126 AS VARCHAR(100)); -- SQL should always return zero rows affected
+ PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_STUDENT_PROGRAM]. Rows affected: ' + CAST(@mergeCount329768232 AS VARCHAR(100)); -- SQL should always return zero rows affected
  END
 ELSE
  BEGIN
- PRINT '[HRSC].[CD_STUDENT_PROGRAM] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount866102126,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns866102126,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd866102126,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel866102126,0) AS VARCHAR(100)) + ')' ;
+ PRINT '[HRSC].[CD_STUDENT_PROGRAM] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount329768232,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns329768232,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd329768232,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel329768232,0) AS VARCHAR(100)) + ')' ;
  END
 
 

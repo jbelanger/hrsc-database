@@ -7,7 +7,7 @@ SET NOCOUNT ON
 
 SET IDENTITY_INSERT [HRSC].[CD_HR_JUSTIFICATION] ON
 
-DECLARE @mergeOutput1701581100 TABLE ( [DMLAction] VARCHAR(6) );
+DECLARE @mergeOutput1949249999 TABLE ( [DMLAction] VARCHAR(6) );
 MERGE INTO [HRSC].[CD_HR_JUSTIFICATION] AS [Target]
 USING (VALUES
   (34,N'RR001',N'National ID (PRI) missing',N'Numéro d''identité national (CIDP) manquant',N'The National ID (PRI) is missing. To create a National ID, you can submit a request through the HRSC web application, providing the employee’s Date of birth and Social Insurance Number. Once the National ID is created, please add it to this form.',N'Le numéro d''identité national (CIDP) est manquant.  Pour créer un numéro d''identité national, vous pouvez soumettre une demande via l''application web du CSRH, en indiquant la date de naissance et le numéro d''assurance sociale de l''employé.  Une fois émis, veuillez ajouter le numéro d''identité national à ce formulaire.','2013-04-05T00:00:00',NULL,N'Lam, Jennifer [NC]','2013-04-05T12:21:23.073',N'Robichaud, Martin M [NC]','2015-09-28T16:11:29.907')
@@ -148,22 +148,22 @@ WHEN MATCHED AND (
 WHEN NOT MATCHED BY TARGET THEN
  INSERT([HR_JUSTIFICATION_ID],[HR_JUSTIFICATION_CODE],[HR_JUSTIFICATION_NAME_EN],[HR_JUSTIFICATION_NAME_FR],[HR_JUSTIFICATION_DESC_EN],[HR_JUSTIFICATION_DESC_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[DATE_CREATED],[USER_UPDATED],[DATE_UPDATED])
  VALUES([Source].[HR_JUSTIFICATION_ID],[Source].[HR_JUSTIFICATION_CODE],[Source].[HR_JUSTIFICATION_NAME_EN],[Source].[HR_JUSTIFICATION_NAME_FR],[Source].[HR_JUSTIFICATION_DESC_EN],[Source].[HR_JUSTIFICATION_DESC_FR],[Source].[EFFECTIVE_DATE],[Source].[EXPIRY_DATE],[Source].[USER_CREATED],[Source].[DATE_CREATED],[Source].[USER_UPDATED],[Source].[DATE_UPDATED])
-OUTPUT $action INTO @mergeOutput1701581100;
+OUTPUT $action INTO @mergeOutput1949249999;
 
-DECLARE @mergeError1701581100 int,
-@mergeCount1701581100 int,
-@mergeCountIns1701581100 int,
-@mergeCountUpd1701581100 int,
-@mergeCountDel1701581100 int
-SELECT @mergeError1701581100 = @@ERROR
-SELECT @mergeCount1701581100 = COUNT(1), @mergeCountIns1701581100 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd1701581100 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel1701581100 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput1701581100
-IF @mergeError1701581100 != 0
+DECLARE @mergeError1949249999 int,
+@mergeCount1949249999 int,
+@mergeCountIns1949249999 int,
+@mergeCountUpd1949249999 int,
+@mergeCountDel1949249999 int
+SELECT @mergeError1949249999 = @@ERROR
+SELECT @mergeCount1949249999 = COUNT(1), @mergeCountIns1949249999 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd1949249999 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel1949249999 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput1949249999
+IF @mergeError1949249999 != 0
  BEGIN
- PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_HR_JUSTIFICATION]. Rows affected: ' + CAST(@mergeCount1701581100 AS VARCHAR(100)); -- SQL should always return zero rows affected
+ PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_HR_JUSTIFICATION]. Rows affected: ' + CAST(@mergeCount1949249999 AS VARCHAR(100)); -- SQL should always return zero rows affected
  END
 ELSE
  BEGIN
- PRINT '[HRSC].[CD_HR_JUSTIFICATION] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount1701581100,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns1701581100,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd1701581100,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel1701581100,0) AS VARCHAR(100)) + ')' ;
+ PRINT '[HRSC].[CD_HR_JUSTIFICATION] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount1949249999,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns1949249999,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd1949249999,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel1949249999,0) AS VARCHAR(100)) + ')' ;
  END
 
 

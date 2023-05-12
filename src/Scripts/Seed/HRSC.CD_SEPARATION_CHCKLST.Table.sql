@@ -7,7 +7,7 @@ SET NOCOUNT ON
 
 SET IDENTITY_INSERT [HRSC].[CD_SEPARATION_CHCKLST] ON
 
-DECLARE @mergeOutput674101442 TABLE ( [DMLAction] VARCHAR(6) );
+DECLARE @mergeOutput121767491 TABLE ( [DMLAction] VARCHAR(6) );
 MERGE INTO [HRSC].[CD_SEPARATION_CHCKLST] AS [Target]
 USING (VALUES
   (3,N'MAN1',N'Furniture (Including Telework Furnishings)',N'Mobilier (incluant mobilier pour télé-travail)',N'Furniture (Including Telework Furnishings)',N'Mobilier (incluant mobilier pour télé-travail)',0,'2013-06-04T00:00:00',NULL,N'yves.robichaud','2013-06-04T00:00:00',NULL,NULL)
@@ -96,22 +96,22 @@ WHEN MATCHED AND (
 WHEN NOT MATCHED BY TARGET THEN
  INSERT([SEPARATION_CHCKLST_ID],[SEPARATION_CHCKLST_CODE],[SEPARATION_CHCKLST_NAME_EN],[SEPARATION_CHCKLST_NAME_FR],[SEPARATION_CHCKLST_DESC_EN],[SEPARATION_CHCKLST_DESC_FR],[SEPARATION_CHCKLST_TYPE],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[DATE_CREATED],[USER_UPDATED],[DATE_UPDATED])
  VALUES([Source].[SEPARATION_CHCKLST_ID],[Source].[SEPARATION_CHCKLST_CODE],[Source].[SEPARATION_CHCKLST_NAME_EN],[Source].[SEPARATION_CHCKLST_NAME_FR],[Source].[SEPARATION_CHCKLST_DESC_EN],[Source].[SEPARATION_CHCKLST_DESC_FR],[Source].[SEPARATION_CHCKLST_TYPE],[Source].[EFFECTIVE_DATE],[Source].[EXPIRY_DATE],[Source].[USER_CREATED],[Source].[DATE_CREATED],[Source].[USER_UPDATED],[Source].[DATE_UPDATED])
-OUTPUT $action INTO @mergeOutput674101442;
+OUTPUT $action INTO @mergeOutput121767491;
 
-DECLARE @mergeError674101442 int,
-@mergeCount674101442 int,
-@mergeCountIns674101442 int,
-@mergeCountUpd674101442 int,
-@mergeCountDel674101442 int
-SELECT @mergeError674101442 = @@ERROR
-SELECT @mergeCount674101442 = COUNT(1), @mergeCountIns674101442 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd674101442 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel674101442 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput674101442
-IF @mergeError674101442 != 0
+DECLARE @mergeError121767491 int,
+@mergeCount121767491 int,
+@mergeCountIns121767491 int,
+@mergeCountUpd121767491 int,
+@mergeCountDel121767491 int
+SELECT @mergeError121767491 = @@ERROR
+SELECT @mergeCount121767491 = COUNT(1), @mergeCountIns121767491 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd121767491 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel121767491 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput121767491
+IF @mergeError121767491 != 0
  BEGIN
- PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_SEPARATION_CHCKLST]. Rows affected: ' + CAST(@mergeCount674101442 AS VARCHAR(100)); -- SQL should always return zero rows affected
+ PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_SEPARATION_CHCKLST]. Rows affected: ' + CAST(@mergeCount121767491 AS VARCHAR(100)); -- SQL should always return zero rows affected
  END
 ELSE
  BEGIN
- PRINT '[HRSC].[CD_SEPARATION_CHCKLST] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount674101442,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns674101442,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd674101442,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel674101442,0) AS VARCHAR(100)) + ')' ;
+ PRINT '[HRSC].[CD_SEPARATION_CHCKLST] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount121767491,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns121767491,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd121767491,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel121767491,0) AS VARCHAR(100)) + ')' ;
  END
 
 

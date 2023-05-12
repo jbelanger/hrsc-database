@@ -7,7 +7,7 @@ SET NOCOUNT ON
 
 SET IDENTITY_INSERT [HRSC].[CD_COI_QUESTION] ON
 
-DECLARE @mergeOutput1566628624 TABLE ( [DMLAction] VARCHAR(6) );
+DECLARE @mergeOutput1786489443 TABLE ( [DMLAction] VARCHAR(6) );
 MERGE INTO [HRSC].[CD_COI_QUESTION] AS [Target]
 USING (VALUES
   (1,5,N'Q1AL',2,N'What is the nature of your current public service duties within your organization?',N'Quelle est la nature de vos fonctions officielles au sein de la fonction publique fédérale?','2016-11-04T08:03:55.717',NULL,N'System',NULL,'2016-11-04T08:03:55.717',NULL)
@@ -64,22 +64,22 @@ WHEN MATCHED AND (
 WHEN NOT MATCHED BY TARGET THEN
  INSERT([COI_QUESTION_ID],[COI_DECLARATION_TYPE_ID],[COI_QUESTION_TYPE_CODE],[VERSION_ID],[COI_QUESTION_EN],[COI_QUESTION_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[USER_UPDATED],[DATE_CREATED],[DATE_UPDATED])
  VALUES([Source].[COI_QUESTION_ID],[Source].[COI_DECLARATION_TYPE_ID],[Source].[COI_QUESTION_TYPE_CODE],[Source].[VERSION_ID],[Source].[COI_QUESTION_EN],[Source].[COI_QUESTION_FR],[Source].[EFFECTIVE_DATE],[Source].[EXPIRY_DATE],[Source].[USER_CREATED],[Source].[USER_UPDATED],[Source].[DATE_CREATED],[Source].[DATE_UPDATED])
-OUTPUT $action INTO @mergeOutput1566628624;
+OUTPUT $action INTO @mergeOutput1786489443;
 
-DECLARE @mergeError1566628624 int,
-@mergeCount1566628624 int,
-@mergeCountIns1566628624 int,
-@mergeCountUpd1566628624 int,
-@mergeCountDel1566628624 int
-SELECT @mergeError1566628624 = @@ERROR
-SELECT @mergeCount1566628624 = COUNT(1), @mergeCountIns1566628624 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd1566628624 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel1566628624 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput1566628624
-IF @mergeError1566628624 != 0
+DECLARE @mergeError1786489443 int,
+@mergeCount1786489443 int,
+@mergeCountIns1786489443 int,
+@mergeCountUpd1786489443 int,
+@mergeCountDel1786489443 int
+SELECT @mergeError1786489443 = @@ERROR
+SELECT @mergeCount1786489443 = COUNT(1), @mergeCountIns1786489443 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd1786489443 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel1786489443 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput1786489443
+IF @mergeError1786489443 != 0
  BEGIN
- PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_COI_QUESTION]. Rows affected: ' + CAST(@mergeCount1566628624 AS VARCHAR(100)); -- SQL should always return zero rows affected
+ PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_COI_QUESTION]. Rows affected: ' + CAST(@mergeCount1786489443 AS VARCHAR(100)); -- SQL should always return zero rows affected
  END
 ELSE
  BEGIN
- PRINT '[HRSC].[CD_COI_QUESTION] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount1566628624,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns1566628624,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd1566628624,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel1566628624,0) AS VARCHAR(100)) + ')' ;
+ PRINT '[HRSC].[CD_COI_QUESTION] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount1786489443,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns1786489443,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd1786489443,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel1786489443,0) AS VARCHAR(100)) + ')' ;
  END
 
 

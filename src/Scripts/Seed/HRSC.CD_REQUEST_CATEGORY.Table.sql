@@ -7,7 +7,7 @@ SET NOCOUNT ON
 
 SET IDENTITY_INSERT [HRSC].[CD_REQUEST_CATEGORY] ON
 
-DECLARE @mergeOutput2130106629 TABLE ( [DMLAction] VARCHAR(6) );
+DECLARE @mergeOutput132195521 TABLE ( [DMLAction] VARCHAR(6) );
 MERGE INTO [HRSC].[CD_REQUEST_CATEGORY] AS [Target]
 USING (VALUES
   (10,N'Classification',N'Classification',N'Classif',N'Classific','2011-12-08T00:00:00',NULL,N'Gaétan',N'system','2011-12-08T00:00:00','2020-06-10T15:24:22.907',N'CLASS',0,1,N'Classif',N'Classif',0,NULL,NULL,1)
@@ -76,9 +76,15 @@ USING (VALUES
  ,(129,N'Analysis (CET-only)',N'Analyse (EGCP-seulement)',N'Analysis (CET-only)',N'Analyse (EGCP-seulement)','2019-11-20T13:48:26.033',NULL,N'Dalebozik, Michael MW [NC]',N'Robichaud, Martin M [NC]','2019-11-20T13:48:26.033','2021-06-18T23:08:06.703',N'N/A',0,1,N'A CET',N'A CET',0,NULL,NULL,0)
  ,(130,N'MyGCPay',N'MaPayeGC',N'MyGCPay',N'MaPayeGC','2019-12-02T08:00:22.090',NULL,N'Dalebozik, Michael MW [NC]',N'Dalebozik, Michael MW [NC]','2019-12-02T08:00:22.090','2019-12-03T12:04:28.807',N'N/A',1,1,N'MyGCPay',N'MaPayeGC',0,NULL,NULL,0)
  ,(131,N'Compensation Liaison Program Officer',N'Agent(e) programme de rémunération prestations',N'Compensation Liaison Program Officer',N'Agent(e) programme de rémunération prestations','2019-12-11T12:01:26.287',NULL,N'Dalebozik, Michael MW [NC]',N'Girouard, Francois F [NC]','2019-12-11T12:01:26.287','2022-11-08T09:12:54.707',N'N/A',0,1,N'CLPO',N'APRP',0,NULL,NULL,1)
- ,(132,N'V&E-Values and Ethics training sessions',N'V&É-Séances de formation liées aux valeurs et à l’éthique',N'Values and Ethics training sessions',N'Séances de formation liées aux valeurs et à l’éthique','2019-12-24T08:35:50.003',NULL,N'Dalebozik, Michael MW [NC]',N'Robichaud, Martin M [NC]','2019-12-24T08:35:50.003','2021-02-05T09:09:29.893',N'N/A',1,1,N'VEForma',N'VETrain',0,NULL,NULL,1)
- ,(133,N'V&E-Political Activities training sessions',N'V&É-Séances de formation liées aux activités politiques',N'Political Activities training sessions',N'Séances de formation liées aux activités politiques','2019-12-24T08:37:02.350',NULL,N'Dalebozik, Michael MW [NC]',N'Robichaud, Martin M [NC]','2019-12-24T08:37:02.350','2021-02-05T09:09:11.520',N'N/A',1,1,N'VEformPoli',N'VEtrPoli',0,NULL,NULL,1)
- ,(134,N'V&E-The Public Servants Disclosure Protection Act training sessions',N'V&É-Séances de formation liées à la Loi sur la protection des fonctionnaires divulgateurs d''actes répréhensibles (LPFDAR)',N'The Public Servants Disclosure Protection Act training sessions',N'Séances de formation liées à la Loi sur la protection des fonctionnaires divulgateurs d''actes répréhensibles (LPFDAR)','2019-12-24T08:38:44.823',NULL,N'Dalebozik, Michael MW [NC]',N'Robichaud, Martin M [NC]','2019-12-24T08:38:44.823','2021-02-05T09:09:20.863',N'N/A',1,1,N'VEfrLPFDAR',N'VEtrPSDPA',0,NULL,NULL,1)
+ ,(132,N'V&E – Training Session Inquiry',N'V&É – Demande de formation en valeurs éthique',N'Values and Ethics training sessions
+Updated as per Joshua Dunn - 2023-03-31',N'Séances de formation liées aux valeurs et à l’éthique
+Updated as per Joshua Dunn - 2023-03-31','2019-12-24T08:35:50.003',NULL,N'Dalebozik, Michael MW [NC]',N'Brisebois, Joshua JJ [NC]','2019-12-24T08:35:50.003','2023-03-31T13:20:37.460',N'N/A',1,1,N'VEForma',N'VETrain',0,NULL,NULL,1)
+ ,(133,N'V&E – Political Activities Inquiry',N'V&É – Activités politiques',N'Political Activities training sessions
+Updated as per Joshua Dunn - 2023-03-31',N'Séances de formation liées aux activités politiques
+Updated as per Joshua Dunn - 2023-03-31','2019-12-24T08:37:02.350',NULL,N'Dalebozik, Michael MW [NC]',N'Brisebois, Joshua JJ [NC]','2019-12-24T08:37:02.350','2023-03-31T13:18:45.580',N'N/A',1,1,N'VEformPoli',N'VEtrPoli',0,NULL,NULL,1)
+ ,(134,N'y-V&E-The Public Servants Disclosure Protection Act training sessions',N'y-V&É-Séances de formation liées à la Loi sur la protection des fonctionnaires divulgateurs d''actes répréhensibles (LPFDAR)',N'y-The Public Servants Disclosure Protection Act training sessions
+Deactivated as per Joshua Dunn - 2023-03-31',N'y-Séances de formation liées à la Loi sur la protection des fonctionnaires divulgateurs d''actes répréhensibles (LPFDAR)
+Deactivated as per Joshua Dunn - 2023-03-31','2019-12-24T08:38:44.823','2023-03-31T13:19:42.007',N'Dalebozik, Michael MW [NC]',N'Brisebois, Joshua JJ [NC]','2019-12-24T08:38:44.823','2023-03-31T13:19:42.007',N'N/A',0,0,N'VEfrLPFDAR',N'VEtrPSDPA',0,NULL,NULL,0)
  ,(135,N'y-Organization Department ID',N'y-Organisation code de service',N'Organization Department ID',N'Organisation code de service','2020-01-15T14:47:25.413','2022-12-21T04:36:16.817',N'Dalebozik, Michael MW [NC]',N'Robichaud, Martin M [NC]','2020-01-15T14:47:25.413','2022-12-21T04:36:16.817',N'N/A',0,0,N'PSDeptID',N'PScodeServ',0,NULL,NULL,0)
  ,(136,N'Access to Cognos (IRIS) Reporting Self Service',N'Accès au Cognos (SIRI) Rapports - Libre-Service',N'Access to Cognos (IRIS) Reporting Self Service',N'Accès au Cognos (SIRI) Rapports - Libre-Service','2020-01-17T09:12:09.060',NULL,N'SYSTEM',N'SYSTEM','2020-01-17T09:12:09.060','2020-01-17T09:12:09.060',N'HRR1',0,1,N'Accès',N'Access',1,NULL,NULL,0)
  ,(137,N'New Custom Report',N'Nouveau rapport personnalisé',N'New Custom Report',N'Nouveau rapport personnalisé','2020-01-17T09:12:09.077',NULL,N'SYSTEM',N'SYSTEM','2020-01-17T09:12:09.077','2020-01-17T09:12:09.077',N'HRR2',0,1,N'Nouveau',N'New Rep',1,NULL,NULL,0)
@@ -92,7 +98,9 @@ USING (VALUES
  ,(145,N'Harassment/violence-Discrimination',N'Harcèlement/Violence-Discrimination',N'Harassment/violence-Discrimination',N'Harcèlement/Violence-Discrimination','2020-11-03T08:18:40.210',NULL,N'Dalebozik, Michael MW [NC]',N'Leblanc, Chantal x [NC]','2020-11-03T08:18:40.210','2021-01-08T10:43:05.397',N'N/A',1,1,N'H&VDisc',N'H&VDisc',0,NULL,NULL,1)
  ,(146,N'Harassment/Violence Request',N'Harcèlement/Violence-Demande',N'Harassment/Violence Request',N'Harcèlement/Violence-Demande','2020-11-03T08:19:14.770',NULL,N'Dalebozik, Michael MW [NC]',N'Leblanc, Chantal x [NC]','2020-11-03T08:19:14.770','2021-01-08T10:44:37.797',N'N/A',1,1,N'H&Vrens',N'H&Vinfo',0,NULL,NULL,1)
  ,(147,N'Work environment improvement strategies – Workplace Assessment Office',N'Stratégies pour améliorer l’environnement de travail - Bureau d’évaluation des milieux de travail',N'Update category as per Mylene Huot - 2023-01-17',N'Update category as per Mylene Huot - 2023-01-17','2020-11-03T08:20:11.557',NULL,N'Dalebozik, Michael MW [NC]',N'Brisebois, Joshua JJ [NC]','2020-11-03T08:20:11.557','2023-01-18T08:20:56.913',N'N/A',1,1,N'BEMT',N'WAO',0,NULL,NULL,1)
- ,(148,N'V&E-Values and Ethics Inquiry',N'V&É-Question reliée aux valeurs et éthique',N'V&E-Values and Ethics Inquiry 2020-02-05  - new',N'V&É-Question reliée aux valeurs et éthique 2020-02-05n - New','2021-02-05T11:44:45.180',NULL,N'Robichaud, Martin M [NC]',N'Leblanc, Chantal x [NC]','2021-02-05T11:44:45.180','2022-03-10T06:51:59.240',N'N/A',1,1,N'Qustn-V&É',N'V&E-Inqry',0,NULL,NULL,1)
+ ,(148,N'V&E – General Values and Ethics Inquiry',N'V&É – Questions générales en valeurs et éthique',N'V&E-Values and Ethics Inquiry 2020-02-05  - new
+Updated as per Joshua Dunn - 2023-03-31',N'V&É-Question reliée aux valeurs et éthique 2020-02-05n - New
+Updated as per Joshua Dunn - 2023-03-31','2021-02-05T11:44:45.180',NULL,N'Robichaud, Martin M [NC]',N'Brisebois, Joshua JJ [NC]','2021-02-05T11:44:45.180','2023-03-31T13:21:48.510',N'N/A',1,1,N'Qustn-V&É',N'V&E-Inqry',0,NULL,NULL,1)
  ,(149,N'y-2021-2022 Leave Year-End',N'y-2021-2022 Fin d’année des congés',NULL,NULL,'2021-04-09T13:58:16.110','2022-05-04T10:22:53.107',N'Leblanc, Chantal x [NC]',N'Leblanc, Chantal x [NC]','2021-04-09T13:58:16.110','2022-05-04T10:22:53.107',N'N/A',0,0,N'2021-22YE',N'2021-22FA',0,NULL,NULL,0)
  ,(150,N'y-Enquiries',N'y-Demandes d''information',N'y-Enquiries',N'y-Demandes d''information','2021-06-01T13:36:49.743','2022-06-28T15:31:57.280',N'Leblanc, Chantal x [NC]',N'Morozan, Alina A [NC]','2021-06-01T13:36:49.743','2022-06-28T15:31:57.280',N'N/A',0,1,N'Enq',N'Info',0,NULL,NULL,0)
  ,(151,N'Duty to Accommodate',N'Obligation de prendre des mesures d’adaptation',N'Modify Category 2021-08-10',N'Modify Category 2021-08-10','2021-06-23T14:32:30.120',NULL,N'Leblanc, Chantal x [NC]',N'Brisebois, Joshua JJ [NC]','2021-06-23T14:32:30.120','2021-08-10T10:25:54.273',N'N/A',0,1,N'OPMA',N'DTA',0,NULL,NULL,1)
@@ -146,7 +154,7 @@ Created 2021-11-15','2021-11-15T14:36:13.300',NULL,N'Duong, Thuy Ha (Tracy) TD [
  ,(186,N'Transformation Team',N'Équipe de transformation',N'PhxIT is a project launched in 2023 and used to predetermine before Employee pay occurs, potential risks of low or no payments.',N'PhxIT est un projet lancé en 2023 et utilisé pour déterminer à l''avance, avant que la rémunération de l''employé n''ait lieu, les risques potentiels de paiements faibles ou nuls. 
 PhxIT est un projet lancé en 2023 et utilisé pour déterminer à l''avance, avant que la rémunération de l''employé n''ait lieu, les risques potentiels de paiements faibles ou nuls.','2023-01-22T19:09:22.963',NULL,N'Robichaud, Martin M [NC]',N'Robichaud, Martin M [NC]','2023-01-22T19:09:22.963','2023-02-06T12:30:57.020',N'N/A',0,0,N'Transfo',N'Transfo',0,NULL,NULL,1)
  ,(187,N'College - Group Mentoring',N'Collège - mentorat de groupe',N'Created 2023-01-24 as per Vanessa Jean Baptiste',N'Created 2023-01-24 as per Vanessa Jean Baptiste','2023-01-24T13:08:04.577',NULL,N'Brisebois, Joshua JJ [NC]',N'Morozan, Alina A [NC]','2023-01-24T13:08:04.577','2023-01-31T11:16:04.250',N'N/A',1,1,N'GM',N'MG',0,NULL,NULL,0)
- ,(188,N'College - Leadership Programs',N'Collège - Programmes de leadership',N'Created as per Vanessa Jean Baptiste 2023-01-24',N'Created as per Vanessa Jean Baptiste 2023-01-24','2023-01-24T13:08:52.217',NULL,N'Brisebois, Joshua JJ [NC]',N'Morozan, Alina A [NC]','2023-01-24T13:08:52.217','2023-01-31T11:16:31.193',N'N/A',1,1,N'LP',N'PL',0,NULL,NULL,0)
+ ,(188,N'College - CSPS Leadership Development Programs',N'Collège - Programmes de perfectionnement en leadership de l’ÉFPC',N'Created as per Vanessa Jean Baptiste 2023-01-24',N'Created as per Vanessa Jean Baptiste 2023-01-24','2023-01-24T13:08:52.217',NULL,N'Brisebois, Joshua JJ [NC]',N'Brisebois, Joshua JJ [NC]','2023-01-24T13:08:52.217','2023-02-21T11:12:40.663',N'N/A',1,1,N'LP',N'PL',0,NULL,NULL,0)
 ) AS [Source] ([REQUEST_CATEGORY_ID],[REQUEST_CATEGORY_NAME_EN],[REQUEST_CATEGORY_NAME_FR],[REQUEST_CATEGORY_DESC_EN],[REQUEST_CATEGORY_DESC_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[USER_UPDATED],[DATE_CREATED],[DATE_UPDATED],[REQUEST_CATEGORY_CODE],[EMPLOYEE_CATEGORY_IND],[MANAGER_CATEGORY_IND],[REQUEST_CATEGORY_ACR_FR],[REQUEST_CATEGORY_ACR_EN],[SURVEY_IND],[REQUEST_CATEGORY_PARENT_ID],[HR_REQUEST_TYPE_ID],[AGENT_CATEGORY_IND])
 ON ([Target].[REQUEST_CATEGORY_ID] = [Source].[REQUEST_CATEGORY_ID])
 WHEN MATCHED AND (
@@ -192,22 +200,22 @@ WHEN MATCHED AND (
 WHEN NOT MATCHED BY TARGET THEN
  INSERT([REQUEST_CATEGORY_ID],[REQUEST_CATEGORY_NAME_EN],[REQUEST_CATEGORY_NAME_FR],[REQUEST_CATEGORY_DESC_EN],[REQUEST_CATEGORY_DESC_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[USER_UPDATED],[DATE_CREATED],[DATE_UPDATED],[REQUEST_CATEGORY_CODE],[EMPLOYEE_CATEGORY_IND],[MANAGER_CATEGORY_IND],[REQUEST_CATEGORY_ACR_FR],[REQUEST_CATEGORY_ACR_EN],[SURVEY_IND],[REQUEST_CATEGORY_PARENT_ID],[HR_REQUEST_TYPE_ID],[AGENT_CATEGORY_IND])
  VALUES([Source].[REQUEST_CATEGORY_ID],[Source].[REQUEST_CATEGORY_NAME_EN],[Source].[REQUEST_CATEGORY_NAME_FR],[Source].[REQUEST_CATEGORY_DESC_EN],[Source].[REQUEST_CATEGORY_DESC_FR],[Source].[EFFECTIVE_DATE],[Source].[EXPIRY_DATE],[Source].[USER_CREATED],[Source].[USER_UPDATED],[Source].[DATE_CREATED],[Source].[DATE_UPDATED],[Source].[REQUEST_CATEGORY_CODE],[Source].[EMPLOYEE_CATEGORY_IND],[Source].[MANAGER_CATEGORY_IND],[Source].[REQUEST_CATEGORY_ACR_FR],[Source].[REQUEST_CATEGORY_ACR_EN],[Source].[SURVEY_IND],[Source].[REQUEST_CATEGORY_PARENT_ID],[Source].[HR_REQUEST_TYPE_ID],[Source].[AGENT_CATEGORY_IND])
-OUTPUT $action INTO @mergeOutput2130106629;
+OUTPUT $action INTO @mergeOutput132195521;
 
-DECLARE @mergeError2130106629 int,
-@mergeCount2130106629 int,
-@mergeCountIns2130106629 int,
-@mergeCountUpd2130106629 int,
-@mergeCountDel2130106629 int
-SELECT @mergeError2130106629 = @@ERROR
-SELECT @mergeCount2130106629 = COUNT(1), @mergeCountIns2130106629 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd2130106629 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel2130106629 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput2130106629
-IF @mergeError2130106629 != 0
+DECLARE @mergeError132195521 int,
+@mergeCount132195521 int,
+@mergeCountIns132195521 int,
+@mergeCountUpd132195521 int,
+@mergeCountDel132195521 int
+SELECT @mergeError132195521 = @@ERROR
+SELECT @mergeCount132195521 = COUNT(1), @mergeCountIns132195521 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd132195521 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel132195521 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput132195521
+IF @mergeError132195521 != 0
  BEGIN
- PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_REQUEST_CATEGORY]. Rows affected: ' + CAST(@mergeCount2130106629 AS VARCHAR(100)); -- SQL should always return zero rows affected
+ PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_REQUEST_CATEGORY]. Rows affected: ' + CAST(@mergeCount132195521 AS VARCHAR(100)); -- SQL should always return zero rows affected
  END
 ELSE
  BEGIN
- PRINT '[HRSC].[CD_REQUEST_CATEGORY] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount2130106629,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns2130106629,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd2130106629,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel2130106629,0) AS VARCHAR(100)) + ')' ;
+ PRINT '[HRSC].[CD_REQUEST_CATEGORY] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount132195521,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns132195521,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd132195521,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel132195521,0) AS VARCHAR(100)) + ')' ;
  END
 
 
