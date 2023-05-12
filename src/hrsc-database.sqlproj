@@ -655,12 +655,6 @@
     <PostDeploy Include="Scripts\PostDeployment.sql" />
   </ItemGroup>
   <ItemGroup>
-    <SqlCmdVariable Include="Release">
-      <DefaultValue>4.13</DefaultValue>
-      <Value>$(SqlCmdVar__1)</Value>
-    </SqlCmdVariable>
-  </ItemGroup>
-  <ItemGroup>
     <PreDeploy Include="Scripts\PreDeployment.sql" />
   </ItemGroup>
 </Project>
