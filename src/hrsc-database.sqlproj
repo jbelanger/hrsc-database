@@ -650,6 +650,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\Db Changes.sql" />
+    <None Include="INT-TST-UAT.publish.xml" />
+    <None Include="PROD-TRN.publish.xml" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Scripts\PostDeployment.sql" />
