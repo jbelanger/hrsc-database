@@ -11,7 +11,6 @@ CREATE     PROCEDURE [HRSC_APP].[usp_REQUEST_Insert]
 	@pRequestDescText nvarchar(4000), 
 	@pRcCode nvarchar(10), 
 	@pEX_IND bit, 
-	@pReservedInd bit, 
 	@pEmailInd bit, 
 	@pTermOfUseAgreementInd numeric(1, 0), 
 	@pLanguageDocID bigint, 
@@ -54,7 +53,6 @@ AS
            ,[REQUEST_DESCRIPTION_TEXT]
            ,[RC_CODE]
 		   ,[EX_IND]
-           ,[RESERVED_IND]
            ,[SEND_EMAIL_IND]
            ,[TERM_OF_USE_AGREEMENT_IND]
            ,[USER_CREATED]
@@ -94,7 +92,6 @@ AS
            @pRequestDescText,
            @pRcCode,
 		   @pEX_IND,
-           @pReservedInd,
            @pEmailInd,
            @pTermOfUseAgreementInd,
            @pUserCreated,

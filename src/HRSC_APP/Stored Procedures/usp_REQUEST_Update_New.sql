@@ -34,7 +34,6 @@ if @ReturnCall = 0
       REQUEST_DESCRIPTION_TEXT=@pRequestDescText,
       RC_CODE=@pRcCode,
       --REQUEST_COUNT = @pRequestCount,
-      RESERVED_IND=@pReservedInd,
       SEND_EMAIL_IND=@pEmailInd,
       TERM_OF_USE_AGREEMENT_IND=@pTermOfUseAgreementInd,
       USER_UPDATED=@pUser,

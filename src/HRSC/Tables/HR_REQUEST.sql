@@ -5,7 +5,6 @@
     [KEYWORDS_TEXT]              NVARCHAR (250)  NULL,
     [REQUEST_DESCRIPTION_TEXT]   NVARCHAR (4000) NULL,
     [RC_CODE]                    NVARCHAR (10)   NULL,
-    [RESERVED_IND]               BIT             NOT NULL,
     [SEND_EMAIL_IND]             BIT             NOT NULL,
     [TERM_OF_USE_AGREEMENT_IND]  NUMERIC (1)     NOT NULL,
     [EXPIRY_DATE]                DATETIME        NULL,
