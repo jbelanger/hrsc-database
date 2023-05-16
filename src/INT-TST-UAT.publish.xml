@@ -13,5 +13,6 @@
     <IgnoreRoleMembership>True</IgnoreRoleMembership>
     <ScriptDatabaseOptions>False</ScriptDatabaseOptions>
     <ProfileVersionNumber>1</ProfileVersionNumber>
+    <DropObjectsNotInSource>True</DropObjectsNotInSource>
   </PropertyGroup>
 </Project>
