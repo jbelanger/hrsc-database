@@ -83,15 +83,20 @@ SET IDENTITY_INSERT [HRSC].[CD_HR_GUIDE_TYPE] OFF
 SET NOCOUNT OFF
 ```
 
+**Credits**
+
 The code and documentation for the usp_generate_merge stored procedure can be found on GitHub [here](https://github.com/readyroll/generate-sql-merge/tree/master). Credits to [readyroll](https://github.com/readyroll).
 
 
-## Generate scripts for all reference data
+## Generate scripts for the reference data
 
-To ease the process of creating all of the sql files in the project, a Powershell script has been created to automate all of this. The tool can be found in the [hrsc-database repository](https://dev.azure.com/ESDC-HRSC-Apps/HRSC/_git/hrsc-database?path=/utils/Generate%20Lookup%20Data.ps1).
+To ease the process of creating all of the sql files in the project, a Powershell script has been created to automate all of this. The tool can be found in the [hrsc-database repository](https://dev.azure.com/ESDC-HRSC-Apps/HRSC/_git/hrsc-database?path=/utils/GenerateReferenceData.ps1).
 
-To use this tool, open a Powershell window and type:
+To use this tool, open a Powershell window and execute the following, using the connection string of the source database:
 
+Example:
 ```Powershell
-PS C:\_DEV\hrsc-database\utils> .\Generate Lookup Data.ps1
+PS C:\_DEV\hrsc-database\utils> .\GenerateReferenceData.ps1  "Data Source=localhost\SQLEXPRESS;Initial Catalog=HRSC;Integrated Security=true;"
 ```
+
+The files will be generated under C:\Temp\ReferenceData. You can edit the script to output the files to a diferent place.

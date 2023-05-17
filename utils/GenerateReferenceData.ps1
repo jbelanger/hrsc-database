@@ -1,3 +1,16 @@
+param (
+        [Parameter(Mandatory=$true, HelpMessage="Enter a valid connection string")]        
+        [ValidateNotNullOrEmpty()]
+        [string]$ConnectionString
+    )
+
+# -------------------------------
+# Change this if needed
+# -------------------------------
+# Where to output the generated files
+$path = "C:\Temp\ReferenceData"
+
+
 # Function: Invoke-GenerateMergeProcedure
 # Description: Executes a stored procedure to generate a merge script for a specified table and saves the result as a SQL file.
 # Parameters:
@@ -7,13 +20,10 @@ function Invoke-GenerateMergeProcedure {
     param (
         [string]$TableName,
 		[string]$OutputPath
-    )
-
-    # Define the connection string
-    $connectionString = "data source=MLAPESD5251.hrdc-drhc.net\MLDB16SATST01;initial catalog=HRSC_UAT;Persist Security Info=True;User ID=HRSC_DAD;Password=Passw0rd#12"
+    )    
 
     # Create a new SqlConnection object
-    $connection = New-Object System.Data.SqlClient.SqlConnection($connectionString)
+    $connection = New-Object System.Data.SqlClient.SqlConnection($ConnectionString)
 
     try {
         # Open the database connection
@@ -76,8 +86,6 @@ function Invoke-GenerateMergeProcedure {
     }
 }
 
-
-$path = "C:\Temp\LookupData"
 # Check if the directory exists
 if (-not (Test-Path -Path $path)) {
 	# Create the directory if it does not exist
