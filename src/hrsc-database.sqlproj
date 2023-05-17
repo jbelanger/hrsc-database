@@ -553,7 +553,7 @@
     <Build Include="HRSC_APP\Stored Procedures\usp_generate_merge.sql" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Scripts\Db Changes.sql" />
+    <None Include="Scripts\RunAfter.sql" />
     <None Include="INT-TST-UAT.publish.xml" />
     <None Include="PROD-TRN.publish.xml" />
   </ItemGroup>

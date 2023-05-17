@@ -11,6 +11,7 @@ Post-Deployment Script Template
 */
 if @@servername <> 'MLDBSQL16CL01' -- Production and training
 begin 
+    PRINT 'BEGIN Merge lookup data scripts'
     /*
     Insert lookup data. Allowed on dev environments only.
     */
@@ -85,11 +86,12 @@ begin
     :r ./"Seed/HRSC.REQ_STATUS_JUSTIFICATION.Table.sql"
     :r ./"Seed/HRSC.SEPARATION_CHKLST_TYPE.Table.sql"
     :r ./"Seed/HRSC.BC_CATEGORY.Table.sql"
+    PRINT 'END Merge lookup data scripts'
 end
 
 
 begin
     PRINT 'BEGIN Post-deployment script'
-    :r ./"Db Changes.sql"
+    :r ./"RunAfter.sql"
     PRINT 'END Post-deployment script'
 end
