@@ -8,13 +8,13 @@ SET NOCOUNT ON
 DECLARE @mergeOutput1554820601 TABLE ( [DMLAction] VARCHAR(6) );
 MERGE INTO [HRSC].[CD_GD_ACCOUNT_TYPE] AS [Target]
 USING (VALUES
-  (1,N'CandB',N'Compensation and Benefits',N'Rémunération et avantages sociaux ',NULL,NULL,'2013-07-06T00:00:00','2013-07-06T00:00:00',N'yves.robichaud','2013-07-06T00:00:00',NULL,NULL)
- ,(2,N'CFOB',N'Chief Financial Officer Branch',N'Direction générale du dirigeant principal des finances',NULL,NULL,'2013-07-06T00:00:00','2013-07-06T00:00:00',N'yves.robichaud','2013-07-06T00:00:00',NULL,NULL)
- ,(3,N'ISB',N'Integrity Services Branch',N'Direction générale des services d’intégrité ',NULL,NULL,'2013-07-06T00:00:00','2013-07-06T00:00:00',N'yves.robichaud','2013-07-06T00:00:00',NULL,NULL)
+  (1,N'CandB',N'Compensation and Benefits',N'RÃ©munÃ©ration et avantages sociaux ',NULL,NULL,'2013-07-06T00:00:00','2013-07-06T00:00:00',N'yves.robichaud','2013-07-06T00:00:00',NULL,NULL)
+ ,(2,N'CFOB',N'Chief Financial Officer Branch',N'Direction gÃ©nÃ©rale du dirigeant principal des finances',NULL,NULL,'2013-07-06T00:00:00','2013-07-06T00:00:00',N'yves.robichaud','2013-07-06T00:00:00',NULL,NULL)
+ ,(3,N'ISB',N'Integrity Services Branch',N'Direction gÃ©nÃ©rale des services dâ€™intÃ©gritÃ© ',NULL,NULL,'2013-07-06T00:00:00','2013-07-06T00:00:00',N'yves.robichaud','2013-07-06T00:00:00',NULL,NULL)
  ,(4,N'SALA',N'CFOB Salary',N'DGGPF Salaire',NULL,NULL,'2013-07-06T00:00:00','2013-07-06T00:00:00',N'jeanluc.lafortune','2013-07-06T00:00:00',NULL,NULL)
- ,(6,N'CBCon',N'Compensation and Benefits - Consultant',N'Rémunération et avantages sociaux - Consultant',NULL,NULL,'2015-05-27T07:39:57.893','2015-05-27T07:39:57.893',N'yves.robichaud','2015-05-27T07:39:57.893',NULL,NULL)
+ ,(6,N'CBCon',N'Compensation and Benefits - Consultant',N'RÃ©munÃ©ration et avantages sociaux - Consultant',NULL,NULL,'2015-05-27T07:39:57.893','2015-05-27T07:39:57.893',N'yves.robichaud','2015-05-27T07:39:57.893',NULL,NULL)
  ,(7,N'NPC',N'National Pay Center Email For Action',N'Email Centre National de la Paye pour action',NULL,NULL,'2015-07-31T11:16:36','2015-07-31T11:16:36',N'HRDC-DRHC\claude.a.mukam','2015-07-31T11:16:36',NULL,NULL)
- ,(8,N'SFT',N'Salary Forecast Team Email When Transfert Request to HRSB',N'Email Équipe de prévision salariale transfert une demande à HRSB',NULL,NULL,'2022-07-31T11:16:36',NULL,N'HRSC 4.13','2023-01-27T11:16:36',NULL,NULL)
+ ,(8,N'SFT',N'Salary Forecast Team Email When Transfert Request to HRSB',N'Email Ã‰quipe de prÃ©vision salariale transfert une demande Ã  HRSB',NULL,NULL,'2022-07-31T11:16:36',NULL,N'HRSC 4.13','2023-01-27T11:16:36',NULL,NULL)
 ) AS [Source] ([GD_ACCOUNT_TYPE_ID],[GD_ACCOUNT_TYPE_CODE],[GD_ACCOUNT_TYPE_NAME_EN],[GD_ACCOUNT_TYPE_NAME_FR],[GD_ACCOUNT_TYPE_DESC_EN],[GD_ACCOUNT_TYPE_DESC_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[DATE_CREATED],[USER_UPDATED],[DATE_UPDATED])
 ON ([Target].[GD_ACCOUNT_TYPE_ID] = [Source].[GD_ACCOUNT_TYPE_ID])
 WHEN MATCHED AND (

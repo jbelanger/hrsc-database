@@ -10,9 +10,9 @@ SET IDENTITY_INSERT [HRSC].[CD_SUNSET_FUNDING_TYPE] ON
 DECLARE @mergeOutput1927013946 TABLE ( [DMLAction] VARCHAR(6) );
 MERGE INTO [HRSC].[CD_SUNSET_FUNDING_TYPE] AS [Target]
 USING (VALUES
-  (1,N'NO-01',N'No -  Does not apply to extension period nor to previous term employment period',N'Non - Ne s''applique pas à la période de prolongation ni à la période d''emploi précédente',NULL,NULL,'2017-05-11',NULL,N'michel.tardif','2017-05-11',NULL,NULL)
- ,(2,N'NO-02',N'No -  Does not apply to extension period but applied to previous term employment period',N'Non - Ne s''applique pas à la période de prolongation mais s''appliquait à la période d''emploi précédente',NULL,NULL,'2017-05-11',NULL,N'michel.tardif','2017-05-11',NULL,NULL)
- ,(3,N'YES01',N'Yes - Applies to the extension period',N'Oui - S''applique à la période de prolongation',NULL,NULL,'2017-05-11',NULL,N'michel.tardif','2017-05-11',NULL,NULL)
+  (1,N'NO-01',N'No -  Does not apply to extension period nor to previous term employment period',N'Non - Ne s''applique pas Ã  la pÃ©riode de prolongation ni Ã  la pÃ©riode d''emploi prÃ©cÃ©dente',NULL,NULL,'2017-05-11',NULL,N'michel.tardif','2017-05-11',NULL,NULL)
+ ,(2,N'NO-02',N'No -  Does not apply to extension period but applied to previous term employment period',N'Non - Ne s''applique pas Ã  la pÃ©riode de prolongation mais s''appliquait Ã  la pÃ©riode d''emploi prÃ©cÃ©dente',NULL,NULL,'2017-05-11',NULL,N'michel.tardif','2017-05-11',NULL,NULL)
+ ,(3,N'YES01',N'Yes - Applies to the extension period',N'Oui - S''applique Ã  la pÃ©riode de prolongation',NULL,NULL,'2017-05-11',NULL,N'michel.tardif','2017-05-11',NULL,NULL)
 ) AS [Source] ([SUNSET_FUNDING_TYPE_ID],[SUNSET_FUNDING_TYPE_CODE],[SUNSET_FUNDING_TYPE_NAME_EN],[SUNSET_FUNDING_TYPE_NAME_FR],[SUNSET_FUNDING_TYPE_DESC_EN],[SUNSET_FUNDING_TYPE_DESC_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[DATE_CREATED],[USER_UPDATED],[DATE_UPDATED])
 ON ([Target].[SUNSET_FUNDING_TYPE_ID] = [Source].[SUNSET_FUNDING_TYPE_ID])
 WHEN MATCHED AND (

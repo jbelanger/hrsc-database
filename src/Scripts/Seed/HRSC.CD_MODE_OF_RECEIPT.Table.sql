@@ -10,11 +10,11 @@ SET IDENTITY_INSERT [HRSC].[CD_MODE_OF_RECEIPT] ON
 DECLARE @mergeOutput1847677630 TABLE ( [DMLAction] VARCHAR(6) );
 MERGE INTO [HRSC].[CD_MODE_OF_RECEIPT] AS [Target]
 USING (VALUES
-  (3,N'Portal',N'Portail',N'Portal',N'Portail','2011-12-09T00:00:00','2012-05-17T09:25:13.347',N'Gaétan',N'Lafortune, Jean-Luc [NC]','2011-12-09T00:00:00','2012-05-17T09:25:13.347',N'PORT')
- ,(4,N'Phone',N'Téléphone',N'Phone',N'Téléphone','2011-12-09T00:00:00',NULL,N'Gaétan',N'Nguyen, David [NC]','2011-12-09T00:00:00','2012-10-30T11:40:03.880',N'PHONE')
- ,(5,N'Email',N'Courriel',N'Email',N'Courriel','2011-12-09T15:44:20.703',NULL,N'Gaétan',N'System','2011-12-09T15:44:20.703','2012-01-05T11:35:42.837',N'MAIL')
+  (3,N'Portal',N'Portail',N'Portal',N'Portail','2011-12-09T00:00:00','2012-05-17T09:25:13.347',N'GaÃ©tan',N'Lafortune, Jean-Luc [NC]','2011-12-09T00:00:00','2012-05-17T09:25:13.347',N'PORT')
+ ,(4,N'Phone',N'TÃ©lÃ©phone',N'Phone',N'TÃ©lÃ©phone','2011-12-09T00:00:00',NULL,N'GaÃ©tan',N'Nguyen, David [NC]','2011-12-09T00:00:00','2012-10-30T11:40:03.880',N'PHONE')
+ ,(5,N'Email',N'Courriel',N'Email',N'Courriel','2011-12-09T15:44:20.703',NULL,N'GaÃ©tan',N'System','2011-12-09T15:44:20.703','2012-01-05T11:35:42.837',N'MAIL')
  ,(7,N'Peoplesoft',N'Peoplesoft',N'Peoplesoft',N'Peoplesoft','2021-06-18T21:35:52.187','2022-04-01T14:28:21.150',N'HRSC 4.10',NULL,'2021-06-18T21:35:52.187',NULL,N'PPSFT')
- ,(8,N'Data Import',N'Importation de données',N'Data Import',N'Importation de données','2023-02-01T20:44:47.737','2023-02-01T20:44:47.737',N'M-A',NULL,'2023-02-01T20:44:47.737',NULL,N'DATAI')
+ ,(8,N'Data Import',N'Importation de donnÃ©es',N'Data Import',N'Importation de donnÃ©es','2023-02-01T20:44:47.737','2023-02-01T20:44:47.737',N'M-A',NULL,'2023-02-01T20:44:47.737',NULL,N'DATAI')
 ) AS [Source] ([MODE_OF_RECEIPT_ID],[MODE_OF_RECEIPT_NAME_EN],[MODE_OF_RECEIPT_NAME_FR],[MODE_OF_RECEIPT_DESC_EN],[MODE_OF_RECEIPT_DESC_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[USER_UPDATED],[DATE_CREATED],[DATE_UPDATED],[MODE_OF_RECEIPT_CODE])
 ON ([Target].[MODE_OF_RECEIPT_ID] = [Source].[MODE_OF_RECEIPT_ID])
 WHEN MATCHED AND (

@@ -10,11 +10,11 @@ SET IDENTITY_INSERT [HRSC].[CD_TYPE_OF_STAFFING_ACTION] ON
 DECLARE @mergeOutput1975014117 TABLE ( [DMLAction] VARCHAR(6) );
 MERGE INTO [HRSC].[CD_TYPE_OF_STAFFING_ACTION] AS [Target]
 USING (VALUES
-  (1,N'TSA01',N'Term/Indeterminate Advertised',N'Annoncée - Terme/Indéterminé',N'Term/Indeterminate Advertised',N'Annoncée - Terme/Indéterminé','2017-07-14T07:42:44.443',NULL,N'tony.paradis','2017-07-14T07:42:44.443',NULL,NULL)
- ,(2,N'TSA02',N'Term/Indeterminate Non-Advertised',N'Non-annoncée - Terme/Indéterminé',N'Term/Indeterminate Non-Advertised',N'Non-annoncée - Terme/Indéterminé','2017-07-14T07:42:44.443',NULL,N'tony.paradis','2017-07-14T07:42:44.443',NULL,NULL)
+  (1,N'TSA01',N'Term/Indeterminate Advertised',N'AnnoncÃ©e - Terme/IndÃ©terminÃ©',N'Term/Indeterminate Advertised',N'AnnoncÃ©e - Terme/IndÃ©terminÃ©','2017-07-14T07:42:44.443',NULL,N'tony.paradis','2017-07-14T07:42:44.443',NULL,NULL)
+ ,(2,N'TSA02',N'Term/Indeterminate Non-Advertised',N'Non-annoncÃ©e - Terme/IndÃ©terminÃ©',N'Term/Indeterminate Non-Advertised',N'Non-annoncÃ©e - Terme/IndÃ©terminÃ©','2017-07-14T07:42:44.443',NULL,N'tony.paradis','2017-07-14T07:42:44.443',NULL,NULL)
  ,(3,N'TSA03',N'Deployment',N'Mutation',N'Deployment',N'Mutation','2017-07-14T07:42:44.443',NULL,N'tony.paradis','2017-07-14T07:42:44.443',NULL,NULL)
- ,(4,N'TSA04',N'Hiring of a former student',N'Embauche d''un ancien étudiant',N'Hiring of a former student',N'Embauche d''un ancien étudiant','2017-07-14T07:42:44.443',NULL,N'tony.paradis','2017-07-14T07:42:44.443',NULL,NULL)
- ,(5,N'TSA05',N'Acting',N'Intérimaire',N'Acting',N'Intérimaire','2017-07-14T07:42:44.443',NULL,N'tony.paradis','2017-07-14T07:42:44.443',NULL,NULL)
+ ,(4,N'TSA04',N'Hiring of a former student',N'Embauche d''un ancien Ã©tudiant',N'Hiring of a former student',N'Embauche d''un ancien Ã©tudiant','2017-07-14T07:42:44.443',NULL,N'tony.paradis','2017-07-14T07:42:44.443',NULL,NULL)
+ ,(5,N'TSA05',N'Acting',N'IntÃ©rimaire',N'Acting',N'IntÃ©rimaire','2017-07-14T07:42:44.443',NULL,N'tony.paradis','2017-07-14T07:42:44.443',NULL,NULL)
 ) AS [Source] ([TYPE_OF_STAFFING_ACTION_ID],[TYPE_OF_STAFFING_ACTION_CODE],[TYPE_OF_STAFFING_ACTION_NAME_EN],[TYPE_OF_STAFFING_ACTION_NAME_FR],[TYPE_OF_STAFFING_ACTION_DESC_EN],[TYPE_OF_STAFFING_ACTION_DESC_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[DATE_CREATED],[USER_UPDATED],[DATE_UPDATED])
 ON ([Target].[TYPE_OF_STAFFING_ACTION_ID] = [Source].[TYPE_OF_STAFFING_ACTION_ID])
 WHEN MATCHED AND (

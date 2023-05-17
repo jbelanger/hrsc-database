@@ -12,11 +12,11 @@ MERGE INTO [HRSC].[CD_SECURITY_CLEARANCE] AS [Target]
 USING (VALUES
   (1,N'Conf',N'Confidential',N'Confidentiel',N'Confidential',N'Confidentiel','2013-01-10T11:39:19.157','2018-06-13T07:21:21.197',N'HRDC-DRHC\elena.akhmentova','2013-01-10T11:39:19.157',NULL,NULL)
  ,(2,N'Secr',N'Secret',N'Secret',N'Secret',N'Secret','2013-01-10T11:39:19.157',NULL,N'HRDC-DRHC\elena.akhmentova','2013-01-10T11:39:19.157',NULL,NULL)
- ,(3,N'TopS',N'Top Secret',N'Très secret',N'Top Secret',N'Très secret','2013-01-10T11:39:19.157',NULL,N'HRDC-DRHC\elena.akhmentova','2013-01-10T11:39:19.157',NULL,NULL)
- ,(4,N'RelSt',N'Reliability Status',N'Cote de fiabilité',N'Reliability Status',N'Cote de fiabilité','2013-01-10T11:39:19.160',NULL,N'HRDC-DRHC\elena.akhmentova','2013-01-10T11:39:19.160',NULL,NULL)
- ,(5,N'ER',N'Enhanced reliability',N'Fiabilité approfondie',N'Enhanced reliability',N'Fiabilité approfondie','2020-01-09T13:30:15.733',NULL,N'System','2020-01-09T13:30:15.733',NULL,NULL)
+ ,(3,N'TopS',N'Top Secret',N'TrÃ¨s secret',N'Top Secret',N'TrÃ¨s secret','2013-01-10T11:39:19.157',NULL,N'HRDC-DRHC\elena.akhmentova','2013-01-10T11:39:19.157',NULL,NULL)
+ ,(4,N'RelSt',N'Reliability Status',N'Cote de fiabilitÃ©',N'Reliability Status',N'Cote de fiabilitÃ©','2013-01-10T11:39:19.160',NULL,N'HRDC-DRHC\elena.akhmentova','2013-01-10T11:39:19.160',NULL,NULL)
+ ,(5,N'ER',N'Enhanced reliability',N'FiabilitÃ© approfondie',N'Enhanced reliability',N'FiabilitÃ© approfondie','2020-01-09T13:30:15.733',NULL,N'System','2020-01-09T13:30:15.733',NULL,NULL)
  ,(6,N'ES',N'Enhanced secret',N'Secret approfondie',N'Enhanced secret',N'Secret approfondie','2020-01-09T13:30:15.733',NULL,N'System','2020-01-09T13:30:15.733',NULL,NULL)
- ,(7,N'ETS',N'Enhanced top secret',N'Très secret approfondie',N'Enhanced top secret',N'Très secret approfondie','2020-01-09T13:30:15.733',NULL,N'System','2020-01-09T13:30:15.733',NULL,NULL)
+ ,(7,N'ETS',N'Enhanced top secret',N'TrÃ¨s secret approfondie',N'Enhanced top secret',N'TrÃ¨s secret approfondie','2020-01-09T13:30:15.733',NULL,N'System','2020-01-09T13:30:15.733',NULL,NULL)
 ) AS [Source] ([SECURITY_CLEARANCE_ID],[SECURITY_CLEARANCE_CODE],[SECURITY_CLEARANCE_NAME_EN],[SECURITY_CLEARANCE_NAME_FR],[SECURITY_CLEARANCE_DESC_EN],[SECURITY_CLEARANCE_DESC_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[DATE_CREATED],[USER_UPDATED],[DATE_UPDATED])
 ON ([Target].[SECURITY_CLEARANCE_ID] = [Source].[SECURITY_CLEARANCE_ID])
 WHEN MATCHED AND (

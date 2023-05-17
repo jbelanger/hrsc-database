@@ -10,11 +10,11 @@ SET IDENTITY_INSERT [HRSC].[CD_REGION] ON
 DECLARE @mergeOutput20195122 TABLE ( [DMLAction] VARCHAR(6) );
 MERGE INTO [HRSC].[CD_REGION] AS [Target]
 USING (VALUES
-  (1,N'Quebec',N'Québec',N'QUebec Region',N'Région Québec','2011-12-13T11:19:57.313',NULL,N'Gaetan',N'System','2011-12-13T11:19:57.313','2012-02-03T10:43:58.710',N'QC')
- ,(2,N'NCR',N'RCN',N'National Capital Region',N'Région de la capitale Nationale','2012-01-05T13:43:43.683',NULL,N'System',N'Nguyen, David [NC]','2012-01-05T13:43:43.683','2012-10-30T11:29:36.897',N'ott')
- ,(3,N'West',N'Ouest',N'West Region',N'Région de l''Ouest','2012-01-24T14:01:05.120',NULL,N'System',N'Paradis, Tony [NC]','2012-01-24T14:01:05.120','2012-03-02T13:19:37.130',N'West')
- ,(4,N'Ontario',N'Ontario',N'Ontario Region',N'Région de l''Ontario','2012-02-01T14:33:56.860',NULL,N'System',N'System','2012-02-01T14:33:56.860','2012-02-10T13:00:32.580',N'ON')
- ,(5,N'Atlantic',N'Atlantique',N'Atlantic Region',N'Région de l''Atlantique','2012-02-01T14:34:22.947',NULL,N'System',NULL,'2012-02-01T14:34:22.947',NULL,N'ATL')
+  (1,N'Quebec',N'QuÃ©bec',N'QUebec Region',N'RÃ©gion QuÃ©bec','2011-12-13T11:19:57.313',NULL,N'Gaetan',N'System','2011-12-13T11:19:57.313','2012-02-03T10:43:58.710',N'QC')
+ ,(2,N'NCR',N'RCN',N'National Capital Region',N'RÃ©gion de la capitale Nationale','2012-01-05T13:43:43.683',NULL,N'System',N'Nguyen, David [NC]','2012-01-05T13:43:43.683','2012-10-30T11:29:36.897',N'ott')
+ ,(3,N'West',N'Ouest',N'West Region',N'RÃ©gion de l''Ouest','2012-01-24T14:01:05.120',NULL,N'System',N'Paradis, Tony [NC]','2012-01-24T14:01:05.120','2012-03-02T13:19:37.130',N'West')
+ ,(4,N'Ontario',N'Ontario',N'Ontario Region',N'RÃ©gion de l''Ontario','2012-02-01T14:33:56.860',NULL,N'System',N'System','2012-02-01T14:33:56.860','2012-02-10T13:00:32.580',N'ON')
+ ,(5,N'Atlantic',N'Atlantique',N'Atlantic Region',N'RÃ©gion de l''Atlantique','2012-02-01T14:34:22.947',NULL,N'System',NULL,'2012-02-01T14:34:22.947',NULL,N'ATL')
  ,(9,N'COI Import',N'COI Import',N'COI Import',N'COI Import','2016-11-22T00:00:00','2016-11-22T14:23:07.500',N'eric.nolet',N'eric.nolet','2016-11-22T14:23:04.757','2016-11-22T14:23:07.500',N'COI')
  ,(10,N'North',N'Nord',N'North',N'Nord','2020-01-17T09:15:19.490','2020-01-20T12:10:55.310',N'Tony.Paradis',N'Girouard, Francois F [NC]','2020-01-17T09:15:19.490','2020-01-20T12:10:55.310',N'NORTH')
 ) AS [Source] ([REGION_ID],[REGION_NAME_EN],[REGION_NAME_FR],[REGION_DESC_EN],[REGION_DESC_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[USER_UPDATED],[DATE_CREATED],[DATE_UPDATED],[REGION_CODE])

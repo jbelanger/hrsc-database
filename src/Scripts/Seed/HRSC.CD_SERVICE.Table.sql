@@ -14,8 +14,8 @@ USING (VALUES
  ,(3,N'CSRV',N'Central Services',N'Services centraux',NULL,NULL,NULL,'2013-02-22T00:00:00',N'seddon','2013-02-22T00:00:00',NULL,NULL)
  ,(4,N'PSRV',N'Personal Services',N'Services personnels',NULL,NULL,NULL,'2013-02-22T00:00:00',N'seddon','2013-02-22T00:00:00',NULL,NULL)
  ,(5,N'SUPRF',N'Supervisory Functions (EX and non EX)',N'Fonctions de supervision (EX et non EX)',NULL,NULL,NULL,'2013-02-22T00:00:00',N'seddon','2013-02-22T00:00:00',NULL,NULL)
- ,(7,N'FRML',N'Formal level in grievance process',N'Palier officiel d’une procédure de griefs',NULL,NULL,NULL,'2013-02-22T00:00:00',N'seddon','2013-02-22T00:00:00',NULL,NULL)
- ,(8,N'ZOTH',N'Other, Please specify (attach annex if insufficient space):',N'Autre, veuillez préciser (ajouter une annexe si l’espace est insuffisante):',NULL,NULL,NULL,'2013-02-22T00:00:00',N'seddon','2013-02-22T00:00:00',NULL,NULL)
+ ,(7,N'FRML',N'Formal level in grievance process',N'Palier officiel dâ€™une procÃ©dure de griefs',NULL,NULL,NULL,'2013-02-22T00:00:00',N'seddon','2013-02-22T00:00:00',NULL,NULL)
+ ,(8,N'ZOTH',N'Other, Please specify (attach annex if insufficient space):',N'Autre, veuillez prÃ©ciser (ajouter une annexe si lâ€™espace est insuffisante):',NULL,NULL,NULL,'2013-02-22T00:00:00',N'seddon','2013-02-22T00:00:00',NULL,NULL)
 ) AS [Source] ([SERVICE_ID],[SERVICE_CODE],[SERVICE_NAME_EN],[SERVICE_NAME_FR],[SERVICE_DESC_EN],[SERVICE_DESC_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[DATE_CREATED],[USER_UPDATED],[DATE_UPDATED])
 ON ([Target].[SERVICE_ID] = [Source].[SERVICE_ID])
 WHEN MATCHED AND (

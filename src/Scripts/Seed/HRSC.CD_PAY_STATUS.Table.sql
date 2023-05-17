@@ -11,8 +11,8 @@ DECLARE @mergeOutput1939537993 TABLE ( [DMLAction] VARCHAR(6) );
 MERGE INTO [HRSC].[CD_PAY_STATUS] AS [Target]
 USING (VALUES
   (1,N'ACTIV',N'Active',N'Actif',N'Active',N'Actif',NULL,N'System',NULL,'2018-06-13T07:21:20.850',NULL,'2018-06-13T07:21:20.850')
- ,(2,N'LWOTP',N'On leave without Pay',N'En congé non-payé',N'On leave without Pay',N'En congé non-payé',NULL,N'System',NULL,'2018-06-13T07:21:20.850',NULL,'2018-06-13T07:21:20.850')
- ,(3,N'LWOP',N'LWOP requested to accept this appointment',N'CNP demandé afin d’accepter cette nomination',N'LWOP requested to accept this appointment',N'CNP demandé afin d’accepter cette nomination',NULL,N'System',NULL,'2018-06-13T07:21:20.850',NULL,'2018-06-13T07:21:20.850')
+ ,(2,N'LWOTP',N'On leave without Pay',N'En congÃ© non-payÃ©',N'On leave without Pay',N'En congÃ© non-payÃ©',NULL,N'System',NULL,'2018-06-13T07:21:20.850',NULL,'2018-06-13T07:21:20.850')
+ ,(3,N'LWOP',N'LWOP requested to accept this appointment',N'CNP demandÃ© afin dâ€™accepter cette nomination',N'LWOP requested to accept this appointment',N'CNP demandÃ© afin dâ€™accepter cette nomination',NULL,N'System',NULL,'2018-06-13T07:21:20.850',NULL,'2018-06-13T07:21:20.850')
  ,(4,N'NA',N'N/A',N'S/O',N'N/A',N'S/O',NULL,N'System',NULL,'2018-06-13T07:21:20.850',NULL,'2018-06-13T07:21:20.850')
 ) AS [Source] ([PAY_STATUS_ID],[PAY_STATUS_CODE],[PAY_STATUS_NAME_EN],[PAY_STATUS_NAME_FR],[PAY_STATUS_DESC_EN],[PAY_STATUS_DESC_FR],[EXPIRY_DATE],[USER_CREATED],[USER_UPDATED],[DATE_CREATED],[DATE_UPDATED],[EFFECTIVE_DATE])
 ON ([Target].[PAY_STATUS_ID] = [Source].[PAY_STATUS_ID])

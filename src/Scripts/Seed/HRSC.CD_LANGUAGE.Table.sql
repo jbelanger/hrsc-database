@@ -11,9 +11,9 @@ DECLARE @mergeOutput1703677117 TABLE ( [DMLAction] VARCHAR(6) );
 MERGE INTO [HRSC].[CD_LANGUAGE] AS [Target]
 USING (VALUES
   (4,1,N'English',N'Anglais',N'EN',N'AN',N'English',N'Anglais','2011-12-08T11:57:42.913',NULL,N'Gaetan',NULL,'2011-12-08T12:01:48.610',NULL,N'0')
- ,(5,2,N'French',N'Français',N'FR',N'FR',N'French',N'Français','2011-12-08T12:02:14.773',NULL,N'Gaetan',NULL,'2011-12-08T12:02:14.773',NULL,N'0')
+ ,(5,2,N'French',N'FranÃ§ais',N'FR',N'FR',N'French',N'FranÃ§ais','2011-12-08T12:02:14.773',NULL,N'Gaetan',NULL,'2011-12-08T12:02:14.773',NULL,N'0')
  ,(6,3,N'Various',N'Divers',N'DV',N'DV',N'Divers',N'Divers','2012-06-01T13:18:34.407',NULL,N'eric.nolet',NULL,'2012-06-27T13:25:15.080',NULL,N'0')
- ,(8,4,N'No Preference',N'Aucune Préférence',N'NP',N'NP',N'No Preference',N'Aucune Préférence','2012-06-01T13:18:34.407',NULL,N'eric.nolet',NULL,'2012-06-27T13:26:56.637',NULL,N'0')
+ ,(8,4,N'No Preference',N'Aucune PrÃ©fÃ©rence',N'NP',N'NP',N'No Preference',N'Aucune PrÃ©fÃ©rence','2012-06-01T13:18:34.407',NULL,N'eric.nolet',NULL,'2012-06-27T13:26:56.637',NULL,N'0')
 ) AS [Source] ([LANGUAGE_ID],[LANGUAGE_CODE],[LANGUAGE_NAME_EN],[LANGUAGE_NAME_FR],[LANGUAGE_ABRVTD_NAME_EN],[LANGUAGE_ABRVTD_NAME_FR],[LANGUAGE_DESC_EN],[LANGUAGE_DESC_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[USER_UPDATED],[DATE_CREATED],[DATE_UPDATED],[LANGUAGE_CODE2])
 ON ([Target].[LANGUAGE_ID] = [Source].[LANGUAGE_ID])
 WHEN MATCHED AND (

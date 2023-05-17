@@ -10,7 +10,7 @@ SET IDENTITY_INSERT [HRSC].[EMAIL_TEMPLATE] ON
 DECLARE @mergeOutput644197345 TABLE ( [DMLAction] VARCHAR(6) );
 MERGE INTO [HRSC].[EMAIL_TEMPLATE] AS [Target]
 USING (VALUES
-  (9,N'HRSC ID [IDENTIFIER] - Request Received - [SUBJECT] [EMP_NAME]',N'CSRH ID [IDENTIFIER] - Demande reçue - [SUBJECT] [EMP_NAME]',N'<font color="red"><i><p>Please note that the Human Resources Services Branch is experiencing a high volume of requests at this time, and the processing of your request may be delayed. We appreciate your patience and strive to ensure that all HR service requests are addressed as quickly as possible.</p>
+  (9,N'HRSC ID [IDENTIFIER] - Request Received - [SUBJECT] [EMP_NAME]',N'CSRH ID [IDENTIFIER] - Demande reÃ§ue - [SUBJECT] [EMP_NAME]',N'<font color="red"><i><p>Please note that the Human Resources Services Branch is experiencing a high volume of requests at this time, and the processing of your request may be delayed. We appreciate your patience and strive to ensure that all HR service requests are addressed as quickly as possible.</p>
 Please visit the <a href="http://iservice.prv/eng/index.shtml">iService Home Page</a> to find key information and services on human resources.</p></i></font>
 
 Your request has been received.
@@ -19,41 +19,41 @@ You can view the request online by clicking on the following link: [REQUEST_LINK
 
 Thank you for using the Human Resources Services Centre (HRSC) Web Application. 
 
-If you have any questions or concerns, please contact the lead assigned to your request.',N'<font color="red"><i><p>Veuillez noter que la Direction générale des services des ressources humaines connaît actuellement un volume élevé de demandes et que le traitement de votre demande pourrait être retardée. Nous vous remercions de votre patience et nous nous efforçons de faire en sorte que toutes les demandes de services RH soient traitées le plus rapidement possible.</p>
-Veuillez visiter la <a href="http://iservice.prv/fra/index.shtml">page d''accueil d''iService</a> pour trouver des informations et des services clés sur les ressources humaines. </p></i></font>
+If you have any questions or concerns, please contact the lead assigned to your request.',N'<font color="red"><i><p>Veuillez noter que la Direction gÃ©nÃ©rale des services des ressources humaines connaÃ®t actuellement un volume Ã©levÃ© de demandes et que le traitement de votre demande pourrait Ãªtre retardÃ©e. Nous vous remercions de votre patience et nous nous efforÃ§ons de faire en sorte que toutes les demandes de services RH soient traitÃ©es le plus rapidement possible.</p>
+Veuillez visiter la <a href="http://iservice.prv/fra/index.shtml">page d''accueil d''iService</a> pour trouver des informations et des services clÃ©s sur les ressources humaines.Â </p></i></font>
 
-Nous accusons réception de votre demande.
+Nous accusons rÃ©ception de votre demande.
 
-Vous pouvez accéder à la demande en cliquant sur le lien suivant : [REQUEST_LINK]
+Vous pouvez accÃ©der Ã  la demande en cliquant sur le lien suivant : [REQUEST_LINK]
 
-Merci d’avoir utilisé l’application web du Centre de services en ressources humaines (CSRH). 
+Merci dâ€™avoir utilisÃ© lâ€™application web du Centre de services en ressources humaines (CSRH). 
 
-Pour toute question ou commentaire concernant cette demande, nous vous invitons à contacter le leader assigné à votre demande.','2019-07-16T00:00:00',NULL,N'Demers, Gaétan [NC]',N'Morozan, Alina A [NC]','2012-01-26T14:13:14.383','2022-06-20T14:53:04.890',1)
- ,(10,N'HRSC ID [IDENTIFIER] - Request Assigned [EMP_NAME]',N'CSRH ID [IDENTIFIER] - Demande assignée [EMP_NAME]',N'A request has been assigned to you.
+Pour toute question ou commentaire concernant cette demande, nous vous invitons Ã  contacter le leader assignÃ© Ã  votre demande.','2019-07-16T00:00:00',NULL,N'Demers, GaÃ©tan [NC]',N'Morozan, Alina A [NC]','2012-01-26T14:13:14.383','2022-06-20T14:53:04.890',1)
+ ,(10,N'HRSC ID [IDENTIFIER] - Request Assigned [EMP_NAME]',N'CSRH ID [IDENTIFIER] - Demande assignÃ©e [EMP_NAME]',N'A request has been assigned to you.
 
-You can view the request online by clicking on the following link: [REQUEST_LINK]',N'Une demande vous a été assignée.
+You can view the request online by clicking on the following link: [REQUEST_LINK]',N'Une demande vous a Ã©tÃ© assignÃ©e.
 
-Vous pouvez accéder à la demande en cliquant sur le lien suivant : [REQUEST_LINK]','2018-01-01T00:00:00',NULL,N'Demers, Gaétan [NC]',N'Robichaud, Martin M [NC]','2012-01-26T14:27:58.370','2020-04-14T14:18:51.753',6)
- ,(11,N'HRSC ID [IDENTIFIER] - Request Modified - [SUBJECT] [EMP_NAME]',N'CSRH ID [IDENTIFIER] - Demande modifiée - [SUBJECT] [EMP_NAME]',N'Your request has been modified.
+Vous pouvez accÃ©der Ã  la demande en cliquant sur le lien suivant : [REQUEST_LINK]','2018-01-01T00:00:00',NULL,N'Demers, GaÃ©tan [NC]',N'Robichaud, Martin M [NC]','2012-01-26T14:27:58.370','2020-04-14T14:18:51.753',6)
+ ,(11,N'HRSC ID [IDENTIFIER] - Request Modified - [SUBJECT] [EMP_NAME]',N'CSRH ID [IDENTIFIER] - Demande modifiÃ©e - [SUBJECT] [EMP_NAME]',N'Your request has been modified.
 
-You can view the request online by clicking on the following link: [REQUEST_LINK]',N'Votre demande a été modifiée.
+You can view the request online by clicking on the following link: [REQUEST_LINK]',N'Votre demande a Ã©tÃ© modifiÃ©e.
 
-Vous pouvez accéder à la demande en cliquant sur le lien suivant : [REQUEST_LINK]','2012-01-26T00:00:00',NULL,N'Demers, Gaétan [NC]',N'Robichaud, Martin M [NC]','2012-01-26T14:43:08.433','2020-04-14T14:20:12.460',7)
- ,(12,N'HRSC ID [IDENTIFIER] - Request Resolved - [SUBJECT] [EMP_NAME]',N'CSRH ID [IDENTIFIER] - Demande résolue - [SUBJECT] [EMP_NAME]',N'Your request has been resolved. 
+Vous pouvez accÃ©der Ã  la demande en cliquant sur le lien suivant : [REQUEST_LINK]','2012-01-26T00:00:00',NULL,N'Demers, GaÃ©tan [NC]',N'Robichaud, Martin M [NC]','2012-01-26T14:43:08.433','2020-04-14T14:20:12.460',7)
+ ,(12,N'HRSC ID [IDENTIFIER] - Request Resolved - [SUBJECT] [EMP_NAME]',N'CSRH ID [IDENTIFIER] - Demande rÃ©solue - [SUBJECT] [EMP_NAME]',N'Your request has been resolved. 
 
 You can view the request online by clicking on the following link: [REQUEST_LINK]
 
-Thank you for using the Human Resources Services Centre (HRSC) Web Application. If you have any questions or concerns, please contact the lead assigned to your request.',N'Votre demande a été résolue.
+Thank you for using the Human Resources Services Centre (HRSC) Web Application. If you have any questions or concerns, please contact the lead assigned to your request.',N'Votre demande a Ã©tÃ© rÃ©solue.
 
-Vous pouvez accéder à la demande en cliquant sur le lien suivant : [REQUEST_LINK]
+Vous pouvez accÃ©der Ã  la demande en cliquant sur le lien suivant : [REQUEST_LINK]
 
-Merci d’avoir utilisé l’Application web du Centre de services en ressources humaines (CSRH). Pour toute question ou commentaire, nous vous invitons à contacter le leader assigné à votre demande.','2019-07-16T00:00:00',NULL,N'Demers, Gaétan [NC]',N'Robichaud, Martin M [NC]','2012-01-26T14:44:06.350','2020-04-14T14:26:15.700',8)
- ,(13,N'HRSC ID [IDENTIFIER] - Request Cancelled - [SUBJECT] [EMP_NAME]',N'CSRH ID [IDENTIFIER] - Demande annulée - [SUBJECT] [EMP_NAME]',N'Your request has been cancelled.
+Merci dâ€™avoir utilisÃ© lâ€™Application web du Centre de services en ressources humaines (CSRH). Pour toute question ou commentaire, nous vous invitons Ã  contacter le leader assignÃ© Ã  votre demande.','2019-07-16T00:00:00',NULL,N'Demers, GaÃ©tan [NC]',N'Robichaud, Martin M [NC]','2012-01-26T14:44:06.350','2020-04-14T14:26:15.700',8)
+ ,(13,N'HRSC ID [IDENTIFIER] - Request Cancelled - [SUBJECT] [EMP_NAME]',N'CSRH ID [IDENTIFIER] - Demande annulÃ©e - [SUBJECT] [EMP_NAME]',N'Your request has been cancelled.
 
-You can view the request online by clicking on the following link: [REQUEST_LINK]',N'Votre demande a été annulée.
+You can view the request online by clicking on the following link: [REQUEST_LINK]',N'Votre demande a Ã©tÃ© annulÃ©e.
 
-Vous pouvez accéder à la demande en cliquant sur le lien suivant : [REQUEST_LINK]','2012-01-26T00:00:00',NULL,N'Demers, Gaétan [NC]',N'Robichaud, Martin M [NC]','2012-01-26T14:48:25.003','2020-04-14T14:19:16.957',9)
- ,(14,N'HRSC ID [IDENTIFIER] - Request Declined - [SUBJECT] [EMP_NAME]',N'CSRH ID [IDENTIFIER] - Demande refusée - [SUBJECT] [EMP_NAME]',N'<p style="font-family:Arial; font-size:16px">
+Vous pouvez accÃ©der Ã  la demande en cliquant sur le lien suivant : [REQUEST_LINK]','2012-01-26T00:00:00',NULL,N'Demers, GaÃ©tan [NC]',N'Robichaud, Martin M [NC]','2012-01-26T14:48:25.003','2020-04-14T14:19:16.957',9)
+ ,(14,N'HRSC ID [IDENTIFIER] - Request Declined - [SUBJECT] [EMP_NAME]',N'CSRH ID [IDENTIFIER] - Demande refusÃ©e - [SUBJECT] [EMP_NAME]',N'<p style="font-family:Arial; font-size:16px">
 Your request cannot be processed for the following reason:
 
 [REJECT_NOTE]
@@ -64,17 +64,17 @@ if your request was declined because of the transfer of activities to the new My
 
 Thank you for using the Human Resources Services Centre (HRSC) Web Application. </p>
 ',N'<p style="font-family:Arial; font-size:16px">
-Votre demande ne peut être traitée pour la raison suivante :
+Votre demande ne peut Ãªtre traitÃ©e pour la raison suivante :
 
 [REJECT_NOTE]
 
-Vous pouvez accéder à la demande en cliquant sur le lien suivant : [REQUEST_LINK]
+Vous pouvez accÃ©der Ã  la demande en cliquant sur le lien suivant : [REQUEST_LINK]
 
-Si votre demande est refusée en raison du transfert d''activités dans le nouveau système de gestion de cas, MonEDSC RH, consultez la section iSrervice pour suivre les étapes et initier votre cas : <a href="https://iservice.prv/fra/prsh/pro_ps/sujets/monesdc-rh.shtml">https://iservice.prv/fra/prsh/pro_ps/sujets/monesdc-rh.shtml</a>.
+Si votre demande est refusÃ©e en raison du transfert d''activitÃ©s dans le nouveau systÃ¨me de gestion de cas, MonEDSC RH, consultez la section iSrervice pour suivre les Ã©tapes et initier votre cas : <a href="https://iservice.prv/fra/prsh/pro_ps/sujets/monesdc-rh.shtml">https://iservice.prv/fra/prsh/pro_ps/sujets/monesdc-rh.shtml</a>.
 
-Merci d’avoir utilisé l’Application web du Centre de services en ressources humaines (CSRH).</p>
-','2012-01-26T00:00:00',NULL,N'Demers, Gaétan [NC]',N'Robichaud, Martin M [NC]','2012-01-26T14:49:11.800','2022-11-23T04:06:05.610',10)
- ,(15,N'HRSC ID [IDENTIFIER] - ACTION REQUIRED - Request Returned - [SUBJECT] [EMP_NAME]',N'CSRH ID [IDENTIFIER] - ACTION REQUISE - Demande retournée - [SUBJECT] [EMP_NAME]',N'Your request has been returned for the following reason:
+Merci dâ€™avoir utilisÃ© lâ€™Application web du Centre de services en ressources humaines (CSRH).</p>
+','2012-01-26T00:00:00',NULL,N'Demers, GaÃ©tan [NC]',N'Robichaud, Martin M [NC]','2012-01-26T14:49:11.800','2022-11-23T04:06:05.610',10)
+ ,(15,N'HRSC ID [IDENTIFIER] - ACTION REQUIRED - Request Returned - [SUBJECT] [EMP_NAME]',N'CSRH ID [IDENTIFIER] - ACTION REQUISE - Demande retournÃ©e - [SUBJECT] [EMP_NAME]',N'Your request has been returned for the following reason:
 
 [REJECT_NOTE]
 
@@ -84,17 +84,17 @@ If you have any questions or concerns, please contact the lead assigned to your 
 
 
 [LEAD_NAME]
-[COLLABORATOR_NAME]',N'Votre demande vous est retournée pour la raison suivante:
+[COLLABORATOR_NAME]',N'Votre demande vous est retournÃ©e pour la raison suivante:
 
 [REJECT_NOTE]
 
 Vous pouvez modifier votre demande en cliquant sur le lien suivant : [REQUEST_LINK]
 
-Pour toute question ou commentaire, nous vous invitons à contacter le leader assigné à votre demande. 
+Pour toute question ou commentaire, nous vous invitons Ã  contacter le leader assignÃ© Ã  votre demande. 
 
 
 [LEAD_NAME]
-[COLLABORATOR_NAME]','2019-07-16T00:00:00',NULL,N'Demers, Gaétan [NC]',N'Robichaud, Martin M [NC]','2012-01-26T14:50:04.323','2020-04-14T14:26:52.950',11)
+[COLLABORATOR_NAME]','2019-07-16T00:00:00',NULL,N'Demers, GaÃ©tan [NC]',N'Robichaud, Martin M [NC]','2012-01-26T14:50:04.323','2020-04-14T14:26:52.950',11)
  ,(16,N'HRSC ID [IDENTIFIER] - ACTION REQUIRED - Request Pending Signature - [SUBJECT] [EMP_NAME]',N'CSRH ID [IDENTIFIER] - ACTION REQUISE - En attente de signature - [SUBJECT] [EMP_NAME]',N'Your request has been processed and the document is ready for signature. Please review the content and return it according to the instructions provided.
 
 [INSTRUCTION_NOTE]
@@ -104,143 +104,143 @@ You can reach the documents by clicking on the following link: [REQUEST_LINK]
 <p style="color:red;">In order to process your requests in a timely manner, all ready for pay documentation (including the signed letter of offer and any supporting pay forms) must be submitted at least 15 business days in advance. This will ensure that HR and the Pay Center receive the required documents on time and will help prevent pay issues. </p>
 
 [LEAD_NAME]
-[COLLABORATOR_NAME]',N'Votre demande a été traitée et le document est prêt pour signature. Veuillez en valider le contenu et nous le retourner selon les instructions fournies.
+[COLLABORATOR_NAME]',N'Votre demande a Ã©tÃ© traitÃ©e et le document est prÃªt pour signature. Veuillez en valider le contenu et nous le retourner selon les instructions fournies.
 
 [INSTRUCTION_NOTE]
 
-Vous pouvez accéder aux documents en cliquant sur le lien suivant : [REQUEST_LINK]
+Vous pouvez accÃ©der aux documents en cliquant sur le lien suivant : [REQUEST_LINK]
 
-<p style="color:red;">Afin de traiter vos demandes dans les meilleurs délais, tous les documents prêts pour la paye (y compris la lettre d’offre signée et tous les autres documents de paye requis) doivent être soumis au moins 15 jours ouvrables à l’avance. Cela assurera que les ressources humaines et le Centre de Paye reçoivent les documents requis à temps et contribuera à éviter les problèmes de paye. </p>
+<p style="color:red;">Afin de traiter vos demandes dans les meilleurs dÃ©lais, tous les documents prÃªts pour la paye (y compris la lettre dâ€™offre signÃ©e et tous les autres documents de paye requis) doivent Ãªtre soumis au moins 15 jours ouvrables Ã  lâ€™avance. Cela assurera que les ressources humaines et le Centre de Paye reÃ§oivent les documents requis Ã  temps et contribuera Ã  Ã©viter les problÃ¨mes de paye. </p>
 
 
 [LEAD_NAME]
 [COLLABORATOR_NAME]','2019-07-16T00:00:00',NULL,N'Paradis, Tony [NC]',N'Dalebozik, Michael MW [NC]','2013-02-11T15:15:10.147','2020-07-29T09:12:31.137',12)
- ,(19,N'HRSC ID [IDENTIFIER] - Request Signed - [SUBJECT] [EMP_NAME]',N'CSRH ID [IDENTIFIER] - Demande signée - [SUBJECT] [EMP_NAME]',N'A Request has been signed by the client.
+ ,(19,N'HRSC ID [IDENTIFIER] - Request Signed - [SUBJECT] [EMP_NAME]',N'CSRH ID [IDENTIFIER] - Demande signÃ©e - [SUBJECT] [EMP_NAME]',N'A Request has been signed by the client.
 
-You can view the request online by clicking on the following link: [REQUEST_LINK]',N'Une demande a été signée par le client.
+You can view the request online by clicking on the following link: [REQUEST_LINK]',N'Une demande a Ã©tÃ© signÃ©e par le client.
 
-Vous pouvez accéder à la demande en cliquant sur le lien suivant : [REQUEST_LINK]','2013-03-07T00:00:00',NULL,N'Paradis, Tony [NC]',N'Robichaud, Martin M [NC]','2013-03-07T21:19:38.223','2020-04-14T14:37:48.760',13)
- ,(20,N'HRSC ID [IDENTIFIER] - Signed Document Received - [SUBJECT] [EMP_NAME]',N'CSRH ID [IDENTIFIER] - Réception du document signé - [SUBJECT] [EMP_NAME]',N'Your request has been updated with the signed document.
+Vous pouvez accÃ©der Ã  la demande en cliquant sur le lien suivant : [REQUEST_LINK]','2013-03-07T00:00:00',NULL,N'Paradis, Tony [NC]',N'Robichaud, Martin M [NC]','2013-03-07T21:19:38.223','2020-04-14T14:37:48.760',13)
+ ,(20,N'HRSC ID [IDENTIFIER] - Signed Document Received - [SUBJECT] [EMP_NAME]',N'CSRH ID [IDENTIFIER] - RÃ©ception du document signÃ© - [SUBJECT] [EMP_NAME]',N'Your request has been updated with the signed document.
 
-You can view the request online by clicking on the following link: [REQUEST_LINK]',N'Votre demande a été mise à jour avec le document signé.
+You can view the request online by clicking on the following link: [REQUEST_LINK]',N'Votre demande a Ã©tÃ© mise Ã  jour avec le document signÃ©.
 
-Vous pouvez accéder à la demande en cliquant sur le lien suivant : [REQUEST_LINK]','2013-03-07T00:00:00',NULL,N'Paradis, Tony [NC]',N'Robichaud, Martin M [NC]','2013-03-08T13:59:03.330','2020-04-14T14:37:29.540',14)
- ,(21,N'HRSC ID [IDENTIFIER] - Returned from Client - [SUBJECT] [EMP_NAME]',N'CSRH ID [IDENTIFIER] - Demande retournée par le client - [SUBJECT] [EMP_NAME]',N'A Request has been Returned from the client.
+Vous pouvez accÃ©der Ã  la demande en cliquant sur le lien suivant : [REQUEST_LINK]','2013-03-07T00:00:00',NULL,N'Paradis, Tony [NC]',N'Robichaud, Martin M [NC]','2013-03-08T13:59:03.330','2020-04-14T14:37:29.540',14)
+ ,(21,N'HRSC ID [IDENTIFIER] - Returned from Client - [SUBJECT] [EMP_NAME]',N'CSRH ID [IDENTIFIER] - Demande retournÃ©e par le client - [SUBJECT] [EMP_NAME]',N'A Request has been Returned from the client.
 
-You can view the request online by clicking on the following link: [REQUEST_LINK]',N'Une demande a été retournée par le client. 
+You can view the request online by clicking on the following link: [REQUEST_LINK]',N'Une demande a Ã©tÃ© retournÃ©e par le client. 
 
-Vous pouvez accéder à la demande en cliquant sur le lien suivant : [REQUEST_LINK]','2019-02-27T00:00:00',NULL,N'Paradis, Tony [NC]',N'Robichaud, Martin M [NC]','2013-03-12T10:52:46.270','2020-04-14T14:27:15.920',15)
- ,(22,N'Notification of Separation - [TYPE] - HRSC ID [IDENTIFIER] - [EMP_PRI]',N'Notification de la séparation - [TYPE] - CSRH ID [IDENTIFIER] - [EMP_PRI]',N'<p><b><font color="red" size="4">*****This email is auto-generated from the HRSC web application*****</font></b></p>
+Vous pouvez accÃ©der Ã  la demande en cliquant sur le lien suivant : [REQUEST_LINK]','2019-02-27T00:00:00',NULL,N'Paradis, Tony [NC]',N'Robichaud, Martin M [NC]','2013-03-12T10:52:46.270','2020-04-14T14:27:15.920',15)
+ ,(22,N'Notification of Separation - [TYPE] - HRSC ID [IDENTIFIER] - [EMP_PRI]',N'Notification de la sÃ©paration - [TYPE] - CSRH ID [IDENTIFIER] - [EMP_PRI]',N'<p><b><font color="red" size="4">*****This email is auto-generated from the HRSC web application*****</font></b></p>
 
 A notification of separation has been submitted by or on behalf of an employee. The submission can be viewed online via the following link: [REQUEST_LINK]
 
-<p>&ldquo;If the departure is to take place prior to the scheduled end date as per the contact, <strong><u>you have to submit a Pay Related Action via the HRSC Web Application</u></strong> in addition to the separation clearance process.&rdquo;</p> In the manager’s section select: Pay related activities and then choose the category “departure” or “leave” and the subcategory “applicable to your specific situation”.  You will also have to provide, if applicable, the appropriate documentation as per the manager’s guide to HR request under the tab departure or leave: https://iservice.prv/eng/hr/comp/topics/phoenix_self_service/docs/manager-guide.pdf.
+<p>&ldquo;If the departure is to take place prior to the scheduled end date as per the contact, <strong><u>you have to submit a Pay Related Action via the HRSC Web Application</u></strong> in addition to the separation clearance process.&rdquo;</p> In the managerâ€™s section select: Pay related activities and then choose the category â€œdepartureâ€ or â€œleaveâ€ and the subcategory â€œapplicable to your specific situationâ€.  You will also have to provide, if applicable, the appropriate documentation as per the managerâ€™s guide to HR request under the tab departure or leave: https://iservice.prv/eng/hr/comp/topics/phoenix_self_service/docs/manager-guide.pdf.
 
-<p>Note: If this separation clearance process request is related to a leave without pay (LWOP) request for a period of greater than 9 months for the same type of leave, ensure all required steps have been completed as per the compensation page on LWOP for six (6) or more days: <a href="https://iservice.prv/eng/hr/comp/topics/lwop/lwop-six-days-plus.shtml">https://iservice.prv/eng/hr/comp/topics/lwop/lwop-six-days-plus.shtml</a>.</p>',N'<p><b><font color="red" size="4">*****Ce courriel est auto-généré à partir de l''application web du CSRH*****</font></b></p>
+<p>Note: If this separation clearance process request is related to a leave without pay (LWOP) request for a period of greater than 9 months for the same type of leave, ensure all required steps have been completed as per the compensation page on LWOP for six (6) or more days: <a href="https://iservice.prv/eng/hr/comp/topics/lwop/lwop-six-days-plus.shtml">https://iservice.prv/eng/hr/comp/topics/lwop/lwop-six-days-plus.shtml</a>.</p>',N'<p><b><font color="red" size="4">*****Ce courriel est auto-gÃ©nÃ©rÃ© Ã  partir de l''application web du CSRH*****</font></b></p>
 
-Une notification de la séparation a été soumise par ou au nom d’un employé. La soumission peut être consultée en ligne à partir du lien suivant:  [REQUEST_LINK]
+Une notification de la sÃ©paration a Ã©tÃ© soumise par ou au nom dâ€™un employÃ©. La soumission peut Ãªtre consultÃ©e en ligne Ã  partir du lien suivant:  [REQUEST_LINK]
 
-<p>&laquo;&nbsp;Si le d&eacute;part doit avoir lieu avant la date de fin pr&eacute;vue selon le contact, <strong><u>vous devez soumettre une action reli&eacute;e &agrave; la paye via l''application Web </u></strong><strong><u>CSRH</u></strong> en plus du processus de s&eacute;paration.&nbsp;&raquo;</p>  Dans la section, je suis un gestionnaire, choisissez : Action reliée à la paye et sélectionnez la catégorie « départ » ou « congé » et la sous-catégorie applicable à votre situation.  Vous devrez aussi soumettre, si applicable, la documentation appropriée selon le guide des demandes RH pour les gestionnaire, section « départ » ou congé: https://iservice.prv/fra/rh/remun/sujets/phenix_libre_service/docs/guide-du-gestionnaire.pdf.
+<p>&laquo;&nbsp;Si le d&eacute;part doit avoir lieu avant la date de fin pr&eacute;vue selon le contact, <strong><u>vous devez soumettre une action reli&eacute;e &agrave; la paye via l''application Web </u></strong><strong><u>CSRH</u></strong> en plus du processus de s&eacute;paration.&nbsp;&raquo;</p>  Dans la section, je suis un gestionnaire, choisissez : Action reliÃ©e Ã  la paye et sÃ©lectionnez la catÃ©gorie Â« dÃ©part Â» ou Â« congÃ© Â» et la sous-catÃ©gorie applicable Ã  votre situation.  Vous devrez aussi soumettre, si applicable, la documentation appropriÃ©e selon le guide des demandes RH pour les gestionnaire, section Â« dÃ©part Â» ou congÃ©: https://iservice.prv/fra/rh/remun/sujets/phenix_libre_service/docs/guide-du-gestionnaire.pdf.
 
 <p>Remarque : Si cette demande de processus de d&eacute;part est en lien avec une demande de Cong&eacute; non pay&eacute; (CNP) pour une p&eacute;riode de plus de 9 mois du m&ecirc;me type de cong&eacute;, assurez-vous que toutes les &eacute;tapes requises ont &eacute;t&eacute; effectu&eacute;es en consultant la page de la r&eacute;mun&eacute;ration et avantages sociaux portant sur un CNP de six (6) jours ou plus&nbsp;:&nbsp;<a href="https://iservice.prv/fra/rh/remun/sujets/cnp/cnp-six-jours-plus.shtml">https://iservice.prv/fra/rh/remun/sujets/cnp/cnp-six-jours-plus.shtml</a>.</p>','2013-05-14T00:00:00',NULL,N'Robichaud, Yves [NC]',N'Morozan, Alina A [NC]','2013-05-14T11:00:00','2022-06-16T08:34:56.307',16)
- ,(23,N'Notification of Separation - [TYPE] - HRSC ID [IDENTIFIER] - [EMP_PRI]',N'Notification de la séparation - [TYPE] - CSRH ID [IDENTIFIER] - [EMP_PRI]',N'Protected B 
+ ,(23,N'Notification of Separation - [TYPE] - HRSC ID [IDENTIFIER] - [EMP_PRI]',N'Notification de la sÃ©paration - [TYPE] - CSRH ID [IDENTIFIER] - [EMP_PRI]',N'Protected B 
 
 A notification of separation has been submitted for your information and/or action as per the following details:
 
 [ALL_SEPARATION_CLEARANCE_FIELDS] 
 
-The separation clearance form and process will be completed for this employee on the identified official date of departure. If you require further information in regards to this submission, please contact the identified manager or administrative assistant.',N'Protégé B
+The separation clearance form and process will be completed for this employee on the identified official date of departure. If you require further information in regards to this submission, please contact the identified manager or administrative assistant.',N'ProtÃ©gÃ© B
 
-Une notification de la séparation a été soumise, elle est portée à votre connaissance pour information et/ou pour action, en fonction des détails suivants :
+Une notification de la sÃ©paration a Ã©tÃ© soumise, elle est portÃ©e Ã  votre connaissance pour information et/ou pour action, en fonction des dÃ©tails suivants :
 
 [ALL_SEPARATION_CLEARANCE_FIELDS] 
 
-Le formulaire du processus de séparation et le processus de départ pour le présent employé seront complétés à la date officielle de départ indiquée. Si vous avez besoin d’information additionnelle à propos de la présente soumission, veuillez communiquer avec le gestionnaire ou avec l’assistant administratif désigné.','2013-05-14T00:00:00',NULL,N'Robichaud, Yves [NC]',N'Robichaud, Martin M [NC]','2013-05-14T11:00:00','2020-04-14T14:29:45.837',17)
- ,(25,N'Notification of Separation - [TYPE] - HRSC ID [IDENTIFIER] - [EMP_PRI]',N'Notification de la séparation - [TYPE] - CSRH ID [IDENTIFIER] - [EMP_PRI]',N'Protected B
+Le formulaire du processus de sÃ©paration et le processus de dÃ©part pour le prÃ©sent employÃ© seront complÃ©tÃ©s Ã  la date officielle de dÃ©part indiquÃ©e. Si vous avez besoin dâ€™information additionnelle Ã  propos de la prÃ©sente soumission, veuillez communiquer avec le gestionnaire ou avec lâ€™assistant administratif dÃ©signÃ©.','2013-05-14T00:00:00',NULL,N'Robichaud, Yves [NC]',N'Robichaud, Martin M [NC]','2013-05-14T11:00:00','2020-04-14T14:29:45.837',17)
+ ,(25,N'Notification of Separation - [TYPE] - HRSC ID [IDENTIFIER] - [EMP_PRI]',N'Notification de la sÃ©paration - [TYPE] - CSRH ID [IDENTIFIER] - [EMP_PRI]',N'Protected B
 
 A notification of separation has been submitted for your information and/or action as per the following details:
 
 [ALL_SEPARATION_CLEARANCE_FIELDS] 
 
-The separation clearance form and process will be completed for this employee on the identified official date of departure. If you require further information in regards to this submission, please contact the identified manager or administrative assistant.',N'Protégé B
+The separation clearance form and process will be completed for this employee on the identified official date of departure. If you require further information in regards to this submission, please contact the identified manager or administrative assistant.',N'ProtÃ©gÃ© B
 
-Une notification de la séparation a été soumise, elle est portée à votre connaissance pour information et/ou pour action, en fonction des détails suivants :
+Une notification de la sÃ©paration a Ã©tÃ© soumise, elle est portÃ©e Ã  votre connaissance pour information et/ou pour action, en fonction des dÃ©tails suivants :
 
 [ALL_SEPARATION_CLEARANCE_FIELDS] 
 
-Le formulaire du processus de séparation et le processus de départ pour le présent employé seront complétés à la date officielle de départ indiquée. Si vous avez besoin d’information additionnelle à propos de la présente soumission, veuillez communiquer avec le gestionnaire ou avec l’assistant administratif désigné.','2013-05-14T00:00:00',NULL,N'Robichaud, Yves [NC]',N'Robichaud, Martin M [NC]','2013-05-14T11:00:00','2020-04-14T14:30:23.650',18)
- ,(28,N'Modification of Separation - [TYPE] - HRSC ID [IDENTIFIER] - [EMP_PRI]',N'Modification de la séparation - [TYPE] - CSRH ID [IDENTIFIER] - [EMP_PRI]',N'<p><b><font color="red" size="4">*****This email is auto-generated from the HRSC web application*****</font></b></p>
+Le formulaire du processus de sÃ©paration et le processus de dÃ©part pour le prÃ©sent employÃ© seront complÃ©tÃ©s Ã  la date officielle de dÃ©part indiquÃ©e. Si vous avez besoin dâ€™information additionnelle Ã  propos de la prÃ©sente soumission, veuillez communiquer avec le gestionnaire ou avec lâ€™assistant administratif dÃ©signÃ©.','2013-05-14T00:00:00',NULL,N'Robichaud, Yves [NC]',N'Robichaud, Martin M [NC]','2013-05-14T11:00:00','2020-04-14T14:30:23.650',18)
+ ,(28,N'Modification of Separation - [TYPE] - HRSC ID [IDENTIFIER] - [EMP_PRI]',N'Modification de la sÃ©paration - [TYPE] - CSRH ID [IDENTIFIER] - [EMP_PRI]',N'<p><b><font color="red" size="4">*****This email is auto-generated from the HRSC web application*****</font></b></p>
 
 The identified notification of separation was modified. The submission can be viewed online via the following link:  [REQUEST_LINK]
 
-<p>&ldquo;If the departure is to take place prior to the scheduled end date as per the contact, <strong><u>you have to submit a Pay Related Action via the HRSC Web Application</u></strong> in addition to the separation clearance process.&rdquo;</p>  In the manager’s section select: Pay related activities and then choose the category “departure” or “leave” and the subcategory “applicable to your specific situation”.  You will also have to provide, if applicable, the appropriate documentation as per the manager’s guide to HR request under the tab departure or leave (http://iservice.prv/eng/hr/comp/topics/phoenix_self_service/docs/step-by-step_guide_manager.pdf).',N'<p><b><font color="red" size="4">*****Ce courriel est auto-généré à partir de l''application web du CSRH*****</font></b></p>
+<p>&ldquo;If the departure is to take place prior to the scheduled end date as per the contact, <strong><u>you have to submit a Pay Related Action via the HRSC Web Application</u></strong> in addition to the separation clearance process.&rdquo;</p>  In the managerâ€™s section select: Pay related activities and then choose the category â€œdepartureâ€ or â€œleaveâ€ and the subcategory â€œapplicable to your specific situationâ€.  You will also have to provide, if applicable, the appropriate documentation as per the managerâ€™s guide to HR request under the tab departure or leave (http://iservice.prv/eng/hr/comp/topics/phoenix_self_service/docs/step-by-step_guide_manager.pdf).',N'<p><b><font color="red" size="4">*****Ce courriel est auto-gÃ©nÃ©rÃ© Ã  partir de l''application web du CSRH*****</font></b></p>
 
-La notification de la séparation indiqué a été modifié. La soumission peut être consultée en ligne à partir du lien suivant:  [REQUEST_LINK]
+La notification de la sÃ©paration indiquÃ© a Ã©tÃ© modifiÃ©. La soumission peut Ãªtre consultÃ©e en ligne Ã  partir du lien suivant:  [REQUEST_LINK]
 
-<p>&laquo;&nbsp;Si le d&eacute;part doit avoir lieu avant la date de fin pr&eacute;vue selon le contact, <strong><u>vous devez soumettre une action reli&eacute;e &agrave; la paye via l''application Web </u></strong><strong><u>CSRH</u></strong> en plus du processus de s&eacute;paration.&nbsp;&raquo;</p>  Dans la section, je suis un gestionnaire, choisissez : Action reliée à la paye et sélectionnez la catégorie « départ » ou « congé » et la sous-catégorie applicable à votre situation.  Vous devrez aussi soumettre, si applicable, la documentation appropriée selon le guide des demandes RH pour les gestionnaire, section « départ » ou congé. (http://iservice.prv/fra/rh/remun/sujets/phenix_libre_service/docs/guide_de_soutien_gestion.pdf).','2013-05-14T00:00:00',NULL,N'Robichaud, Yves [NC]',N'Leblanc, Chantal x [NC]','2013-05-14T11:00:00','2021-07-14T08:33:22.993',20)
- ,(29,N'Modification of Separation - [TYPE] - HRSC ID [IDENTIFIER] - [EMP_PRI]',N'Modification de la séparation - [TYPE] - CSRH ID [IDENTIFIER] - [EMP_PRI]',N'Protected B
+<p>&laquo;&nbsp;Si le d&eacute;part doit avoir lieu avant la date de fin pr&eacute;vue selon le contact, <strong><u>vous devez soumettre une action reli&eacute;e &agrave; la paye via l''application Web </u></strong><strong><u>CSRH</u></strong> en plus du processus de s&eacute;paration.&nbsp;&raquo;</p>  Dans la section, je suis un gestionnaire, choisissez : Action reliÃ©e Ã  la paye et sÃ©lectionnez la catÃ©gorie Â« dÃ©part Â» ou Â« congÃ© Â» et la sous-catÃ©gorie applicable Ã  votre situation.  Vous devrez aussi soumettre, si applicable, la documentation appropriÃ©e selon le guide des demandes RH pour les gestionnaire, section Â« dÃ©part Â» ou congÃ©. (http://iservice.prv/fra/rh/remun/sujets/phenix_libre_service/docs/guide_de_soutien_gestion.pdf).','2013-05-14T00:00:00',NULL,N'Robichaud, Yves [NC]',N'Leblanc, Chantal x [NC]','2013-05-14T11:00:00','2021-07-14T08:33:22.993',20)
+ ,(29,N'Modification of Separation - [TYPE] - HRSC ID [IDENTIFIER] - [EMP_PRI]',N'Modification de la sÃ©paration - [TYPE] - CSRH ID [IDENTIFIER] - [EMP_PRI]',N'Protected B
 
 For your information and/or action, the identified notification of separation has been modified. Please note that the original information received should be disregarded.
 
 [ALL_SEPARATION_CLEARANCE_FIELDS] 
 
-The separation clearance form and process will be completed for this employee on the identified official date of departure. If you require further information in regards to this submission, please contact the identified manager or administrative assistant.',N'Protégé B
+The separation clearance form and process will be completed for this employee on the identified official date of departure. If you require further information in regards to this submission, please contact the identified manager or administrative assistant.',N'ProtÃ©gÃ© B
 
-Pour votre information et/ou pour action, la notification de la séparation indiqué a été modifié. Veuillez noter que l’information initialement reçue ne doit plus être prise en considération. 
+Pour votre information et/ou pour action, la notification de la sÃ©paration indiquÃ© a Ã©tÃ© modifiÃ©. Veuillez noter que lâ€™information initialement reÃ§ue ne doit plus Ãªtre prise en considÃ©ration. 
 
 [ALL_SEPARATION_CLEARANCE_FIELDS] 
 
-Le formulaire du processus de séparation et le processus de départ pour le présent employé seront complétés à la date officielle de départ indiquée. Si vous avez besoin d’information additionnelle à propos de la présente soumission, veuillez communiquer avec le gestionnaire ou avec l’assistant administratif désigné.','2013-05-14T00:00:00',NULL,N'Robichaud, Yves [NC]',N'Robichaud, Martin M [NC]','2013-05-14T11:00:00','2020-04-14T14:30:55.823',21)
- ,(30,N'Modification of Separation - [TYPE] - HRSC ID [IDENTIFIER] - [EMP_PRI]',N'Modification de la séparation - [TYPE] - CSRH ID [IDENTIFIER] - [EMP_PRI]',N'Protected B
+Le formulaire du processus de sÃ©paration et le processus de dÃ©part pour le prÃ©sent employÃ© seront complÃ©tÃ©s Ã  la date officielle de dÃ©part indiquÃ©e. Si vous avez besoin dâ€™information additionnelle Ã  propos de la prÃ©sente soumission, veuillez communiquer avec le gestionnaire ou avec lâ€™assistant administratif dÃ©signÃ©.','2013-05-14T00:00:00',NULL,N'Robichaud, Yves [NC]',N'Robichaud, Martin M [NC]','2013-05-14T11:00:00','2020-04-14T14:30:55.823',21)
+ ,(30,N'Modification of Separation - [TYPE] - HRSC ID [IDENTIFIER] - [EMP_PRI]',N'Modification de la sÃ©paration - [TYPE] - CSRH ID [IDENTIFIER] - [EMP_PRI]',N'Protected B
 
 For your information and/or action, the identified notification of separation clearance was modified. Please note that the original information received should be disregarded.
 
 [ALL_SEPARATION_CLEARANCE_FIELDS] 
  
-The separation clearance form and process will be completed for this employee on the identified official date of departure. If you require further information in regards to this submission, please contact the identified manager or administrative assistant.',N'Protégé B
+The separation clearance form and process will be completed for this employee on the identified official date of departure. If you require further information in regards to this submission, please contact the identified manager or administrative assistant.',N'ProtÃ©gÃ© B
 
-Pour votre information et/ou pour action, la notification de la séparation indiqué a été modifié. Veuillez noter que l’information initialement reçue ne doit plus être prise en considération.
+Pour votre information et/ou pour action, la notification de la sÃ©paration indiquÃ© a Ã©tÃ© modifiÃ©. Veuillez noter que lâ€™information initialement reÃ§ue ne doit plus Ãªtre prise en considÃ©ration.
 
 [ALL_SEPARATION_CLEARANCE_FIELDS] 
 
-Le formulaire du processus de séparation et le processus de départ pour le présent employé seront complétés à la date officielle de départ indiquée. Si vous avez besoin d’information additionnelle à propos de la présente soumission, veuillez communiquer avec le gestionnaire ou avec l’assistant administratif désigné.','2013-05-14T00:00:00',NULL,N'Robichaud, Yves [NC]',N'Robichaud, Martin M [NC]','2013-05-14T11:00:00','2020-04-14T14:31:31.717',22)
- ,(31,N'Separation Clearance Submission - [TYPE] - HRSC ID [IDENTIFIER] - [EMP_PRI]',N'Soumission de séparation - [TYPE] - CSRH ID [IDENTIFIER] - [EMP_PRI]',N'Thank you for submitting a separation clearance certificate. The submission can be viewed online via the following link:  [REQUEST_LINK]
+Le formulaire du processus de sÃ©paration et le processus de dÃ©part pour le prÃ©sent employÃ© seront complÃ©tÃ©s Ã  la date officielle de dÃ©part indiquÃ©e. Si vous avez besoin dâ€™information additionnelle Ã  propos de la prÃ©sente soumission, veuillez communiquer avec le gestionnaire ou avec lâ€™assistant administratif dÃ©signÃ©.','2013-05-14T00:00:00',NULL,N'Robichaud, Yves [NC]',N'Robichaud, Martin M [NC]','2013-05-14T11:00:00','2020-04-14T14:31:31.717',22)
+ ,(31,N'Separation Clearance Submission - [TYPE] - HRSC ID [IDENTIFIER] - [EMP_PRI]',N'Soumission de sÃ©paration - [TYPE] - CSRH ID [IDENTIFIER] - [EMP_PRI]',N'Thank you for submitting a separation clearance certificate. The submission can be viewed online via the following link:  [REQUEST_LINK]
 
-<p>&ldquo;If the departure is to take place prior to the scheduled end date as per the contact, <strong><u>you have to submit a Pay Related Action via the HRSC Web Application</u></strong> in addition to the separation clearance process.&rdquo;</p>  In the manager’s section select: Pay related activities and then choose the category “departure” or “leave” and the subcategory applicable to your specific situation.  You will also have to provide, if applicable, the appropriate documentation as per the manager’s guide to HR request under the tab departure or leave : https://iservice.prv/eng/hr/comp/topics/phoenix_self_service/docs/manager-guide.pdf.
+<p>&ldquo;If the departure is to take place prior to the scheduled end date as per the contact, <strong><u>you have to submit a Pay Related Action via the HRSC Web Application</u></strong> in addition to the separation clearance process.&rdquo;</p>  In the managerâ€™s section select: Pay related activities and then choose the category â€œdepartureâ€ or â€œleaveâ€ and the subcategory applicable to your specific situation.  You will also have to provide, if applicable, the appropriate documentation as per the managerâ€™s guide to HR request under the tab departure or leave : https://iservice.prv/eng/hr/comp/topics/phoenix_self_service/docs/manager-guide.pdf.
 
-<p>Note: If this separation clearance process request is related to a leave without pay (LWOP) request for a period of greater than 9 months for the same type of leave, ensure all required steps have been completed as per the compensation page on LWOP for six (6) or more days: <a href="https://iservice.prv/eng/hr/comp/topics/lwop/lwop-six-days-plus.shtml">https://iservice.prv/eng/hr/comp/topics/lwop/lwop-six-days-plus.shtml</a>.</p>',N'Nous vous remercions de nous avoir soumis votre formulaire du processus de séparation. La soumission peut être consultée en ligne à partir du lien suivant:  [REQUEST_LINK]
+<p>Note: If this separation clearance process request is related to a leave without pay (LWOP) request for a period of greater than 9 months for the same type of leave, ensure all required steps have been completed as per the compensation page on LWOP for six (6) or more days: <a href="https://iservice.prv/eng/hr/comp/topics/lwop/lwop-six-days-plus.shtml">https://iservice.prv/eng/hr/comp/topics/lwop/lwop-six-days-plus.shtml</a>.</p>',N'Nous vous remercions de nous avoir soumis votre formulaire du processus de sÃ©paration. La soumission peut Ãªtre consultÃ©e en ligne Ã  partir du lien suivant:  [REQUEST_LINK]
 
-<p>&laquo;&nbsp;Si le d&eacute;part doit avoir lieu avant la date de fin pr&eacute;vue selon le contact, <strong><u>vous devez soumettre une action reli&eacute;e &agrave; la paye via l''application Web </u></strong><strong><u>CSRH</u></strong> en plus du processus de s&eacute;paration.&nbsp;&raquo;</p>  Dans la section, je suis un gestionnaire, choisissez : Action reliée à la paye et sélectionnez la catégorie « départ » ou « congé » et la sous-catégorie applicable à votre situation.  Vous devrez aussi soumettre, si applicable, la documentation appropriée selon le guide des demandes RH pour les gestionnaire, section « départ » ou congé: https://iservice.prv/fra/rh/remun/sujets/phenix_libre_service/docs/guide-du-gestionnaire.pdf. 
+<p>&laquo;&nbsp;Si le d&eacute;part doit avoir lieu avant la date de fin pr&eacute;vue selon le contact, <strong><u>vous devez soumettre une action reli&eacute;e &agrave; la paye via l''application Web </u></strong><strong><u>CSRH</u></strong> en plus du processus de s&eacute;paration.&nbsp;&raquo;</p>  Dans la section, je suis un gestionnaire, choisissez : Action reliÃ©e Ã  la paye et sÃ©lectionnez la catÃ©gorie Â« dÃ©part Â» ou Â« congÃ© Â» et la sous-catÃ©gorie applicable Ã  votre situation.  Vous devrez aussi soumettre, si applicable, la documentation appropriÃ©e selon le guide des demandes RH pour les gestionnaire, section Â« dÃ©part Â» ou congÃ©: https://iservice.prv/fra/rh/remun/sujets/phenix_libre_service/docs/guide-du-gestionnaire.pdf. 
 
 <p>Remarque : Si cette demande de processus de d&eacute;part est en lien avec une demande de Cong&eacute; non pay&eacute; (CNP) pour une p&eacute;riode de plus de 9 mois du m&ecirc;me type de cong&eacute;, assurez-vous que toutes les &eacute;tapes requises ont &eacute;t&eacute; effectu&eacute;es en consultant la page de la r&eacute;mun&eacute;ration et avantages sociaux portant sur un CNP de six (6) jours ou plus&nbsp;:&nbsp;<a href="https://iservice.prv/fra/rh/remun/sujets/cnp/cnp-six-jours-plus.shtml">https://iservice.prv/fra/rh/remun/sujets/cnp/cnp-six-jours-plus.shtml</a>.</p>','2019-06-14T00:00:00',NULL,N'Robichaud, Yves [NC]',N'Morozan, Alina A [NC]','2013-05-14T11:00:00','2022-06-16T08:27:58.477',23)
- ,(32,N'Separation Clearance Returned - [TYPE] - HRSC ID [IDENTIFIER] - [EMP_PRI]',N'Séparation retourné - [TYPE] - CSRH ID [IDENTIFIER] - [EMP_PRI]',N'The identified separation clearance certificate has been returned by an Enabling Services Branch. The submission can be viewed online via the following link for appropriate action:  [REQUEST_LINK]',N'Le formulaire du processus de séparation indiqué  a été renvoyé par une des directions générales des services habilitants. La soumission peut être consultée en ligne, à partir du lien suivant:  [REQUEST_LINK]','2013-05-14T00:00:00',NULL,N'Robichaud, Yves [NC]',N'Robichaud, Martin M [NC]','2013-05-14T11:00:00','2020-04-14T14:36:07.727',25)
- ,(42,N'Separation Clearance Modified - [TYPE] - HRSC ID [IDENTIFIER] - [EMP_PRI]',N'Formulaire du processus de séparation modifié - [TYPE] - CSRH ID [IDENTIFIER] - [EMP_PRI]',N'<p><b><font color="red" size="4">*****This email is auto-generated from the HRSC web application*****</font></b></p>
+ ,(32,N'Separation Clearance Returned - [TYPE] - HRSC ID [IDENTIFIER] - [EMP_PRI]',N'SÃ©paration retournÃ© - [TYPE] - CSRH ID [IDENTIFIER] - [EMP_PRI]',N'The identified separation clearance certificate has been returned by an Enabling Services Branch. The submission can be viewed online via the following link for appropriate action:  [REQUEST_LINK]',N'Le formulaire du processus de sÃ©paration indiquÃ©  a Ã©tÃ© renvoyÃ© par une des directions gÃ©nÃ©rales des services habilitants. La soumission peut Ãªtre consultÃ©e en ligne, Ã  partir du lien suivant:  [REQUEST_LINK]','2013-05-14T00:00:00',NULL,N'Robichaud, Yves [NC]',N'Robichaud, Martin M [NC]','2013-05-14T11:00:00','2020-04-14T14:36:07.727',25)
+ ,(42,N'Separation Clearance Modified - [TYPE] - HRSC ID [IDENTIFIER] - [EMP_PRI]',N'Formulaire du processus de sÃ©paration modifiÃ© - [TYPE] - CSRH ID [IDENTIFIER] - [EMP_PRI]',N'<p><b><font color="red" size="4">*****This email is auto-generated from the HRSC web application*****</font></b></p>
 
 The identified separation clearance form was modified. The submission can be viewed online via the following link:  [REQUEST_LINK]
 
-<p>&ldquo;If the departure is to take place prior to the scheduled end date as per the contact, <strong><u>you have to submit a Pay Related Action via the HRSC Web Application</u></strong> in addition to the separation clearance process.&rdquo;</p>  In the manager’s section select: Pay related activities and then choose the category “departure” or “leave” and the subcategory “applicable to your specific situation”.  You will also have to provide, if applicable, the appropriate documentation as per the manager’s guide to HR request under the tab departure or leave ( http://iservice.prv/eng/hr/comp/topics/phoenix_self_service/docs/step-by-step_guide_manager.pdf).b departure or leave ( http://iservice.prv/eng/hr/comp/topics/phoenix_self_service/docs/step-by-step_guide_manager.pdf).',N'<p><b><font color="red" size="4">*****Ce courriel est auto-généré à partir de l''application web du CSRH*****</font></b></p>
+<p>&ldquo;If the departure is to take place prior to the scheduled end date as per the contact, <strong><u>you have to submit a Pay Related Action via the HRSC Web Application</u></strong> in addition to the separation clearance process.&rdquo;</p>  In the managerâ€™s section select: Pay related activities and then choose the category â€œdepartureâ€ or â€œleaveâ€ and the subcategory â€œapplicable to your specific situationâ€.  You will also have to provide, if applicable, the appropriate documentation as per the managerâ€™s guide to HR request under the tab departure or leave ( http://iservice.prv/eng/hr/comp/topics/phoenix_self_service/docs/step-by-step_guide_manager.pdf).b departure or leave ( http://iservice.prv/eng/hr/comp/topics/phoenix_self_service/docs/step-by-step_guide_manager.pdf).',N'<p><b><font color="red" size="4">*****Ce courriel est auto-gÃ©nÃ©rÃ© Ã  partir de l''application web du CSRH*****</font></b></p>
 
-Le formulaire du processus de séparation indiqué  a été modifié. La soumission peut être consultée en ligne, à partir du lien suivant:  [REQUEST_LINK]
+Le formulaire du processus de sÃ©paration indiquÃ©  a Ã©tÃ© modifiÃ©. La soumission peut Ãªtre consultÃ©e en ligne, Ã  partir du lien suivant:  [REQUEST_LINK]
 
-<p>&laquo;&nbsp;Si le d&eacute;part doit avoir lieu avant la date de fin pr&eacute;vue selon le contact, <strong><u>vous devez soumettre une action reli&eacute;e &agrave; la paye via l''application Web </u></strong><strong><u>CSRH</u></strong> en plus du processus de s&eacute;paration.&nbsp;&raquo;</p>  Dans la section, je suis un gestionnaire, choisissez : Action reliée à la paye et sélectionnez la catégorie « départ » ou « congé » et la sous-catégorie applicable à votre situation.  Vous devrez aussi soumettre, si applicable, la documentation appropriée selon le guide des demandes RH pour les gestionnaire, section « départ » ou congé. (http://iservice.prv/fra/rh/remun/sujets/phenix_libre_service/docs/guide_de_soutien_gestion.pdf).','2013-05-15T00:00:00',NULL,N'Robichaud, Yves [NC]',N'Leblanc, Chantal x [NC]','2013-05-15T10:00:00','2021-07-14T08:32:56.273',26)
- ,(44,N'Separation Clearance Modified - [TYPE] - HRSC ID [IDENTIFIER] - [EMP_PRI]',N'Formulaire du processus de séparation modifié - [TYPE] - CSRH ID [IDENTIFIER] - [EMP_PRI]',N'For your information and/or action, the identified separation clearance form was modified. The submission can be viewed online via the following link:  [REQUEST_LINK]
+<p>&laquo;&nbsp;Si le d&eacute;part doit avoir lieu avant la date de fin pr&eacute;vue selon le contact, <strong><u>vous devez soumettre une action reli&eacute;e &agrave; la paye via l''application Web </u></strong><strong><u>CSRH</u></strong> en plus du processus de s&eacute;paration.&nbsp;&raquo;</p>  Dans la section, je suis un gestionnaire, choisissez : Action reliÃ©e Ã  la paye et sÃ©lectionnez la catÃ©gorie Â« dÃ©part Â» ou Â« congÃ© Â» et la sous-catÃ©gorie applicable Ã  votre situation.  Vous devrez aussi soumettre, si applicable, la documentation appropriÃ©e selon le guide des demandes RH pour les gestionnaire, section Â« dÃ©part Â» ou congÃ©. (http://iservice.prv/fra/rh/remun/sujets/phenix_libre_service/docs/guide_de_soutien_gestion.pdf).','2013-05-15T00:00:00',NULL,N'Robichaud, Yves [NC]',N'Leblanc, Chantal x [NC]','2013-05-15T10:00:00','2021-07-14T08:32:56.273',26)
+ ,(44,N'Separation Clearance Modified - [TYPE] - HRSC ID [IDENTIFIER] - [EMP_PRI]',N'Formulaire du processus de sÃ©paration modifiÃ© - [TYPE] - CSRH ID [IDENTIFIER] - [EMP_PRI]',N'For your information and/or action, the identified separation clearance form was modified. The submission can be viewed online via the following link:  [REQUEST_LINK]
 
-If you require further information in regards to this submission, please contact the identified manager or administrative assistant.',N'Pour votre information et/ou pour action, le formulaire du processus de séparation indiqué a été modifié. Veuillez noter que l’information initialement reçue ne doit plus être prise en considération:  [REQUEST_LINK]
+If you require further information in regards to this submission, please contact the identified manager or administrative assistant.',N'Pour votre information et/ou pour action, le formulaire du processus de sÃ©paration indiquÃ© a Ã©tÃ© modifiÃ©. Veuillez noter que lâ€™information initialement reÃ§ue ne doit plus Ãªtre prise en considÃ©ration:  [REQUEST_LINK]
 
-Si vous avez besoin d’information additionnelle à propos de la présente soumission, veuillez communiquer avec le gestionnaire ou avec l’assistant administratif désigné.','2013-05-15T00:00:00',NULL,N'Robichaud, Yves [NC]',N'Robichaud, Martin M [NC]','2013-05-15T10:00:00','2020-04-14T14:32:06.717',27)
- ,(45,N'Separation Clearance - Section 33 - [TYPE] - HRSC ID [IDENTIFIER] - [EMP_PRI]',N'Séparation - Article 33 - [TYPE] - CSRH ID [IDENTIFIER] - [EMP_PRI]',N'The identified separation clearance certificate has been approved (Section 33 Authority) and is now ready for your information and/or action as per the attached.
+Si vous avez besoin dâ€™information additionnelle Ã  propos de la prÃ©sente soumission, veuillez communiquer avec le gestionnaire ou avec lâ€™assistant administratif dÃ©signÃ©.','2013-05-15T00:00:00',NULL,N'Robichaud, Yves [NC]',N'Robichaud, Martin M [NC]','2013-05-15T10:00:00','2020-04-14T14:32:06.717',27)
+ ,(45,N'Separation Clearance - Section 33 - [TYPE] - HRSC ID [IDENTIFIER] - [EMP_PRI]',N'SÃ©paration - Article 33 - [TYPE] - CSRH ID [IDENTIFIER] - [EMP_PRI]',N'The identified separation clearance certificate has been approved (Section 33 Authority) and is now ready for your information and/or action as per the attached.
 
-If you require further information in regards to this submission, please contact the identified manager or administrative assistant.',N'Le certificat du processus de séparation indiqué a été approuvé (délégation d’autorité sous l’article 33), il est maintenant à votre disposition, ci-joint, pour votre information et/ou pour action.
+If you require further information in regards to this submission, please contact the identified manager or administrative assistant.',N'Le certificat du processus de sÃ©paration indiquÃ© a Ã©tÃ© approuvÃ© (dÃ©lÃ©gation dâ€™autoritÃ© sous lâ€™article 33), il est maintenant Ã  votre disposition, ci-joint, pour votre information et/ou pour action.
 
-Si vous avez besoin d’information additionnelle à propos de la présente soumission, veuillez communiquer avec le gestionnaire ou avec l’assistant administratif désigné.','2013-05-15T00:00:00',NULL,N'Robichaud, Yves [NC]',N'Robichaud, Martin M [NC]','2013-05-15T10:00:00','2020-04-14T14:28:16.533',28)
- ,(46,N'Separation Clearance Resolved - [TYPE] - HRSC ID [IDENTIFIER] - [EMP_PRI]',N'Séparation réglée - [TYPE] - CSRH ID [IDENTIFIER] - [EMP_PRI]',N'The identified separation clearance certificate submission has been resolved. The applicable certificate can be viewed online via the following link:  [REQUEST_LINK]
-
-
-In addition to the separation process, <b><u>you have to submit a request in the HRSC portal</u></b>.  In the manager’s section select: Pay related activities and then choose the category “departure” or “leave” and the subcategory “applicable to your specific situation”.  You will also have to provide, if applicable, the appropriate documentation as per the manager’s guide to HR request under the tab departure or leave (http://iservice.prv/eng/hr/comp/topics/phoenix_self_service/docs/step-by-step_guide_manager.pdf).',N'La soumission du certificat du processus de séparation indiqué a été réglée. Le formulaire peut être consulté en ligne à partir du lien suivant :  [REQUEST_LINK]
+Si vous avez besoin dâ€™information additionnelle Ã  propos de la prÃ©sente soumission, veuillez communiquer avec le gestionnaire ou avec lâ€™assistant administratif dÃ©signÃ©.','2013-05-15T00:00:00',NULL,N'Robichaud, Yves [NC]',N'Robichaud, Martin M [NC]','2013-05-15T10:00:00','2020-04-14T14:28:16.533',28)
+ ,(46,N'Separation Clearance Resolved - [TYPE] - HRSC ID [IDENTIFIER] - [EMP_PRI]',N'SÃ©paration rÃ©glÃ©e - [TYPE] - CSRH ID [IDENTIFIER] - [EMP_PRI]',N'The identified separation clearance certificate submission has been resolved. The applicable certificate can be viewed online via the following link:  [REQUEST_LINK]
 
 
-En complément de votre demande de Formalités de fin d’emploi, <b><u>vous devez soumettre une demande distincte dans le portail du CSRH</u></b>.  Dans la section, je suis un gestionnaire, choisissez : Action reliée à la paye et sélectionnez la catégorie « départ » ou « congé » et la sous-catégorie applicable à votre situation.  Vous devrez aussi soumettre, si applicable, la documentation appropriée selon le guide des demandes RH pour les gestionnaire, section « départ » ou congé. (http://iservice.prv/fra/rh/remun/sujets/phenix_libre_service/docs/guide_de_soutien_gestion.pdf).','2013-05-15T00:00:00',NULL,N'Robichaud, Yves [NC]',N'Robichaud, Martin M [NC]','2013-05-15T10:00:00','2020-04-14T14:35:18.053',29)
- ,(52,N'Conflict of Interest and Post-Employment Message',N'Message à propos des conflits d''intérêts et l''après-mandat',N'---------> La version française du courriel suit l''anglais --------->
+In addition to the separation process, <b><u>you have to submit a request in the HRSC portal</u></b>.  In the managerâ€™s section select: Pay related activities and then choose the category â€œdepartureâ€ or â€œleaveâ€ and the subcategory â€œapplicable to your specific situationâ€.  You will also have to provide, if applicable, the appropriate documentation as per the managerâ€™s guide to HR request under the tab departure or leave (http://iservice.prv/eng/hr/comp/topics/phoenix_self_service/docs/step-by-step_guide_manager.pdf).',N'La soumission du certificat du processus de sÃ©paration indiquÃ© a Ã©tÃ© rÃ©glÃ©e. Le formulaire peut Ãªtre consultÃ© en ligne Ã  partir du lien suivant :  [REQUEST_LINK]
+
+
+En complÃ©ment de votre demande de FormalitÃ©s de fin dâ€™emploi, <b><u>vous devez soumettre une demande distincte dans le portail du CSRH</u></b>.  Dans la section, je suis un gestionnaire, choisissez : Action reliÃ©e Ã  la paye et sÃ©lectionnez la catÃ©gorie Â« dÃ©part Â» ou Â« congÃ© Â» et la sous-catÃ©gorie applicable Ã  votre situation.  Vous devrez aussi soumettre, si applicable, la documentation appropriÃ©e selon le guide des demandes RH pour les gestionnaire, section Â« dÃ©part Â» ou congÃ©. (http://iservice.prv/fra/rh/remun/sujets/phenix_libre_service/docs/guide_de_soutien_gestion.pdf).','2013-05-15T00:00:00',NULL,N'Robichaud, Yves [NC]',N'Robichaud, Martin M [NC]','2013-05-15T10:00:00','2020-04-14T14:35:18.053',29)
+ ,(52,N'Conflict of Interest and Post-Employment Message',N'Message Ã  propos des conflits d''intÃ©rÃªts et l''aprÃ¨s-mandat',N'---------> La version franÃ§aise du courriel suit l''anglais --------->
 
 Colleague, 
  
@@ -248,54 +248,54 @@ Since you are going to be leaving temporarily (e.g. maternity and/or parental le
 
 As you are aware, public servants play a key role in maintaining public trust and government confidence. One important way to protect this trust is by preventing situations that could give rise to real, apparent or potential conflict of interest. In accordance with this responsibility, Treasury Board Secretariat (TBS) implemented the <a href="https://www.tbs-sct.gc.ca/pol/doc-eng.aspx?id=32627">Directive on Conflict of Interest</a>.
  
-In summary, the Directive requires that employees take the appropriate action to avoid, reduce or manage situations of real, potential or apparent conflict of interest in the performance of their duties and after their employment with ESDC. If a conflict of interest arises between your private interests and your official responsibilities as a public servant, the conflict must be resolved in favour of the public interest. Additional information can be found in the <a href="https://www.tbs-sct.gc.ca/pol/doc-eng.aspx?id=32627">Directive on Conflict of Interest</a> and in the  <a href="http://iservice.prv/eng/is/ve/code_of_conduct/index.shtml">ESDC Code of Conduct</a> under section 4(e)(i). 
+In summary, the Directive requires that employees take the appropriate action to avoid, reduce or manage situations of real, potential or apparent conflict of interest in the performance of their duties and after their employment with ESDC. If a conflict of interest arises between your private interests and your official responsibilities as a public servant, the conflict must be resolved in favour of the public interest. Additional information can be found in the <a href="https://www.tbs-sct.gc.ca/pol/doc-eng.aspx?id=32627">Directive on Conflict of Interest</a> and in the Â <a href="http://iservice.prv/eng/is/ve/code_of_conduct/index.shtml">ESDC Code of Conduct</a> under section 4(e)(i). 
  
-Please contact your manager or the Office of Values and Ethics through ESDC’s <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Human Resources Service Centre</a> if you have any questions related to this message. 
+Please contact your manager or the Office of Values and Ethics through ESDCâ€™s <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Human Resources Service Centre</a> if you have any questions related to this message. 
 
 Sincerely,
 
-Véronique Tremblay
-Director – Office of Workplace Values, Recognition and Resolution
+VÃ©ronique Tremblay
+Director â€“ Office of Workplace Values, Recognition and Resolution
 Human Resources Services Branch
 Employment and Social Development Canada/ Government of Canada
 
----------> Version française du courriel --------->
+---------> Version franÃ§aise du courriel --------->
 
-Collègue, 
+CollÃ¨gue, 
 
-Puisque vous quittez temporairement (p. ex. congé de maternité/parental) ou définitivement (p. ex. retraite, transfert ou mutation) Emploi et Développement social Canada, je voudrais vous rappeler qu''il est important de veiller à éviter tout conflit d''intérêts entre vos responsabilités actuelles et futures si vous envisagez de faire une transition vers un emploi à l''extérieur d''ESDC.
+Puisque vous quittez temporairement (p. ex. congÃ© de maternitÃ©/parental) ou dÃ©finitivement (p. ex. retraite, transfert ou mutation) Emploi et DÃ©veloppement social Canada, je voudrais vous rappeler qu''il est important de veiller Ã  Ã©viter tout conflit d''intÃ©rÃªts entre vos responsabilitÃ©s actuelles et futures si vous envisagez de faire une transition vers un emploi Ã  l''extÃ©rieur d''ESDC.
 
-Comme vous le savez, les fonctionnaires jouent un rôle clé dans le maintien de la confiance du public et du gouvernement. Une façon importante de protéger cette confiance est de prévenir les situations qui pourraient donner lieu à un conflit d''intérêts réel, apparent ou potentiel. Conformément à cette responsabilité, le Secrétariat du Conseil du Trésor a mis en œuvre la <a href="https://www.tbs-sct.gc.ca/pol/doc-fra.aspx?id=32627">Directive sur les conflits d&rsquo;int&eacute;r&ecirc;ts</a>.
+Comme vous le savez, les fonctionnaires jouent un rÃ´le clÃ© dans le maintien de la confiance du public et du gouvernement. Une faÃ§on importante de protÃ©ger cette confiance est de prÃ©venir les situations qui pourraient donner lieu Ã  un conflit d''intÃ©rÃªts rÃ©el, apparent ou potentiel. ConformÃ©ment Ã  cette responsabilitÃ©, le SecrÃ©tariat du Conseil du TrÃ©sor a mis en Å“uvre la <a href="https://www.tbs-sct.gc.ca/pol/doc-fra.aspx?id=32627">Directive sur les conflits d&rsquo;int&eacute;r&ecirc;ts</a>.
 
-En résumé, la Directive exige que les employés prennent les mesures appropriées pour éviter, réduire ou gérer les situations de conflit d''intérêts réel, potentiel ou apparent dans l''exercice de leurs fonctions et après leur emploi à EDSC. Si un conflit d''intérêts survient entre vos intérêts privés et vos responsabilités officielles en tant que fonctionnaire, ce conflit doit être résolu en faveur de l''intérêt public. Vous trouverez des informations supplémentaires dans la <a href="https://www.tbs-sct.gc.ca/pol/doc-fra.aspx?id=32627">Directive sur les conflits d&rsquo;int&eacute;r&ecirc;ts</a> et dans le <a href="http://iservice.prv/fra/si/ve/code_de_conduite/code_de_conduite.shtml">Code de conduite d&rsquo;ESDC</a>
+En rÃ©sumÃ©, la Directive exige que les employÃ©s prennent les mesures appropriÃ©es pour Ã©viter, rÃ©duire ou gÃ©rer les situations de conflit d''intÃ©rÃªts rÃ©el, potentiel ou apparent dans l''exercice de leurs fonctions et aprÃ¨s leur emploi Ã  EDSC. Si un conflit d''intÃ©rÃªts survient entre vos intÃ©rÃªts privÃ©s et vos responsabilitÃ©s officielles en tant que fonctionnaire, ce conflit doit Ãªtre rÃ©solu en faveur de l''intÃ©rÃªt public. Vous trouverez des informations supplÃ©mentaires dans la <a href="https://www.tbs-sct.gc.ca/pol/doc-fra.aspx?id=32627">Directive sur les conflits d&rsquo;int&eacute;r&ecirc;ts</a> et dans le <a href="http://iservice.prv/fra/si/ve/code_de_conduite/code_de_conduite.shtml">Code de conduite d&rsquo;ESDC</a>
 
-Veuillez contacter votre gestionnaire ou le Bureau des valeurs et de l''éthique par l’entremise du <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Centre de services en ressources humaines</a> d’EDSC si vous avez des questions relatives à ce message. 
-
-Cordialement,
-
-Véronique Tremblay
-Directrice – Bureau des valeurs, de la reconnaissance et de la résolution en milieu de travail 
-Direction générale des services de ressources humaines
-Emploi et développement social Canada/ Gouvernement du Canada',N'---------> The English version of the email follows the French --------->
-
-Collègue, 
-
-Puisque vous quittez temporairement (p. ex. congé de maternité/parental) ou définitivement (p. ex. retraite, transfert ou mutation) Emploi et Développement social Canada, je voudrais vous rappeler qu''il est important de veiller à éviter tout conflit d''intérêts entre vos responsabilités actuelles et futures si vous envisagez de faire une transition vers un emploi à l''extérieur d''ESDC.
-
-Comme vous le savez, les fonctionnaires jouent un rôle clé dans le maintien de la confiance du public et du gouvernement. Une façon importante de protéger cette confiance est de prévenir les situations qui pourraient donner lieu à un conflit d''intérêts réel, apparent ou potentiel. Conformément à cette responsabilité, le Secrétariat du Conseil du Trésor a mis en œuvre la <a href="https://www.tbs-sct.gc.ca/pol/doc-fra.aspx?id=32627">Directive sur les conflits d&rsquo;int&eacute;r&ecirc;ts</a>.
-
-En résumé, la Directive exige que les employés prennent les mesures appropriées pour éviter, réduire ou gérer les situations de conflit d''intérêts réel, potentiel ou apparent dans l''exercice de leurs fonctions et après leur emploi à EDSC. Si un conflit d''intérêts survient entre vos intérêts privés et vos responsabilités officielles en tant que fonctionnaire, ce conflit doit être résolu en faveur de l''intérêt public. Vous trouverez des informations supplémentaires dans la <a href="https://www.tbs-sct.gc.ca/pol/doc-fra.aspx?id=32627">Directive sur les conflits d&rsquo;int&eacute;r&ecirc;ts</a> et dans le <a href="http://iservice.prv/fra/si/ve/code_de_conduite/code_de_conduite.shtml">Code de conduite d&rsquo;ESDC</a>
-
-Veuillez contacter votre gestionnaire ou le Bureau des valeurs et de l''éthique par l’entremise du <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Centre de services en ressources humaines</a> d’EDSC si vous avez des questions relatives à ce message. 
+Veuillez contacter votre gestionnaire ou le Bureau des valeurs et de l''Ã©thique par lâ€™entremise du <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Centre de services en ressources humaines</a> dâ€™EDSC si vous avez des questions relatives Ã  ce message. 
 
 Cordialement,
 
-Véronique Tremblay
-Directrice – Bureau des valeurs, de la reconnaissance et de la résolution en milieu de travail 
-Direction générale des services de ressources humaines
-Emploi et développement social Canada/ Gouvernement du Canada
+VÃ©ronique Tremblay
+Directrice â€“ Bureau des valeurs, de la reconnaissance et de la rÃ©solution en milieu de travail 
+Direction gÃ©nÃ©rale des services de ressources humaines
+Emploi et dÃ©veloppement social Canada/ Gouvernement du Canada',N'---------> The English version of the email follows the French --------->
 
- ---------> English version of the email --------->
+CollÃ¨gue, 
+
+Puisque vous quittez temporairement (p. ex. congÃ© de maternitÃ©/parental) ou dÃ©finitivement (p. ex. retraite, transfert ou mutation) Emploi et DÃ©veloppement social Canada, je voudrais vous rappeler qu''il est important de veiller Ã  Ã©viter tout conflit d''intÃ©rÃªts entre vos responsabilitÃ©s actuelles et futures si vous envisagez de faire une transition vers un emploi Ã  l''extÃ©rieur d''ESDC.
+
+Comme vous le savez, les fonctionnaires jouent un rÃ´le clÃ© dans le maintien de la confiance du public et du gouvernement. Une faÃ§on importante de protÃ©ger cette confiance est de prÃ©venir les situations qui pourraient donner lieu Ã  un conflit d''intÃ©rÃªts rÃ©el, apparent ou potentiel. ConformÃ©ment Ã  cette responsabilitÃ©, le SecrÃ©tariat du Conseil du TrÃ©sor a mis en Å“uvre la <a href="https://www.tbs-sct.gc.ca/pol/doc-fra.aspx?id=32627">Directive sur les conflits d&rsquo;int&eacute;r&ecirc;ts</a>.
+
+En rÃ©sumÃ©, la Directive exige que les employÃ©s prennent les mesures appropriÃ©es pour Ã©viter, rÃ©duire ou gÃ©rer les situations de conflit d''intÃ©rÃªts rÃ©el, potentiel ou apparent dans l''exercice de leurs fonctions et aprÃ¨s leur emploi Ã  EDSC. Si un conflit d''intÃ©rÃªts survient entre vos intÃ©rÃªts privÃ©s et vos responsabilitÃ©s officielles en tant que fonctionnaire, ce conflit doit Ãªtre rÃ©solu en faveur de l''intÃ©rÃªt public. Vous trouverez des informations supplÃ©mentaires dans la <a href="https://www.tbs-sct.gc.ca/pol/doc-fra.aspx?id=32627">Directive sur les conflits d&rsquo;int&eacute;r&ecirc;ts</a> et dans le <a href="http://iservice.prv/fra/si/ve/code_de_conduite/code_de_conduite.shtml">Code de conduite d&rsquo;ESDC</a>
+
+Veuillez contacter votre gestionnaire ou le Bureau des valeurs et de l''Ã©thique par lâ€™entremise du <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Centre de services en ressources humaines</a> dâ€™EDSC si vous avez des questions relatives Ã  ce message. 
+
+Cordialement,
+
+VÃ©ronique Tremblay
+Directrice â€“ Bureau des valeurs, de la reconnaissance et de la rÃ©solution en milieu de travail 
+Direction gÃ©nÃ©rale des services de ressources humaines
+Emploi et dÃ©veloppement social Canada/ Gouvernement du Canada
+
+Â ---------> English version of the email --------->
 
 Colleague,
 
@@ -303,17 +303,17 @@ Since you are going to be leaving temporarily (e.g. maternity and/or parental le
 
 As you are aware, public servants play a key role in maintaining public trust and government confidence. One important way to protect this trust is by preventing situations that could give rise to real, apparent or potential conflict of interest. In accordance with this responsibility, Treasury Board Secretariat (TBS) implemented the <a href="https://www.tbs-sct.gc.ca/pol/doc-eng.aspx?id=32627">Directive on Conflict of Interest</a>.
 
-In summary, the Directive requires that employees take the appropriate action to avoid, reduce or manage situations of real, potential or apparent conflict of interest in the performance of their duties and after their employment with ESDC. If a conflict of interest arises between your private interests and your official responsibilities as a public servant, the conflict must be resolved in favour of the public interest. Additional information can be found in the <a href="https://www.tbs-sct.gc.ca/pol/doc-eng.aspx?id=32627">Directive on Conflict of Interest</a> and in the <a href="http://iservice.prv/eng/is/ve/code_of_conduct/index.shtml">ESDC Code of Conduct</a> under section 4(e)(i).
+In summary, the Directive requires that employees take the appropriate action to avoid, reduce or manage situations of real, potential or apparent conflict of interest in the performance of their duties and after their employment with ESDC. If a conflict of interest arises between your private interests and your official responsibilities as a public servant, the conflict must be resolved in favour of the public interest. Additional information can be found in the <a href="https://www.tbs-sct.gc.ca/pol/doc-eng.aspx?id=32627">Directive on Conflict of Interest</a> and in theÂ <a href="http://iservice.prv/eng/is/ve/code_of_conduct/index.shtml">ESDC Code of Conduct</a> under section 4(e)(i).
 
-Please contact your manager or the Office of Values and Ethics through ESDC’s <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Human Resources Service Centre</a> if you have any questions related to this message.
+Please contact your manager or the Office of Values and Ethics through ESDCâ€™s <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Human Resources Service Centre</a> if you have any questions related to this message.
 
 Sincerely,
 
-Véronique Tremblay
-Director – Office of Workplace Values, Recognition and Resolution
+VÃ©ronique Tremblay
+Director â€“ Office of Workplace Values, Recognition and Resolution
 Human Resources Services Branch
 Employment and Social Development Canada/ Government of Canada','2019-06-10T00:00:00',NULL,N'Robichaud, Yves [NC]',N'Leblanc, Chantal x [NC]','2015-03-30T07:42:48.460','2022-03-17T14:46:17.027',30)
- ,(54,N'Conflict of Interest and Post-Employment Message',N'Message à propos des conflits d''intérêts et l''après-mandat',N'---------> La version française du courriel suit l''anglais --------->
+ ,(54,N'Conflict of Interest and Post-Employment Message',N'Message Ã  propos des conflits d''intÃ©rÃªts et l''aprÃ¨s-mandat',N'---------> La version franÃ§aise du courriel suit l''anglais --------->
 
 Colleague,
  
@@ -331,80 +331,80 @@ b) make representations to any government organization on behalf of persons or e
  
 c) give advice to your clients or employer using information that is not publicly available concerning the programs or policies of the Department or concerning the programs or policies of the departments or organizations with which you had a direct and substantial relationship.
  
-This limitation period may, however be waived or reduced after consideration of various factors, as specified in the Code, in regards to both your situation and the public interest. If you wish to make a request to waive or reduce the limitation period, please contact the Office of Values and Ethics through ESDC’s <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Human Resources Service Centre</a>.
+This limitation period may, however be waived or reduced after consideration of various factors, as specified in the Code, in regards to both your situation and the public interest. If you wish to make a request to waive or reduce the limitation period, please contact the Office of Values and Ethics through ESDCâ€™s <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Human Resources Service Centre</a>.
  
  You will be advised in writing of any decision in relation to your specific situation.
  
-Officers at the Office of Values and Ethics would be pleased to explain the post-employment provisions further and answer any questions you may have. Should you require additional information, please do not hesitate to contact the Office of Values and Ethics through the ESDC’s <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Human Resources Service Centre</a> or by email at <a href="mailto:NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca">NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca</a> 
+Officers at the Office of Values and Ethics would be pleased to explain the post-employment provisions further and answer any questions you may have. Should you require additional information, please do not hesitate to contact the Office of Values and Ethics through the ESDCâ€™s <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Human Resources Service Centre</a> or by email at <a href="mailto:NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca">NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca</a> 
 
 Yours sincerely,
  
- Véronique Tremblay
- Director – Office of Workplace Values, Recognition and Resolution
+ VÃ©ronique Tremblay
+ Director â€“ Office of Workplace Values, Recognition and Resolution
  Human Resources Services Branch
  Employment and Social Development Canada/ Government of Canada
 
----------> Version française du courriel --------->
+---------> Version franÃ§aise du courriel --------->
 
-Collègue, 
+CollÃ¨gue, 
  
-Puisque vous prenez un congé sans solde de la fonction publique du Canada, je voudrais vous rappeler qu’il est important de veiller à éviter tout conflit d’intérêts entre vos responsabilités actuelles et futures si vous envisagez de faire une transition vers un emploi à l’extérieur d’ESDC.
+Puisque vous prenez un congÃ© sans solde de la fonction publique du Canada, je voudrais vous rappeler quâ€™il est important de veiller Ã  Ã©viter tout conflit dâ€™intÃ©rÃªts entre vos responsabilitÃ©s actuelles et futures si vous envisagez de faire une transition vers un emploi Ã  lâ€™extÃ©rieur dâ€™ESDC.
 
-Comme vous êtes dans une position désignée, il vous incombe de respecter les mesures d’observation concernant l’après-mandat énoncées à l’alinéa 4(e) du <a href="http://iservice.prv/fra/si/ve/code_de_conduite/code_de_conduite.shtml">Code de conduite d&rsquo;EDSC</a> (le Code). L’application des dispositions relatives à l’après-mandat a pour but de vous protéger et de protéger le gouvernement contre les allégations de traitement de faveur, d’accès privilégié aux représentants du gouvernement ou d’utilisation de renseignements gouvernementaux qui ne sont pas facilement accessibles au public. 
+Comme vous Ãªtes dans une position dÃ©signÃ©e, il vous incombe de respecter les mesures dâ€™observation concernant lâ€™aprÃ¨s-mandat Ã©noncÃ©es Ã  lâ€™alinÃ©aÂ 4(e) du <a href="http://iservice.prv/fra/si/ve/code_de_conduite/code_de_conduite.shtml">Code de conduite d&rsquo;EDSC</a> (le Code). Lâ€™application des dispositions relatives Ã  lâ€™aprÃ¨s-mandat a pour but de vous protÃ©ger et de protÃ©ger le gouvernement contre les allÃ©gations de traitement de faveur, dâ€™accÃ¨s privilÃ©giÃ© aux reprÃ©sentants du gouvernement ou dâ€™utilisation de renseignements gouvernementaux qui ne sont pas facilement accessibles au public. 
  
-En outre, comme stipulé dans <a href="http://iservice.prv/fra/si/ve/code_de_conduite/code_de_conduite.shtml">le Code</a>, une période de restriction d’un an débutera le jour de votre départ. Avant votre départ et pendant cette période de restriction, vous devez soumettre une <a href="http://hrsc-csrh.prv/WebForms/NewRequest.aspx?RequestType=COI&amp;FormTypeInd=0">d&eacute;claration de conflit d&rsquo;int&eacute;r&ecirc;ts</a> au <a href="mailto:NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca">Bureau des valeurs et de l&rsquo;&eacute;thique</a> toutes offres sérieuses d’emploi ou activités proposées à l’extérieur de la fonction publique. Cela inclut, mais ne se limite pas à des offres faites par des entités avec lesquelles vous avez eu, personnellement ou par l’entremise de vos subalternes, des rapports officiels importants au cours de votre dernière année de service. 
- 
-De plus, pendant cette période d’un an, il vous sera interdit :
- 
-a)  d’accepter une nomination au conseil d’administration d’une entité privée avec laquelle vous avez eu, personnellement ou par l’entremise de vos subalternes, des rapports officiels importants au cours de l’année ayant précédé la fin de votre mandat, ou d’accepter un emploi au sein d’une telle entité?;
+En outre, comme stipulÃ© dans <a href="http://iservice.prv/fra/si/ve/code_de_conduite/code_de_conduite.shtml">le Code</a>, une pÃ©riode de restriction dâ€™un an dÃ©butera le jour de votre dÃ©part. Avant votre dÃ©part et pendant cette pÃ©riode de restriction, vous devez soumettre une <a href="http://hrsc-csrh.prv/WebForms/NewRequest.aspx?RequestType=COI&amp;FormTypeInd=0">d&eacute;claration de conflit d&rsquo;int&eacute;r&ecirc;ts</a> au <a href="mailto:NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca">Bureau des valeurs et de l&rsquo;&eacute;thique</a> toutes offres sÃ©rieuses dâ€™emploi ou activitÃ©s proposÃ©es Ã  lâ€™extÃ©rieur de la fonction publique. Cela inclut, mais ne se limite pas Ã  des offres faites par des entitÃ©s avec lesquelles vous avez eu, personnellement ou par lâ€™entremise de vos subalternes, des rapports officiels importants au cours de votre derniÃ¨re annÃ©e de service. 
+Â 
+De plus, pendant cette pÃ©riode dâ€™un an, il vous sera interditÂ :
+Â 
+a)Â Â dâ€™accepter une nomination au conseil dâ€™administration dâ€™une entitÃ© privÃ©e avec laquelle vous avez eu, personnellement ou par lâ€™entremise de vos subalternes, des rapports officiels importants au cours de lâ€™annÃ©e ayant prÃ©cÃ©dÃ© la fin de votre mandat, ou dâ€™accepter un emploi au sein dâ€™une telle entitÃ©?;
 
-b)  d’intervenir pour le compte ou au nom d’une autre personne ou d’une entité auprès de tout organisme du gouvernement avec lequel vous avez eu, personnellement ou par l’entremise de vos subalternes, des rapports officiels importants au cours de l’année ayant précédé la fin de votre mandat?;
+b)Â Â dâ€™intervenir pour le compte ou au nom dâ€™une autre personne ou dâ€™une entitÃ© auprÃ¨s de tout organisme du gouvernement avec lequel vous avez eu, personnellement ou par lâ€™entremise de vos subalternes, des rapports officiels importants au cours de lâ€™annÃ©e ayant prÃ©cÃ©dÃ© la fin de votre mandat?;
 
-c)  de donner à vos clients ou à votre employeur, au moyen de renseignements qui ne sont pas accessibles au public, des conseils touchant les programmes ou les politiques du Ministère ou concernant les programmes ou les politiques des ministères ou des organismes avec lesquels vous avez entretenu d’importants rapports directs.
- 
-Cette période de restriction pourrait toutefois être réduite ou annulée après l’examen de divers facteurs relatifs à votre cas et à l’intérêt public, tel que le prévoit le Code. Si vous désirez présenter une demande d’annulation ou de réduction de la période de restriction, vous devez communiquer avec le Bureau de Valeurs et de l’éthique par l’intermédiaire du <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Centre de services en ressources humaines</a> d’EDSC.
+c)Â Â de donner Ã  vos clients ou Ã  votre employeur, au moyen de renseignements qui ne sont pas accessibles au public, des conseils touchant les programmes ou les politiques du MinistÃ¨re ou concernant les programmes ou les politiques des ministÃ¨res ou des organismes avec lesquels vous avez entretenu dâ€™importants rapports directs.
+Â 
+Cette pÃ©riode de restriction pourrait toutefois Ãªtre rÃ©duite ou annulÃ©e aprÃ¨s lâ€™examen de divers facteurs relatifs Ã  votre cas et Ã  lâ€™intÃ©rÃªt public, tel que le prÃ©voit le Code. Si vous dÃ©sirez prÃ©senter une demande dâ€™annulation ou de rÃ©duction de la pÃ©riode de restriction, vous devez communiquer avec le Bureau de Valeurs et de lâ€™Ã©thique par lâ€™intermÃ©diaire du <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Centre de services en ressources humaines</a> dâ€™EDSC.
  
-Toute décision relative à votre situation vous sera communiquée par écrit.
+Toute dÃ©cision relative Ã  votre situation vous sera communiquÃ©e par Ã©crit.
  
-Les agents du Bureau des valeurs et de l’éthique se feront un plaisir de vous expliquer les dispositions supplémentaires à l’après-mandat et de répondre à toutes vos questions. S’il vous plait, n’hésitez pas à contacter le Bureau de valeurs et de l’éthique pour obtenir de plus amples renseignements par courriel <a href="mailto:NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca">NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca</a> ou par l’intermédiaire du <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Centre de services en ressources humaines</a>d''EDSC.
+Les agents du Bureau des valeurs et de lâ€™Ã©thique se feront un plaisir de vous expliquer les dispositions supplÃ©mentaires Ã  lâ€™aprÃ¨s-mandat et de rÃ©pondre Ã  toutes vos questions. Sâ€™il vous plait, nâ€™hÃ©sitez pas Ã  contacter le Bureau de valeurs et de lâ€™Ã©thique pour obtenir de plus amples renseignements par courriel <a href="mailto:NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca">NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca</a> ou par lâ€™intermÃ©diaire du <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Centre de services en ressources humaines</a>d''EDSC.
  
 Cordialement, 
  
-Véronique Tremblay 
-Directrice – Bureau des valeurs, de la reconnaissance et de la résolution en milieu de travail 
-Direction générale des services de ressources humaines
-Emploi et développement social Canada/ Gouvernement du Canada',N'---------> The English version of the email follows the French --------->
+VÃ©ronique Tremblay 
+Directrice â€“ Bureau des valeurs, de la reconnaissance et de la rÃ©solution en milieu de travail 
+Direction gÃ©nÃ©rale des services de ressources humaines
+Emploi et dÃ©veloppement social Canada/ Gouvernement du Canada',N'---------> The English version of the email follows the French --------->
 
-Collègue, 
+CollÃ¨gue, 
  
-Puisque vous prenez un congé sans solde de la fonction publique du Canada, je voudrais vous rappeler qu’il est important de veiller à éviter tout conflit d’intérêts entre vos responsabilités actuelles et futures si vous envisagez de faire une transition vers un emploi à l’extérieur d’ESDC.
+Puisque vous prenez un congÃ© sans solde de la fonction publique du Canada, je voudrais vous rappeler quâ€™il est important de veiller Ã  Ã©viter tout conflit dâ€™intÃ©rÃªts entre vos responsabilitÃ©s actuelles et futures si vous envisagez de faire une transition vers un emploi Ã  lâ€™extÃ©rieur dâ€™ESDC.
 
-Comme vous êtes dans une position désignée, il vous incombe de respecter les mesures d’observation concernant l’après-mandat énoncées à l’alinéa 4(e) du <a href="http://iservice.prv/fra/si/ve/code_de_conduite/code_de_conduite.shtml">Code de conduite d&rsquo;EDSC</a> (le Code). L’application des dispositions relatives à l’après-mandat a pour but de vous protéger et de protéger le gouvernement contre les allégations de traitement de faveur, d’accès privilégié aux représentants du gouvernement ou d’utilisation de renseignements gouvernementaux qui ne sont pas facilement accessibles au public. 
+Comme vous Ãªtes dans une position dÃ©signÃ©e, il vous incombe de respecter les mesures dâ€™observation concernant lâ€™aprÃ¨s-mandat Ã©noncÃ©es Ã  lâ€™alinÃ©aÂ 4(e) du <a href="http://iservice.prv/fra/si/ve/code_de_conduite/code_de_conduite.shtml">Code de conduite d&rsquo;EDSC</a> (le Code). Lâ€™application des dispositions relatives Ã  lâ€™aprÃ¨s-mandat a pour but de vous protÃ©ger et de protÃ©ger le gouvernement contre les allÃ©gations de traitement de faveur, dâ€™accÃ¨s privilÃ©giÃ© aux reprÃ©sentants du gouvernement ou dâ€™utilisation de renseignements gouvernementaux qui ne sont pas facilement accessibles au public. 
  
-En outre, comme stipulé dans <a href="http://iservice.prv/fra/si/ve/code_de_conduite/code_de_conduite.shtml">le Code</a>, une période de restriction d’un an débutera le jour de votre départ. Avant votre départ et pendant cette période de restriction, vous devez soumettre une <a href="http://hrsc-csrh.prv/WebForms/NewRequest.aspx?RequestType=COI&amp;FormTypeInd=0">d&eacute;claration de conflit d&rsquo;int&eacute;r&ecirc;ts</a> au <a href="mailto:NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca">Bureau des valeurs et de l&rsquo;&eacute;thique</a> toutes offres sérieuses d’emploi ou activités proposées à l’extérieur de la fonction publique. Cela inclut, mais ne se limite pas à des offres faites par des entités avec lesquelles vous avez eu, personnellement ou par l’entremise de vos subalternes, des rapports officiels importants au cours de votre dernière année de service. 
- 
-De plus, pendant cette période d’un an, il vous sera interdit :
- 
-a)  d’accepter une nomination au conseil d’administration d’une entité privée avec laquelle vous avez eu, personnellement ou par l’entremise de vos subalternes, des rapports officiels importants au cours de l’année ayant précédé la fin de votre mandat, ou d’accepter un emploi au sein d’une telle entité?;
+En outre, comme stipulÃ© dans <a href="http://iservice.prv/fra/si/ve/code_de_conduite/code_de_conduite.shtml">le Code</a>, une pÃ©riode de restriction dâ€™un an dÃ©butera le jour de votre dÃ©part. Avant votre dÃ©part et pendant cette pÃ©riode de restriction, vous devez soumettre une <a href="http://hrsc-csrh.prv/WebForms/NewRequest.aspx?RequestType=COI&amp;FormTypeInd=0">d&eacute;claration de conflit d&rsquo;int&eacute;r&ecirc;ts</a> au <a href="mailto:NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca">Bureau des valeurs et de l&rsquo;&eacute;thique</a> toutes offres sÃ©rieuses dâ€™emploi ou activitÃ©s proposÃ©es Ã  lâ€™extÃ©rieur de la fonction publique. Cela inclut, mais ne se limite pas Ã  des offres faites par des entitÃ©s avec lesquelles vous avez eu, personnellement ou par lâ€™entremise de vos subalternes, des rapports officiels importants au cours de votre derniÃ¨re annÃ©e de service. 
+Â 
+De plus, pendant cette pÃ©riode dâ€™un an, il vous sera interditÂ :
+Â 
+a)Â Â dâ€™accepter une nomination au conseil dâ€™administration dâ€™une entitÃ© privÃ©e avec laquelle vous avez eu, personnellement ou par lâ€™entremise de vos subalternes, des rapports officiels importants au cours de lâ€™annÃ©e ayant prÃ©cÃ©dÃ© la fin de votre mandat, ou dâ€™accepter un emploi au sein dâ€™une telle entitÃ©?;
 
-b)  d’intervenir pour le compte ou au nom d’une autre personne ou d’une entité auprès de tout organisme du gouvernement avec lequel vous avez eu, personnellement ou par l’entremise de vos subalternes, des rapports officiels importants au cours de l’année ayant précédé la fin de votre mandat?;
+b)Â Â dâ€™intervenir pour le compte ou au nom dâ€™une autre personne ou dâ€™une entitÃ© auprÃ¨s de tout organisme du gouvernement avec lequel vous avez eu, personnellement ou par lâ€™entremise de vos subalternes, des rapports officiels importants au cours de lâ€™annÃ©e ayant prÃ©cÃ©dÃ© la fin de votre mandat?;
 
-c)  de donner à vos clients ou à votre employeur, au moyen de renseignements qui ne sont pas accessibles au public, des conseils touchant les programmes ou les politiques du Ministère ou concernant les programmes ou les politiques des ministères ou des organismes avec lesquels vous avez entretenu d’importants rapports directs.
- 
-Cette période de restriction pourrait toutefois être réduite ou annulée après l’examen de divers facteurs relatifs à votre cas et à l’intérêt public, tel que le prévoit le Code. Si vous désirez présenter une demande d’annulation ou de réduction de la période de restriction, vous devez communiquer avec le Bureau de Valeurs et de l’éthique par l’intermédiaire du <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Centre de services en ressources humaines</a> d’EDSC.
+c)Â Â de donner Ã  vos clients ou Ã  votre employeur, au moyen de renseignements qui ne sont pas accessibles au public, des conseils touchant les programmes ou les politiques du MinistÃ¨re ou concernant les programmes ou les politiques des ministÃ¨res ou des organismes avec lesquels vous avez entretenu dâ€™importants rapports directs.
+Â 
+Cette pÃ©riode de restriction pourrait toutefois Ãªtre rÃ©duite ou annulÃ©e aprÃ¨s lâ€™examen de divers facteurs relatifs Ã  votre cas et Ã  lâ€™intÃ©rÃªt public, tel que le prÃ©voit le Code. Si vous dÃ©sirez prÃ©senter une demande dâ€™annulation ou de rÃ©duction de la pÃ©riode de restriction, vous devez communiquer avec le Bureau de Valeurs et de lâ€™Ã©thique par lâ€™intermÃ©diaire du <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Centre de services en ressources humaines</a> dâ€™EDSC.
  
-Toute décision relative à votre situation vous sera communiquée par écrit.
+Toute dÃ©cision relative Ã  votre situation vous sera communiquÃ©e par Ã©crit.
  
-Les agents du Bureau des valeurs et de l’éthique se feront un plaisir de vous expliquer les dispositions supplémentaires à l’après-mandat et de répondre à toutes vos questions. S’il vous plait, n’hésitez pas à contacter le Bureau de valeurs et de l’éthique pour obtenir de plus amples renseignements par courriel <a href="mailto:NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca">NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca</a> ou par l’intermédiaire du <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Centre de services en ressources humaines</a>d''EDSC.
+Les agents du Bureau des valeurs et de lâ€™Ã©thique se feront un plaisir de vous expliquer les dispositions supplÃ©mentaires Ã  lâ€™aprÃ¨s-mandat et de rÃ©pondre Ã  toutes vos questions. Sâ€™il vous plait, nâ€™hÃ©sitez pas Ã  contacter le Bureau de valeurs et de lâ€™Ã©thique pour obtenir de plus amples renseignements par courriel <a href="mailto:NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca">NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca</a> ou par lâ€™intermÃ©diaire du <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Centre de services en ressources humaines</a>d''EDSC.
  
 Cordialement, 
  
-Véronique Tremblay 
-Directrice – Bureau des valeurs, de la reconnaissance et de la résolution en milieu de travail 
-Direction générale des services de ressources humaines
-Emploi et développement social Canada/ Gouvernement du Canada
+VÃ©ronique Tremblay 
+Directrice â€“ Bureau des valeurs, de la reconnaissance et de la rÃ©solution en milieu de travail 
+Direction gÃ©nÃ©rale des services de ressources humaines
+Emploi et dÃ©veloppement social Canada/ Gouvernement du Canada
 
- ---------> English version of the email --------->
+Â ---------> English version of the email --------->
 
 Colleague,
  
@@ -422,19 +422,19 @@ b) make representations to any government organization on behalf of persons or e
  
 c) give advice to your clients or employer using information that is not publicly available concerning the programs or policies of the Department or concerning the programs or policies of the departments or organizations with which you had a direct and substantial relationship.
  
-This limitation period may, however be waived or reduced after consideration of various factors, as specified in the Code, in regards to both your situation and the public interest. If you wish to make a request to waive or reduce the limitation period, please contact the Office of Values and Ethics through ESDC’s <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Human Resources Service Centre</a>.
+This limitation period may, however be waived or reduced after consideration of various factors, as specified in the Code, in regards to both your situation and the public interest. If you wish to make a request to waive or reduce the limitation period, please contact the Office of Values and Ethics through ESDCâ€™s <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Human Resources Service Centre</a>.
  
 You will be advised in writing of any decision in relation to your specific situation.
  
-Officers at the Office of Values and Ethics would be pleased to explain the post-employment provisions further and answer any questions you may have. Should you require additional information, please do not hesitate to contact the Office of Values and Ethics through the ESDC’s <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Human Resources Service Centre</a> or by email at <a href="mailto:NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca">NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca</a> 
+Officers at the Office of Values and Ethics would be pleased to explain the post-employment provisions further and answer any questions you may have. Should you require additional information, please do not hesitate to contact the Office of Values and Ethics through the ESDCâ€™s <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Human Resources Service Centre</a> or by email at <a href="mailto:NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca">NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca</a> 
 
 Yours sincerely,
  
-Véronique Tremblay
-Director – Office of Workplace Values, Recognition and Resolution
+VÃ©ronique Tremblay
+Director â€“ Office of Workplace Values, Recognition and Resolution
 Human Resources Services Branch
 Employment and Social Development Canada/ Government of Canada','2019-06-10T00:00:00',NULL,N'Robichaud, Yves [NC]',N'Leblanc, Chantal x [NC]','2015-03-30T07:42:48.477','2022-03-17T14:47:15.713',31)
- ,(55,N'Conflict of Interest and Post-Employment Message',N'Message à propos des conflits d''intérêts et l''après-mandat',N'---------> La version française du courriel suit l''anglais --------->
+ ,(55,N'Conflict of Interest and Post-Employment Message',N'Message Ã  propos des conflits d''intÃ©rÃªts et l''aprÃ¨s-mandat',N'---------> La version franÃ§aise du courriel suit l''anglais --------->
 
 Colleague,
  
@@ -452,7 +452,7 @@ b) make representations to any government organization on behalf of persons or e
  
 c) give advice to your clients or employer using information that is not publicly available concerning the programs or policies of the Department or concerning the programs or policies of the departments or organizations with which you had a direct and substantial relationship.
 
-This limitation period may, however be waived or reduced after consideration of various factors, as specified in the Code, in regards to both your situation and the public interest. If you wish to make a request to waive or reduce the limitation period, please contact the Office of Values and Ethics through ESDC’s <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Human Resources Service Centre</a>.
+This limitation period may, however be waived or reduced after consideration of various factors, as specified in the Code, in regards to both your situation and the public interest. If you wish to make a request to waive or reduce the limitation period, please contact the Office of Values and Ethics through ESDCâ€™s <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Human Resources Service Centre</a>.
  
 You will be advised in writing of any decision in relation to your specific situation.
 
@@ -462,91 +462,91 @@ a) working as a consultant lobbyist,
 b) carrying out lobbying activities on behalf of an organization,
 c) working for a corporation if lobbying constitutes a significant part (20% or more) of your work.
 
-The Commissioner of Lobbying is empowered to grant exemptions to the five-year prohibition on lobbying in certain situations described in the Lobbying Act. Please consult the  <a href="https://lobbycanada.gc.ca/en/">Office of the Commissioner of Lobbying of Canada</a> website for more detailed information.
+The Commissioner of Lobbying is empowered to grant exemptions to the five-year prohibition on lobbying in certain situations described in the Lobbying Act. Please consult the Â <a href="https://lobbycanada.gc.ca/en/">Office of the Commissioner of Lobbying of Canada</a>Â website for more detailed information.
  
-Officers at the Office of Values and Ethics would be pleased to explain the post-employment provisions further and answer any questions you may have. Should you require additional information, please do not hesitate to contact the Office of Values and Ethics through the ESDC’s  <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Human Resources Service Centre</a> or by email at <a href="mailto:NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca">NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca</a>
+Officers at the Office of Values and Ethics would be pleased to explain the post-employment provisions further and answer any questions you may have. Should you require additional information, please do not hesitate to contact the Office of Values and Ethics through the ESDCâ€™s Â <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Human Resources Service Centre</a> or by email at <a href="mailto:NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca">NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca</a>
 
 Yours sincerely,
  
-Darlène de Gravina
+DarlÃ¨ne de Gravina
 Assistant Deputy Minister
 Human Resources Services Branch
 
----------> Version française du courriel --------->
+---------> Version franÃ§aise du courriel --------->
 
-Collègue, 
+CollÃ¨gue, 
  
-Puisque vous prenez un congé sans solde de la fonction publique du Canada, je voudrais vous rappeler qu’il est important de veiller à éviter tout conflit d’intérêts entre vos responsabilités actuelles et futures si vous envisagez de faire une transition vers un emploi à l’extérieur d’ESDC.
+Puisque vous prenez un congÃ© sans solde de la fonction publique du Canada, je voudrais vous rappeler quâ€™il est important de veiller Ã  Ã©viter tout conflit dâ€™intÃ©rÃªts entre vos responsabilitÃ©s actuelles et futures si vous envisagez de faire une transition vers un emploi Ã  lâ€™extÃ©rieur dâ€™ESDC.
 
-Comme vous êtes dans une position désignée, il vous incombe de respecter les mesures d’observation concernant l’après-mandat énoncées à l’alinéa 4(e) du <a href="http://iservice.prv/fra/si/ve/code_de_conduite/code_de_conduite.shtml">Code de conduite d&rsquo;EDSC</a> (le Code). L’application des dispositions relatives à l’après-mandat a pour but de vous protéger et de protéger le gouvernement contre les allégations de traitement de faveur, d’accès privilégié aux représentants du gouvernement ou d’utilisation de renseignements gouvernementaux qui ne sont pas facilement accessibles au public. 
+Comme vous Ãªtes dans une position dÃ©signÃ©e, il vous incombe de respecter les mesures dâ€™observation concernant lâ€™aprÃ¨s-mandat Ã©noncÃ©es Ã  lâ€™alinÃ©aÂ 4(e) du <a href="http://iservice.prv/fra/si/ve/code_de_conduite/code_de_conduite.shtml">Code de conduite d&rsquo;EDSC</a> (le Code). Lâ€™application des dispositions relatives Ã  lâ€™aprÃ¨s-mandat a pour but de vous protÃ©ger et de protÃ©ger le gouvernement contre les allÃ©gations de traitement de faveur, dâ€™accÃ¨s privilÃ©giÃ© aux reprÃ©sentants du gouvernement ou dâ€™utilisation de renseignements gouvernementaux qui ne sont pas facilement accessibles au public. 
  
-En outre, comme stipulé dans <a href="http://iservice.prv/fra/si/ve/code_de_conduite/code_de_conduite.shtml">le Code</a>, une période de restriction d’un an débutera le jour de votre départ. Avant votre départ et pendant cette période de restriction, vous devez soumettre une <a href="http://hrsc-csrh.prv/WebForms/NewRequest.aspx?RequestType=COI&amp;FormTypeInd=0">d&eacute;claration de conflit d&rsquo;int&eacute;r&ecirc;ts</a> au <a href="mailto:NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca">Bureau des valeurs et de l&rsquo;&eacute;thique</a> toutes offres sérieuses d’emploi ou activités proposées à l’extérieur de la fonction publique. Cela inclut, mais ne se limite pas à des offres faites par des entités avec lesquelles vous avez eu, personnellement ou par l’entremise de vos subalternes, des rapports officiels importants au cours de votre dernière année de service. 
- 
-De plus, pendant cette période d’un an, il vous sera interdit :
- 
-a) d’accepter une nomination au conseil d’administration d’une entité privée avec laquelle vous avez eu, personnellement ou par l’entremise de vos subalternes, des rapports officiels importants au cours de l’année ayant précédé la fin de votre mandat, ou d’accepter un emploi au sein d’une telle entité?;
+En outre, comme stipulÃ© dans <a href="http://iservice.prv/fra/si/ve/code_de_conduite/code_de_conduite.shtml">le Code</a>, une pÃ©riode de restriction dâ€™un an dÃ©butera le jour de votre dÃ©part. Avant votre dÃ©part et pendant cette pÃ©riode de restriction, vous devez soumettre une <a href="http://hrsc-csrh.prv/WebForms/NewRequest.aspx?RequestType=COI&amp;FormTypeInd=0">d&eacute;claration de conflit d&rsquo;int&eacute;r&ecirc;ts</a> au <a href="mailto:NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca">Bureau des valeurs et de l&rsquo;&eacute;thique</a> toutes offres sÃ©rieuses dâ€™emploi ou activitÃ©s proposÃ©es Ã  lâ€™extÃ©rieur de la fonction publique. Cela inclut, mais ne se limite pas Ã  des offres faites par des entitÃ©s avec lesquelles vous avez eu, personnellement ou par lâ€™entremise de vos subalternes, des rapports officiels importants au cours de votre derniÃ¨re annÃ©e de service.Â 
+Â 
+De plus, pendant cette pÃ©riode dâ€™un an, il vous sera interditÂ :
+Â 
+a)Â dâ€™accepter une nomination au conseil dâ€™administration dâ€™une entitÃ© privÃ©e avec laquelle vous avez eu, personnellement ou par lâ€™entremise de vos subalternes, des rapports officiels importants au cours de lâ€™annÃ©e ayant prÃ©cÃ©dÃ© la fin de votre mandat, ou dâ€™accepter un emploi au sein dâ€™une telle entitÃ©?;
 
-b) d’intervenir pour le compte ou au nom d’une autre personne ou d’une entité auprès de tout organisme du gouvernement avec lequel vous avez eu, personnellement ou par l’entremise de vos subalternes, des rapports officiels importants au cours de l’année ayant précédé la fin de votre mandat?;
+b)Â dâ€™intervenir pour le compte ou au nom dâ€™une autre personne ou dâ€™une entitÃ© auprÃ¨s de tout organisme du gouvernement avec lequel vous avez eu, personnellement ou par lâ€™entremise de vos subalternes, des rapports officiels importants au cours de lâ€™annÃ©e ayant prÃ©cÃ©dÃ© la fin de votre mandat?;
 
-c) de donner à vos clients ou à votre employeur, au moyen de renseignements qui ne sont pas accessibles au public, des conseils touchant les programmes ou les politiques du Ministère ou concernant les programmes ou les politiques des ministères ou des organismes avec lesquels vous avez entretenu d’importants rapports directs.
- 
-Cette période de restriction pourrait toutefois être réduite ou annulée après l’examen de divers facteurs relatifs à votre cas et à l’intérêt public, tel que le prévoit le Code. Si vous désirez présenter une demande d’annulation ou de réduction de la période de restriction, vous devez communiquer avec le Bureau de Valeurs et de l’éthique par l’intermédiaire du <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Centre de services en ressources humaines</a> d’EDSC.
+c)Â de donner Ã  vos clients ou Ã  votre employeur, au moyen de renseignements qui ne sont pas accessibles au public, des conseils touchant les programmes ou les politiques du MinistÃ¨re ou concernant les programmes ou les politiques des ministÃ¨res ou des organismes avec lesquels vous avez entretenu dâ€™importants rapports directs.
+Â 
+Cette pÃ©riode de restriction pourrait toutefois Ãªtre rÃ©duite ou annulÃ©e aprÃ¨s lâ€™examen de divers facteurs relatifs Ã  votre cas et Ã  lâ€™intÃ©rÃªt public, tel que le prÃ©voit le Code. Si vous dÃ©sirez prÃ©senter une demande dâ€™annulation ou de rÃ©duction de la pÃ©riode de restriction, vous devez communiquer avec le Bureau de Valeurs et de lâ€™Ã©thique par lâ€™intermÃ©diaire du <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Centre de services en ressources humaines</a> dâ€™EDSC.
  
-Toute décision relative à votre situation vous sera communiquée par écrit.
+Toute dÃ©cision relative Ã  votre situation vous sera communiquÃ©e par Ã©crit.
  
-De plus, la Loi sur le lobbying vous interdit, pendant une période de cinq ans, à titre de titulaire d’une charge publique désignée :
- 
-a) de travailler à titre de lobbyiste-conseil;
-b) de mener des activités de lobbying pour le compte d’une organisation;
-c) de travailler pour une société, si le lobbying constitue une partie importante (20 % ou plus) de votre travail.
- 
-Le commissaire au lobbying a le pouvoir de vous accorder des exemptions à l’interdiction de faire du lobbying pendant une période de cinq ans dans certaines situations décrites dans la Loi sur le lobbying. Veuillez consulter le site Web du <a href="https://lobbycanada.gc.ca/fr/">Commissariat au lobbying du Canada</a> pour de plus amples renseignements.
+De plus, la Loi sur le lobbying vous interdit, pendant une pÃ©riode de cinq ans, Ã  titre de titulaire dâ€™une charge publique dÃ©signÃ©e :
+Â 
+a) de travailler Ã  titre de lobbyiste-conseil;
+b) de mener des activitÃ©s de lobbying pour le compte dâ€™une organisation;
+c) de travailler pour une sociÃ©tÃ©, si le lobbying constitue une partie importante (20 % ou plus) de votre travail.
+Â 
+Le commissaire au lobbying a le pouvoir de vous accorder des exemptions Ã  lâ€™interdiction de faire du lobbying pendant une pÃ©riode de cinq ans dans certaines situations dÃ©crites dans la Loi sur le lobbying. Veuillez consulter le site Web du <a href="https://lobbycanada.gc.ca/fr/">Commissariat au lobbying du Canada</a> pour de plus amples renseignements.
  
-Les agents du Bureau des valeurs et de l’éthique se feront un plaisir de vous expliquer les dispositions supplémentaires à l’après-mandat et de répondre à toutes vos questions. S’il vous plait, n’hésitez pas à contacter le Bureau de valeurs et de l’éthique pour obtenir de plus amples renseignements par courriel <a href="mailto:NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca">NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca</a> ou par l’intermédiaire du <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Centre de services en ressources humaines</a> d''EDSC.
+Les agents du Bureau des valeurs et de lâ€™Ã©thique se feront un plaisir de vous expliquer les dispositions supplÃ©mentaires Ã  lâ€™aprÃ¨s-mandat et de rÃ©pondre Ã  toutes vos questions. Sâ€™il vous plait, nâ€™hÃ©sitez pas Ã  contacter le Bureau de valeurs et de lâ€™Ã©thique pour obtenir de plus amples renseignements par courriel <a href="mailto:NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca">NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca</a> ou par lâ€™intermÃ©diaire du <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Centre de services en ressources humaines</a> d''EDSC.
  
 Cordialement,
   
-Darlène de Gravina
+DarlÃ¨ne de Gravina
 Sous-ministre adjointe
-Direction générale des services de ressources humaines',N'---------> The English version of the email follows the French --------->
+Direction gÃ©nÃ©rale des services de ressources humaines',N'---------> The English version of the email follows the French --------->
 
-Collègue, 
+CollÃ¨gue, 
  
-Puisque vous prenez un congé sans solde de la fonction publique du Canada, je voudrais vous rappeler qu’il est important de veiller à éviter tout conflit d’intérêts entre vos responsabilités actuelles et futures si vous envisagez de faire une transition vers un emploi à l’extérieur d’ESDC.
+Puisque vous prenez un congÃ© sans solde de la fonction publique du Canada, je voudrais vous rappeler quâ€™il est important de veiller Ã  Ã©viter tout conflit dâ€™intÃ©rÃªts entre vos responsabilitÃ©s actuelles et futures si vous envisagez de faire une transition vers un emploi Ã  lâ€™extÃ©rieur dâ€™ESDC.
 
-Comme vous êtes dans une position désignée, il vous incombe de respecter les mesures d’observation concernant l’après-mandat énoncées à l’alinéa 4(e) du <a href="http://iservice.prv/fra/si/ve/code_de_conduite/code_de_conduite.shtml">Code de conduite d&rsquo;EDSC</a> (le Code). L’application des dispositions relatives à l’après-mandat a pour but de vous protéger et de protéger le gouvernement contre les allégations de traitement de faveur, d’accès privilégié aux représentants du gouvernement ou d’utilisation de renseignements gouvernementaux qui ne sont pas facilement accessibles au public. 
+Comme vous Ãªtes dans une position dÃ©signÃ©e, il vous incombe de respecter les mesures dâ€™observation concernant lâ€™aprÃ¨s-mandat Ã©noncÃ©es Ã  lâ€™alinÃ©aÂ 4(e) du <a href="http://iservice.prv/fra/si/ve/code_de_conduite/code_de_conduite.shtml">Code de conduite d&rsquo;EDSC</a> (le Code). Lâ€™application des dispositions relatives Ã  lâ€™aprÃ¨s-mandat a pour but de vous protÃ©ger et de protÃ©ger le gouvernement contre les allÃ©gations de traitement de faveur, dâ€™accÃ¨s privilÃ©giÃ© aux reprÃ©sentants du gouvernement ou dâ€™utilisation de renseignements gouvernementaux qui ne sont pas facilement accessibles au public. 
  
-En outre, comme stipulé dans <a href="http://iservice.prv/fra/si/ve/code_de_conduite/code_de_conduite.shtml">le Code</a>, une période de restriction d’un an débutera le jour de votre départ. Avant votre départ et pendant cette période de restriction, vous devez soumettre une <a href="http://hrsc-csrh.prv/WebForms/NewRequest.aspx?RequestType=COI&amp;FormTypeInd=0">d&eacute;claration de conflit d&rsquo;int&eacute;r&ecirc;ts</a> au <a href="mailto:NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca">Bureau des valeurs et de l&rsquo;&eacute;thique</a> toutes offres sérieuses d’emploi ou activités proposées à l’extérieur de la fonction publique. Cela inclut, mais ne se limite pas à des offres faites par des entités avec lesquelles vous avez eu, personnellement ou par l’entremise de vos subalternes, des rapports officiels importants au cours de votre dernière année de service. 
- 
-De plus, pendant cette période d’un an, il vous sera interdit :
- 
-a) d’accepter une nomination au conseil d’administration d’une entité privée avec laquelle vous avez eu, personnellement ou par l’entremise de vos subalternes, des rapports officiels importants au cours de l’année ayant précédé la fin de votre mandat, ou d’accepter un emploi au sein d’une telle entité?;
+En outre, comme stipulÃ© dans <a href="http://iservice.prv/fra/si/ve/code_de_conduite/code_de_conduite.shtml">le Code</a>, une pÃ©riode de restriction dâ€™un an dÃ©butera le jour de votre dÃ©part. Avant votre dÃ©part et pendant cette pÃ©riode de restriction, vous devez soumettre une <a href="http://hrsc-csrh.prv/WebForms/NewRequest.aspx?RequestType=COI&amp;FormTypeInd=0">d&eacute;claration de conflit d&rsquo;int&eacute;r&ecirc;ts</a> au <a href="mailto:NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca">Bureau des valeurs et de l&rsquo;&eacute;thique</a> toutes offres sÃ©rieuses dâ€™emploi ou activitÃ©s proposÃ©es Ã  lâ€™extÃ©rieur de la fonction publique. Cela inclut, mais ne se limite pas Ã  des offres faites par des entitÃ©s avec lesquelles vous avez eu, personnellement ou par lâ€™entremise de vos subalternes, des rapports officiels importants au cours de votre derniÃ¨re annÃ©e de service.Â 
+Â 
+De plus, pendant cette pÃ©riode dâ€™un an, il vous sera interditÂ :
+Â 
+a)Â dâ€™accepter une nomination au conseil dâ€™administration dâ€™une entitÃ© privÃ©e avec laquelle vous avez eu, personnellement ou par lâ€™entremise de vos subalternes, des rapports officiels importants au cours de lâ€™annÃ©e ayant prÃ©cÃ©dÃ© la fin de votre mandat, ou dâ€™accepter un emploi au sein dâ€™une telle entitÃ©?;
 
-b) d’intervenir pour le compte ou au nom d’une autre personne ou d’une entité auprès de tout organisme du gouvernement avec lequel vous avez eu, personnellement ou par l’entremise de vos subalternes, des rapports officiels importants au cours de l’année ayant précédé la fin de votre mandat?;
+b)Â dâ€™intervenir pour le compte ou au nom dâ€™une autre personne ou dâ€™une entitÃ© auprÃ¨s de tout organisme du gouvernement avec lequel vous avez eu, personnellement ou par lâ€™entremise de vos subalternes, des rapports officiels importants au cours de lâ€™annÃ©e ayant prÃ©cÃ©dÃ© la fin de votre mandat?;
 
-c) de donner à vos clients ou à votre employeur, au moyen de renseignements qui ne sont pas accessibles au public, des conseils touchant les programmes ou les politiques du Ministère ou concernant les programmes ou les politiques des ministères ou des organismes avec lesquels vous avez entretenu d’importants rapports directs.
- 
-Cette période de restriction pourrait toutefois être réduite ou annulée après l’examen de divers facteurs relatifs à votre cas et à l’intérêt public, tel que le prévoit le Code. Si vous désirez présenter une demande d’annulation ou de réduction de la période de restriction, vous devez communiquer avec le Bureau de Valeurs et de l’éthique par l’intermédiaire du <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Centre de services en ressources humaines</a> d’EDSC.
+c)Â de donner Ã  vos clients ou Ã  votre employeur, au moyen de renseignements qui ne sont pas accessibles au public, des conseils touchant les programmes ou les politiques du MinistÃ¨re ou concernant les programmes ou les politiques des ministÃ¨res ou des organismes avec lesquels vous avez entretenu dâ€™importants rapports directs.
+Â 
+Cette pÃ©riode de restriction pourrait toutefois Ãªtre rÃ©duite ou annulÃ©e aprÃ¨s lâ€™examen de divers facteurs relatifs Ã  votre cas et Ã  lâ€™intÃ©rÃªt public, tel que le prÃ©voit le Code. Si vous dÃ©sirez prÃ©senter une demande dâ€™annulation ou de rÃ©duction de la pÃ©riode de restriction, vous devez communiquer avec le Bureau de Valeurs et de lâ€™Ã©thique par lâ€™intermÃ©diaire du <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Centre de services en ressources humaines</a> dâ€™EDSC.
  
-Toute décision relative à votre situation vous sera communiquée par écrit.
+Toute dÃ©cision relative Ã  votre situation vous sera communiquÃ©e par Ã©crit.
  
-De plus, la Loi sur le lobbying vous interdit, pendant une période de cinq ans, à titre de titulaire d’une charge publique désignée :
- 
-a) de travailler à titre de lobbyiste-conseil;
-b) de mener des activités de lobbying pour le compte d’une organisation;
-c) de travailler pour une société, si le lobbying constitue une partie importante (20 % ou plus) de votre travail.
- 
-Le commissaire au lobbying a le pouvoir de vous accorder des exemptions à l’interdiction de faire du lobbying pendant une période de cinq ans dans certaines situations décrites dans la Loi sur le lobbying. Veuillez consulter le site Web du <a href="https://lobbycanada.gc.ca/fr/">Commissariat au lobbying du Canada</a> pour de plus amples renseignements.
+De plus, la Loi sur le lobbying vous interdit, pendant une pÃ©riode de cinq ans, Ã  titre de titulaire dâ€™une charge publique dÃ©signÃ©e :
+Â 
+a) de travailler Ã  titre de lobbyiste-conseil;
+b) de mener des activitÃ©s de lobbying pour le compte dâ€™une organisation;
+c) de travailler pour une sociÃ©tÃ©, si le lobbying constitue une partie importante (20 % ou plus) de votre travail.
+Â 
+Le commissaire au lobbying a le pouvoir de vous accorder des exemptions Ã  lâ€™interdiction de faire du lobbying pendant une pÃ©riode de cinq ans dans certaines situations dÃ©crites dans la Loi sur le lobbying. Veuillez consulter le site Web du <a href="https://lobbycanada.gc.ca/fr/">Commissariat au lobbying du Canada</a> pour de plus amples renseignements.
  
-Les agents du Bureau des valeurs et de l’éthique se feront un plaisir de vous expliquer les dispositions supplémentaires à l’après-mandat et de répondre à toutes vos questions. S’il vous plait, n’hésitez pas à contacter le Bureau de valeurs et de l’éthique pour obtenir de plus amples renseignements par courriel <a href="mailto:NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca">NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca</a> ou par l’intermédiaire du <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Centre de services en ressources humaines</a> d''EDSC.
+Les agents du Bureau des valeurs et de lâ€™Ã©thique se feront un plaisir de vous expliquer les dispositions supplÃ©mentaires Ã  lâ€™aprÃ¨s-mandat et de rÃ©pondre Ã  toutes vos questions. Sâ€™il vous plait, nâ€™hÃ©sitez pas Ã  contacter le Bureau de valeurs et de lâ€™Ã©thique pour obtenir de plus amples renseignements par courriel <a href="mailto:NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca">NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca</a> ou par lâ€™intermÃ©diaire du <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Centre de services en ressources humaines</a> d''EDSC.
  
 Cordialement,
   
-Darlène de Gravina
+DarlÃ¨ne de Gravina
 Sous-ministre adjointe
-Direction générale des services de ressources humaines
+Direction gÃ©nÃ©rale des services de ressources humaines
 
- ---------> English version of the email --------->
+Â ---------> English version of the email --------->
 
 Colleague,
  
@@ -564,7 +564,7 @@ b) make representations to any government organization on behalf of persons or e
  
 c) give advice to your clients or employer using information that is not publicly available concerning the programs or policies of the Department or concerning the programs or policies of the departments or organizations with which you had a direct and substantial relationship.
 
-This limitation period may, however be waived or reduced after consideration of various factors, as specified in the Code, in regards to both your situation and the public interest. If you wish to make a request to waive or reduce the limitation period, please contact the Office of Values and Ethics through ESDC’s <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Human Resources Service Centre</a>.
+This limitation period may, however be waived or reduced after consideration of various factors, as specified in the Code, in regards to both your situation and the public interest. If you wish to make a request to waive or reduce the limitation period, please contact the Office of Values and Ethics through ESDCâ€™s <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Human Resources Service Centre</a>.
  
 You will be advised in writing of any decision in relation to your specific situation.
 
@@ -574,16 +574,16 @@ a) working as a consultant lobbyist,
 b) carrying out lobbying activities on behalf of an organization,
 c) working for a corporation if lobbying constitutes a significant part (20% or more) of your work.
 
-The Commissioner of Lobbying is empowered to grant exemptions to the five-year prohibition on lobbying in certain situations described in the Lobbying Act. Please consult the  <a href="https://lobbycanada.gc.ca/en/">Office of the Commissioner of Lobbying of Canada</a> website for more detailed information.
+The Commissioner of Lobbying is empowered to grant exemptions to the five-year prohibition on lobbying in certain situations described in the Lobbying Act. Please consult the Â <a href="https://lobbycanada.gc.ca/en/">Office of the Commissioner of Lobbying of Canada</a>Â website for more detailed information.
  
-Officers at the Office of Values and Ethics would be pleased to explain the post-employment provisions further and answer any questions you may have. Should you require additional information, please do not hesitate to contact the Office of Values and Ethics through the ESDC’s  <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Human Resources Service Centre</a> or by email at <a href="mailto:NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca">NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca</a>
+Officers at the Office of Values and Ethics would be pleased to explain the post-employment provisions further and answer any questions you may have. Should you require additional information, please do not hesitate to contact the Office of Values and Ethics through the ESDCâ€™s Â <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Human Resources Service Centre</a> or by email at <a href="mailto:NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca">NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca</a>
 
 Yours sincerely,
  
-Darlène de Gravina
+DarlÃ¨ne de Gravina
 Assistant Deputy Minister
 Human Resources Services Branch','2015-03-30T00:00:00',NULL,N'Robichaud, Yves [NC]',N'Leblanc, Chantal x [NC]','2015-03-30T07:42:48.483','2021-05-11T13:40:37.237',32)
- ,(57,N'Conflict of Interest and Post-Employment Message',N'Message à propos des conflits d''intérêts et l''après-mandat',N'---------> La version française du courriel suit l''anglais --------->
+ ,(57,N'Conflict of Interest and Post-Employment Message',N'Message Ã  propos des conflits d''intÃ©rÃªts et l''aprÃ¨s-mandat',N'---------> La version franÃ§aise du courriel suit l''anglais --------->
 
 Colleague,
 
@@ -601,81 +601,81 @@ b) make representations to any government organization on behalf of persons or e
  
 c) give advice to your clients or employer using information that is not publicly available concerning the programs or policies of the Department or concerning the programs or policies of the departments or organizations with which you had a direct and substantial relationship.
  
-This limitation period may, however be waived or reduced after consideration of various factors, as specified in the Code, in regards to both your situation and the public interest. If you wish to make a request to waive or reduce the limitation period, please contact the Office of Values and Ethics through ESDC’s <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Human Resources Service Centre</a>.
+This limitation period may, however be waived or reduced after consideration of various factors, as specified in the Code, in regards to both your situation and the public interest. If you wish to make a request to waive or reduce the limitation period, please contact the Office of Values and Ethics through ESDCâ€™s <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Human Resources Service Centre</a>.
  
 You will be advised in writing of any decision in relation to your specific situation.
  
-Officers at the Office of Values and Ethics would be pleased to explain the post-employment provisions further and answer any questions you may have. Should you require additional information, please do not hesitate to contact the Office of Values and Ethics through the ESDC’s <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Human Resources Service Centre</a> or by email at <a href="mailto:NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca">NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca</a> 
+Officers at the Office of Values and Ethics would be pleased to explain the post-employment provisions further and answer any questions you may have. Should you require additional information, please do not hesitate to contact the Office of Values and Ethics through the ESDCâ€™s <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Human Resources Service Centre</a> or by email at <a href="mailto:NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca">NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca</a> 
 
 Yours sincerely,
  
- Véronique Tremblay
- Director – Office of Workplace Values, Recognition and Resolution
+ VÃ©ronique Tremblay
+ Director â€“ Office of Workplace Values, Recognition and Resolution
  Human Resources Services Branch
  Employment and Social Development Canada/ Government of Canada
 
 
----------> Version française du courriel --------->
+---------> Version franÃ§aise du courriel --------->
 
-Collègue, 
+CollÃ¨gue, 
  
-Je vous écris pour vous féliciter pour votre retraite de la fonction publique. Je profite de l’occasion pour vous remercier de votre contribution à la fonction publique du Canada et vous souhaiter bonne chance dans vos nouveaux projets. Je vous rappelle également l’importance d’éviter tout conflit d’intérêts entre vos responsabilités actuelles et futures si vous envisagez une transition vers un emploi à l’extérieur de la fonction publique.
+Je vous Ã©cris pour vous fÃ©liciter pour votre retraite de la fonction publique. Je profite de lâ€™occasion pour vous remercier de votre contribution Ã  la fonction publique du Canada et vous souhaiter bonne chance dans vos nouveaux projets. Je vous rappelle Ã©galement lâ€™importance dâ€™Ã©viter tout conflit dâ€™intÃ©rÃªts entre vos responsabilitÃ©s actuelles et futures si vous envisagez une transition vers un emploi Ã  lâ€™extÃ©rieur de la fonction publique.
  
-Comme vous êtes dans une position désignée, il vous incombe de respecter les mesures d’observation concernant l’après-mandat énoncées à l’alinéa 4(e) du <a href="http://iservice.prv/fra/si/ve/code_de_conduite/code_de_conduite.shtml">Code de conduite d&rsquo;EDSC</a>  (le Code). L’application des dispositions relatives à l’après-mandat a pour but de vous protéger et de protéger le gouvernement contre les allégations de traitement de faveur, d’accès privilégié aux représentants du gouvernement ou d’utilisation de renseignements gouvernementaux qui ne sont pas facilement accessibles au public. 
+Comme vous Ãªtes dans une position dÃ©signÃ©e, il vous incombe de respecter les mesures dâ€™observation concernant lâ€™aprÃ¨s-mandat Ã©noncÃ©es Ã  lâ€™alinÃ©aÂ 4(e) du <a href="http://iservice.prv/fra/si/ve/code_de_conduite/code_de_conduite.shtml">Code de conduite d&rsquo;EDSC</a>Â  (le Code). Lâ€™application des dispositions relatives Ã  lâ€™aprÃ¨s-mandat a pour but de vous protÃ©ger et de protÃ©ger le gouvernement contre les allÃ©gations de traitement de faveur, dâ€™accÃ¨s privilÃ©giÃ© aux reprÃ©sentants du gouvernement ou dâ€™utilisation de renseignements gouvernementaux qui ne sont pas facilement accessibles au public. 
  
-En outre, comme stipulé dans <a href="http://iservice.prv/fra/si/ve/code_de_conduite/code_de_conduite.shtml">le Code</a>, une période de restriction d’un an débutera le jour de votre départ. Avant votre départ et pendant cette période de restriction, vous devez soumettre une <a href="http://hrsc-csrh.prv/WebForms/NewRequest.aspx?RequestType=COI&amp;FormTypeInd=0">d&eacute;claration de conflit d&rsquo;int&eacute;r&ecirc;ts</a> au <a href="mailto:NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca">Bureau des valeurs et de l&rsquo;&eacute;thique</a> toutes offres sérieuses d’emploi ou d’activités proposées à l’extérieur de la fonction publique. Cela inclut, mais ne se limite pas à des offres faites par des entités avec lesquelles vous avez eu, personnellement ou par l’entremise de vos subalternes, des rapports officiels importants au cours de votre dernière année de service. 
- 
-De plus, pendant cette période d’un an, il vous sera interdit :
- 
-a) d’accepter une nomination au conseil d’administration d’une entité privée avec laquelle vous avez eu, personnellement ou par l’entremise de vos subalternes, des rapports officiels importants au cours de l’année ayant précédé la fin de votre mandat, ou d’accepter un emploi au sein d’une telle entité?;
+En outre, comme stipulÃ© dans <a href="http://iservice.prv/fra/si/ve/code_de_conduite/code_de_conduite.shtml">le Code</a>, une pÃ©riode de restriction dâ€™un an dÃ©butera le jour de votre dÃ©part. Avant votre dÃ©part et pendant cette pÃ©riode de restriction, vous devez soumettre une <a href="http://hrsc-csrh.prv/WebForms/NewRequest.aspx?RequestType=COI&amp;FormTypeInd=0">d&eacute;claration de conflit d&rsquo;int&eacute;r&ecirc;ts</a> au <a href="mailto:NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca">Bureau des valeurs et de l&rsquo;&eacute;thique</a> toutes offres sÃ©rieuses dâ€™emploi ou dâ€™activitÃ©s proposÃ©es Ã  lâ€™extÃ©rieur de la fonction publique. Cela inclut, mais ne se limite pas Ã  des offres faites par des entitÃ©s avec lesquelles vous avez eu, personnellement ou par lâ€™entremise de vos subalternes, des rapports officiels importants au cours de votre derniÃ¨re annÃ©e de service. 
+Â 
+De plus, pendant cette pÃ©riode dâ€™un an, il vous sera interditÂ :
+Â 
+a)Â dâ€™accepter une nomination au conseil dâ€™administration dâ€™une entitÃ© privÃ©e avec laquelle vous avez eu, personnellement ou par lâ€™entremise de vos subalternes, des rapports officiels importants au cours de lâ€™annÃ©e ayant prÃ©cÃ©dÃ© la fin de votre mandat, ou dâ€™accepter un emploi au sein dâ€™une telle entitÃ©?;
 
-b) d’intervenir pour le compte ou au nom d’une autre personne ou d’une entité auprès de tout organisme du gouvernement avec lequel vous avez eu, personnellement ou par l’entremise de vos subalternes, des rapports officiels importants au cours de l’année ayant précédé la fin de votre mandat?;
+b)Â dâ€™intervenir pour le compte ou au nom dâ€™une autre personne ou dâ€™une entitÃ© auprÃ¨s de tout organisme du gouvernement avec lequel vous avez eu, personnellement ou par lâ€™entremise de vos subalternes, des rapports officiels importants au cours de lâ€™annÃ©e ayant prÃ©cÃ©dÃ© la fin de votre mandat?;
 
-c) de donner à vos clients ou à votre employeur, au moyen de renseignements qui ne sont pas accessibles au public, des conseils touchant les programmes ou les politiques du Ministère ou concernant les programmes ou les politiques des ministères ou des organismes avec lesquels vous avez entretenu d’importants rapports directs.
- 
-Cette période de restriction pourrait toutefois être réduite ou annulée après l’examen de divers facteurs relatifs à votre cas et à l’intérêt public, tel que le prévoit le Code. Si vous désirez présenter une demande d’annulation ou de réduction de la période de restriction, vous devez communiquer avec le Bureau de Valeurs et de l’éthique par l’intermédiaire du <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Centre de services en ressources humaines</a> d’EDSC.
+c)Â de donner Ã  vos clients ou Ã  votre employeur, au moyen de renseignements qui ne sont pas accessibles au public, des conseils touchant les programmes ou les politiques du MinistÃ¨re ou concernant les programmes ou les politiques des ministÃ¨res ou des organismes avec lesquels vous avez entretenu dâ€™importants rapports directs.
+Â 
+Cette pÃ©riode de restriction pourrait toutefois Ãªtre rÃ©duite ou annulÃ©e aprÃ¨s lâ€™examen de divers facteurs relatifs Ã  votre cas et Ã  lâ€™intÃ©rÃªt public, tel que le prÃ©voit le Code. Si vous dÃ©sirez prÃ©senter une demande dâ€™annulation ou de rÃ©duction de la pÃ©riode de restriction, vous devez communiquer avec le Bureau de Valeurs et de lâ€™Ã©thique par lâ€™intermÃ©diaire du <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Centre de services en ressources humaines</a> dâ€™EDSC.
  
-Toute décision relative à votre situation vous sera communiquée par écrit.
+Toute dÃ©cision relative Ã  votre situation vous sera communiquÃ©e par Ã©crit.
  
-Les agents du Bureau des valeurs et de l’éthique se feront un plaisir de vous expliquer les dispositions supplémentaires à l’après-mandat et de répondre à toutes vos questions. S’il vous plait, n’hésitez pas à contacter le Bureau de valeurs et de l’éthique pour obtenir de plus amples renseignements par courriel <a href="mailto:NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca"> NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca</a> ou par l’intermédiaire du <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Centre de services en ressources humaines</a> d’EDSC.
+Les agents du Bureau des valeurs et de lâ€™Ã©thique se feront un plaisir de vous expliquer les dispositions supplÃ©mentaires Ã  lâ€™aprÃ¨s-mandat et de rÃ©pondre Ã  toutes vos questions. Sâ€™il vous plait, nâ€™hÃ©sitez pas Ã  contacter le Bureau de valeurs et de lâ€™Ã©thique pour obtenir de plus amples renseignements par courriel <a href="mailto:NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca"> NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca</a> ou par lâ€™intermÃ©diaire du <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Centre de services en ressources humaines</a> dâ€™EDSC.
  
 Cordialement, 
  
-Véronique Tremblay
-Directrice – Bureau des valeurs, de la reconnaissance et de la résolution en milieu de travail 
-Direction générale des services de ressources humaines
-Emploi et développement social Canada/ Gouvernement du Canada',N'---------> The English version of the email follows the French --------->
+VÃ©ronique Tremblay
+Directrice â€“ Bureau des valeurs, de la reconnaissance et de la rÃ©solution en milieu de travail 
+Direction gÃ©nÃ©rale des services de ressources humaines
+Emploi et dÃ©veloppement social Canada/ Gouvernement du Canada',N'---------> The English version of the email follows the French --------->
 
-Collègue, 
+CollÃ¨gue, 
  
-Je vous écris pour vous féliciter pour votre retraite de la fonction publique. Je profite de l’occasion pour vous remercier de votre contribution à la fonction publique du Canada et vous souhaiter bonne chance dans vos nouveaux projets. Je vous rappelle également l’importance d’éviter tout conflit d’intérêts entre vos responsabilités actuelles et futures si vous envisagez une transition vers un emploi à l’extérieur de la fonction publique.
+Je vous Ã©cris pour vous fÃ©liciter pour votre retraite de la fonction publique. Je profite de lâ€™occasion pour vous remercier de votre contribution Ã  la fonction publique du Canada et vous souhaiter bonne chance dans vos nouveaux projets. Je vous rappelle Ã©galement lâ€™importance dâ€™Ã©viter tout conflit dâ€™intÃ©rÃªts entre vos responsabilitÃ©s actuelles et futures si vous envisagez une transition vers un emploi Ã  lâ€™extÃ©rieur de la fonction publique.
  
-Comme vous êtes dans une position désignée, il vous incombe de respecter les mesures d’observation concernant l’après-mandat énoncées à l’alinéa 4(e) du <a href="http://iservice.prv/fra/si/ve/code_de_conduite/code_de_conduite.shtml">Code de conduite d&rsquo;EDSC</a>  (le Code). L’application des dispositions relatives à l’après-mandat a pour but de vous protéger et de protéger le gouvernement contre les allégations de traitement de faveur, d’accès privilégié aux représentants du gouvernement ou d’utilisation de renseignements gouvernementaux qui ne sont pas facilement accessibles au public. 
+Comme vous Ãªtes dans une position dÃ©signÃ©e, il vous incombe de respecter les mesures dâ€™observation concernant lâ€™aprÃ¨s-mandat Ã©noncÃ©es Ã  lâ€™alinÃ©aÂ 4(e) du <a href="http://iservice.prv/fra/si/ve/code_de_conduite/code_de_conduite.shtml">Code de conduite d&rsquo;EDSC</a>Â  (le Code). Lâ€™application des dispositions relatives Ã  lâ€™aprÃ¨s-mandat a pour but de vous protÃ©ger et de protÃ©ger le gouvernement contre les allÃ©gations de traitement de faveur, dâ€™accÃ¨s privilÃ©giÃ© aux reprÃ©sentants du gouvernement ou dâ€™utilisation de renseignements gouvernementaux qui ne sont pas facilement accessibles au public. 
  
-En outre, comme stipulé dans <a href="http://iservice.prv/fra/si/ve/code_de_conduite/code_de_conduite.shtml">le Code</a>, une période de restriction d’un an débutera le jour de votre départ. Avant votre départ et pendant cette période de restriction, vous devez soumettre une <a href="http://hrsc-csrh.prv/WebForms/NewRequest.aspx?RequestType=COI&amp;FormTypeInd=0">d&eacute;claration de conflit d&rsquo;int&eacute;r&ecirc;ts</a> au <a href="mailto:NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca">Bureau des valeurs et de l&rsquo;&eacute;thique</a> toutes offres sérieuses d’emploi ou d’activités proposées à l’extérieur de la fonction publique. Cela inclut, mais ne se limite pas à des offres faites par des entités avec lesquelles vous avez eu, personnellement ou par l’entremise de vos subalternes, des rapports officiels importants au cours de votre dernière année de service. 
- 
-De plus, pendant cette période d’un an, il vous sera interdit :
- 
-a) d’accepter une nomination au conseil d’administration d’une entité privée avec laquelle vous avez eu, personnellement ou par l’entremise de vos subalternes, des rapports officiels importants au cours de l’année ayant précédé la fin de votre mandat, ou d’accepter un emploi au sein d’une telle entité?;
+En outre, comme stipulÃ© dans <a href="http://iservice.prv/fra/si/ve/code_de_conduite/code_de_conduite.shtml">le Code</a>, une pÃ©riode de restriction dâ€™un an dÃ©butera le jour de votre dÃ©part. Avant votre dÃ©part et pendant cette pÃ©riode de restriction, vous devez soumettre une <a href="http://hrsc-csrh.prv/WebForms/NewRequest.aspx?RequestType=COI&amp;FormTypeInd=0">d&eacute;claration de conflit d&rsquo;int&eacute;r&ecirc;ts</a> au <a href="mailto:NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca">Bureau des valeurs et de l&rsquo;&eacute;thique</a> toutes offres sÃ©rieuses dâ€™emploi ou dâ€™activitÃ©s proposÃ©es Ã  lâ€™extÃ©rieur de la fonction publique. Cela inclut, mais ne se limite pas Ã  des offres faites par des entitÃ©s avec lesquelles vous avez eu, personnellement ou par lâ€™entremise de vos subalternes, des rapports officiels importants au cours de votre derniÃ¨re annÃ©e de service. 
+Â 
+De plus, pendant cette pÃ©riode dâ€™un an, il vous sera interditÂ :
+Â 
+a)Â dâ€™accepter une nomination au conseil dâ€™administration dâ€™une entitÃ© privÃ©e avec laquelle vous avez eu, personnellement ou par lâ€™entremise de vos subalternes, des rapports officiels importants au cours de lâ€™annÃ©e ayant prÃ©cÃ©dÃ© la fin de votre mandat, ou dâ€™accepter un emploi au sein dâ€™une telle entitÃ©?;
 
-b) d’intervenir pour le compte ou au nom d’une autre personne ou d’une entité auprès de tout organisme du gouvernement avec lequel vous avez eu, personnellement ou par l’entremise de vos subalternes, des rapports officiels importants au cours de l’année ayant précédé la fin de votre mandat?;
+b)Â dâ€™intervenir pour le compte ou au nom dâ€™une autre personne ou dâ€™une entitÃ© auprÃ¨s de tout organisme du gouvernement avec lequel vous avez eu, personnellement ou par lâ€™entremise de vos subalternes, des rapports officiels importants au cours de lâ€™annÃ©e ayant prÃ©cÃ©dÃ© la fin de votre mandat?;
 
-c) de donner à vos clients ou à votre employeur, au moyen de renseignements qui ne sont pas accessibles au public, des conseils touchant les programmes ou les politiques du Ministère ou concernant les programmes ou les politiques des ministères ou des organismes avec lesquels vous avez entretenu d’importants rapports directs.
- 
-Cette période de restriction pourrait toutefois être réduite ou annulée après l’examen de divers facteurs relatifs à votre cas et à l’intérêt public, tel que le prévoit le Code. Si vous désirez présenter une demande d’annulation ou de réduction de la période de restriction, vous devez communiquer avec le Bureau de Valeurs et de l’éthique par l’intermédiaire du <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Centre de services en ressources humaines</a> d’EDSC.
+c)Â de donner Ã  vos clients ou Ã  votre employeur, au moyen de renseignements qui ne sont pas accessibles au public, des conseils touchant les programmes ou les politiques du MinistÃ¨re ou concernant les programmes ou les politiques des ministÃ¨res ou des organismes avec lesquels vous avez entretenu dâ€™importants rapports directs.
+Â 
+Cette pÃ©riode de restriction pourrait toutefois Ãªtre rÃ©duite ou annulÃ©e aprÃ¨s lâ€™examen de divers facteurs relatifs Ã  votre cas et Ã  lâ€™intÃ©rÃªt public, tel que le prÃ©voit le Code. Si vous dÃ©sirez prÃ©senter une demande dâ€™annulation ou de rÃ©duction de la pÃ©riode de restriction, vous devez communiquer avec le Bureau de Valeurs et de lâ€™Ã©thique par lâ€™intermÃ©diaire du <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Centre de services en ressources humaines</a> dâ€™EDSC.
  
-Toute décision relative à votre situation vous sera communiquée par écrit.
+Toute dÃ©cision relative Ã  votre situation vous sera communiquÃ©e par Ã©crit.
  
-Les agents du Bureau des valeurs et de l’éthique se feront un plaisir de vous expliquer les dispositions supplémentaires à l’après-mandat et de répondre à toutes vos questions. S’il vous plait, n’hésitez pas à contacter le Bureau de valeurs et de l’éthique pour obtenir de plus amples renseignements par courriel <a href="mailto:NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca"> NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca</a> ou par l’intermédiaire du <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Centre de services en ressources humaines</a> d’EDSC.
+Les agents du Bureau des valeurs et de lâ€™Ã©thique se feront un plaisir de vous expliquer les dispositions supplÃ©mentaires Ã  lâ€™aprÃ¨s-mandat et de rÃ©pondre Ã  toutes vos questions. Sâ€™il vous plait, nâ€™hÃ©sitez pas Ã  contacter le Bureau de valeurs et de lâ€™Ã©thique pour obtenir de plus amples renseignements par courriel <a href="mailto:NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca"> NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca</a> ou par lâ€™intermÃ©diaire du <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Centre de services en ressources humaines</a> dâ€™EDSC.
  
 Cordialement, 
  
-Véronique Tremblay
-Directrice– Bureau des valeurs, de la reconnaissance et de la résolution en milieu de travail 
-Direction générale des services de ressources humaines
-Emploi et développement social Canada/ Gouvernement du Canada
+VÃ©ronique Tremblay
+Directriceâ€“ Bureau des valeurs, de la reconnaissance et de la rÃ©solution en milieu de travail 
+Direction gÃ©nÃ©rale des services de ressources humaines
+Emploi et dÃ©veloppement social Canada/ Gouvernement du Canada
 
- ---------> English version of the email --------->
+Â ---------> English version of the email --------->
 
 
 Colleague,
@@ -694,19 +694,19 @@ b) make representations to any government organization on behalf of persons or e
  
 c) give advice to your clients or employer using information that is not publicly available concerning the programs or policies of the Department or concerning the programs or policies of the departments or organizations with which you had a direct and substantial relationship.
  
-This limitation period may, however be waived or reduced after consideration of various factors, as specified in the Code, in regards to both your situation and the public interest. If you wish to make a request to waive or reduce the limitation period, please contact the Office of Values and Ethics through ESDC’s <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Human Resources Service Centre</a>.
+This limitation period may, however be waived or reduced after consideration of various factors, as specified in the Code, in regards to both your situation and the public interest. If you wish to make a request to waive or reduce the limitation period, please contact the Office of Values and Ethics through ESDCâ€™s <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Human Resources Service Centre</a>.
  
 You will be advised in writing of any decision in relation to your specific situation.
  
-Officers at the Office of Values and Ethics would be pleased to explain the post-employment provisions further and answer any questions you may have. Should you require additional information, please do not hesitate to contact the Office of Values and Ethics through the ESDC’s <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Human Resources Service Centre</a> or by email at <a href="mailto:NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca">NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca</a> 
+Officers at the Office of Values and Ethics would be pleased to explain the post-employment provisions further and answer any questions you may have. Should you require additional information, please do not hesitate to contact the Office of Values and Ethics through the ESDCâ€™s <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Human Resources Service Centre</a> or by email at <a href="mailto:NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca">NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca</a> 
 
 Yours sincerely,
  
- Véronique Tremblay
- Director – Office of Workplace Values, Recognition and Resolution
+ VÃ©ronique Tremblay
+ Director â€“ Office of Workplace Values, Recognition and Resolution
  Human Resources Services Branch
  Employment and Social Development Canada/ Government of Canada','2019-06-10T00:00:00',NULL,N'Robichaud, Yves [NC]',N'Leblanc, Chantal x [NC]','2015-03-30T07:42:48.490','2022-03-17T15:13:15.967',33)
- ,(58,N'Conflict of Interest and Post-Employment Message',N'Message à propos des conflits d''intérêts et l''après-mandat',N'---------> La version française du courriel suit l''anglais --------->
+ ,(58,N'Conflict of Interest and Post-Employment Message',N'Message Ã  propos des conflits d''intÃ©rÃªts et l''aprÃ¨s-mandat',N'---------> La version franÃ§aise du courriel suit l''anglais --------->
 
 Colleague,
  
@@ -724,7 +724,7 @@ b) make representations to any government organization on behalf of persons or e
  
 c) give advice to your clients or employer using information that is not publicly available concerning the programs or policies of the Department or concerning the programs or policies of the departments or organizations with which you had a direct and substantial relationship.
  
-This limitation period may, however be waived or reduced after consideration of various factors, as specified in the Code, in regards to both your situation and the public interest. If you wish to make a request to waive or reduce the limitation period, please contact the Office of Values and Ethics through ESDC’s <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Human Resources Service Centre</a>.
+This limitation period may, however be waived or reduced after consideration of various factors, as specified in the Code, in regards to both your situation and the public interest. If you wish to make a request to waive or reduce the limitation period, please contact the Office of Values and Ethics through ESDCâ€™s <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Human Resources Service Centre</a>.
  
 You will be advised in writing of any decision in relation to your specific situation.
  
@@ -736,90 +736,90 @@ c) working for a corporation if lobbying constitutes a significant part (20% or 
  
 The Commissioner of Lobbying is empowered to grant exemptions to the five-year prohibition on lobbying in certain situations described in the Lobbying Act. Please consult the <a href="https://lobbycanada.gc.ca/en/">Office of the Commissioner of Lobbying of Canada</a> website for more detailed information.
  
-Officers at the Office of Values and Ethics would be pleased to explain the post-employment provisions further and answer any questions you may have. Should you require additional information, please do not hesitate to contact the Office of Values and Ethics through the ESDC’s <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Human Resources Service Centre</a> or by email at <a href="mailto:NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca">NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca</a> 
+Officers at the Office of Values and Ethics would be pleased to explain the post-employment provisions further and answer any questions you may have. Should you require additional information, please do not hesitate to contact the Office of Values and Ethics through the ESDCâ€™s <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Human Resources Service Centre</a> or by email at <a href="mailto:NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca">NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca</a> 
 
 Yours sincerely,
  
  
-Darlène de Gravina
+DarlÃ¨ne de Gravina
 Assistant Deputy Minister
 Human Resources Services Branch
 
----------> Version française du courriel --------->
+---------> Version franÃ§aise du courriel --------->
 
-Collègue,
+CollÃ¨gue,
  
-Je vous écris pour vous féliciter pour votre retraite de la fonction publique. Je profite de l’occasion pour vous remercier de votre contribution à la fonction publique du Canada et vous souhaiter bonne chance dans vos nouveaux projets. Je vous rappelle également l’importance d’éviter tout conflit d’intérêts entre vos responsabilités actuelles et futures si vous envisagez une transition vers un emploi à l’extérieur de la fonction publique.
+Je vous Ã©cris pour vous fÃ©liciter pour votre retraite de la fonction publique. Je profite de lâ€™occasion pour vous remercier de votre contribution Ã  la fonction publique du Canada et vous souhaiter bonne chance dans vos nouveaux projets. Je vous rappelle Ã©galement lâ€™importance dâ€™Ã©viter tout conflit dâ€™intÃ©rÃªts entre vos responsabilitÃ©s actuelles et futures si vous envisagez une transition vers un emploi Ã  lâ€™extÃ©rieur de la fonction publique.
  
-Comme vous êtes dans une position désignée, il vous incombe de respecter les mesures d’observation concernant l’après-mandat énoncées à l’alinéa 4(e) du <a href="http://iservice.prv/fra/si/ve/code_de_conduite/code_de_conduite.shtml">Code de conduite d&rsquo;EDSC</a> (le Code). L’application des dispositions relatives à l’après-mandat a pour but de vous protéger et de protéger le gouvernement contre les allégations de traitement de faveur, d’accès privilégié aux représentants du gouvernement ou d’utilisation de renseignements gouvernementaux qui ne sont pas facilement accessibles au public. 
+Comme vous Ãªtes dans une position dÃ©signÃ©e, il vous incombe de respecter les mesures dâ€™observation concernant lâ€™aprÃ¨s-mandat Ã©noncÃ©es Ã  lâ€™alinÃ©aÂ 4(e) du <a href="http://iservice.prv/fra/si/ve/code_de_conduite/code_de_conduite.shtml">Code de conduite d&rsquo;EDSC</a> (le Code). Lâ€™application des dispositions relatives Ã  lâ€™aprÃ¨s-mandat a pour but de vous protÃ©ger et de protÃ©ger le gouvernement contre les allÃ©gations de traitement de faveur, dâ€™accÃ¨s privilÃ©giÃ© aux reprÃ©sentants du gouvernement ou dâ€™utilisation de renseignements gouvernementaux qui ne sont pas facilement accessibles au public. 
  
-En outre, comme stipulé dans <a href="http://iservice.prv/fra/si/ve/code_de_conduite/code_de_conduite.shtml">le Code</a>, une période de restriction d’un an débutera le jour de votre départ. Avant votre départ et pendant cette période de restriction, vous devez soumettre une <a href="http://hrsc-csrh.prv/WebForms/NewRequest.aspx?RequestType=COI&amp;FormTypeInd=0">d&eacute;claration de conflit d&rsquo;int&eacute;r&ecirc;ts</a> au <a href="mailto:NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca">Bureau des valeurs et de l&rsquo;&eacute;thique</a> toutes offres sérieuses d’emploi ou d’activités proposées à l’extérieur de la fonction publique. Cela inclut, mais ne se limite pas à des offres faites par des entités avec lesquelles vous avez eu, personnellement ou par l’entremise de vos subalternes, des rapports officiels importants au cours de votre dernière année de service. 
- 
-De plus, pendant cette période d’un an, il vous sera interdit :
- 
-a)  d’accepter une nomination au conseil d’administration d’une entité privée avec laquelle vous avez eu, personnellement ou par l’entremise de vos subalternes, des rapports officiels importants au cours de l’année ayant précédé la fin de votre mandat, ou d’accepter un emploi au sein d’une telle entité?;
+En outre, comme stipulÃ© dans <a href="http://iservice.prv/fra/si/ve/code_de_conduite/code_de_conduite.shtml">le Code</a>, une pÃ©riode de restriction dâ€™un an dÃ©butera le jour de votre dÃ©part. Avant votre dÃ©part et pendant cette pÃ©riode de restriction, vous devez soumettre une <a href="http://hrsc-csrh.prv/WebForms/NewRequest.aspx?RequestType=COI&amp;FormTypeInd=0">d&eacute;claration de conflit d&rsquo;int&eacute;r&ecirc;ts</a> au <a href="mailto:NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca">Bureau des valeurs et de l&rsquo;&eacute;thique</a> toutes offres sÃ©rieuses dâ€™emploi ou dâ€™activitÃ©s proposÃ©es Ã  lâ€™extÃ©rieur de la fonction publique. Cela inclut, mais ne se limite pas Ã  des offres faites par des entitÃ©s avec lesquelles vous avez eu, personnellement ou par lâ€™entremise de vos subalternes, des rapports officiels importants au cours de votre derniÃ¨re annÃ©e de service. 
+Â 
+De plus, pendant cette pÃ©riode dâ€™un an, il vous sera interditÂ :
+Â 
+a)Â Â dâ€™accepter une nomination au conseil dâ€™administration dâ€™une entitÃ© privÃ©e avec laquelle vous avez eu, personnellement ou par lâ€™entremise de vos subalternes, des rapports officiels importants au cours de lâ€™annÃ©e ayant prÃ©cÃ©dÃ© la fin de votre mandat, ou dâ€™accepter un emploi au sein dâ€™une telle entitÃ©?;
 
-b)  d’intervenir pour le compte ou au nom d’une autre personne ou d’une entité auprès de tout organisme du gouvernement avec lequel vous avez eu, personnellement ou par l’entremise de vos subalternes, des rapports officiels importants au cours de l’année ayant précédé la fin de votre mandat?;
+b)Â Â dâ€™intervenir pour le compte ou au nom dâ€™une autre personne ou dâ€™une entitÃ© auprÃ¨s de tout organisme du gouvernement avec lequel vous avez eu, personnellement ou par lâ€™entremise de vos subalternes, des rapports officiels importants au cours de lâ€™annÃ©e ayant prÃ©cÃ©dÃ© la fin de votre mandat?;
 
-c)  de donner à vos clients ou à votre employeur, au moyen de renseignements qui ne sont pas accessibles au public, des conseils touchant les programmes ou les politiques du Ministère ou concernant les programmes ou les politiques des ministères ou des organismes avec lesquels vous avez entretenu d’importants rapports directs.
- 
-Cette période de restriction pourrait toutefois être réduite ou annulée après l’examen de divers facteurs relatifs à votre cas et à l’intérêt public, tel que le prévoit le Code. Si vous désirez présenter une demande d’annulation ou de réduction de la période de restriction, vous devez communiquer avec le Bureau de Valeurs et de l’éthique par l’intermédiaire du <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Centre de services en ressources humaines</a> d’EDSC.
+c)Â Â de donner Ã  vos clients ou Ã  votre employeur, au moyen de renseignements qui ne sont pas accessibles au public, des conseils touchant les programmes ou les politiques du MinistÃ¨re ou concernant les programmes ou les politiques des ministÃ¨res ou des organismes avec lesquels vous avez entretenu dâ€™importants rapports directs.
+Â 
+Cette pÃ©riode de restriction pourrait toutefois Ãªtre rÃ©duite ou annulÃ©e aprÃ¨s lâ€™examen de divers facteurs relatifs Ã  votre cas et Ã  lâ€™intÃ©rÃªt public, tel que le prÃ©voit le Code. Si vous dÃ©sirez prÃ©senter une demande dâ€™annulation ou de rÃ©duction de la pÃ©riode de restriction, vous devez communiquer avec le Bureau de Valeurs et de lâ€™Ã©thique par lâ€™intermÃ©diaire du <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Centre de services en ressources humaines</a> dâ€™EDSC.
  
-Toute décision relative à votre situation vous sera communiquée par écrit.
+Toute dÃ©cision relative Ã  votre situation vous sera communiquÃ©e par Ã©crit.
  
-De plus, la Loi sur le lobbying vous interdit, pendant une période de cinq ans, à titre de titulaire d’une charge publique désignée :
+De plus, la Loi sur le lobbying vous interdit, pendant une pÃ©riode de cinq ans, Ã  titre de titulaire dâ€™une charge publique dÃ©signÃ©e :
 
-a) de travailler à titre de lobbyiste-conseil;
-b) de mener des activités de lobbying pour le compte d’une organisation;
-c) de travailler pour une société, si le lobbying constitue une partie importante (20 % ou plus) de votre travail.
+a) de travailler Ã  titre de lobbyiste-conseil;
+b) de mener des activitÃ©s de lobbying pour le compte dâ€™une organisation;
+c) de travailler pour une sociÃ©tÃ©, si le lobbying constitue une partie importante (20 % ou plus) de votre travail.
  
-Le commissaire au lobbying a le pouvoir de vous accorder des exemptions à l’interdiction de faire du lobbying pendant une période de cinq ans dans certaines situations décrites dans la Loi sur le lobbying. Veuillez consulter le site Web du <a href="https://lobbycanada.gc.ca/fr/">Commissariat au lobbying du Canada</a> pour de plus amples renseignements.
+Le commissaire au lobbying a le pouvoir de vous accorder des exemptions Ã  lâ€™interdiction de faire du lobbying pendant une pÃ©riode de cinq ans dans certaines situations dÃ©crites dans la Loi sur le lobbying. Veuillez consulter le site Web du <a href="https://lobbycanada.gc.ca/fr/">Commissariat au lobbying du Canada</a> pour de plus amples renseignements.
  
-Les agents du Bureau des valeurs et de l’éthique se feront un plaisir de vous expliquer les dispositions supplémentaires à l’après-mandat et de répondre à toutes vos questions. S’il vous plait, n’hésitez pas à contacter le Bureau de valeurs et de l’éthique pour obtenir de plus amples renseignements par courriel <a href="mailto:NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca">NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca</a> ou par l’intermédiaire du <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Centre de services en ressources humaines</a> d’EDSC.
+Les agents du Bureau des valeurs et de lâ€™Ã©thique se feront un plaisir de vous expliquer les dispositions supplÃ©mentaires Ã  lâ€™aprÃ¨s-mandat et de rÃ©pondre Ã  toutes vos questions. Sâ€™il vous plait, nâ€™hÃ©sitez pas Ã  contacter le Bureau de valeurs et de lâ€™Ã©thique pour obtenir de plus amples renseignements par courriel <a href="mailto:NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca">NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca</a> ou par lâ€™intermÃ©diaire du <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Centre de services en ressources humaines</a> dâ€™EDSC.
  
 Cordialement,
  
-Darlène de Gravina
+DarlÃ¨ne de Gravina
 Sous-ministre adjointe
-Direction générale des services de ressources humaines',N'---------> The English version of the email follows the French --------->
+Direction gÃ©nÃ©rale des services de ressources humaines',N'---------> The English version of the email follows the French --------->
 
-Collègue,
+CollÃ¨gue,
  
-Je vous écris pour vous féliciter pour votre retraite de la fonction publique. Je profite de l’occasion pour vous remercier de votre contribution à la fonction publique du Canada et vous souhaiter bonne chance dans vos nouveaux projets. Je vous rappelle également l’importance d’éviter tout conflit d’intérêts entre vos responsabilités actuelles et futures si vous envisagez une transition vers un emploi à l’extérieur de la fonction publique.
+Je vous Ã©cris pour vous fÃ©liciter pour votre retraite de la fonction publique. Je profite de lâ€™occasion pour vous remercier de votre contribution Ã  la fonction publique du Canada et vous souhaiter bonne chance dans vos nouveaux projets. Je vous rappelle Ã©galement lâ€™importance dâ€™Ã©viter tout conflit dâ€™intÃ©rÃªts entre vos responsabilitÃ©s actuelles et futures si vous envisagez une transition vers un emploi Ã  lâ€™extÃ©rieur de la fonction publique.
  
-Comme vous êtes dans une position désignée, il vous incombe de respecter les mesures d’observation concernant l’après-mandat énoncées à l’alinéa 4(e) du <a href="http://iservice.prv/fra/si/ve/code_de_conduite/code_de_conduite.shtml">Code de conduite d&rsquo;EDSC</a> (le Code). L’application des dispositions relatives à l’après-mandat a pour but de vous protéger et de protéger le gouvernement contre les allégations de traitement de faveur, d’accès privilégié aux représentants du gouvernement ou d’utilisation de renseignements gouvernementaux qui ne sont pas facilement accessibles au public. 
+Comme vous Ãªtes dans une position dÃ©signÃ©e, il vous incombe de respecter les mesures dâ€™observation concernant lâ€™aprÃ¨s-mandat Ã©noncÃ©es Ã  lâ€™alinÃ©aÂ 4(e) du <a href="http://iservice.prv/fra/si/ve/code_de_conduite/code_de_conduite.shtml">Code de conduite d&rsquo;EDSC</a> (le Code). Lâ€™application des dispositions relatives Ã  lâ€™aprÃ¨s-mandat a pour but de vous protÃ©ger et de protÃ©ger le gouvernement contre les allÃ©gations de traitement de faveur, dâ€™accÃ¨s privilÃ©giÃ© aux reprÃ©sentants du gouvernement ou dâ€™utilisation de renseignements gouvernementaux qui ne sont pas facilement accessibles au public. 
  
-En outre, comme stipulé dans <a href="http://iservice.prv/fra/si/ve/code_de_conduite/code_de_conduite.shtml">le Code</a>, une période de restriction d’un an débutera le jour de votre départ. Avant votre départ et pendant cette période de restriction, vous devez soumettre une <a href="http://hrsc-csrh.prv/WebForms/NewRequest.aspx?RequestType=COI&amp;FormTypeInd=0">d&eacute;claration de conflit d&rsquo;int&eacute;r&ecirc;ts</a> au <a href="mailto:NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca">Bureau des valeurs et de l&rsquo;&eacute;thique</a> toutes offres sérieuses d’emploi ou d’activités proposées à l’extérieur de la fonction publique. Cela inclut, mais ne se limite pas à des offres faites par des entités avec lesquelles vous avez eu, personnellement ou par l’entremise de vos subalternes, des rapports officiels importants au cours de votre dernière année de service. 
- 
-De plus, pendant cette période d’un an, il vous sera interdit :
- 
-a)  d’accepter une nomination au conseil d’administration d’une entité privée avec laquelle vous avez eu, personnellement ou par l’entremise de vos subalternes, des rapports officiels importants au cours de l’année ayant précédé la fin de votre mandat, ou d’accepter un emploi au sein d’une telle entité?;
+En outre, comme stipulÃ© dans <a href="http://iservice.prv/fra/si/ve/code_de_conduite/code_de_conduite.shtml">le Code</a>, une pÃ©riode de restriction dâ€™un an dÃ©butera le jour de votre dÃ©part. Avant votre dÃ©part et pendant cette pÃ©riode de restriction, vous devez soumettre une <a href="http://hrsc-csrh.prv/WebForms/NewRequest.aspx?RequestType=COI&amp;FormTypeInd=0">d&eacute;claration de conflit d&rsquo;int&eacute;r&ecirc;ts</a> au <a href="mailto:NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca">Bureau des valeurs et de l&rsquo;&eacute;thique</a> toutes offres sÃ©rieuses dâ€™emploi ou dâ€™activitÃ©s proposÃ©es Ã  lâ€™extÃ©rieur de la fonction publique. Cela inclut, mais ne se limite pas Ã  des offres faites par des entitÃ©s avec lesquelles vous avez eu, personnellement ou par lâ€™entremise de vos subalternes, des rapports officiels importants au cours de votre derniÃ¨re annÃ©e de service. 
+Â 
+De plus, pendant cette pÃ©riode dâ€™un an, il vous sera interditÂ :
+Â 
+a)Â Â dâ€™accepter une nomination au conseil dâ€™administration dâ€™une entitÃ© privÃ©e avec laquelle vous avez eu, personnellement ou par lâ€™entremise de vos subalternes, des rapports officiels importants au cours de lâ€™annÃ©e ayant prÃ©cÃ©dÃ© la fin de votre mandat, ou dâ€™accepter un emploi au sein dâ€™une telle entitÃ©?;
 
-b)  d’intervenir pour le compte ou au nom d’une autre personne ou d’une entité auprès de tout organisme du gouvernement avec lequel vous avez eu, personnellement ou par l’entremise de vos subalternes, des rapports officiels importants au cours de l’année ayant précédé la fin de votre mandat?;
+b)Â Â dâ€™intervenir pour le compte ou au nom dâ€™une autre personne ou dâ€™une entitÃ© auprÃ¨s de tout organisme du gouvernement avec lequel vous avez eu, personnellement ou par lâ€™entremise de vos subalternes, des rapports officiels importants au cours de lâ€™annÃ©e ayant prÃ©cÃ©dÃ© la fin de votre mandat?;
 
-c)  de donner à vos clients ou à votre employeur, au moyen de renseignements qui ne sont pas accessibles au public, des conseils touchant les programmes ou les politiques du Ministère ou concernant les programmes ou les politiques des ministères ou des organismes avec lesquels vous avez entretenu d’importants rapports directs.
- 
-Cette période de restriction pourrait toutefois être réduite ou annulée après l’examen de divers facteurs relatifs à votre cas et à l’intérêt public, tel que le prévoit le Code. Si vous désirez présenter une demande d’annulation ou de réduction de la période de restriction, vous devez communiquer avec le Bureau de Valeurs et de l’éthique par l’intermédiaire du <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Centre de services en ressources humaines</a> d’EDSC.
+c)Â Â de donner Ã  vos clients ou Ã  votre employeur, au moyen de renseignements qui ne sont pas accessibles au public, des conseils touchant les programmes ou les politiques du MinistÃ¨re ou concernant les programmes ou les politiques des ministÃ¨res ou des organismes avec lesquels vous avez entretenu dâ€™importants rapports directs.
+Â 
+Cette pÃ©riode de restriction pourrait toutefois Ãªtre rÃ©duite ou annulÃ©e aprÃ¨s lâ€™examen de divers facteurs relatifs Ã  votre cas et Ã  lâ€™intÃ©rÃªt public, tel que le prÃ©voit le Code. Si vous dÃ©sirez prÃ©senter une demande dâ€™annulation ou de rÃ©duction de la pÃ©riode de restriction, vous devez communiquer avec le Bureau de Valeurs et de lâ€™Ã©thique par lâ€™intermÃ©diaire du <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Centre de services en ressources humaines</a> dâ€™EDSC.
  
-Toute décision relative à votre situation vous sera communiquée par écrit.
+Toute dÃ©cision relative Ã  votre situation vous sera communiquÃ©e par Ã©crit.
  
-De plus, la Loi sur le lobbying vous interdit, pendant une période de cinq ans, à titre de titulaire d’une charge publique désignée :
+De plus, la Loi sur le lobbying vous interdit, pendant une pÃ©riode de cinq ans, Ã  titre de titulaire dâ€™une charge publique dÃ©signÃ©e :
 
-a) de travailler à titre de lobbyiste-conseil;
-b) de mener des activités de lobbying pour le compte d’une organisation;
-c) de travailler pour une société, si le lobbying constitue une partie importante (20 % ou plus) de votre travail.
+a) de travailler Ã  titre de lobbyiste-conseil;
+b) de mener des activitÃ©s de lobbying pour le compte dâ€™une organisation;
+c) de travailler pour une sociÃ©tÃ©, si le lobbying constitue une partie importante (20 % ou plus) de votre travail.
  
-Le commissaire au lobbying a le pouvoir de vous accorder des exemptions à l’interdiction de faire du lobbying pendant une période de cinq ans dans certaines situations décrites dans la Loi sur le lobbying. Veuillez consulter le site Web du <a href="https://lobbycanada.gc.ca/fr/">Commissariat au lobbying du Canada</a> pour de plus amples renseignements.
+Le commissaire au lobbying a le pouvoir de vous accorder des exemptions Ã  lâ€™interdiction de faire du lobbying pendant une pÃ©riode de cinq ans dans certaines situations dÃ©crites dans la Loi sur le lobbying. Veuillez consulter le site Web du <a href="https://lobbycanada.gc.ca/fr/">Commissariat au lobbying du Canada</a> pour de plus amples renseignements.
  
-Les agents du Bureau des valeurs et de l’éthique se feront un plaisir de vous expliquer les dispositions supplémentaires à l’après-mandat et de répondre à toutes vos questions. S’il vous plait, n’hésitez pas à contacter le Bureau de valeurs et de l’éthique pour obtenir de plus amples renseignements par courriel <a href="mailto:NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca">NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca</a> ou par l’intermédiaire du <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Centre de services en ressources humaines</a> d’EDSC.
+Les agents du Bureau des valeurs et de lâ€™Ã©thique se feront un plaisir de vous expliquer les dispositions supplÃ©mentaires Ã  lâ€™aprÃ¨s-mandat et de rÃ©pondre Ã  toutes vos questions. Sâ€™il vous plait, nâ€™hÃ©sitez pas Ã  contacter le Bureau de valeurs et de lâ€™Ã©thique pour obtenir de plus amples renseignements par courriel <a href="mailto:NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca">NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca</a> ou par lâ€™intermÃ©diaire du <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Centre de services en ressources humaines</a> dâ€™EDSC.
  
 Cordialement,
  
-Darlène de Gravina
+DarlÃ¨ne de Gravina
 Sous-ministre adjointe
-Direction générale des services de ressources humaines
+Direction gÃ©nÃ©rale des services de ressources humaines
 
- ---------> English version of the email --------->
+Â ---------> English version of the email --------->
 
 Colleague,
  
@@ -837,7 +837,7 @@ b) make representations to any government organization on behalf of persons or e
  
 c) give advice to your clients or employer using information that is not publicly available concerning the programs or policies of the Department or concerning the programs or policies of the departments or organizations with which you had a direct and substantial relationship.
  
-This limitation period may, however be waived or reduced after consideration of various factors, as specified in the Code, in regards to both your situation and the public interest. If you wish to make a request to waive or reduce the limitation period, please contact the Office of Values and Ethics through ESDC’s <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Human Resources Service Centre</a>.
+This limitation period may, however be waived or reduced after consideration of various factors, as specified in the Code, in regards to both your situation and the public interest. If you wish to make a request to waive or reduce the limitation period, please contact the Office of Values and Ethics through ESDCâ€™s <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Human Resources Service Centre</a>.
  
 You will be advised in writing of any decision in relation to your specific situation.
  
@@ -849,15 +849,15 @@ c) working for a corporation if lobbying constitutes a significant part (20% or 
  
 The Commissioner of Lobbying is empowered to grant exemptions to the five-year prohibition on lobbying in certain situations described in the Lobbying Act. Please consult the <a href="https://lobbycanada.gc.ca/en/">Office of the Commissioner of Lobbying of Canada</a> website for more detailed information.
  
-Officers at the Office of Values and Ethics would be pleased to explain the post-employment provisions further and answer any questions you may have. Should you require additional information, please do not hesitate to contact the Office of Values and Ethics through the ESDC’s <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Human Resources Service Centre</a> or by email at <a href="mailto:NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca">NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca</a> 
+Officers at the Office of Values and Ethics would be pleased to explain the post-employment provisions further and answer any questions you may have. Should you require additional information, please do not hesitate to contact the Office of Values and Ethics through the ESDCâ€™s <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Human Resources Service Centre</a> or by email at <a href="mailto:NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca">NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca</a> 
 
 Yours sincerely,
  
  
-Darlène de Gravina
+DarlÃ¨ne de Gravina
 Assistant Deputy Minister
 Human Resources Services Branch','2015-03-30T00:00:00',NULL,N'Robichaud, Yves [NC]',N'Leblanc, Chantal x [NC]','2015-03-30T07:42:48.493','2021-05-11T13:42:48.793',34)
- ,(60,N'Conflict of Interest and Post-Employment Message',N'Message à propos des conflits d''intérêts et l''après-mandat',N'---------> La version française du courriel suit l''anglais --------->
+ ,(60,N'Conflict of Interest and Post-Employment Message',N'Message Ã  propos des conflits d''intÃ©rÃªts et l''aprÃ¨s-mandat',N'---------> La version franÃ§aise du courriel suit l''anglais --------->
 
 Colleague,
  
@@ -875,79 +875,79 @@ b) make representations to any government organization on behalf of persons or e
  
 c) give advice to your clients or employer using information that is not publicly available concerning the programs or policies of the Department or concerning the programs or policies of the departments or organizations with which you had a direct and substantial relationship.
  
-This limitation period may, however be waived or reduced after consideration of various factors, as specified in the Code, in regards to both your situation and the public interest. If you wish to make a request to waive or reduce the limitation period, please contact the Office of Values and Ethics through ESDC’s <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Human Resources Service Centre</a>.
+This limitation period may, however be waived or reduced after consideration of various factors, as specified in the Code, in regards to both your situation and the public interest. If you wish to make a request to waive or reduce the limitation period, please contact the Office of Values and Ethics through ESDCâ€™s <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Human Resources Service Centre</a>.
  
 You will be advised in writing of any decision in relation to your specific situation.
  
-Officers at the Office of Values and Ethics would be pleased to explain the post-employment provisions further and answer any questions you may have. Should you require additional information, please do not hesitate to contact the Office of Values and Ethics through the ESDC’s <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Human Resources Service Centre</a> or by email at <a href="mailto:NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca">NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca</a> 
+Officers at the Office of Values and Ethics would be pleased to explain the post-employment provisions further and answer any questions you may have. Should you require additional information, please do not hesitate to contact the Office of Values and Ethics through the ESDCâ€™s <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Human Resources Service Centre</a> or by email at <a href="mailto:NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca">NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca</a> 
 
 Yours sincerely,
  
-Véronique Tremblay
-Director – Office of Workplace Values, Recognition and Resolution
+VÃ©ronique Tremblay
+Director â€“ Office of Workplace Values, Recognition and Resolution
 Human Resources Services Branch
 Employment and Social Development Canada/ Government of Canada
 
----------> Version française du courriel --------->
+---------> Version franÃ§aise du courriel --------->
 
-Collègue, 
+CollÃ¨gue, 
  
-Puisque vous quittez la fonction publique du Canada, je voudrais vous rappeler qu’il est important de veiller à éviter tout conflit d’intérêts entre vos responsabilités actuelles et futures si vous envisagez de faire une transition vers un emploi à l’extérieur d’ESDC.
+Puisque vous quittez la fonction publique du Canada, je voudrais vous rappeler quâ€™il est important de veiller Ã  Ã©viter tout conflit dâ€™intÃ©rÃªts entre vos responsabilitÃ©s actuelles et futures si vous envisagez de faire une transition vers un emploi Ã  lâ€™extÃ©rieur dâ€™ESDC.
 
-Comme vous êtes dans une position désignée, il vous incombe de respecter les mesures d’observation concernant l’après-mandat énoncées à l’alinéa 4(e) du <a href="http://iservice.prv/fra/si/ve/code_de_conduite/code_de_conduite.shtml">Code de conduite d&rsquo;EDSC</a> (le Code). L’application des dispositions relatives à l’après-mandat a pour but de vous protéger et de protéger le gouvernement contre les allégations de traitement de faveur, d’accès privilégié aux représentants du gouvernement ou d’utilisation de renseignements gouvernementaux qui ne sont pas facilement accessibles au public. 
+Comme vous Ãªtes dans une position dÃ©signÃ©e, il vous incombe de respecter les mesures dâ€™observation concernant lâ€™aprÃ¨s-mandat Ã©noncÃ©es Ã  lâ€™alinÃ©aÂ 4(e) du <a href="http://iservice.prv/fra/si/ve/code_de_conduite/code_de_conduite.shtml">Code de conduite d&rsquo;EDSC</a> (le Code). Lâ€™application des dispositions relatives Ã  lâ€™aprÃ¨s-mandat a pour but de vous protÃ©ger et de protÃ©ger le gouvernement contre les allÃ©gations de traitement de faveur, dâ€™accÃ¨s privilÃ©giÃ© aux reprÃ©sentants du gouvernement ou dâ€™utilisation de renseignements gouvernementaux qui ne sont pas facilement accessibles au public. 
  
-En outre, comme stipulé dans <a href="http://iservice.prv/fra/si/ve/code_de_conduite/code_de_conduite.shtml">le Code</a>, une période de restriction d’un an débutera le jour de votre départ. Avant votre départ et pendant cette période de restriction, vous devez soumettre une <a href="http://hrsc-csrh.prv/WebForms/NewRequest.aspx?RequestType=COI&amp;FormTypeInd=0">d&eacute;claration de conflit d&rsquo;int&eacute;r&ecirc;ts</a> au <a href="mailto:NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca">Bureau des valeurs et de l&rsquo;&eacute;thique</a> toutes offres sérieuses d’emploi ou activités proposées à l’extérieur de la fonction publique. Cela inclut, mais ne se limite pas à des offres faites par des entités avec lesquelles vous avez eu, personnellement ou par l’entremise de vos subalternes, des rapports officiels importants au cours de votre dernière année de service. 
- 
-De plus, pendant cette période d’un an, il vous sera interdit :
- 
-a)  d’accepter une nomination au conseil d’administration d’une entité privée avec laquelle vous avez eu, personnellement ou par l’entremise de vos subalternes, des rapports officiels importants au cours de l’année ayant précédé la fin de votre mandat, ou d’accepter un emploi au sein d’une telle entité?;
+En outre, comme stipulÃ© dans <a href="http://iservice.prv/fra/si/ve/code_de_conduite/code_de_conduite.shtml">le Code</a>, une pÃ©riode de restriction dâ€™un an dÃ©butera le jour de votre dÃ©part. Avant votre dÃ©part et pendant cette pÃ©riode de restriction, vous devez soumettre une <a href="http://hrsc-csrh.prv/WebForms/NewRequest.aspx?RequestType=COI&amp;FormTypeInd=0">d&eacute;claration de conflit d&rsquo;int&eacute;r&ecirc;ts</a> au <a href="mailto:NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca">Bureau des valeurs et de l&rsquo;&eacute;thique</a> toutes offres sÃ©rieuses dâ€™emploi ou activitÃ©s proposÃ©es Ã  lâ€™extÃ©rieur de la fonction publique. Cela inclut, mais ne se limite pas Ã  des offres faites par des entitÃ©s avec lesquelles vous avez eu, personnellement ou par lâ€™entremise de vos subalternes, des rapports officiels importants au cours de votre derniÃ¨re annÃ©e de service. 
+Â 
+De plus, pendant cette pÃ©riode dâ€™un an, il vous sera interditÂ :
+Â 
+a)Â Â dâ€™accepter une nomination au conseil dâ€™administration dâ€™une entitÃ© privÃ©e avec laquelle vous avez eu, personnellement ou par lâ€™entremise de vos subalternes, des rapports officiels importants au cours de lâ€™annÃ©e ayant prÃ©cÃ©dÃ© la fin de votre mandat, ou dâ€™accepter un emploi au sein dâ€™une telle entitÃ©?;
 
-b)  d’intervenir pour le compte ou au nom d’une autre personne ou d’une entité auprès de tout organisme du gouvernement avec lequel vous avez eu, personnellement ou par l’entremise de vos subalternes, des rapports officiels importants au cours de l’année ayant précédé la fin de votre mandat?;
+b)Â Â dâ€™intervenir pour le compte ou au nom dâ€™une autre personne ou dâ€™une entitÃ© auprÃ¨s de tout organisme du gouvernement avec lequel vous avez eu, personnellement ou par lâ€™entremise de vos subalternes, des rapports officiels importants au cours de lâ€™annÃ©e ayant prÃ©cÃ©dÃ© la fin de votre mandat?;
 
-c)  de donner à vos clients ou à votre employeur, au moyen de renseignements qui ne sont pas accessibles au public, des conseils touchant les programmes ou les politiques du Ministère ou concernant les programmes ou les politiques des ministères ou des organismes avec lesquels vous avez entretenu d’importants rapports directs.
- 
-Cette période de restriction pourrait toutefois être réduite ou annulée après l’examen de divers facteurs relatifs à votre cas et à l’intérêt public, tel que le prévoit le Code. Si vous désirez présenter une demande d’annulation ou de réduction de la période de restriction, vous devez communiquer avec le Bureau de Valeurs et de l’éthique par l’intermédiaire du <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Centre de services en ressources humaines</a> d’EDSC.
+c)Â Â de donner Ã  vos clients ou Ã  votre employeur, au moyen de renseignements qui ne sont pas accessibles au public, des conseils touchant les programmes ou les politiques du MinistÃ¨re ou concernant les programmes ou les politiques des ministÃ¨res ou des organismes avec lesquels vous avez entretenu dâ€™importants rapports directs.
+Â 
+Cette pÃ©riode de restriction pourrait toutefois Ãªtre rÃ©duite ou annulÃ©e aprÃ¨s lâ€™examen de divers facteurs relatifs Ã  votre cas et Ã  lâ€™intÃ©rÃªt public, tel que le prÃ©voit le Code. Si vous dÃ©sirez prÃ©senter une demande dâ€™annulation ou de rÃ©duction de la pÃ©riode de restriction, vous devez communiquer avec le Bureau de Valeurs et de lâ€™Ã©thique par lâ€™intermÃ©diaire du <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Centre de services en ressources humaines</a> dâ€™EDSC.
  
-Toute décision relative à votre situation vous sera communiquée par écrit.
+Toute dÃ©cision relative Ã  votre situation vous sera communiquÃ©e par Ã©crit.
  
-Les agents du Bureau des valeurs et de l’éthique se feront un plaisir de vous expliquer les dispositions supplémentaires à l’après-mandat et de répondre à toutes vos questions. S’il vous plait, n’hésitez pas à contacter le Bureau de valeurs et de l’éthique pour obtenir de plus amples renseignements par courriel <a href="mailto:NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca">NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca</a> ou par l’intermédiaire du <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Centre de services en ressources humaines</a> d’EDSC.
+Les agents du Bureau des valeurs et de lâ€™Ã©thique se feront un plaisir de vous expliquer les dispositions supplÃ©mentaires Ã  lâ€™aprÃ¨s-mandat et de rÃ©pondre Ã  toutes vos questions. Sâ€™il vous plait, nâ€™hÃ©sitez pas Ã  contacter le Bureau de valeurs et de lâ€™Ã©thique pour obtenir de plus amples renseignements par courriel <a href="mailto:NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca">NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca</a> ou par lâ€™intermÃ©diaire du <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Centre de services en ressources humaines</a> dâ€™EDSC.
  
 Cordialement, 
  
-Véronique Tremblay
-Directrice – Bureau des valeurs, de la reconnaissance et de la résolution en milieu de travail 
-Direction générale des services de ressources humaines
-Emploi et développement social Canada/ Gouvernement du Canada',N'---------> The English version of the email follows the French --------->
+VÃ©ronique Tremblay
+Directrice â€“ Bureau des valeurs, de la reconnaissance et de la rÃ©solution en milieu de travail 
+Direction gÃ©nÃ©rale des services de ressources humaines
+Emploi et dÃ©veloppement social Canada/ Gouvernement du Canada',N'---------> The English version of the email follows the French --------->
 
-Collègue, 
+CollÃ¨gue, 
  
-Puisque vous quittez la fonction publique du Canada, je voudrais vous rappeler qu’il est important de veiller à éviter tout conflit d’intérêts entre vos responsabilités actuelles et futures si vous envisagez de faire une transition vers un emploi à l’extérieur d’ESDC.
+Puisque vous quittez la fonction publique du Canada, je voudrais vous rappeler quâ€™il est important de veiller Ã  Ã©viter tout conflit dâ€™intÃ©rÃªts entre vos responsabilitÃ©s actuelles et futures si vous envisagez de faire une transition vers un emploi Ã  lâ€™extÃ©rieur dâ€™ESDC.
 
-Comme vous êtes dans une position désignée, il vous incombe de respecter les mesures d’observation concernant l’après-mandat énoncées à l’alinéa 4(e) du <a href="http://iservice.prv/fra/si/ve/code_de_conduite/code_de_conduite.shtml">Code de conduite d&rsquo;EDSC</a> (le Code). L’application des dispositions relatives à l’après-mandat a pour but de vous protéger et de protéger le gouvernement contre les allégations de traitement de faveur, d’accès privilégié aux représentants du gouvernement ou d’utilisation de renseignements gouvernementaux qui ne sont pas facilement accessibles au public. 
+Comme vous Ãªtes dans une position dÃ©signÃ©e, il vous incombe de respecter les mesures dâ€™observation concernant lâ€™aprÃ¨s-mandat Ã©noncÃ©es Ã  lâ€™alinÃ©aÂ 4(e) du <a href="http://iservice.prv/fra/si/ve/code_de_conduite/code_de_conduite.shtml">Code de conduite d&rsquo;EDSC</a> (le Code). Lâ€™application des dispositions relatives Ã  lâ€™aprÃ¨s-mandat a pour but de vous protÃ©ger et de protÃ©ger le gouvernement contre les allÃ©gations de traitement de faveur, dâ€™accÃ¨s privilÃ©giÃ© aux reprÃ©sentants du gouvernement ou dâ€™utilisation de renseignements gouvernementaux qui ne sont pas facilement accessibles au public. 
  
-En outre, comme stipulé dans <a href="http://iservice.prv/fra/si/ve/code_de_conduite/code_de_conduite.shtml">le Code</a>, une période de restriction d’un an débutera le jour de votre départ. Avant votre départ et pendant cette période de restriction, vous devez soumettre une <a href="http://hrsc-csrh.prv/WebForms/NewRequest.aspx?RequestType=COI&amp;FormTypeInd=0">d&eacute;claration de conflit d&rsquo;int&eacute;r&ecirc;ts</a> au <a href="mailto:NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca">Bureau des valeurs et de l&rsquo;&eacute;thique</a> toutes offres sérieuses d’emploi ou activités proposées à l’extérieur de la fonction publique. Cela inclut, mais ne se limite pas à des offres faites par des entités avec lesquelles vous avez eu, personnellement ou par l’entremise de vos subalternes, des rapports officiels importants au cours de votre dernière année de service. 
- 
-De plus, pendant cette période d’un an, il vous sera interdit :
- 
-a)  d’accepter une nomination au conseil d’administration d’une entité privée avec laquelle vous avez eu, personnellement ou par l’entremise de vos subalternes, des rapports officiels importants au cours de l’année ayant précédé la fin de votre mandat, ou d’accepter un emploi au sein d’une telle entité?;
+En outre, comme stipulÃ© dans <a href="http://iservice.prv/fra/si/ve/code_de_conduite/code_de_conduite.shtml">le Code</a>, une pÃ©riode de restriction dâ€™un an dÃ©butera le jour de votre dÃ©part. Avant votre dÃ©part et pendant cette pÃ©riode de restriction, vous devez soumettre une <a href="http://hrsc-csrh.prv/WebForms/NewRequest.aspx?RequestType=COI&amp;FormTypeInd=0">d&eacute;claration de conflit d&rsquo;int&eacute;r&ecirc;ts</a> au <a href="mailto:NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca">Bureau des valeurs et de l&rsquo;&eacute;thique</a> toutes offres sÃ©rieuses dâ€™emploi ou activitÃ©s proposÃ©es Ã  lâ€™extÃ©rieur de la fonction publique. Cela inclut, mais ne se limite pas Ã  des offres faites par des entitÃ©s avec lesquelles vous avez eu, personnellement ou par lâ€™entremise de vos subalternes, des rapports officiels importants au cours de votre derniÃ¨re annÃ©e de service. 
+Â 
+De plus, pendant cette pÃ©riode dâ€™un an, il vous sera interditÂ :
+Â 
+a)Â Â dâ€™accepter une nomination au conseil dâ€™administration dâ€™une entitÃ© privÃ©e avec laquelle vous avez eu, personnellement ou par lâ€™entremise de vos subalternes, des rapports officiels importants au cours de lâ€™annÃ©e ayant prÃ©cÃ©dÃ© la fin de votre mandat, ou dâ€™accepter un emploi au sein dâ€™une telle entitÃ©?;
 
-b)  d’intervenir pour le compte ou au nom d’une autre personne ou d’une entité auprès de tout organisme du gouvernement avec lequel vous avez eu, personnellement ou par l’entremise de vos subalternes, des rapports officiels importants au cours de l’année ayant précédé la fin de votre mandat?;
+b)Â Â dâ€™intervenir pour le compte ou au nom dâ€™une autre personne ou dâ€™une entitÃ© auprÃ¨s de tout organisme du gouvernement avec lequel vous avez eu, personnellement ou par lâ€™entremise de vos subalternes, des rapports officiels importants au cours de lâ€™annÃ©e ayant prÃ©cÃ©dÃ© la fin de votre mandat?;
 
-c)  de donner à vos clients ou à votre employeur, au moyen de renseignements qui ne sont pas accessibles au public, des conseils touchant les programmes ou les politiques du Ministère ou concernant les programmes ou les politiques des ministères ou des organismes avec lesquels vous avez entretenu d’importants rapports directs.
- 
-Cette période de restriction pourrait toutefois être réduite ou annulée après l’examen de divers facteurs relatifs à votre cas et à l’intérêt public, tel que le prévoit le Code. Si vous désirez présenter une demande d’annulation ou de réduction de la période de restriction, vous devez communiquer avec le Bureau de Valeurs et de l’éthique par l’intermédiaire du <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Centre de services en ressources humaines</a> d’EDSC.
+c)Â Â de donner Ã  vos clients ou Ã  votre employeur, au moyen de renseignements qui ne sont pas accessibles au public, des conseils touchant les programmes ou les politiques du MinistÃ¨re ou concernant les programmes ou les politiques des ministÃ¨res ou des organismes avec lesquels vous avez entretenu dâ€™importants rapports directs.
+Â 
+Cette pÃ©riode de restriction pourrait toutefois Ãªtre rÃ©duite ou annulÃ©e aprÃ¨s lâ€™examen de divers facteurs relatifs Ã  votre cas et Ã  lâ€™intÃ©rÃªt public, tel que le prÃ©voit le Code. Si vous dÃ©sirez prÃ©senter une demande dâ€™annulation ou de rÃ©duction de la pÃ©riode de restriction, vous devez communiquer avec le Bureau de Valeurs et de lâ€™Ã©thique par lâ€™intermÃ©diaire du <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Centre de services en ressources humaines</a> dâ€™EDSC.
  
-Toute décision relative à votre situation vous sera communiquée par écrit.
+Toute dÃ©cision relative Ã  votre situation vous sera communiquÃ©e par Ã©crit.
  
-Les agents du Bureau des valeurs et de l’éthique se feront un plaisir de vous expliquer les dispositions supplémentaires à l’après-mandat et de répondre à toutes vos questions. S’il vous plait, n’hésitez pas à contacter le Bureau de valeurs et de l’éthique pour obtenir de plus amples renseignements par courriel <a href="mailto:NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca">NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca</a> ou par l’intermédiaire du <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Centre de services en ressources humaines</a> d’EDSC.
+Les agents du Bureau des valeurs et de lâ€™Ã©thique se feront un plaisir de vous expliquer les dispositions supplÃ©mentaires Ã  lâ€™aprÃ¨s-mandat et de rÃ©pondre Ã  toutes vos questions. Sâ€™il vous plait, nâ€™hÃ©sitez pas Ã  contacter le Bureau de valeurs et de lâ€™Ã©thique pour obtenir de plus amples renseignements par courriel <a href="mailto:NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca">NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca</a> ou par lâ€™intermÃ©diaire du <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Centre de services en ressources humaines</a> dâ€™EDSC.
  
 Cordialement, 
  
-Véronique Tremblay
-Directrice – Bureau des valeurs, de la reconnaissance et de la résolution en milieu de travail 
-Direction générale des services de ressources humaines
-Emploi et développement social Canada/ Gouvernement du Canada
- ---------> English version of the email --------->
+VÃ©ronique Tremblay
+Directrice â€“ Bureau des valeurs, de la reconnaissance et de la rÃ©solution en milieu de travail 
+Direction gÃ©nÃ©rale des services de ressources humaines
+Emploi et dÃ©veloppement social Canada/ Gouvernement du Canada
+Â ---------> English version of the email --------->
 
 Colleague,
 
@@ -965,40 +965,40 @@ b) make representations to any government organization on behalf of persons or e
 
 c) give advice to your clients or employer using information that is not publicly available concerning the programs or policies of the Department or concerning the programs or policies of the departments or organizations with which you had a direct and substantial relationship.
 
-This limitation period may, however be waived or reduced after consideration of various factors, as specified in the Code, in regards to both your situation and the public interest. If you wish to make a request to waive or reduce the limitation period, please contact the Office of Values and Ethics through ESDC’s <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Human Resources Service Centre</a>.
+This limitation period may, however be waived or reduced after consideration of various factors, as specified in the Code, in regards to both your situation and the public interest. If you wish to make a request to waive or reduce the limitation period, please contact the Office of Values and Ethics through ESDCâ€™s <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Human Resources Service Centre</a>.
 
 You will be advised in writing of any decision in relation to your specific situation.
 
-Officers at the Office of Values and Ethics would be pleased to explain the post-employment provisions further and answer any questions you may have. Should you require additional information, please do not hesitate to contact the Office of Values and Ethics through the ESDC’s <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Human Resources Service Centre</a> or by email at <a href="mailto:NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca">NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca</a>
+Officers at the Office of Values and Ethics would be pleased to explain the post-employment provisions further and answer any questions you may have. Should you require additional information, please do not hesitate to contact the Office of Values and Ethics through the ESDCâ€™s <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Human Resources Service Centre</a> or by email at <a href="mailto:NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca">NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca</a>
 
 Yours sincerely,
 
-Véronique Tremblay
-Director – Office of Workplace Values, Recognition and Resolution
+VÃ©ronique Tremblay
+Director â€“ Office of Workplace Values, Recognition and Resolution
 Human Resources Services Branch
 Employment and Social Development Canada/ Government of Canada','2019-06-10T00:00:00',NULL,N'Robichaud, Yves [NC]',N'Leblanc, Chantal x [NC]','2015-03-30T07:42:48.500','2022-03-17T15:14:41.233',35)
- ,(61,N'HRSC ID [IDENTIFIER] - Request Recalled [EMP_NAME]',N'CSRH ID [IDENTIFIER] - Demande rappelée [EMP_NAME]',N'A request has been recalled and re-assigned to you.
+ ,(61,N'HRSC ID [IDENTIFIER] - Request Recalled [EMP_NAME]',N'CSRH ID [IDENTIFIER] - Demande rappelÃ©e [EMP_NAME]',N'A request has been recalled and re-assigned to you.
 
-You can view the request online by clicking on the following link: [REQUEST_LINK]',N'Une demande à été rappelé et vous a été assignée à nouveau.
+You can view the request online by clicking on the following link: [REQUEST_LINK]',N'Une demande Ã  Ã©tÃ© rappelÃ© et vous a Ã©tÃ© assignÃ©e Ã  nouveau.
 
-Vous pouvez accéder à la demande en cliquant sur le lien suivant : [REQUEST_LINK]','2015-03-30T00:00:00',NULL,N'Nolet, Éric [NC]',N'Robichaud, Martin M [NC]','2015-03-30T07:42:48.510','2020-04-14T14:34:47.223',38)
- ,(62,N'HRSC ID [IDENTIFIER] - Request Reminder - [SUBJECT] [EMP_NAME]',N'CSRH ID [IDENTIFIER] - Demande requérant votre attention - [SUBJECT] [EMP_NAME]',N'A request that you submitted requires your attention..
+Vous pouvez accÃ©der Ã  la demande en cliquant sur le lien suivant : [REQUEST_LINK]','2015-03-30T00:00:00',NULL,N'Nolet, Ã‰ric [NC]',N'Robichaud, Martin M [NC]','2015-03-30T07:42:48.510','2020-04-14T14:34:47.223',38)
+ ,(62,N'HRSC ID [IDENTIFIER] - Request Reminder - [SUBJECT] [EMP_NAME]',N'CSRH ID [IDENTIFIER] - Demande requÃ©rant votre attention - [SUBJECT] [EMP_NAME]',N'A request that you submitted requires your attention..
  
 You can view the request online by clicking on the following link: [REQUEST_LINK]
 
 Thank you for using the Human Resources Services Centre (HRSC) Web Application. 
 If you have any questions or concerns, please contact the lead assigned to your request.',N'Une demande que vous avez soumis demande votre attention.
 
-Vous pouvez accéder à la demande en cliquant sur le lien suivant : [REQUEST_LINK]
+Vous pouvez accÃ©der Ã  la demande en cliquant sur le lien suivant : [REQUEST_LINK]
 
-Merci d’avoir utilisé l’application web du Centre de services en ressources humaines (CSRH). 
-Pour toute question ou commentaire concernant cette demande, nous vous invitons à contacter le leader assigné à votre demande.','2019-04-17T00:00:00',NULL,N'Nolet, Éric [NC]',N'Robichaud, Martin M [NC]','2015-03-30T07:42:48.517','2020-05-14T10:58:03.350',37)
- ,(63,N'HRSC Requests assigned in bulk',N'CSRH Demandes assignées en bloc',N'[REQ_COUNT] request(s) have been assigned in bulk to you into the following BC: [BC]
+Merci dâ€™avoir utilisÃ© lâ€™application web du Centre de services en ressources humaines (CSRH). 
+Pour toute question ou commentaire concernant cette demande, nous vous invitons Ã  contacter le leader assignÃ© Ã  votre demande.','2019-04-17T00:00:00',NULL,N'Nolet, Ã‰ric [NC]',N'Robichaud, Martin M [NC]','2015-03-30T07:42:48.517','2020-05-14T10:58:03.350',37)
+ ,(63,N'HRSC Requests assigned in bulk',N'CSRH Demandes assignÃ©es en bloc',N'[REQ_COUNT] request(s) have been assigned in bulk to you into the following BC: [BC]
 
-You can view the request online on the HRSC Web Application: http://hrsc-csrh.prv/WebForms/ResultsMyRequests.aspx',N'[REQ_COUNT] demande(s) vous ont été assignée(s) en bloc dans le CA suivant : [BC]
+You can view the request online on the HRSC Web Application: http://hrsc-csrh.prv/WebForms/ResultsMyRequests.aspx',N'[REQ_COUNT] demande(s) vous ont Ã©tÃ© assignÃ©e(s) en bloc dans le CA suivant : [BC]
 
-Vous pouvez visualiser les demandes à partir de l’application Web du CSRH : http://hrsc-csrh.prv/WebForms/ResultsMyRequests.aspx','2015-03-30T00:00:00',NULL,N'Nolet, Éric [NC]',N'Dalebozik, Michael MW [NC]','2015-03-30T07:42:48.523','2020-01-20T10:44:53.660',39)
- ,(64,N'HRSC ID [IDENTIFIER] - Request to validate - [SUBJECT] [EMP_NAME]',N'CSRH ID [IDENTIFIER] - Demande à valider - [SUBJECT] [EMP_NAME]',N'An overtime request in compensatory time is pending validation from you.
+Vous pouvez visualiser les demandes Ã  partir de lâ€™application Web du CSRH : http://hrsc-csrh.prv/WebForms/ResultsMyRequests.aspx','2015-03-30T00:00:00',NULL,N'Nolet, Ã‰ric [NC]',N'Dalebozik, Michael MW [NC]','2015-03-30T07:42:48.523','2020-01-20T10:44:53.660',39)
+ ,(64,N'HRSC ID [IDENTIFIER] - Request to validate - [SUBJECT] [EMP_NAME]',N'CSRH ID [IDENTIFIER] - Demande Ã  valider - [SUBJECT] [EMP_NAME]',N'An overtime request in compensatory time is pending validation from you.
 
 You can view the request online by clicking on the following link: [REQUEST_LINK]
 
@@ -1011,21 +1011,21 @@ Collective Agreements:
 http://iservice.prv/eng/hr/cb/tools_and_resources/collective_agreements.shtml
 
 Terms and Conditions of Employment
-http://iservice.prv/eng/hr/cb/tools_and_resources/terms_and_conditions_employment.shtml',N'Une demande de temps supplémentaire en temps compensatoire est en attente de validation de votre part.
+http://iservice.prv/eng/hr/cb/tools_and_resources/terms_and_conditions_employment.shtml',N'Une demande de temps supplÃ©mentaire en temps compensatoire est en attente de validation de votre part.
 
-Vous pouvez accéder à la demande en cliquant sur le lien suivant : [REQUEST_LINK]
+Vous pouvez accÃ©der Ã  la demande en cliquant sur le lien suivant : [REQUEST_LINK]
 
 Les sections iService suivantes peuvent vous aider dans la validation.
 
-Section du temps supplémentaire :
+Section du temps supplÃ©mentaire :
 http://s2tst-srv403.sade-edap.prv/fra/rh/ras/sujets/paye/information_paye.shtml#Overtime
 
 Conventions collectives : 
 http://iservice.prv/fra/rh/ras/outils_et_ressources/conventions_collectives.shtml
 
-Conditions d’emploi : 
+Conditions dâ€™emploi : 
 http://iservice.prv/fra/rh/ras/outils_et_ressources/conditions_emploi.shtml','2015-03-30T00:00:00',NULL,N'Robichaud, Yves [NC]',N'Robichaud, Martin M [NC]','2015-03-30T07:42:48.530','2020-04-14T14:21:58.047',40)
- ,(65,N'HRSC ID [IDENTIFIER] - Request to approve - [SUBJECT] [EMP_NAME]',N'CSRH ID [IDENTIFIER] - Demande à approuver - [SUBJECT] [EMP_NAME]',N'An overtime request in compensatory time has been assigned to you for approval.
+ ,(65,N'HRSC ID [IDENTIFIER] - Request to approve - [SUBJECT] [EMP_NAME]',N'CSRH ID [IDENTIFIER] - Demande Ã  approuver - [SUBJECT] [EMP_NAME]',N'An overtime request in compensatory time has been assigned to you for approval.
 
 You can view the request online by clicking on the following link: [REQUEST_LINK]
 
@@ -1038,21 +1038,21 @@ Collective Agreements:
 http://iservice.prv/eng/hr/cb/tools_and_resources/collective_agreements.shtml
 
 Terms and Conditions of Employment
-http://iservice.prv/eng/hr/cb/tools_and_resources/terms_and_conditions_employment.shtml',N'Une demande de temps supplémentaire en temps compensatoire vous a été assignée pour approbation.
+http://iservice.prv/eng/hr/cb/tools_and_resources/terms_and_conditions_employment.shtml',N'Une demande de temps supplÃ©mentaire en temps compensatoire vous a Ã©tÃ© assignÃ©e pour approbation.
 
-Vous pouvez accéder à la demande en cliquant sur le lien suivant : [REQUEST_LINK]
+Vous pouvez accÃ©der Ã  la demande en cliquant sur le lien suivant : [REQUEST_LINK]
 
-Les sections iService suivantes peuvent vous aider dans l’approbation.
+Les sections iService suivantes peuvent vous aider dans lâ€™approbation.
 
-Section du temps supplémentaire :
+Section du temps supplÃ©mentaire :
 http://s2tst-srv403.sade-edap.prv/fra/rh/ras/sujets/paye/information_paye.shtml#Overtime
 
 Conventions collectives : 
 http://iservice.prv/fra/rh/ras/outils_et_ressources/conventions_collectives.shtml
 
-Conditions d’emploi : 
+Conditions dâ€™emploi : 
 http://iservice.prv/fra/rh/ras/outils_et_ressources/conditions_emploi.shtml','2015-03-30T00:00:00',NULL,N'Robichaud, Yves [NC]',N'Robichaud, Martin M [NC]','2015-03-30T07:42:48.537','2020-04-14T14:22:22.687',41)
- ,(66,N'HRSC ID [IDENTIFIER] - Request reassigned for approval - [SUBJECT] [EMP_NAME]',N'CSRH ID [IDENTIFIER] - Demande réassignée pour approbation - [SUBJECT] [EMP_NAME]',N'An overtime request in compensatory time has been reassigned to you for approval.
+ ,(66,N'HRSC ID [IDENTIFIER] - Request reassigned for approval - [SUBJECT] [EMP_NAME]',N'CSRH ID [IDENTIFIER] - Demande rÃ©assignÃ©e pour approbation - [SUBJECT] [EMP_NAME]',N'An overtime request in compensatory time has been reassigned to you for approval.
 
 You can view the request online by clicking on the following link: [REQUEST_LINK]
 
@@ -1065,62 +1065,62 @@ Collective Agreements:
 http://iservice.prv/eng/hr/cb/tools_and_resources/collective_agreements.shtml
 
 Terms and Conditions of Employment
-http://iservice.prv/eng/hr/cb/tools_and_resources/terms_and_conditions_employment.shtml',N'Une demande de temps supplémentaire en temps compensatoire vous a été réassignée pour approbation. 
+http://iservice.prv/eng/hr/cb/tools_and_resources/terms_and_conditions_employment.shtml',N'Une demande de temps supplÃ©mentaire en temps compensatoire vous a Ã©tÃ© rÃ©assignÃ©e pour approbation. 
 
-Vous pouvez accéder à la demande en cliquant sur le lien suivant : [REQUEST_LINK]
+Vous pouvez accÃ©der Ã  la demande en cliquant sur le lien suivant : [REQUEST_LINK]
 
-Les sections iService suivantes peuvent vous aider dans l’approbation.
+Les sections iService suivantes peuvent vous aider dans lâ€™approbation.
 
-Section du temps supplémentaire :
+Section du temps supplÃ©mentaire :
 http://s2tst-srv403.sade-edap.prv/fra/rh/ras/sujets/paye/information_paye.shtml#Overtime
 
 Conventions collectives : 
 http://iservice.prv/fra/rh/ras/outils_et_ressources/conventions_collectives.shtml
 
-Conditions d’emploi : 
+Conditions dâ€™emploi : 
 http://iservice.prv/fra/rh/ras/outils_et_ressources/conditions_emploi.shtml','2015-03-30T00:00:00',NULL,N'Robichaud, Yves [NC]',N'Robichaud, Martin M [NC]','2015-03-30T07:42:48.543','2020-04-14T14:22:48.393',42)
- ,(67,N'HRSC ID [IDENTIFIER] - Request cancelled - [SUBJECT] [EMP_NAME]',N'CSRH ID [IDENTIFIER] - Demande annulée - [SUBJECT] [EMP_NAME]',N'This overtime request in compensatory time has been cancelled by the Manager.
+ ,(67,N'HRSC ID [IDENTIFIER] - Request cancelled - [SUBJECT] [EMP_NAME]',N'CSRH ID [IDENTIFIER] - Demande annulÃ©e - [SUBJECT] [EMP_NAME]',N'This overtime request in compensatory time has been cancelled by the Manager.
 
 [REJECT_NOTE]
 
-You can view the request online by clicking on the following link: [REQUEST_LINK]',N'Cette demande de temps supplémentaire en temps compensatoire a été annulée par le gestionnaire.
+You can view the request online by clicking on the following link: [REQUEST_LINK]',N'Cette demande de temps supplÃ©mentaire en temps compensatoire a Ã©tÃ© annulÃ©e par le gestionnaire.
 
 [REJECT_NOTE]
 
-Vous pouvez accéder à la demande en cliquant sur le lien suivant : [REQUEST_LINK]','2015-03-30T00:00:00',NULL,N'Robichaud, Yves',N'Robichaud, Martin M [NC]','2015-03-30T07:42:48.550','2020-04-14T14:23:15.613',43)
- ,(68,N'HRSC ID [IDENTIFIER] - Request cancelled - [SUBJECT] [EMP_NAME]',N'CSRH ID [IDENTIFIER] - Demande annulée - [SUBJECT] [EMP_NAME]',N'This overtime request in compensatory time has been cancelled by the immediate Supervisor.
+Vous pouvez accÃ©der Ã  la demande en cliquant sur le lien suivant : [REQUEST_LINK]','2015-03-30T00:00:00',NULL,N'Robichaud, Yves',N'Robichaud, Martin M [NC]','2015-03-30T07:42:48.550','2020-04-14T14:23:15.613',43)
+ ,(68,N'HRSC ID [IDENTIFIER] - Request cancelled - [SUBJECT] [EMP_NAME]',N'CSRH ID [IDENTIFIER] - Demande annulÃ©e - [SUBJECT] [EMP_NAME]',N'This overtime request in compensatory time has been cancelled by the immediate Supervisor.
 
 [REJECT_NOTE]
 
-You can view the request online by clicking on the following link: [REQUEST_LINK]',N'La demande de temps supplémentaire en temps compensatoire a été annulée par le superviseur immédiat.
+You can view the request online by clicking on the following link: [REQUEST_LINK]',N'La demande de temps supplÃ©mentaire en temps compensatoire a Ã©tÃ© annulÃ©e par le superviseur immÃ©diat.
 
 [REJECT_NOTE]
 
-Vous pouvez accéder à la demande en cliquant sur le lien suivant : [REQUEST_LINK]','2015-03-30T00:00:00',NULL,N'Robichaud, Yves [NC]',N'Robichaud, Martin M [NC]','2015-03-30T07:42:48.553','2020-04-14T14:23:45.583',44)
- ,(69,N'HRSC ID [IDENTIFIER] - Request cancelled - [SUBJECT] [EMP_NAME]',N'CSRH ID [IDENTIFIER] - Demande annulée - [SUBJECT] [EMP_NAME]',N'This overtime request in compensatory time has been cancelled by the employee.
+Vous pouvez accÃ©der Ã  la demande en cliquant sur le lien suivant : [REQUEST_LINK]','2015-03-30T00:00:00',NULL,N'Robichaud, Yves [NC]',N'Robichaud, Martin M [NC]','2015-03-30T07:42:48.553','2020-04-14T14:23:45.583',44)
+ ,(69,N'HRSC ID [IDENTIFIER] - Request cancelled - [SUBJECT] [EMP_NAME]',N'CSRH ID [IDENTIFIER] - Demande annulÃ©e - [SUBJECT] [EMP_NAME]',N'This overtime request in compensatory time has been cancelled by the employee.
 
 [REJECT_NOTE]
 
-You can view the request online by clicking on the following link: [REQUEST_LINK]',N'Cette demande de temps supplémentaire en temps compensatoire a été annulée par l’employé.
+You can view the request online by clicking on the following link: [REQUEST_LINK]',N'Cette demande de temps supplÃ©mentaire en temps compensatoire a Ã©tÃ© annulÃ©e par lâ€™employÃ©.
 
 [REJECT_NOTE]
 
-Vous pouvez accéder à la demande en cliquant sur le lien suivant : [REQUEST_LINK]','2015-03-30T00:00:00',NULL,N'Robichaud, Yves [NC]',N'Robichaud, Martin M [NC]','2015-03-30T07:42:48.560','2020-04-14T14:24:11.303',45)
- ,(73,N'HRSC ID [IDENTIFIER] - Request resolved - [SUBJECT] [EMP_NAME]',N'CSRH ID [IDENTIFIER] - Demande résolue - [SUBJECT] [EMP_NAME]',N'This overtime request in compensatory time has been resolved.
+Vous pouvez accÃ©der Ã  la demande en cliquant sur le lien suivant : [REQUEST_LINK]','2015-03-30T00:00:00',NULL,N'Robichaud, Yves [NC]',N'Robichaud, Martin M [NC]','2015-03-30T07:42:48.560','2020-04-14T14:24:11.303',45)
+ ,(73,N'HRSC ID [IDENTIFIER] - Request resolved - [SUBJECT] [EMP_NAME]',N'CSRH ID [IDENTIFIER] - Demande rÃ©solue - [SUBJECT] [EMP_NAME]',N'This overtime request in compensatory time has been resolved.
 
-You can view the request online by clicking on the following link: [REQUEST_LINK]',N'La demande de temps supplémentaire en temps compensatoire est résolue.
+You can view the request online by clicking on the following link: [REQUEST_LINK]',N'La demande de temps supplÃ©mentaire en temps compensatoire est rÃ©solue.
 
-Vous pouvez accéder à la demande en cliquant sur le lien suivant : [REQUEST_LINK]','2015-03-30T00:00:00',NULL,N'Robichaud, Yves',N'Robichaud, Martin M [NC]','2015-03-30T07:42:48.570','2020-04-14T14:24:46.260',46)
- ,(74,N'HRSC ID [IDENTIFIER] - Request declined - [SUBJECT] [EMP_NAME]',N'CSRH ID [IDENTIFIER] - Demande refusée - [SUBJECT] [EMP_NAME]',N'The overtime request in compensatory time cannot be processed for the following reason:
-
-[REJECT_NOTE]
-
-You can view the request online by clicking on the following link: [REQUEST_LINK]',N'La demande de temps supplémentaire en temps compensatoire ne peut être traitée pour la raison suivante :
+Vous pouvez accÃ©der Ã  la demande en cliquant sur le lien suivant : [REQUEST_LINK]','2015-03-30T00:00:00',NULL,N'Robichaud, Yves',N'Robichaud, Martin M [NC]','2015-03-30T07:42:48.570','2020-04-14T14:24:46.260',46)
+ ,(74,N'HRSC ID [IDENTIFIER] - Request declined - [SUBJECT] [EMP_NAME]',N'CSRH ID [IDENTIFIER] - Demande refusÃ©e - [SUBJECT] [EMP_NAME]',N'The overtime request in compensatory time cannot be processed for the following reason:
 
 [REJECT_NOTE]
 
-Vous pouvez accéder à la demande en cliquant sur le lien suivant : [REQUEST_LINK]','2019-04-17T00:00:00',NULL,N'Robichaud, Yves',N'Robichaud, Martin M [NC]','2015-03-30T07:42:48.577','2020-04-14T14:25:07.930',47)
- ,(78,N'Conflict of Interest and Post-Employment Message',N'Message à propos des conflits d''intérêts et l''après-mandat',N'---------> La version française du courriel suit l''anglais --------->
+You can view the request online by clicking on the following link: [REQUEST_LINK]',N'La demande de temps supplÃ©mentaire en temps compensatoire ne peut Ãªtre traitÃ©e pour la raison suivante :
+
+[REJECT_NOTE]
+
+Vous pouvez accÃ©der Ã  la demande en cliquant sur le lien suivant : [REQUEST_LINK]','2019-04-17T00:00:00',NULL,N'Robichaud, Yves',N'Robichaud, Martin M [NC]','2015-03-30T07:42:48.577','2020-04-14T14:25:07.930',47)
+ ,(78,N'Conflict of Interest and Post-Employment Message',N'Message Ã  propos des conflits d''intÃ©rÃªts et l''aprÃ¨s-mandat',N'---------> La version franÃ§aise du courriel suit l''anglais --------->
 
 Colleague,
  
@@ -1138,7 +1138,7 @@ b) make representations to any government organization on behalf of persons or e
  
 c) give advice to your clients or employer using information that is not publicly available concerning the programs or policies of the Department or concerning the programs or policies of the departments or organizations with which you had a direct and substantial relationship.
 
-This limitation period may, however be waived or reduced after consideration of various factors, as specified in the Code, in regards to both your situation and the public interest. If you wish to make a request to waive or reduce the limitation period, please contact the Office of Values and Ethics through ESDC’s <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Human Resources Service Centre</a>.
+This limitation period may, however be waived or reduced after consideration of various factors, as specified in the Code, in regards to both your situation and the public interest. If you wish to make a request to waive or reduce the limitation period, please contact the Office of Values and Ethics through ESDCâ€™s <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Human Resources Service Centre</a>.
  
 You will be advised in writing of any decision in relation to your specific situation.
  
@@ -1150,89 +1150,89 @@ c) working for a corporation if lobbying constitutes a significant part (20% or 
  
 The Commissioner of Lobbying is empowered to grant exemptions to the five-year prohibition on lobbying in certain situations described in the Lobbying Act. Please consult the <a href="https://lobbycanada.gc.ca/en/">Office of the Commissioner of Lobbying of Canada</a> website for more detailed information.
  
-Officers at the Office of Values and Ethics would be pleased to explain the post-employment provisions further and answer any questions you may have. Should you require additional information, please do not hesitate to contact the Office of Values and Ethics through the ESDC’s <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Human Resources Service Centre</a> or by email at <a href="mailto:NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca">NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca</a>
+Officers at the Office of Values and Ethics would be pleased to explain the post-employment provisions further and answer any questions you may have. Should you require additional information, please do not hesitate to contact the Office of Values and Ethics through the ESDCâ€™s <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Human Resources Service Centre</a> or by email at <a href="mailto:NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca">NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca</a>
  
 Yours sincerely,
  
-Darlène de Gravina
+DarlÃ¨ne de Gravina
 Assistant Deputy Minister
 Human Resources Services Branch
  
  
----------> Version française du courriel --------->
+---------> Version franÃ§aise du courriel --------->
 
-Collègue, 
+CollÃ¨gue, 
  
-Puisque vous quittez la fonction publique du Canada, je voudrais vous rappeler qu’il est important de veiller à éviter tout conflit d’intérêts entre vos responsabilités actuelles et futures si vous envisagez de faire une transition vers un emploi à l’extérieur d’ESDC.
+Puisque vous quittez la fonction publique du Canada, je voudrais vous rappeler quâ€™il est important de veiller Ã  Ã©viter tout conflit dâ€™intÃ©rÃªts entre vos responsabilitÃ©s actuelles et futures si vous envisagez de faire une transition vers un emploi Ã  lâ€™extÃ©rieur dâ€™ESDC.
 
-Comme vous êtes dans une position désignée, il vous incombe de respecter les mesures d’observation concernant l’après-mandat énoncées à l’alinéa 4(e) du <a href="http://iservice.prv/fra/si/ve/code_de_conduite/code_de_conduite.shtml">Code de conduite d&rsquo;EDSC</a> (le Code). L’application des dispositions relatives à l’après-mandat a pour but de vous protéger et de protéger le gouvernement contre les allégations de traitement de faveur, d’accès privilégié aux représentants du gouvernement ou d’utilisation de renseignements gouvernementaux qui ne sont pas facilement accessibles au public. 
+Comme vous Ãªtes dans une position dÃ©signÃ©e, il vous incombe de respecter les mesures dâ€™observation concernant lâ€™aprÃ¨s-mandat Ã©noncÃ©es Ã  lâ€™alinÃ©aÂ 4(e) du <a href="http://iservice.prv/fra/si/ve/code_de_conduite/code_de_conduite.shtml">Code de conduite d&rsquo;EDSC</a> (le Code). Lâ€™application des dispositions relatives Ã  lâ€™aprÃ¨s-mandat a pour but de vous protÃ©ger et de protÃ©ger le gouvernement contre les allÃ©gations de traitement de faveur, dâ€™accÃ¨s privilÃ©giÃ© aux reprÃ©sentants du gouvernement ou dâ€™utilisation de renseignements gouvernementaux qui ne sont pas facilement accessibles au public. 
  
-En outre, comme stipulé dans <a href="http://iservice.prv/fra/si/ve/code_de_conduite/code_de_conduite.shtml">le Code</a>, une période de restriction d’un an débutera le jour de votre départ. Avant votre départ et pendant cette période de restriction, vous devez soumettre une <a href="http://hrsc-csrh.prv/WebForms/NewRequest.aspx?RequestType=COI&amp;FormTypeInd=0">d&eacute;claration de conflit d&rsquo;int&eacute;r&ecirc;ts</a> au <a href="mailto:NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca">Bureau des valeurs et de l&rsquo;&eacute;thique</a> toutes offres sérieuses d’emploi ou activités proposées à l’extérieur de la fonction publique. Cela inclut, mais ne se limite pas à des offres faites par des entités avec lesquelles vous avez eu, personnellement ou par l’entremise de vos subalternes, des rapports officiels importants au cours de votre dernière année de service. 
- 
-De plus, pendant cette période d’un an, il vous sera interdit :
- 
-a)  d’accepter une nomination au conseil d’administration d’une entité privée avec laquelle vous avez eu, personnellement ou par l’entremise de vos subalternes, des rapports officiels importants au cours de l’année ayant précédé la fin de votre mandat, ou d’accepter un emploi au sein d’une telle entité?;
+En outre, comme stipulÃ© dans <a href="http://iservice.prv/fra/si/ve/code_de_conduite/code_de_conduite.shtml">le Code</a>, une pÃ©riode de restriction dâ€™un an dÃ©butera le jour de votre dÃ©part. Avant votre dÃ©part et pendant cette pÃ©riode de restriction, vous devez soumettre une <a href="http://hrsc-csrh.prv/WebForms/NewRequest.aspx?RequestType=COI&amp;FormTypeInd=0">d&eacute;claration de conflit d&rsquo;int&eacute;r&ecirc;ts</a> au <a href="mailto:NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca">Bureau des valeurs et de l&rsquo;&eacute;thique</a> toutes offres sÃ©rieuses dâ€™emploi ou activitÃ©s proposÃ©es Ã  lâ€™extÃ©rieur de la fonction publique. Cela inclut, mais ne se limite pas Ã  des offres faites par des entitÃ©s avec lesquelles vous avez eu, personnellement ou par lâ€™entremise de vos subalternes, des rapports officiels importants au cours de votre derniÃ¨re annÃ©e de service. 
+Â 
+De plus, pendant cette pÃ©riode dâ€™un an, il vous sera interditÂ :
+Â 
+a)Â Â dâ€™accepter une nomination au conseil dâ€™administration dâ€™une entitÃ© privÃ©e avec laquelle vous avez eu, personnellement ou par lâ€™entremise de vos subalternes, des rapports officiels importants au cours de lâ€™annÃ©e ayant prÃ©cÃ©dÃ© la fin de votre mandat, ou dâ€™accepter un emploi au sein dâ€™une telle entitÃ©?;
 
-b)  d’intervenir pour le compte ou au nom d’une autre personne ou d’une entité auprès de tout organisme du gouvernement avec lequel vous avez eu, personnellement ou par l’entremise de vos subalternes, des rapports officiels importants au cours de l’année ayant précédé la fin de votre mandat?;
+b)Â Â dâ€™intervenir pour le compte ou au nom dâ€™une autre personne ou dâ€™une entitÃ© auprÃ¨s de tout organisme du gouvernement avec lequel vous avez eu, personnellement ou par lâ€™entremise de vos subalternes, des rapports officiels importants au cours de lâ€™annÃ©e ayant prÃ©cÃ©dÃ© la fin de votre mandat?;
 
-c)  de donner à vos clients ou à votre employeur, au moyen de renseignements qui ne sont pas accessibles au public, des conseils touchant les programmes ou les politiques du Ministère ou concernant les programmes ou les politiques des ministères ou des organismes avec lesquels vous avez entretenu d’importants rapports directs.
- 
-Cette période de restriction pourrait toutefois être réduite ou annulée après l’examen de divers facteurs relatifs à votre cas et à l’intérêt public, tel que le prévoit le Code. Si vous désirez présenter une demande d’annulation ou de réduction de la période de restriction, vous devez communiquer avec le Bureau de Valeurs et de l’éthique par l’intermédiaire du <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Centre de services en ressources humaines</a> d’EDSC.
+c)Â Â de donner Ã  vos clients ou Ã  votre employeur, au moyen de renseignements qui ne sont pas accessibles au public, des conseils touchant les programmes ou les politiques du MinistÃ¨re ou concernant les programmes ou les politiques des ministÃ¨res ou des organismes avec lesquels vous avez entretenu dâ€™importants rapports directs.
+Â 
+Cette pÃ©riode de restriction pourrait toutefois Ãªtre rÃ©duite ou annulÃ©e aprÃ¨s lâ€™examen de divers facteurs relatifs Ã  votre cas et Ã  lâ€™intÃ©rÃªt public, tel que le prÃ©voit le Code. Si vous dÃ©sirez prÃ©senter une demande dâ€™annulation ou de rÃ©duction de la pÃ©riode de restriction, vous devez communiquer avec le Bureau de Valeurs et de lâ€™Ã©thique par lâ€™intermÃ©diaire du <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Centre de services en ressources humaines</a> dâ€™EDSC.
  
-Toute décision relative à votre situation vous sera communiquée par écrit.
+Toute dÃ©cision relative Ã  votre situation vous sera communiquÃ©e par Ã©crit.
 
-De plus, la Loi sur le lobbying vous interdit, pendant une période de cinq ans, à titre de titulaire d’une charge publique désignée :
- 
-a) de travailler à titre de lobbyiste-conseil;
-b) de mener des activités de lobbying pour le compte d’une organisation;
-c) de travailler pour une société, si le lobbying constitue une partie importante (20 % ou plus) de votre travail.
- 
-Le commissaire au lobbying a le pouvoir de vous accorder des exemptions à l’interdiction de faire du lobbying pendant une période de cinq ans dans certaines situations décrites dans la Loi sur le lobbying. Veuillez consulter le site Web du <a href="https://lobbycanada.gc.ca/fr/">Commissariat au lobbying du Canada</a> pour de plus amples renseignements.
+De plus, la Loi sur le lobbying vous interdit, pendant une pÃ©riode de cinq ans, Ã  titre de titulaire dâ€™une charge publique dÃ©signÃ©e :
+Â 
+a) de travailler Ã  titre de lobbyiste-conseil;
+b) de mener des activitÃ©s de lobbying pour le compte dâ€™une organisation;
+c) de travailler pour une sociÃ©tÃ©, si le lobbying constitue une partie importante (20 % ou plus) de votre travail.
+Â 
+Le commissaire au lobbying a le pouvoir de vous accorder des exemptions Ã  lâ€™interdiction de faire du lobbying pendant une pÃ©riode de cinq ans dans certaines situations dÃ©crites dans la Loi sur le lobbying. Veuillez consulter le site Web du <a href="https://lobbycanada.gc.ca/fr/">Commissariat au lobbying du Canada</a> pour de plus amples renseignements.
  
-Les agents du Bureau des valeurs et de l’éthique se feront un plaisir de vous expliquer les dispositions supplémentaires à l’après-mandat et de répondre à toutes vos questions. S’il vous plait, n’hésitez pas à contacter le Bureau de valeurs et de l’éthique pour obtenir de plus amples renseignements par courriel <a href="mailto:NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca">NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca</a> ou par l’intermédiaire du <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Centre de services en ressources humaines</a> d’EDSC.
+Les agents du Bureau des valeurs et de lâ€™Ã©thique se feront un plaisir de vous expliquer les dispositions supplÃ©mentaires Ã  lâ€™aprÃ¨s-mandat et de rÃ©pondre Ã  toutes vos questions. Sâ€™il vous plait, nâ€™hÃ©sitez pas Ã  contacter le Bureau de valeurs et de lâ€™Ã©thique pour obtenir de plus amples renseignements par courriel <a href="mailto:NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca">NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca</a> ou par lâ€™intermÃ©diaire du <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Centre de services en ressources humaines</a> dâ€™EDSC.
 
 Cordialement,
  
-Darlène de Gravina
+DarlÃ¨ne de Gravina
 Sous-ministre adjointe
-Direction générale des services de ressources humaines',N'---------> The English version of the email follows the French --------->
+Direction gÃ©nÃ©rale des services de ressources humaines',N'---------> The English version of the email follows the French --------->
 
-Collègue, 
+CollÃ¨gue, 
  
-Puisque vous quittez la fonction publique du Canada, je voudrais vous rappeler qu’il est important de veiller à éviter tout conflit d’intérêts entre vos responsabilités actuelles et futures si vous envisagez de faire une transition vers un emploi à l’extérieur d’ESDC.
+Puisque vous quittez la fonction publique du Canada, je voudrais vous rappeler quâ€™il est important de veiller Ã  Ã©viter tout conflit dâ€™intÃ©rÃªts entre vos responsabilitÃ©s actuelles et futures si vous envisagez de faire une transition vers un emploi Ã  lâ€™extÃ©rieur dâ€™ESDC.
 
-Comme vous êtes dans une position désignée, il vous incombe de respecter les mesures d’observation concernant l’après-mandat énoncées à l’alinéa 4(e) du <a href="http://iservice.prv/fra/si/ve/code_de_conduite/code_de_conduite.shtml">Code de conduite d&rsquo;EDSC</a> (le Code). L’application des dispositions relatives à l’après-mandat a pour but de vous protéger et de protéger le gouvernement contre les allégations de traitement de faveur, d’accès privilégié aux représentants du gouvernement ou d’utilisation de renseignements gouvernementaux qui ne sont pas facilement accessibles au public. 
+Comme vous Ãªtes dans une position dÃ©signÃ©e, il vous incombe de respecter les mesures dâ€™observation concernant lâ€™aprÃ¨s-mandat Ã©noncÃ©es Ã  lâ€™alinÃ©aÂ 4(e) du <a href="http://iservice.prv/fra/si/ve/code_de_conduite/code_de_conduite.shtml">Code de conduite d&rsquo;EDSC</a> (le Code). Lâ€™application des dispositions relatives Ã  lâ€™aprÃ¨s-mandat a pour but de vous protÃ©ger et de protÃ©ger le gouvernement contre les allÃ©gations de traitement de faveur, dâ€™accÃ¨s privilÃ©giÃ© aux reprÃ©sentants du gouvernement ou dâ€™utilisation de renseignements gouvernementaux qui ne sont pas facilement accessibles au public. 
  
-En outre, comme stipulé dans <a href="http://iservice.prv/fra/si/ve/code_de_conduite/code_de_conduite.shtml">le Code</a>, une période de restriction d’un an débutera le jour de votre départ. Avant votre départ et pendant cette période de restriction, vous devez soumettre une <a href="http://hrsc-csrh.prv/WebForms/NewRequest.aspx?RequestType=COI&amp;FormTypeInd=0">d&eacute;claration de conflit d&rsquo;int&eacute;r&ecirc;ts</a> au <a href="mailto:NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca">Bureau des valeurs et de l&rsquo;&eacute;thique</a> toutes offres sérieuses d’emploi ou activités proposées à l’extérieur de la fonction publique. Cela inclut, mais ne se limite pas à des offres faites par des entités avec lesquelles vous avez eu, personnellement ou par l’entremise de vos subalternes, des rapports officiels importants au cours de votre dernière année de service. 
- 
-De plus, pendant cette période d’un an, il vous sera interdit :
- 
-a)  d’accepter une nomination au conseil d’administration d’une entité privée avec laquelle vous avez eu, personnellement ou par l’entremise de vos subalternes, des rapports officiels importants au cours de l’année ayant précédé la fin de votre mandat, ou d’accepter un emploi au sein d’une telle entité?;
+En outre, comme stipulÃ© dans <a href="http://iservice.prv/fra/si/ve/code_de_conduite/code_de_conduite.shtml">le Code</a>, une pÃ©riode de restriction dâ€™un an dÃ©butera le jour de votre dÃ©part. Avant votre dÃ©part et pendant cette pÃ©riode de restriction, vous devez soumettre une <a href="http://hrsc-csrh.prv/WebForms/NewRequest.aspx?RequestType=COI&amp;FormTypeInd=0">d&eacute;claration de conflit d&rsquo;int&eacute;r&ecirc;ts</a> au <a href="mailto:NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca">Bureau des valeurs et de l&rsquo;&eacute;thique</a> toutes offres sÃ©rieuses dâ€™emploi ou activitÃ©s proposÃ©es Ã  lâ€™extÃ©rieur de la fonction publique. Cela inclut, mais ne se limite pas Ã  des offres faites par des entitÃ©s avec lesquelles vous avez eu, personnellement ou par lâ€™entremise de vos subalternes, des rapports officiels importants au cours de votre derniÃ¨re annÃ©e de service. 
+Â 
+De plus, pendant cette pÃ©riode dâ€™un an, il vous sera interditÂ :
+Â 
+a)Â Â dâ€™accepter une nomination au conseil dâ€™administration dâ€™une entitÃ© privÃ©e avec laquelle vous avez eu, personnellement ou par lâ€™entremise de vos subalternes, des rapports officiels importants au cours de lâ€™annÃ©e ayant prÃ©cÃ©dÃ© la fin de votre mandat, ou dâ€™accepter un emploi au sein dâ€™une telle entitÃ©?;
 
-b)  d’intervenir pour le compte ou au nom d’une autre personne ou d’une entité auprès de tout organisme du gouvernement avec lequel vous avez eu, personnellement ou par l’entremise de vos subalternes, des rapports officiels importants au cours de l’année ayant précédé la fin de votre mandat?;
+b)Â Â dâ€™intervenir pour le compte ou au nom dâ€™une autre personne ou dâ€™une entitÃ© auprÃ¨s de tout organisme du gouvernement avec lequel vous avez eu, personnellement ou par lâ€™entremise de vos subalternes, des rapports officiels importants au cours de lâ€™annÃ©e ayant prÃ©cÃ©dÃ© la fin de votre mandat?;
 
-c)  de donner à vos clients ou à votre employeur, au moyen de renseignements qui ne sont pas accessibles au public, des conseils touchant les programmes ou les politiques du Ministère ou concernant les programmes ou les politiques des ministères ou des organismes avec lesquels vous avez entretenu d’importants rapports directs.
- 
-Cette période de restriction pourrait toutefois être réduite ou annulée après l’examen de divers facteurs relatifs à votre cas et à l’intérêt public, tel que le prévoit le Code. Si vous désirez présenter une demande d’annulation ou de réduction de la période de restriction, vous devez communiquer avec le Bureau de Valeurs et de l’éthique par l’intermédiaire du <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Centre de services en ressources humaines</a> d’EDSC.
+c)Â Â de donner Ã  vos clients ou Ã  votre employeur, au moyen de renseignements qui ne sont pas accessibles au public, des conseils touchant les programmes ou les politiques du MinistÃ¨re ou concernant les programmes ou les politiques des ministÃ¨res ou des organismes avec lesquels vous avez entretenu dâ€™importants rapports directs.
+Â 
+Cette pÃ©riode de restriction pourrait toutefois Ãªtre rÃ©duite ou annulÃ©e aprÃ¨s lâ€™examen de divers facteurs relatifs Ã  votre cas et Ã  lâ€™intÃ©rÃªt public, tel que le prÃ©voit le Code. Si vous dÃ©sirez prÃ©senter une demande dâ€™annulation ou de rÃ©duction de la pÃ©riode de restriction, vous devez communiquer avec le Bureau de Valeurs et de lâ€™Ã©thique par lâ€™intermÃ©diaire du <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Centre de services en ressources humaines</a> dâ€™EDSC.
  
-Toute décision relative à votre situation vous sera communiquée par écrit.
+Toute dÃ©cision relative Ã  votre situation vous sera communiquÃ©e par Ã©crit.
 
-De plus, la Loi sur le lobbying vous interdit, pendant une période de cinq ans, à titre de titulaire d’une charge publique désignée :
- 
-a) de travailler à titre de lobbyiste-conseil;
-b) de mener des activités de lobbying pour le compte d’une organisation;
-c) de travailler pour une société, si le lobbying constitue une partie importante (20 % ou plus) de votre travail.
- 
-Le commissaire au lobbying a le pouvoir de vous accorder des exemptions à l’interdiction de faire du lobbying pendant une période de cinq ans dans certaines situations décrites dans la Loi sur le lobbying. Veuillez consulter le site Web du <a href="https://lobbycanada.gc.ca/fr/">Commissariat au lobbying du Canada</a> pour de plus amples renseignements.
+De plus, la Loi sur le lobbying vous interdit, pendant une pÃ©riode de cinq ans, Ã  titre de titulaire dâ€™une charge publique dÃ©signÃ©e :
+Â 
+a) de travailler Ã  titre de lobbyiste-conseil;
+b) de mener des activitÃ©s de lobbying pour le compte dâ€™une organisation;
+c) de travailler pour une sociÃ©tÃ©, si le lobbying constitue une partie importante (20 % ou plus) de votre travail.
+Â 
+Le commissaire au lobbying a le pouvoir de vous accorder des exemptions Ã  lâ€™interdiction de faire du lobbying pendant une pÃ©riode de cinq ans dans certaines situations dÃ©crites dans la Loi sur le lobbying. Veuillez consulter le site Web du <a href="https://lobbycanada.gc.ca/fr/">Commissariat au lobbying du Canada</a> pour de plus amples renseignements.
  
-Les agents du Bureau des valeurs et de l’éthique se feront un plaisir de vous expliquer les dispositions supplémentaires à l’après-mandat et de répondre à toutes vos questions. S’il vous plait, n’hésitez pas à contacter le Bureau de valeurs et de l’éthique pour obtenir de plus amples renseignements par courriel <a href="mailto:NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca">NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca</a> ou par l’intermédiaire du <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Centre de services en ressources humaines</a> d’EDSC.
+Les agents du Bureau des valeurs et de lâ€™Ã©thique se feront un plaisir de vous expliquer les dispositions supplÃ©mentaires Ã  lâ€™aprÃ¨s-mandat et de rÃ©pondre Ã  toutes vos questions. Sâ€™il vous plait, nâ€™hÃ©sitez pas Ã  contacter le Bureau de valeurs et de lâ€™Ã©thique pour obtenir de plus amples renseignements par courriel <a href="mailto:NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca">NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca</a> ou par lâ€™intermÃ©diaire du <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Centre de services en ressources humaines</a> dâ€™EDSC.
 
 Cordialement,
  
-Darlène de Gravina
+DarlÃ¨ne de Gravina
 Sous-ministre adjointe
-Direction générale des services de ressources humaines
- ---------> English version of the email --------->
+Direction gÃ©nÃ©rale des services de ressources humaines
+Â ---------> English version of the email --------->
 
 Colleague,
  
@@ -1250,7 +1250,7 @@ b) make representations to any government organization on behalf of persons or e
  
 c) give advice to your clients or employer using information that is not publicly available concerning the programs or policies of the Department or concerning the programs or policies of the departments or organizations with which you had a direct and substantial relationship.
 
-This limitation period may, however be waived or reduced after consideration of various factors, as specified in the Code, in regards to both your situation and the public interest. If you wish to make a request to waive or reduce the limitation period, please contact the Office of Values and Ethics through ESDC’s <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Human Resources Service Centre</a>.
+This limitation period may, however be waived or reduced after consideration of various factors, as specified in the Code, in regards to both your situation and the public interest. If you wish to make a request to waive or reduce the limitation period, please contact the Office of Values and Ethics through ESDCâ€™s <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Human Resources Service Centre</a>.
  
 You will be advised in writing of any decision in relation to your specific situation.
  
@@ -1262,14 +1262,14 @@ c) working for a corporation if lobbying constitutes a significant part (20% or 
  
 The Commissioner of Lobbying is empowered to grant exemptions to the five-year prohibition on lobbying in certain situations described in the Lobbying Act. Please consult the <a href="https://lobbycanada.gc.ca/en/">Office of the Commissioner of Lobbying of Canada</a> website for more detailed information.
  
-Officers at the Office of Values and Ethics would be pleased to explain the post-employment provisions further and answer any questions you may have. Should you require additional information, please do not hesitate to contact the Office of Values and Ethics through the ESDC’s <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Human Resources Service Centre</a> or by email at <a href="mailto:NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca">NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca</a>
+Officers at the Office of Values and Ethics would be pleased to explain the post-employment provisions further and answer any questions you may have. Should you require additional information, please do not hesitate to contact the Office of Values and Ethics through the ESDCâ€™s <a href="http://hrsc-csrh.prv/Webforms/NewRequest.aspx?RequestType=HRSC&amp;FormTypeInd=0">Human Resources Service Centre</a> or by email at <a href="mailto:NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca">NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca</a>
  
 Yours sincerely,
  
-Darlène de Gravina
+DarlÃ¨ne de Gravina
 Assistant Deputy Minister
 Human Resources Services Branch','2015-03-30T00:00:00',NULL,N'Robichaud, Yves [NC]',N'Leblanc, Chantal x [NC]','2015-03-30T07:42:48.580','2021-05-11T13:44:44.397',36)
- ,(79,N'Your request [IDENTIFIER] - Manager Action Required: Employee Schedule ([EMP_NAME])',N'Votre demande [IDENTIFIER] - Action requise du gestionnaire: Horaire de l''employé ([EMP_NAME])',N'<font face="Arial"
+ ,(79,N'Your request [IDENTIFIER] - Manager Action Required: Employee Schedule ([EMP_NAME])',N'Votre demande [IDENTIFIER] - Action requise du gestionnaire: Horaire de l''employÃ© ([EMP_NAME])',N'<font face="Arial"
 
 Good day,
 
@@ -1296,34 +1296,34 @@ The pay action request and the required documents attached.
 
 thank you',N'Bonjour, 
 
-Le Centre de services en ressources humaines (CSRH) d’EDSC, vous fait parvenir ce courriel pour action. 
+Le Centre de services en ressources humaines (CSRH) dâ€™EDSC, vous fait parvenir ce courriel pour action. 
 
-La demande d’intervention de paye et les documents requis y sont joints. 
+La demande dâ€™intervention de paye et les documents requis y sont joints. 
 
 Merci','2019-04-17T00:00:00',NULL,N'Mukam, Claude A [NC]',N'Robichaud, Martin M [NC]','2015-07-09T15:46:16','2020-04-14T14:21:03.307',49)
  ,(94,N'HRSC ID [IDENTIFIER] - [CATEGORY]/[SUB-CATEGORY] - [EMP_NAME]',N'CSRH ID [IDENTIFIER] - [CATEGORY]/[SUB-CATEGORY] - [EMP_NAME]',N'Good day, 
 
 The Human Resources Service Center (HRSC) has transferred your request to the National Pay Center. 
 
-The Pay Centre will process the required action(s) on the employee’s file; if you need to follow up on this request, please contact them directly.
+The Pay Centre will process the required action(s) on the employeeâ€™s file; if you need to follow up on this request, please contact them directly.
 
-The Pay Centre’s contact information and service standards can be found at:  http://www.tpsgc-pwgsc.gc.ca/remuneration-compensation/services-paye-pay-services/paye-centre-pay/index-eng.html
+The Pay Centreâ€™s contact information and service standards can be found at:  http://www.tpsgc-pwgsc.gc.ca/remuneration-compensation/services-paye-pay-services/paye-centre-pay/index-eng.html
 
 Thank you.',N'Bonjour, 
 
-Le Centre de services en ressources humaines (CSRH) a acheminée votre demande au Centre des services de paye.  
+Le Centre de services en ressources humaines (CSRH) a acheminÃ©e votre demande au Centre des services de paye.  
 
-Le Centre de services de paye prendra les mesures nécessaires au dossier de l’employé.  Si vous désirez faire un suivi de cette demande, s’il vous plaît, communiquez avec le Centre des services de paye directement.
+Le Centre de services de paye prendra les mesures nÃ©cessaires au dossier de lâ€™employÃ©.  Si vous dÃ©sirez faire un suivi de cette demande, sâ€™il vous plaÃ®t, communiquez avec le Centre des services de paye directement.
 
-Les coordonnées, ainsi que les normes de service, du Centre des services de paye sont disponibles au : http://www.tpsgc-pwgsc.gc.ca/remuneration-compensation/services-paye-pay-services/paye-centre-pay/index-fra.html
+Les coordonnÃ©es, ainsi que les normes de service, du Centre des services de paye sont disponibles au : http://www.tpsgc-pwgsc.gc.ca/remuneration-compensation/services-paye-pay-services/paye-centre-pay/index-fra.html
 
 Merci.','2018-01-01T00:00:00',NULL,N'HRDC-DRHC\claude.a.mukam',N'Robichaud, Martin M [NC]','2015-07-23T11:07:06','2020-04-14T14:21:30.840',50)
- ,(95,N'HRSC ID [IDENTIFIER] - Intervention Updated - Note or Documents added [EMP_NAME]',N'CSRH ID [IDENTIFIER] - Intervention mise à jour - Note ou documents ajoutés [EMP_NAME]',N'A request assigned to you has been updated or notes, document added.
+ ,(95,N'HRSC ID [IDENTIFIER] - Intervention Updated - Note or Documents added [EMP_NAME]',N'CSRH ID [IDENTIFIER] - Intervention mise Ã  jour - Note ou documents ajoutÃ©s [EMP_NAME]',N'A request assigned to you has been updated or notes, document added.
 
-You can view the Intervention online by clicking on the following link: [REQUEST_LINK]',N'Une intervention dont vous êtes le leader ou le collaborateur a été modifié ou un une note ou un document a été ajouté.
+You can view the Intervention online by clicking on the following link: [REQUEST_LINK]',N'Une intervention dont vous Ãªtes le leader ou le collaborateur a Ã©tÃ© modifiÃ© ou un une note ou un document a Ã©tÃ© ajoutÃ©.
 
-Vous pouvez accéder à l''intervention en cliquant sur le lien suivant : [REQUEST_LINK]','2019-02-27T00:00:00',NULL,N'Paradis, Tony [NC]',N'Robichaud, Martin M [NC]','2015-09-15T13:19:52','2020-05-14T10:57:26.787',51)
- ,(96,N'Please participate in ESDC''s Exit Survey / Veuillez participer au sondage de fin d''empoi d''EDSC',N'Veuillez participer au sondage de fin d''empoi d''EDSC / Please participate in ESDC''s Exit Survey',N'---------> La version française du courriel suit l''anglais --------->
+Vous pouvez accÃ©der Ã  l''intervention en cliquant sur le lien suivant : [REQUEST_LINK]','2019-02-27T00:00:00',NULL,N'Paradis, Tony [NC]',N'Robichaud, Martin M [NC]','2015-09-15T13:19:52','2020-05-14T10:57:26.787',51)
+ ,(96,N'Please participate in ESDC''s Exit Survey / Veuillez participer au sondage de fin d''empoi d''EDSC',N'Veuillez participer au sondage de fin d''empoi d''EDSC / Please participate in ESDC''s Exit Survey',N'---------> La version franÃ§aise du courriel suit l''anglais --------->
 
 Hello,
 
@@ -1341,45 +1341,45 @@ If you have any questions regarding the survey, do not hesitate to contact us by
 
 Thank you in advance for your feedback!
 
----------> Version française du courriel --------->
+---------> Version franÃ§aise du courriel --------->
 
 Bonjour,
 
-Avant de partir, vous êtes invité à nous fournir de la rétroaction sur votre expérience au Ministère en répondant à un court sondage de fin d’emploi d’une durée de 5 à 7 minutes. EDSC en tant qu’employeur est engagé à créer un milieu de travail positif pour son personnel. Votre opinion est importante et les renseignements recueillis nous aideront à améliorer le milieu de travail à travers nos pratiques d’embauche et de rétention du personnel.
+Avant de partir, vous Ãªtes invitÃ© Ã  nous fournir de la rÃ©troaction sur votre expÃ©rience au MinistÃ¨re en rÃ©pondant Ã  un court sondage de fin dâ€™emploi dâ€™une durÃ©e de 5 Ã  7 minutes. EDSC en tant quâ€™employeur est engagÃ© Ã  crÃ©er un milieu de travail positif pour son personnel.Â Votre opinion est importante et les renseignements recueillis nous aideront Ã  amÃ©liorer le milieu de travail Ã  travers nos pratiques dâ€™embauche et de rÃ©tention du personnel.
 
-Votre participation est volontaire et confidentielle. Ce lien au sondage est indépendant du processus de séparation. Vos réponses ne sont pas associées à des renseignements personnels pouvant vous identifier. Soyez assuré qu’elle n’affectera pas votre relation avec Emploi et Développement social Canada, Service Canada ou le Programme du travail.
+Votre participation est volontaire et confidentielle.Â Ce lien au sondage est indÃ©pendant du processus de sÃ©paration. Vos rÃ©ponses ne sont pas associÃ©es Ã  des renseignements personnels pouvant vous identifier.Â Soyez assurÃ© quâ€™elle nâ€™affectera pas votre relation avec Emploi et DÃ©veloppement social Canada, Service Canada ou le Programme du travail.
 
-Le lien au sondage est disponible à l’extérieur du site intranet ministériel et peut être rempli une fois que vous avez quitté.
+Le lien au sondage est disponible Ã  lâ€™extÃ©rieur du site intranet ministÃ©riel et peut Ãªtre rempli une fois que vous avez quittÃ©.
 
-Veuillez cliquer sur le lien ci-bas pour participer au sondage. Une fois que vous avez cliqué sur le lien, vous aurez 20 minutes pour remplir le sondage.
+Veuillez cliquer sur le lien ci-bas pour participer au sondage.Â Une fois que vous avez cliquÃ© sur le lien, vous aurez 20 minutes pour remplir le sondage.
 
 <a href="https://srv217.services.gc.ca/ihst4/Intro.aspx?cid=97eb0da9-c7d0-41eb-8a7b-7d3b73b40760&lc=fra">https://srv212.services.gc.ca/ihst/Intro.aspx?cid=97eb0da9-c7d0-41eb-8a7b-7d3b73b40760&lc=fra</a>
 
-Si vous avez des questions concernant le sondage, n’hésitez pas à communiquer avec nous par courriel : NC-SONDAGES-SURVEYS-GD@hrsdc-rhdcc.gc.ca
+Si vous avez des questions concernant le sondage, nâ€™hÃ©sitez pas Ã  communiquer avec nous par courriel : NC-SONDAGES-SURVEYS-GD@hrsdc-rhdcc.gc.ca
 
-Merci à l’avance pour votre rétroaction!',N'---------> The English version of the email follows the French --------->
+Merci Ã  lâ€™avance pour votre rÃ©troaction!',N'---------> The English version of the email follows the French --------->
 
 Bonjour,
 
-Avant de partir, vous êtes invité à nous fournir de la rétroaction sur votre expérience au Ministère en répondant à un court sondage de fin d’emploi d’une durée de 5 à 7 minutes. EDSC en tant qu’employeur est engagé à créer un milieu de travail positif pour son personnel. Votre opinion est importante et les renseignements recueillis nous aideront à améliorer le milieu de travail à travers nos pratiques d’embauche et de rétention du personnel.
+Avant de partir, vous Ãªtes invitÃ© Ã  nous fournir de la rÃ©troaction sur votre expÃ©rience au MinistÃ¨re en rÃ©pondant Ã  un court sondage de fin dâ€™emploi dâ€™une durÃ©e de 5 Ã  7 minutes. EDSC en tant quâ€™employeur est engagÃ© Ã  crÃ©er un milieu de travail positif pour son personnel. Votre opinion est importante et les renseignements recueillis nous aideront Ã  amÃ©liorer le milieu de travail Ã  travers nos pratiques dâ€™embauche et de rÃ©tention du personnel.
 
-Votre participation est volontaire et confidentielle. Ce lien au sondage est indépendant du processus de séparation. Vos réponses ne sont pas associées à des renseignements personnels pouvant vous identifier. Soyez assuré qu’elle n’affectera pas votre relation avec Emploi et Développement social Canada, Service Canada ou le Programme du travail.
+Votre participation est volontaire et confidentielle. Ce lien au sondage est indÃ©pendant du processus de sÃ©paration. Vos rÃ©ponses ne sont pas associÃ©es Ã  des renseignements personnels pouvant vous identifier. Soyez assurÃ© quâ€™elle nâ€™affectera pas votre relation avec Emploi et DÃ©veloppement social Canada, Service Canada ou le Programme du travail.
 
-Le lien au sondage est disponible à l’extérieur du site intranet ministériel et peut être rempli une fois que vous avez quitté.
+Le lien au sondage est disponible Ã  lâ€™extÃ©rieur du site intranet ministÃ©riel et peut Ãªtre rempli une fois que vous avez quittÃ©.
 
-Veuillez cliquer sur le lien ci-bas pour participer au sondage. Une fois que vous avez cliqué sur le lien, vous aurez 20 minutes pour remplir le sondage.
+Veuillez cliquer sur le lien ci-bas pour participer au sondage. Une fois que vous avez cliquÃ© sur le lien, vous aurez 20 minutes pour remplir le sondage.
 
 <a href="https://srv217.services.gc.ca/ihst4/Intro.aspx?cid=97eb0da9-c7d0-41eb-8a7b-7d3b73b40760&lc=fra">https://srv212.services.gc.ca/ihst/Intro.aspx?cid=97eb0da9-c7d0-41eb-8a7b-7d3b73b40760&lc=fra</a>
 
-Si vous avez des questions concernant le sondage, n’hésitez pas à communiquer avec nous par courriel : NC-SONDAGES-SURVEYS-GD@hrsdc-rhdcc.gc.ca
+Si vous avez des questions concernant le sondage, nâ€™hÃ©sitez pas Ã  communiquer avec nous par courriel : NC-SONDAGES-SURVEYS-GD@hrsdc-rhdcc.gc.ca
 
-Merci à l’avance pour votre rétroaction!
+Merci Ã  lâ€™avance pour votre rÃ©troaction!
 
- ---------> English version of the email --------->
+Â ---------> English version of the email --------->
 
 Hello,
 
-Before you leave, you are invited to provide us with feedback on your experience with the Department by responding to a 5-7 minutes Exit Survey. As an employer, ESDC is committed to creating a positive work environment for its employees. Your opinion is important and the information collected will help us improve the workplace through our staff retention and recruitment practices. 
+Before you leave, you are invited to provide us with feedback on your experience with the Department by responding to a 5-7 minutes Exit Survey. As an employer, ESDC is committed to creating a positive work environment for its employees. Your opinion is important and the information collected will help us improve the workplace through our staff retention and recruitment practices.Â 
 
 Your participation is voluntary and confidential. The survey link is independent of the Separation Clearance Process. No personal identifiable information is associated with your responses. Rest assured that it will not affect your relationship with Employment and Social Development Canada, Service Canada or the Labour Program.
 
@@ -1392,7 +1392,7 @@ Please click on the link below to participate in the survey. Once you click on t
 If you have any questions regarding the survey, do not hesitate to contact us by email: NC-SONDAGES-SURVEYS-GD@hrsdc-rhdcc.gc.ca
 
 Thank you in advance for your feedback!','2016-04-01T00:00:00',NULL,N'Nolet, Eric E [NC]',N'Brisebois, Joshua JJ [NC]','2016-04-21T08:39:18.520','2021-12-21T13:37:45.857',52)
- ,(97,N'HRSC ID [IDENTIFIER] - Received - Confidential Report - [EMP_NAME]',N'CSRH ID [IDENTIFIER] - Reçu - Rapport Confidentiel - [EMP_NAME]',N'<p><b><font color="red" size="4">*****This email is auto-generated from the HRSC web application''s training environment*****</font></b></p>
+ ,(97,N'HRSC ID [IDENTIFIER] - Received - Confidential Report - [EMP_NAME]',N'CSRH ID [IDENTIFIER] - ReÃ§u - Rapport Confidentiel - [EMP_NAME]',N'<p><b><font color="red" size="4">*****This email is auto-generated from the HRSC web application''s training environment*****</font></b></p>
 
 <p><span style="background-color: #ffffff; color: #ff0000;"><em>Please note that the Office of Values and Ethics is currently experiencing a high volume of requests at this time, and the processing of your request may be delayed. We appreciate your patience and strive to ensure that all conflict of interest disclosures are addressed as quickly as possible.</em></span></p>
 
@@ -1403,114 +1403,114 @@ Your confidential report has been received.
 You can view the confidential report online by clicking on the following link: [REQUEST_LINK]
 
 If you have any questions or concerns, please contact the lead assigned to your confidential report. You can also email the Office of Values and Ethics at NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca.
-',N'<p><b><font color="red" size="4">*****Ce courriel est auto-généré à partir de l''environnement de formation de l''application web du CSRH*****</font></b></p>
+',N'<p><b><font color="red" size="4">*****Ce courriel est auto-gÃ©nÃ©rÃ© Ã  partir de l''environnement de formation de l''application web du CSRH*****</font></b></p>
 
 <p><span style="background-color: #ffffff; color: #ff0000;"><em>Veuillez noter que le Bureau des valeurs et de l&rsquo;&eacute;thique conna&icirc;t actuellement un volume &eacute;lev&eacute; de demandes et que le traitement de votre demande pourrait &ecirc;tre retard&eacute;e. Nous vous remercions de votre patience et nous nous effor&ccedil;ons de faire en sorte que toutes d&eacute;clarations de conflit d&rsquo;int&eacute;r&ecirc;ts soient trait&eacute;es le plus rapidement possible.</em></span></p>
 
-Merci d’avoir utilisé l’application web du Centre de services en ressources humaines (CSRH).
+Merci dâ€™avoir utilisÃ© lâ€™application web du Centre de services en ressources humaines (CSRH).
 
-Nous accusons réception de votre rapport confidentiel.
+Nous accusons rÃ©ception de votre rapport confidentiel.
 
-Vous pouvez accéder au rapport en cliquant sur le lien suivant : [REQUEST_LINK]
+Vous pouvez accÃ©der au rapport en cliquant sur le lien suivant : [REQUEST_LINK]
 
-Pour toute question ou commentaire concernant le rapport, nous vous invitons à contacter la personne assignée à votre rapport confidentiel. Vous pouvez également contacter le Bureau des valeurs et de l’éthique par courriel : NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca
+Pour toute question ou commentaire concernant le rapport, nous vous invitons Ã  contacter la personne assignÃ©e Ã  votre rapport confidentiel. Vous pouvez Ã©galement contacter le Bureau des valeurs et de lâ€™Ã©thique par courriel : NC-OVE-AC-BVE@hrsdc-rhdcc.gc.ca
 ','2016-11-04T00:00:00',NULL,N'System',N'Brisebois, Joshua JJ [NC]','2016-11-04T08:03:56','2023-03-07T14:45:21.607',53)
- ,(98,N'HRSC ID [IDENTIFIER] - Resolved - Confidential Report - [EMP_NAME]',N'CSRH ID [IDENTIFIER]  - Résolu - Rapport Confidentiel - [EMP_NAME]',N'Thank you for using the Human Resources Services Centre (HRSC) Web Application.
+ ,(98,N'HRSC ID [IDENTIFIER] - Resolved - Confidential Report - [EMP_NAME]',N'CSRH ID [IDENTIFIER]  - RÃ©solu - Rapport Confidentiel - [EMP_NAME]',N'Thank you for using the Human Resources Services Centre (HRSC) Web Application.
 
 Your confidential report has been resolved. 
 
-You can view the confidential report online by clicking on the following link: [REQUEST_LINK]',N'Merci d’avoir utilisé l’Application web du Centre de services en ressources humaines (CSRH). 
+You can view the confidential report online by clicking on the following link: [REQUEST_LINK]',N'Merci dâ€™avoir utilisÃ© lâ€™Application web du Centre de services en ressources humaines (CSRH). 
 
-Votre rapport confidentiel a été résolu.
+Votre rapport confidentiel a Ã©tÃ© rÃ©solu.
 
-Vous pouvez accéder au rapport confidentiel en cliquant sur le lien suivant : [REQUEST_LINK]','2016-11-04T00:00:00',NULL,N'System',N'Robichaud, Martin M [NC]','2016-11-04T08:03:56','2020-04-14T14:18:04.063',54)
- ,(99,N'HSRC ID [IDENTIFIER] Confidential Report - No Conflict of Interest',N'CSRH ID [IDENTIFIER] Rapport confidentiel - Aucun conflit d’intérêt',N'<p><b><font color="red" size="4">*****This email is auto-generated from the HRSC web application''s training environment*****</font></b></p>
+Vous pouvez accÃ©der au rapport confidentiel en cliquant sur le lien suivant : [REQUEST_LINK]','2016-11-04T00:00:00',NULL,N'System',N'Robichaud, Martin M [NC]','2016-11-04T08:03:56','2020-04-14T14:18:04.063',54)
+ ,(99,N'HSRC ID [IDENTIFIER] Confidential Report - No Conflict of Interest',N'CSRH ID [IDENTIFIER] Rapport confidentiel - Aucun conflit dâ€™intÃ©rÃªt',N'<p><b><font color="red" size="4">*****This email is auto-generated from the HRSC web application''s training environment*****</font></b></p>
 
 <p><span style="background-color: #ffffff; color: #ff0000;"><em>Please note that the Office of Values and Ethics is currently experiencing a high volume of requests at this time, and the processing of your request may be delayed. We appreciate your patience and strive to ensure that all conflict of interest disclosures are addressed as quickly as possible.</em></span></p>
 
 [EMP_NAME],
 
-Thank you for completing your Conflict of interest disclosure report in accordance with the <a href="http://iservice.prv/eng/is/ve/code_of_conduct/code_of_conduct.shtml">ESDC Code of Conduct</a> (the Code) and Treasury Board’s <a href="https://www.tbs-sct.gc.ca/pol/doc-eng.aspx?id=32627">Directive on Conflict of Interest</a>.
+Thank you for completing your Conflict of interest disclosure report in accordance with the <a href="http://iservice.prv/eng/is/ve/code_of_conduct/code_of_conduct.shtml">ESDC Code of Conduct</a> (the Code) and Treasury Boardâ€™s <a href="https://www.tbs-sct.gc.ca/pol/doc-eng.aspx?id=32627">Directive on Conflict of Interest</a>.
 
-In your Conflict of Interest Disclosure report, you indicated a “Nil” declaration. Based on this information, I can confirm that you are not in a conflict of interest situation at the present time.
+In your Conflict of Interest Disclosure report, you indicated a â€œNilâ€ declaration. Based on this information, I can confirm that you are not in a conflict of interest situation at the present time.
  
-For your information, the Treasury Board Secretariat <a href="https://www.tbs-sct.gc.ca/pol/doc-eng.aspx?id=32621">Policy on People Management</a> defines a conflict of interest as “a situation, whether real, apparent or potential, in which the person employed has private interests that could influence the performance of their official duties and responsibilities or in which the person employed uses their office for personal gain.” 
+For your information, the Treasury Board Secretariat <a href="https://www.tbs-sct.gc.ca/pol/doc-eng.aspx?id=32621">Policy on People Management</a> defines a conflict of interest as â€œa situation, whether real, apparent or potential, in which the person employed has private interests that could influence the performance of their official duties and responsibilities or in which the person employed uses their office for personal gain.â€ 
 
 As a reminder, please note that <a href="http://iservice.prv/eng/is/ve/code_of_conduct/code_of_conduct.shtml">the Code</a> states that, as a public servant, you must file a <a href="http://hrsc-csrh.prv/WebForms/NewRequest.aspx?RequestType=COI&amp;FormTypeInd=0">Conflict of Interest Disclosure report</a> report within 60 days of your initial appointment or any subsequent appointment, transfer or deployment. A designated officer then decides whether a conflict of interest situation exists and, if so, makes recommendations for dealing with it.
- 
-On a regular basis thereafter, and every time a major change occurs in your personal affairs, interests or official duties, you are required to review your obligations under the Code and the Directive on COI. If a real, apparent or potential conflict of interest exists, you must file a Conflict of Interest Disclosure in a timely manner through ESDC’s <a href="http://hrsc-csrh.prv/WebForms/Home.aspx?Mode=P">Human Resources Service Centre</a>.
- 
+Â 
+On a regular basis thereafter, and every time a major change occurs in your personal affairs, interests or official duties, you are required to review your obligations under the Code and the Directive on COI. If a real, apparent or potential conflict of interest exists, you must file a Conflict of Interest Disclosure in a timely manner through ESDCâ€™s <a href="http://hrsc-csrh.prv/WebForms/Home.aspx?Mode=P">Human Resources Service Centre</a>.
+Â 
 All Executives (EX) or their equivalent, as well as EX minus 1 and their equivalent, must complete and submit a Conflict of Interest Disclosure form each year.
- 
+Â 
 Your participation in this exercise serves to maintain public confidence in the integrity of the public service. 
 
 Sincerely,
 
-Véronique Tremblay
-Director – Office of Workplace Values, Recognition and Resolution
+VÃ©ronique Tremblay
+Director â€“ Office of Workplace Values, Recognition and Resolution
 Human Resources Services Branch
-Employment and Social Development Canada/ Government of Canada',N'<p><b><font color="red" size="4">*****Ce courriel est auto-généré à partir de l''environnement de formation de l''application web du CSRH*****</font></b></p>
+Employment and Social Development Canada/ Government of Canada',N'<p><b><font color="red" size="4">*****Ce courriel est auto-gÃ©nÃ©rÃ© Ã  partir de l''environnement de formation de l''application web du CSRH*****</font></b></p>
 
 <p><span style="background-color: #ffffff; color: #ff0000;"><em>Veuillez noter que le Bureau des valeurs et de l&rsquo;&eacute;thique conna&icirc;t actuellement un volume &eacute;lev&eacute; de demandes et que le traitement de votre demande pourrait &ecirc;tre retard&eacute;e. Nous vous remercions de votre patience et nous nous effor&ccedil;ons de faire en sorte que toutes d&eacute;clarations de conflit d&rsquo;int&eacute;r&ecirc;ts soient trait&eacute;es le plus rapidement possible.</em></span></p>
 
 [EMP_NAME],
 
-Nous vous remercions d’avoir soumis votre déclaration de conflit d’intérêts selon les dispositions du  <a href="http://iservice.prv/fra/si/ve/code_de_conduite/code_de_conduite.shtml">Code de conduite d&rsquo;EDSC</a> (le Code) et de la <a href="https://www.tbs-sct.gc.ca/pol/doc-fra.aspx?id=32627">Directive sur les conflits d&rsquo;int&eacute;r&ecirc;ts</a> du Secrétariat du Conseil du Trésor.
+Nous vous remercions dâ€™avoir soumis votre dÃ©claration de conflit dâ€™intÃ©rÃªts selon les dispositions du Â <a href="http://iservice.prv/fra/si/ve/code_de_conduite/code_de_conduite.shtml">Code de conduite d&rsquo;EDSC</a> (le Code) et de la <a href="https://www.tbs-sct.gc.ca/pol/doc-fra.aspx?id=32627">Directive sur les conflits d&rsquo;int&eacute;r&ecirc;ts</a> du SecrÃ©tariat du Conseil du TrÃ©sor.
 
-Dans votre déclaration de conflit d’intérêts, vous avez indiqué «?Nulle?», qu’aucune des situations ne s’applique à votre cas. Sur la base cette information, je peux confirmer que vous n’êtes pas dans une situation de conflit d’intérêts au moment présent.
+Dans votre dÃ©claration de conflit dâ€™intÃ©rÃªts, vous avez indiquÃ© Â«?Nulle?Â», quâ€™aucune des situations ne sâ€™applique Ã  votre cas. Sur la base cette information, je peux confirmer que vous nâ€™Ãªtes pas dans une situation de conflit dâ€™intÃ©rÃªts au moment prÃ©sent.
 
-Pour votre information, la <a href="https://www.tbs-sct.gc.ca/pol/doc-fra.aspx?id=32621">Politique sur la gestion des personnes</a> du Secrétariat du Conseil du Trésor définit un conflit d’intérêts tel que : «?une situation, qu’elle soit réelle, apparente ou potentielle, dans laquelle la personne employée a des intérêts privés qui pourraient influer sur l’exécution de ses fonctions et de ses responsabilités officielles ou par laquelle la personne employée utilise ses fonctions officielles à des fins personnelles?».
+Pour votre information, la <a href="https://www.tbs-sct.gc.ca/pol/doc-fra.aspx?id=32621">Politique sur la gestion des personnes</a> du SecrÃ©tariat du Conseil du TrÃ©sor dÃ©finit un conflit dâ€™intÃ©rÃªts tel queÂ : Â«?une situation, quâ€™elle soit rÃ©elle, apparente ou potentielle, dans laquelle la personne employÃ©e a des intÃ©rÃªts privÃ©s qui pourraient influer sur lâ€™exÃ©cution de ses fonctions et de ses responsabilitÃ©s officielles ou par laquelle la personne employÃ©e utilise ses fonctions officielles Ã  des fins personnelles?Â».
 
-Pour rappel, veuillez noter que <a href="http://iservice.prv/fra/si/ve/code_de_conduite/code_de_conduite.shtml">le Code</a> nous informe que, en tant que fonctionnaire, vous devez soumettre une <a href="http://hrsc-csrh.prv/WebForms/NewRequest.aspx?RequestType=COI&amp;FormTypeInd=0">d&eacute;claration de conflit d&rsquo;int&eacute;r&ecirc;ts</a> dans les 60 jours suivant votre nomination initiale ou une nomination, une mutation ou un transfert subséquent. Un représentant désigné décidera s’il s’agit ou non d’une situation de conflit d’intérêts et, dans l’affirmative, formulera des recommandations pour le régler.
+Pour rappel, veuillez noter que <a href="http://iservice.prv/fra/si/ve/code_de_conduite/code_de_conduite.shtml">le Code</a> nous informe que, en tant que fonctionnaire, vous devez soumettre une <a href="http://hrsc-csrh.prv/WebForms/NewRequest.aspx?RequestType=COI&amp;FormTypeInd=0">d&eacute;claration de conflit d&rsquo;int&eacute;r&ecirc;ts</a> dans les 60Â jours suivant votre nomination initiale ou une nomination, une mutation ou un transfert subsÃ©quent. Un reprÃ©sentant dÃ©signÃ© dÃ©cidera sâ€™il sâ€™agit ou non dâ€™une situation de conflit dâ€™intÃ©rÃªts et, dans lâ€™affirmative, formulera des recommandations pour le rÃ©gler.
 
-Par la suite, vous devez, régulièrement ou à chaque fois qu’un changement important survient dans vos affaires privées et intérêts personnels ou dans vos fonctions officielles, revoir vos obligations selon le Code et la Directive sur les conflits d’intérêts. S’il existe un conflit d’intérêts réel, apparent ou potentiel, vous devez produire une déclaration de conflit d’intérêts au moment opportun par l’entremise du <a href="http://hrsc-csrh.prv/WebForms/Home.aspx?Mode=P%ef%bf%bd">Centre de services en ressources humaines</a> de l’EDSC.
+Par la suite, vous devez, rÃ©guliÃ¨rement ou Ã  chaque fois quâ€™un changement important survient dans vos affaires privÃ©es et intÃ©rÃªts personnels ou dans vos fonctions officielles, revoir vos obligations selon le Code et la Directive sur les conflits dâ€™intÃ©rÃªts. Sâ€™il existe un conflit dâ€™intÃ©rÃªts rÃ©el, apparent ou potentiel, vous devez produire une dÃ©claration de conflit dâ€™intÃ©rÃªts au moment opportun par lâ€™entremise du <a href="http://hrsc-csrh.prv/WebForms/Home.aspx?Mode=P%ef%bf%bd">Centre de services en ressources humaines</a> de lâ€™EDSC.
 
-Tous les cadres supérieurs (EX) ou leur équivalent, ainsi que les EX moins 1 et leur équivalent, doivent remplir et soumettre chaque année un formulaire de déclaration de conflits d’intérêts. 
+Tous les cadres supÃ©rieurs (EX) ou leur Ã©quivalent, ainsi que les EX moinsÂ 1 et leur Ã©quivalent, doivent remplir et soumettre chaque annÃ©e un formulaire de dÃ©claration de conflits dâ€™intÃ©rÃªts.Â 
 
-Votre participation dans cet exercice contribue grandement au maintien de la confiance du public envers l’intégrité de la fonction publique. 
+Votre participation dans cet exercice contribue grandement au maintien de la confiance du public envers lâ€™intÃ©gritÃ© de la fonction publique.Â 
 
 Cordialement,
 
-Véronique Tremblay
-Directrice – Bureau des valeurs, de la reconnaissance et de la résolution en milieu de travail 
-Direction générale des services de ressources humaines
-Emploi et développement social Canada/ Gouvernement du Canada','2019-04-17T00:00:00',NULL,N'System',N'Leblanc, Chantal x [NC]','2016-11-04T08:03:56','2022-03-17T15:06:14.890',55)
- ,(100,N'HRSC ID [IDENTIFIER] - Request Resolved - [SUBJECT] [EMP_NAME]',N'CSRH ID [IDENTIFIER] - Demande résolue - [SUBJECT] [EMP_NAME]',N'Your request has been resolved. 
+VÃ©ronique Tremblay
+Directrice â€“ Bureau des valeurs, de la reconnaissance et de la rÃ©solution en milieu de travail 
+Direction gÃ©nÃ©rale des services de ressources humaines
+Emploi et dÃ©veloppement social Canada/ Gouvernement du Canada','2019-04-17T00:00:00',NULL,N'System',N'Leblanc, Chantal x [NC]','2016-11-04T08:03:56','2022-03-17T15:06:14.890',55)
+ ,(100,N'HRSC ID [IDENTIFIER] - Request Resolved - [SUBJECT] [EMP_NAME]',N'CSRH ID [IDENTIFIER] - Demande rÃ©solue - [SUBJECT] [EMP_NAME]',N'Your request has been resolved. 
 
 You can view the request online by clicking on the following link: [REQUEST_LINK]
 
-Thank you for using the Human Resources Services Centre (HRSC) Web Application. If you have any questions or concerns, please contact the lead assigned to your request.',N'Votre demande a été résolue.
+Thank you for using the Human Resources Services Centre (HRSC) Web Application. If you have any questions or concerns, please contact the lead assigned to your request.',N'Votre demande a Ã©tÃ© rÃ©solue.
 
-Vous pouvez accéder à la demande en cliquant sur le lien suivant : [REQUEST_LINK]
+Vous pouvez accÃ©der Ã  la demande en cliquant sur le lien suivant : [REQUEST_LINK]
 
-Merci d’avoir utilisé l’Application web du Centre de services en ressources humaines (CSRH). Pour toute question ou commentaire, nous vous invitons à contacter le leader assigné à votre demande.','2020-06-20T00:00:00',NULL,N'Sytem',N'Robichaud, Martin M [NC]','2018-06-13T07:21:21.160','2020-04-14T14:38:35.370',56)
- ,(101,N'HRSC - Requests Received - [SUBJECT]',N'CSRH - Demandes reçues - [SUBJECT]',N'Your [REQ_COUNT] requests have been received.
-
-You can view the request online on the HRSC Web Application: http://hrsc-csrh.prv/webforms/ClientRequests.aspx
-
-Thank you for using the Human Resources Services Centre (HRSC) Web Application.
-
-If you have any questions or concerns, please contact the lead assigned to your request.',N'Nous accusons réception de vos [REQ_COUNT] demandes.
-
-Vous pouvez visualiser les demandes à partir de l’application Web du CSRH : http://hrsc-csrh.prv/webforms/ClientRequests.aspx
-
-Merci d’avoir utilisé l’application web du Centre de services en ressources humaines (CSRH).
-
-Pour toute question ou commentaire concernant cette demande, nous vous invitons à contacter le leader assigné à votre demande.','2019-07-27T00:00:00',NULL,N'Girouard, Francois F [NC]',N'Robichaud, Martin M [NC]','2019-07-27T11:25:24.857','2020-04-14T14:08:01.200',57)
- ,(102,N'HRSC - Requests Received - [SUBJECT]',N'CSRH - Demandes reçues - [SUBJECT]',N'Your [REQ_COUNT] requests have been received.
+Merci dâ€™avoir utilisÃ© lâ€™Application web du Centre de services en ressources humaines (CSRH). Pour toute question ou commentaire, nous vous invitons Ã  contacter le leader assignÃ© Ã  votre demande.','2020-06-20T00:00:00',NULL,N'Sytem',N'Robichaud, Martin M [NC]','2018-06-13T07:21:21.160','2020-04-14T14:38:35.370',56)
+ ,(101,N'HRSC - Requests Received - [SUBJECT]',N'CSRH - Demandes reÃ§ues - [SUBJECT]',N'Your [REQ_COUNT] requests have been received.
 
 You can view the request online on the HRSC Web Application: http://hrsc-csrh.prv/webforms/ClientRequests.aspx
 
 Thank you for using the Human Resources Services Centre (HRSC) Web Application.
 
-If you have any questions or concerns, please contact the lead assigned to your request.',N'Nous accusons réception de vos [REQ_COUNT] demandes.
+If you have any questions or concerns, please contact the lead assigned to your request.',N'Nous accusons rÃ©ception de vos [REQ_COUNT] demandes.
 
-Vous pouvez visualiser les demandes à partir de l’application Web du CSRH : http://hrsc-csrh.prv/webforms/ClientRequests.aspx
+Vous pouvez visualiser les demandes Ã  partir de lâ€™application Web du CSRH : http://hrsc-csrh.prv/webforms/ClientRequests.aspx
 
-Merci d’avoir utilisé l’application web du Centre de services en ressources humaines (CSRH).
+Merci dâ€™avoir utilisÃ© lâ€™application web du Centre de services en ressources humaines (CSRH).
 
-Pour toute question ou commentaire concernant cette demande, nous vous invitons à contacter le leader assigné à votre demande..','2019-07-29T00:00:00',NULL,N'Girouard, Francois F [NC]',N'Robichaud, Martin M [NC]','2019-07-29T09:48:57.147','2020-04-14T14:08:51.403',57)
- ,(10102,N'HRSC ID [IDENTIFIER] - Action required: Waiting for approval - [SUBJECT] - Employee:[EMP_NAME]',N'CSRH ID [IDENTIFIER] - Action requise: En attente d''approbation - [SUBJECT] - Employé:[EMP_NAME]',N'Your requests waiting for approval.
+Pour toute question ou commentaire concernant cette demande, nous vous invitons Ã  contacter le leader assignÃ© Ã  votre demande.','2019-07-27T00:00:00',NULL,N'Girouard, Francois F [NC]',N'Robichaud, Martin M [NC]','2019-07-27T11:25:24.857','2020-04-14T14:08:01.200',57)
+ ,(102,N'HRSC - Requests Received - [SUBJECT]',N'CSRH - Demandes reÃ§ues - [SUBJECT]',N'Your [REQ_COUNT] requests have been received.
+
+You can view the request online on the HRSC Web Application: http://hrsc-csrh.prv/webforms/ClientRequests.aspx
+
+Thank you for using the Human Resources Services Centre (HRSC) Web Application.
+
+If you have any questions or concerns, please contact the lead assigned to your request.',N'Nous accusons rÃ©ception de vos [REQ_COUNT] demandes.
+
+Vous pouvez visualiser les demandes Ã  partir de lâ€™application Web du CSRH : http://hrsc-csrh.prv/webforms/ClientRequests.aspx
+
+Merci dâ€™avoir utilisÃ© lâ€™application web du Centre de services en ressources humaines (CSRH).
+
+Pour toute question ou commentaire concernant cette demande, nous vous invitons Ã  contacter le leader assignÃ© Ã  votre demande..','2019-07-29T00:00:00',NULL,N'Girouard, Francois F [NC]',N'Robichaud, Martin M [NC]','2019-07-29T09:48:57.147','2020-04-14T14:08:51.403',57)
+ ,(10102,N'HRSC ID [IDENTIFIER] - Action required: Waiting for approval - [SUBJECT] - Employee:[EMP_NAME]',N'CSRH ID [IDENTIFIER] - Action requise: En attente d''approbation - [SUBJECT] - EmployÃ©:[EMP_NAME]',N'Your requests waiting for approval.
 
 You can view the request online on the HRSC Web Application: http://hrsc-csrh.prv/webforms/clientrequestsdelegate.aspx
 
@@ -1518,45 +1518,45 @@ You can view the request online on the HRSC Web Application: http://hrsc-csrh.pr
 
 If you have any questions or concerns, please contact the lead assigned to your request.',N'Votre demande est en attente d''approbation.
 
-Vous pouvez visualiser les demandes à partir de l’application Web du CSRH : http://hrsc-csrh.prv/webforms/clientrequestsdelegate.aspx
+Vous pouvez visualiser les demandes Ã  partir de lâ€™application Web du CSRH : http://hrsc-csrh.prv/webforms/clientrequestsdelegate.aspx
 
- Merci d’avoir utilisé l’application web du Centre de services en ressources humaines (CSRH).
+ Merci dâ€™avoir utilisÃ© lâ€™application web du Centre de services en ressources humaines (CSRH).
 
-Pour toute question ou commentaire concernant cette demande, nous vous invitons à contacter le leader assigné à votre demande..','2023-01-01T00:00:00',NULL,N'HRSC 4.13',N'HRSC 4.13','2023-01-19T09:48:57.147','2023-01-19T09:08:51.403',58)
- ,(10103,N'HRSC ID [IDENTIFIER] - Request Approuved - [SUBJECT] - Employee Name:[EMP_NAME]',N'CSRH ID [IDENTIFIER] - Demande approuvée - [SUBJECT] - Nom d''employé:[EMP_NAME]',N'This requests has been approved.
+Pour toute question ou commentaire concernant cette demande, nous vous invitons Ã  contacter le leader assignÃ© Ã  votre demande..','2023-01-01T00:00:00',NULL,N'HRSC 4.13',N'HRSC 4.13','2023-01-19T09:48:57.147','2023-01-19T09:08:51.403',58)
+ ,(10103,N'HRSC ID [IDENTIFIER] - Request Approuved - [SUBJECT] - Employee Name:[EMP_NAME]',N'CSRH ID [IDENTIFIER] - Demande approuvÃ©e - [SUBJECT] - Nom d''employÃ©:[EMP_NAME]',N'This requests has been approved.
 
-You can view the request online on the HRSC Web Application: [REQUEST_LINK]',N'Cette demande a été approuvée.
+You can view the request online on the HRSC Web Application: [REQUEST_LINK]',N'Cette demande a Ã©tÃ© approuvÃ©e.
 
-Vous pouvez visualiser les demandes à partir de l’application Web du CSRH : [REQUEST_LINK]','2023-01-01T00:00:00',NULL,N'HRSC 4.13',N'HRSC 4.13','2023-01-19T09:48:57.147','2023-01-19T09:08:51.403',59)
- ,(10104,N'HRSC ID [IDENTIFIER] - Request Declined - [SUBJECT] - Employee Name:[EMP_NAME]',N'CSRH ID [IDENTIFIER] - Demande déclinée - [SUBJECT] - Nom d''employé:[EMP_NAME]',N'This requests has been Declined.
+Vous pouvez visualiser les demandes Ã  partir de lâ€™application Web du CSRH : [REQUEST_LINK]','2023-01-01T00:00:00',NULL,N'HRSC 4.13',N'HRSC 4.13','2023-01-19T09:48:57.147','2023-01-19T09:08:51.403',59)
+ ,(10104,N'HRSC ID [IDENTIFIER] - Request Declined - [SUBJECT] - Employee Name:[EMP_NAME]',N'CSRH ID [IDENTIFIER] - Demande dÃ©clinÃ©e - [SUBJECT] - Nom d''employÃ©:[EMP_NAME]',N'This requests has been Declined.
 
-You can view the request online on the HRSC Web Application: [REQUEST_LINK]',N'Cette demande a été déclinée.
+You can view the request online on the HRSC Web Application: [REQUEST_LINK]',N'Cette demande a Ã©tÃ© dÃ©clinÃ©e.
 
-Vous pouvez visualiser les demandes à partir de l’application Web du CSRH : [REQUEST_LINK]','2023-01-01T00:00:00',NULL,N'HRSC 4.13',N'HRSC 4.13','2023-01-19T09:48:57.147','2023-01-19T09:08:51.403',60)
- ,(10105,N'HRSC ID [IDENTIFIER] - Request Pending Signature - [SUBJECT] - Employee:[EMP_NAME]',N'CSRH ID [IDENTIFIER] - Demande en attente de signature - [SUBJECT] - Employé:[EMP_NAME]',N'This requests is waithing for signature.
+Vous pouvez visualiser les demandes Ã  partir de lâ€™application Web du CSRH : [REQUEST_LINK]','2023-01-01T00:00:00',NULL,N'HRSC 4.13',N'HRSC 4.13','2023-01-19T09:48:57.147','2023-01-19T09:08:51.403',60)
+ ,(10105,N'HRSC ID [IDENTIFIER] - Request Pending Signature - [SUBJECT] - Employee:[EMP_NAME]',N'CSRH ID [IDENTIFIER] - Demande en attente de signature - [SUBJECT] - EmployÃ©:[EMP_NAME]',N'This requests is waithing for signature.
 
 You can view the request online on the HRSC Web Application: [REQUEST_LINK]',N'Cette demande est en attente de signature.
 
-Vous pouvez visualiser les demandes à partir de l’application Web du CSRH : [REQUEST_LINK]','2023-01-01T00:00:00',NULL,N'HRSC 4.13',N'HRSC 4.13','2023-01-19T09:48:57.147','2023-01-19T09:08:51.403',61)
- ,(10106,N'HRSC ID [IDENTIFIER] - Request Resolved - [SUBJECT] - Employee:[EMP_NAME]',N'CSRH ID [IDENTIFIER] - Demande résolue - [SUBJECT] - Employé:[EMP_NAME]',N'This requests is Resolved. 
+Vous pouvez visualiser les demandes Ã  partir de lâ€™application Web du CSRH : [REQUEST_LINK]','2023-01-01T00:00:00',NULL,N'HRSC 4.13',N'HRSC 4.13','2023-01-19T09:48:57.147','2023-01-19T09:08:51.403',61)
+ ,(10106,N'HRSC ID [IDENTIFIER] - Request Resolved - [SUBJECT] - Employee:[EMP_NAME]',N'CSRH ID [IDENTIFIER] - Demande rÃ©solue - [SUBJECT] - EmployÃ©:[EMP_NAME]',N'This requests is Resolved. 
 
-You can view the request online on the HRSC Web Application: [REQUEST_LINK]',N'Cette demande est résolue.
+You can view the request online on the HRSC Web Application: [REQUEST_LINK]',N'Cette demande est rÃ©solue.
 
-Vous pouvez visualiser les demandes à partir de l’application Web du CSRH : [REQUEST_LINK]','2023-01-01T00:00:00',NULL,N'HRSC 4.13',N'HRSC 4.13','2023-01-19T09:48:57.147','2023-01-19T09:08:51.403',62)
- ,(10107,N'HRSC ID [IDENTIFIER] - Request Resolve by SFT - [SUBJECT] - Employee:[EMP_NAME]',N'CSRH ID [IDENTIFIER] - Demande Résolue par SFT - [SUBJECT] - Employé:[EMP_NAME]',N'This requests been resolved by SFT. 
+Vous pouvez visualiser les demandes Ã  partir de lâ€™application Web du CSRH : [REQUEST_LINK]','2023-01-01T00:00:00',NULL,N'HRSC 4.13',N'HRSC 4.13','2023-01-19T09:48:57.147','2023-01-19T09:08:51.403',62)
+ ,(10107,N'HRSC ID [IDENTIFIER] - Request Resolve by SFT - [SUBJECT] - Employee:[EMP_NAME]',N'CSRH ID [IDENTIFIER] - Demande RÃ©solue par SFT - [SUBJECT] - EmployÃ©:[EMP_NAME]',N'This requests been resolved by SFT. 
 
-You can view the request online on the HRSC Web Application: [REQUEST_LINK]',N'Cette demande a été résolue par SFT.
+You can view the request online on the HRSC Web Application: [REQUEST_LINK]',N'Cette demande a Ã©tÃ© rÃ©solue par SFT.
 
-Vous pouvez visualiser les demandes à partir de l’application Web du CSRH : [REQUEST_LINK]','2023-01-01T00:00:00',NULL,N'HRSC 4.13',N'HRSC 4.13','2023-01-19T09:48:57.147','2023-01-19T09:08:51.403',63)
- ,(10108,N'HRSC ID [IDENTIFIER] - Request Resolve by SFT - [SUBJECT] - Employee:[EMP_NAME]',N'CSRH ID [IDENTIFIER] - Demande Résolue par SFT - [SUBJECT] - Employé:[EMP_NAME]',N'This requests been resolved by SFT. 
+Vous pouvez visualiser les demandes Ã  partir de lâ€™application Web du CSRH : [REQUEST_LINK]','2023-01-01T00:00:00',NULL,N'HRSC 4.13',N'HRSC 4.13','2023-01-19T09:48:57.147','2023-01-19T09:08:51.403',63)
+ ,(10108,N'HRSC ID [IDENTIFIER] - Request Resolve by SFT - [SUBJECT] - Employee:[EMP_NAME]',N'CSRH ID [IDENTIFIER] - Demande RÃ©solue par SFT - [SUBJECT] - EmployÃ©:[EMP_NAME]',N'This requests been resolved by SFT. 
 
  To be able to transfert to HRSB you need resolve your intervent. 
 
- You can view the request online on the HRSC Web Application: [REQUEST_LINK]',N'Cette demande a été résolue par SFT.
+ You can view the request online on the HRSC Web Application: [REQUEST_LINK]',N'Cette demande a Ã©tÃ© rÃ©solue par SFT.
 
- Pour que la demande soit transférée à HRSB vous devez résoudre votre intervention. 
+ Pour que la demande soit transfÃ©rÃ©e Ã  HRSB vous devez rÃ©soudre votre intervention. 
 
- Vous pouvez visualiser les demandes à partir de l’application Web du CSRH : [REQUEST_LINK]','2023-01-01T00:00:00',NULL,N'HRSC 4.13',N'HRSC 4.13','2023-01-19T09:48:57.147','2023-01-19T09:08:51.403',64)
+ Vous pouvez visualiser les demandes Ã  partir de lâ€™application Web du CSRH : [REQUEST_LINK]','2023-01-01T00:00:00',NULL,N'HRSC 4.13',N'HRSC 4.13','2023-01-19T09:48:57.147','2023-01-19T09:08:51.403',64)
 ) AS [Source] ([EMAIL_TEMPLATE_ID],[EMAIL_TEMPLATE_SUBJECT_EN],[EMAIL_TEMPLATE_SUBJECT_FR],[EMAIL_TEMPLATE_BODY_EN],[EMAIL_TEMPLATE_BODY_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[USER_UPDATED],[DATE_CREATED],[DATE_UPDATED],[EMAIL_TEMPLATE_TYPE_ID])
 ON ([Target].[EMAIL_TEMPLATE_ID] = [Source].[EMAIL_TEMPLATE_ID])
 WHEN MATCHED AND (

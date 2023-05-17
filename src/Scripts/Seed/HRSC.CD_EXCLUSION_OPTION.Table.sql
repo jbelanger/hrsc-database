@@ -12,8 +12,8 @@ MERGE INTO [HRSC].[CD_EXCLUSION_OPTION] AS [Target]
 USING (VALUES
   (9,N'NotEx',N'Not Excluded',N'Non Exclu',N'Not Excluded',N'Non Exclu','2013-01-10T11:15:52.090',NULL,N'HRDC-DRHC\elena.akhmentova','2013-01-10T11:15:52.090',NULL,NULL)
  ,(10,N'Ex',N'Excluded',N'Exclu',N'Excluded',N'Exclu','2013-01-10T11:15:52.090',NULL,N'HRDC-DRHC\elena.akhmentova','2013-01-10T11:15:52.090',NULL,NULL)
- ,(11,N'Prop',N'Proposed for Exclusion',N'Proposé pour l''exclusion',N'Proposed for Exclusion',N'Proposé pour l''exclusion','2013-01-10T11:15:52.090',NULL,N'HRDC-DRHC\elena.akhmentova','2013-01-10T11:15:52.090',NULL,NULL)
- ,(12,N'NotRe',N'Not Represented',N'Non représenté',N'Not Represented',N'Non représenté','2018-06-13T07:21:20.330',NULL,N'System','2018-06-13T07:21:20.330',NULL,NULL)
+ ,(11,N'Prop',N'Proposed for Exclusion',N'ProposÃ© pour l''exclusion',N'Proposed for Exclusion',N'ProposÃ© pour l''exclusion','2013-01-10T11:15:52.090',NULL,N'HRDC-DRHC\elena.akhmentova','2013-01-10T11:15:52.090',NULL,NULL)
+ ,(12,N'NotRe',N'Not Represented',N'Non reprÃ©sentÃ©',N'Not Represented',N'Non reprÃ©sentÃ©','2018-06-13T07:21:20.330',NULL,N'System','2018-06-13T07:21:20.330',NULL,NULL)
 ) AS [Source] ([EXCLUSION_OPT_ID],[EXCLUSION_OPT_CODE],[EXCLUSION_OPT_NAME_EN],[EXCLUSION_OPT_NAME_FR],[EXCLUSION_OPT_DESC_EN],[EXCLUSION_OPT_DESC_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[DATE_CREATED],[USER_UPDATED],[DATE_UPDATED])
 ON ([Target].[EXCLUSION_OPT_ID] = [Source].[EXCLUSION_OPT_ID])
 WHEN MATCHED AND (

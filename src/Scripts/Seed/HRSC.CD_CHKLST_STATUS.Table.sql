@@ -9,13 +9,13 @@ DECLARE @mergeOutput1485248346 TABLE ( [DMLAction] VARCHAR(6) );
 MERGE INTO [HRSC].[CD_CHKLST_STATUS] AS [Target]
 USING (VALUES
   (1,N'NONAP',N'Non Applicable',N'Non applicable',NULL,NULL,'2013-05-30T00:00:00',NULL,N'yves.robichaud','2013-05-30T00:00:00',NULL,NULL)
- ,(2,N'RECOV',N'Recovered',N'Récupéré',NULL,NULL,'2013-05-30T00:00:00',NULL,N'yves.robichaud','2013-05-30T00:00:00',NULL,NULL)
- ,(3,N'RECNE',N'Recovery Necessary',N'Recouvrement nécessaire',NULL,NULL,'2013-05-30T00:00:00',NULL,N'yves.robichaud','2013-05-30T00:00:00',NULL,NULL)
- ,(4,N'UPDAT',N'Reviewed and/or Updated (Comments Required) ',N'Revu et/ou mis à jour (commentaires requis)',NULL,NULL,'2013-05-30T00:00:00',NULL,N'yves.robichaud','2013-05-30T00:00:00',NULL,NULL)
+ ,(2,N'RECOV',N'Recovered',N'RÃ©cupÃ©rÃ©',NULL,NULL,'2013-05-30T00:00:00',NULL,N'yves.robichaud','2013-05-30T00:00:00',NULL,NULL)
+ ,(3,N'RECNE',N'Recovery Necessary',N'Recouvrement nÃ©cessaire',NULL,NULL,'2013-05-30T00:00:00',NULL,N'yves.robichaud','2013-05-30T00:00:00',NULL,NULL)
+ ,(4,N'UPDAT',N'Reviewed and/or Updated (Comments Required) ',N'Revu et/ou mis Ã  jour (commentaires requis)',NULL,NULL,'2013-05-30T00:00:00',NULL,N'yves.robichaud','2013-05-30T00:00:00',NULL,NULL)
  ,(5,N'YES',N'Yes',N'Oui',N'Yes',N'Oui','2013-05-30T00:00:00',NULL,N'tony.paradis','2013-05-30T00:00:00',NULL,NULL)
  ,(6,N'NO',N'No',N'Non',N'No',N'Non','2013-05-30T00:00:00',NULL,N'tony.paradis','2013-05-30T00:00:00',NULL,NULL)
- ,(7,N'RTND',N'Returned',N'Retournés',N'Returned',N'Retournés','2015-03-30T07:42:47.407',NULL,N'Tony.paradis','2015-03-30T07:42:47.407',NULL,NULL)
- ,(8,N'CANC',N'Cancelled',N'Annulé',N'Cancelled',N'Annulé','2015-03-30T07:42:47.440',NULL,N'Tont.Paradis','2015-03-30T07:42:47.440',NULL,NULL)
+ ,(7,N'RTND',N'Returned',N'RetournÃ©s',N'Returned',N'RetournÃ©s','2015-03-30T07:42:47.407',NULL,N'Tony.paradis','2015-03-30T07:42:47.407',NULL,NULL)
+ ,(8,N'CANC',N'Cancelled',N'AnnulÃ©',N'Cancelled',N'AnnulÃ©','2015-03-30T07:42:47.440',NULL,N'Tont.Paradis','2015-03-30T07:42:47.440',NULL,NULL)
 ) AS [Source] ([CHKLST_STATUS_ID],[CHKLST_STATUS_CODE],[CHKLST_STATUS_NAME_EN],[CHKLST_STATUS_NAME_FR],[CHKLST_STATUS_DESC_EN],[CHKLST_STATUS_DESC_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[DATE_CREATED],[USER_UPDATED],[DATE_UPDATED])
 ON ([Target].[CHKLST_STATUS_ID] = [Source].[CHKLST_STATUS_ID])
 WHEN MATCHED AND (

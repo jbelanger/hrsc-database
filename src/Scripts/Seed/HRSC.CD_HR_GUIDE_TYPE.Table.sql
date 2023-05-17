@@ -11,7 +11,7 @@ DECLARE @mergeOutput1901249828 TABLE ( [DMLAction] VARCHAR(6) );
 MERGE INTO [HRSC].[CD_HR_GUIDE_TYPE] AS [Target]
 USING (VALUES
   (2,N'MG',N'Guide',N'Guide',N'Manager''s Guide',N'Guide du gestionnaire',NULL,NULL,N'Jan  9 2013  3:08PM','2013-01-09T15:08:59.977',NULL,NULL)
- ,(3,N'PR',N'Procedure',N'Procédure',N'HR Desk Procedure',N'Procédure HR',NULL,NULL,N'Jan  9 2013  3:10PM','2013-01-09T15:10:30.047',NULL,NULL)
+ ,(3,N'PR',N'Procedure',N'ProcÃ©dure',N'HR Desk Procedure',N'ProcÃ©dure HR',NULL,NULL,N'Jan  9 2013  3:10PM','2013-01-09T15:10:30.047',NULL,NULL)
  ,(4,N'FI',N'Form Instructions',N'Instructions du Formulaire',N'Form Instructions',N'Instructions du Formulaire',NULL,NULL,N'system','2021-02-05T07:35:50.540',NULL,NULL)
 ) AS [Source] ([HR_GUIDE_TYPE_ID],[HR_GUIDE_TYPE_CODE],[HR_GUIDE_TYPE_NAME_EN],[HR_GUIDE_TYPE_NAME_FR],[HR_GUIDE_TYPE_DESC_EN],[HR_GUIDE_TYPE_DESC_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[DATE_CREATED],[USER_UPDATED],[DATE_UPDATED])
 ON ([Target].[HR_GUIDE_TYPE_ID] = [Source].[HR_GUIDE_TYPE_ID])

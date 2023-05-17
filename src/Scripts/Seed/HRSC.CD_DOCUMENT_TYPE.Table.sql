@@ -10,11 +10,11 @@ SET IDENTITY_INSERT [HRSC].[CD_DOCUMENT_TYPE] ON
 DECLARE @mergeOutput1127675065 TABLE ( [DMLAction] VARCHAR(6) );
 MERGE INTO [HRSC].[CD_DOCUMENT_TYPE] AS [Target]
 USING (VALUES
-  (1,N'MS-Word',N'MS-Word',N'Word file',N'Fichier Word',N'application/vnd.ms-word','2011-12-09T15:14:45.253',NULL,N'Gaétan',NULL,'2011-12-09T15:14:45.253',NULL,N'doc')
- ,(2,N'MS-Excel',N'MS-Excel',N'Excel file',N'Fichier Excel',N'application/vnd.ms-excel','2011-12-09T15:14:45.253',NULL,N'Gaétan',NULL,'2011-12-09T15:14:45.253',NULL,N'xls')
- ,(3,N'Adobe PDF',N'Adobe PDF',N'PDF file',N'Fichier PDF',N'application/pdf','2011-12-09T15:47:43.030',NULL,N'Gaétan',NULL,'2011-12-09T15:47:43.030',NULL,N'pdf')
- ,(4,N'MS-Visio',N'MS-Visio',N'Visio file',N'Fichier Visio',N'application/vnd.visio','2011-12-09T15:47:43.030',NULL,N'Gaétan',NULL,'2011-12-09T15:47:43.030',NULL,N'vsd')
- ,(7,N'Unknonwed',N'Unknonwed',N'Unknonwed',N'Unknonwed',N'Unknonwed','2012-03-02T15:18:01.813',NULL,N'Éric Nolet',NULL,'2012-03-02T15:18:01.813',NULL,N'UNK')
+  (1,N'MS-Word',N'MS-Word',N'Word file',N'Fichier Word',N'application/vnd.ms-word','2011-12-09T15:14:45.253',NULL,N'GaÃ©tan',NULL,'2011-12-09T15:14:45.253',NULL,N'doc')
+ ,(2,N'MS-Excel',N'MS-Excel',N'Excel file',N'Fichier Excel',N'application/vnd.ms-excel','2011-12-09T15:14:45.253',NULL,N'GaÃ©tan',NULL,'2011-12-09T15:14:45.253',NULL,N'xls')
+ ,(3,N'Adobe PDF',N'Adobe PDF',N'PDF file',N'Fichier PDF',N'application/pdf','2011-12-09T15:47:43.030',NULL,N'GaÃ©tan',NULL,'2011-12-09T15:47:43.030',NULL,N'pdf')
+ ,(4,N'MS-Visio',N'MS-Visio',N'Visio file',N'Fichier Visio',N'application/vnd.visio','2011-12-09T15:47:43.030',NULL,N'GaÃ©tan',NULL,'2011-12-09T15:47:43.030',NULL,N'vsd')
+ ,(7,N'Unknonwed',N'Unknonwed',N'Unknonwed',N'Unknonwed',N'Unknonwed','2012-03-02T15:18:01.813',NULL,N'Ã‰ric Nolet',NULL,'2012-03-02T15:18:01.813',NULL,N'UNK')
 ) AS [Source] ([DOCUMENT_TYPE_ID],[DOCUMENT_TYPE_NAME_EN],[DOCUMENT_TYPE_NAME_FR],[DOCUMENT_TYPE_DESC_EN],[DOCUMENT_TYPE_DESC_FR],[DOCUMENT_CONTENT_TYPE],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[USER_UPDATED],[DATE_CREATED],[DATE_UPDATED],[DOCUMENT_TYPE_CODE])
 ON ([Target].[DOCUMENT_TYPE_ID] = [Source].[DOCUMENT_TYPE_ID])
 WHEN MATCHED AND (

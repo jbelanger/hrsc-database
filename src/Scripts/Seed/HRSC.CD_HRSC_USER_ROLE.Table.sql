@@ -10,10 +10,10 @@ SET IDENTITY_INSERT [HRSC].[CD_HRSC_USER_ROLE] ON
 DECLARE @mergeOutput1591676718 TABLE ( [DMLAction] VARCHAR(6) );
 MERGE INTO [HRSC].[CD_HRSC_USER_ROLE] AS [Target]
 USING (VALUES
-  (3,N'IITB Support',N'DGITT support',N'Innovation, Information and Technology Branch',N'Direction générale de l’innovation, de l’information et de la technologie ','2012-01-12T15:21:07.543',NULL,N'System',NULL,'2012-01-12T15:21:07.543',NULL,N'IITB')
+  (3,N'IITB Support',N'DGITT support',N'Innovation, Information and Technology Branch',N'Direction gÃ©nÃ©rale de lâ€™innovation, de lâ€™information et de la technologie ','2012-01-12T15:21:07.543',NULL,N'System',NULL,'2012-01-12T15:21:07.543',NULL,N'IITB')
  ,(4,N'HRSC management',N'Gestion CSRH',N'Super Administrator',N'Super administrateur','2012-01-12T15:23:14.380',NULL,N'System',NULL,'2012-01-12T15:23:14.380',NULL,N'ADMIN')
- ,(5,N'BC management',N'Gestion CA',N'report, manage user for his/their BC…',N'raport, gestion des usager pour ou leur centre d''affaire...','2012-01-12T15:24:59.750',NULL,N'System',NULL,'2012-01-12T15:24:59.750',NULL,N'BCM')
- ,(6,N'BC Employee',N'Employé CA',N'process request',N'processus des demandes','2012-01-12T15:26:26.903',NULL,N'System',NULL,'2012-01-12T15:26:26.903',NULL,N'BCE')
+ ,(5,N'BC management',N'Gestion CA',N'report, manage user for his/their BCâ€¦',N'raport, gestion des usager pour ou leur centre d''affaire...','2012-01-12T15:24:59.750',NULL,N'System',NULL,'2012-01-12T15:24:59.750',NULL,N'BCM')
+ ,(6,N'BC Employee',N'EmployÃ© CA',N'process request',N'processus des demandes','2012-01-12T15:26:26.903',NULL,N'System',NULL,'2012-01-12T15:26:26.903',NULL,N'BCE')
 ) AS [Source] ([HRSC_USER_ROLE_ID],[HRSC_USER_ROLE_NAME_EN],[HRSC_USER_ROLE_NAME_FR],[HRSC_USER_ROLE_DESC_EN],[HRSC_USER_ROLE_DESC_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[USER_UPDATED],[DATE_CREATED],[DATE_UPDATED],[HRSC_USER_ROLE_CODE])
 ON ([Target].[HRSC_USER_ROLE_ID] = [Source].[HRSC_USER_ROLE_ID])
 WHEN MATCHED AND (

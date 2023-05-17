@@ -90,7 +90,7 @@ The code and documentation for the usp_generate_merge stored procedure can be fo
 
 ## Generate scripts for the reference data
 
-To ease the process of creating all of the sql files in the project, a Powershell script has been created to automate all of this. The tool can be found in the [hrsc-database repository](https://dev.azure.com/ESDC-HRSC-Apps/HRSC/_git/hrsc-database?path=/utils/GenerateReferenceData.ps1).
+To ease the process of creating all of the sql files in the project, a Powershell script has been created to automate all of this. The tool can be found in the [hrsc-database repository](../utils/GenerateReferenceData.ps1).
 
 To use this tool, open a Powershell window and execute the following, using the connection string of the source database:
 
@@ -100,3 +100,25 @@ PS C:\_DEV\hrsc-database\utils> .\GenerateReferenceData.ps1  "Data Source=localh
 ```
 
 The files will be generated under C:\Temp\ReferenceData. You can edit the script to output the files to a diferent place.
+
+## Execute merge script through the Post-Deployment script
+
+Those generated files can be used through a post-deployment script in the SSDT project to synchronize the data. **This should only be used in developement environments**.
+
+```SQL
+if @@servername <> 'MLDBSQL16CL01' -- Production and training
+begin 
+    PRINT 'BEGIN Merge lookup data scripts'
+    /*
+    Insert lookup data. Allowed on dev environments only.
+    */
+    :r ./"Seed/HRSC.CD_ACADEMIC_LEVEL.Table.sql"
+    :r ./"Seed/HRSC.CD_ACCOMODATION_REQUIRED.Table.sql"
+    :r ./"Seed/HRSC.CD_ACTION_TYPE.Table.sql"
+    :r ./"Seed/HRSC.CD_ANNOUNCEMENT_TYPE.Table.sql"
+    ...
+```
+
+The condition **@@servername <> 'MLDBSQL16CL01'** ensures this code is not ran on a production environment. 
+
+See [PostDeployment.sql](../src/Scripts/PostDeployment.sql) for more details.

@@ -8,17 +8,17 @@ SET NOCOUNT ON
 DECLARE @mergeOutput1487344363 TABLE ( [DMLAction] VARCHAR(6) );
 MERGE INTO [HRSC].[CD_ACADEMIC_LEVEL] AS [Target]
 USING (VALUES
-  (1,N'SEC',N'FSWEP - Seconday School (99815)',N'PFETE - École Secondaire (99815)',NULL,NULL,'2015-03-30',NULL,N'1',NULL,'2015-03-30',NULL)
- ,(2,N'CEGEP',N'FSWEP - College (99821)',N'PFETE - Cégep (99821)',NULL,NULL,'2015-03-30',NULL,N'1',NULL,'2015-03-30',NULL)
- ,(3,N'UNIPC',N'FSWEP- University Undergraduate (99822)',N'PFETE - Université premier cycle (99822)',NULL,NULL,'2015-03-30',NULL,N'1',NULL,'2015-03-30',NULL)
- ,(4,N'UNIM',N'FSWEP - University Master (99823)',N'PFETE - Université Maîtrise (98823)',NULL,NULL,'2015-03-30',NULL,N'1',NULL,'2015-03-30',NULL)
- ,(5,N'UNID',N'FSWEP - University Doctorate (99824)',N'PFETE - Université Doctorat (99824)',NULL,NULL,'2015-03-30',NULL,N'1',NULL,'2015-03-30',NULL)
- ,(6,N'STCOL',N'Co-op/Internship - College (99825)',N'Co-op / Stage - Collège (99825)',NULL,NULL,'2015-03-30',NULL,N'1',NULL,'2015-03-30',NULL)
+  (1,N'SEC',N'FSWEP - Seconday School (99815)',N'PFETE - Ã‰cole Secondaire (99815)',NULL,NULL,'2015-03-30',NULL,N'1',NULL,'2015-03-30',NULL)
+ ,(2,N'CEGEP',N'FSWEP - College (99821)',N'PFETE - CÃ©gep (99821)',NULL,NULL,'2015-03-30',NULL,N'1',NULL,'2015-03-30',NULL)
+ ,(3,N'UNIPC',N'FSWEP- University Undergraduate (99822)',N'PFETE - UniversitÃ© premier cycle (99822)',NULL,NULL,'2015-03-30',NULL,N'1',NULL,'2015-03-30',NULL)
+ ,(4,N'UNIM',N'FSWEP - University Master (99823)',N'PFETE - UniversitÃ© MaÃ®trise (98823)',NULL,NULL,'2015-03-30',NULL,N'1',NULL,'2015-03-30',NULL)
+ ,(5,N'UNID',N'FSWEP - University Doctorate (99824)',N'PFETE - UniversitÃ© Doctorat (99824)',NULL,NULL,'2015-03-30',NULL,N'1',NULL,'2015-03-30',NULL)
+ ,(6,N'STCOL',N'Co-op/Internship - College (99825)',N'Co-op / Stage - CollÃ¨ge (99825)',NULL,NULL,'2015-03-30',NULL,N'1',NULL,'2015-03-30',NULL)
  ,(7,N'STUPC',N'Co-op/Internship - Univ. Undrgrad (99826)',N'Co-op / Stage - Univ. premier cycle (99826)',NULL,NULL,'2015-03-30',NULL,N'1',NULL,'2015-03-30',NULL)
- ,(8,N'STUM',N'Co-op/Internship - Univ. Master (99827)',N'Co-op / Stage - Univ. Maîtrise (99827)',NULL,NULL,'2015-03-30',NULL,N'1',NULL,'2015-03-30',NULL)
+ ,(8,N'STUM',N'Co-op/Internship - Univ. Master (99827)',N'Co-op / Stage - Univ. MaÃ®trise (99827)',NULL,NULL,'2015-03-30',NULL,N'1',NULL,'2015-03-30',NULL)
  ,(9,N'STUD',N'Co-op/Internship - Univ. Doctorat (99828)',N'Co-op / Stage - Univ. Doctorat (99828)',NULL,NULL,'2015-03-30',NULL,N'1',NULL,'2015-03-30',NULL)
  ,(10,N'PAR',N'RAP - RAP Program (99814)',N'PAR - Programme PAR (99814)',NULL,NULL,'2015-03-30',NULL,N'1',NULL,'2015-03-30',NULL)
- ,(11,N'PEI',N'Internal Exchange Program (99820)',N'Programme d''échange interne (99820)',NULL,NULL,'2015-03-30',NULL,N'1',NULL,'2015-03-30',NULL)
+ ,(11,N'PEI',N'Internal Exchange Program (99820)',N'Programme d''Ã©change interne (99820)',NULL,NULL,'2015-03-30',NULL,N'1',NULL,'2015-03-30',NULL)
 ) AS [Source] ([ACADEMIC_LEVEL_ID],[ACADEMIC_LEVEL_CODE],[ACADEMIC_LEVEL_NAME_EN],[ACADEMIC_LEVEL_NAME_FR],[ACADEMIC_LEVEL_DESC_EN],[ACADEMIC_LEVEL_DESC_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[USER_UPDATED],[DATE_CREATED],[DATE_UPDATED])
 ON ([Target].[ACADEMIC_LEVEL_ID] = [Source].[ACADEMIC_LEVEL_ID])
 WHEN MATCHED AND (

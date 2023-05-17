@@ -10,9 +10,9 @@ SET IDENTITY_INSERT [HRSC].[CD_RELOCATION_EXPENSE] ON
 DECLARE @mergeOutput25767149 TABLE ( [DMLAction] VARCHAR(6) );
 MERGE INTO [HRSC].[CD_RELOCATION_EXPENSE] AS [Target]
 USING (VALUES
-  (1,N'Empee',N'Employee Requested',N'À la demande de l’employé ',N'Employee Requested',N'À la demande de l’employé ','2013-01-10T00:00:00','2020-01-17T09:12:09.043',N'HRDC-DRHC\elena.akhmentova','2013-01-10T11:35:30.930',N'michel.tardif','2018-09-24T15:17:39.810')
- ,(2,N'Emper',N'Employer Requested',N'À la demande de l''employeur',N'Employer Requested',N'À la demande de l''employeur','2013-01-10T11:35:30.957','2020-01-17T09:12:09.043',N'HRDC-DRHC\elena.akhmentova','2013-01-10T11:35:30.957',NULL,NULL)
- ,(4,N'NA',N'Not applicable',N'Sans objet',N'Not applicable',N'Sans objet','2013-02-01T00:00:00','2020-01-17T09:12:09.043',N'Alain Bélanger','2013-02-01T00:00:00',NULL,NULL)
+  (1,N'Empee',N'Employee Requested',N'Ã€ la demande de lâ€™employÃ© ',N'Employee Requested',N'Ã€ la demande de lâ€™employÃ© ','2013-01-10T00:00:00','2020-01-17T09:12:09.043',N'HRDC-DRHC\elena.akhmentova','2013-01-10T11:35:30.930',N'michel.tardif','2018-09-24T15:17:39.810')
+ ,(2,N'Emper',N'Employer Requested',N'Ã€ la demande de l''employeur',N'Employer Requested',N'Ã€ la demande de l''employeur','2013-01-10T11:35:30.957','2020-01-17T09:12:09.043',N'HRDC-DRHC\elena.akhmentova','2013-01-10T11:35:30.957',NULL,NULL)
+ ,(4,N'NA',N'Not applicable',N'Sans objet',N'Not applicable',N'Sans objet','2013-02-01T00:00:00','2020-01-17T09:12:09.043',N'Alain BÃ©langer','2013-02-01T00:00:00',NULL,NULL)
  ,(5,N'No',N'No*',N'Non : *',N'No*',N'Non : *',NULL,NULL,N'dbo','2020-01-17T09:12:09.043',NULL,NULL)
  ,(6,N'Yes',N'Yes: You must attach the NRO email*',N'Oui : Vous devez joindre le courriel du BNR*',N'Yes: You must attach the NRO email*',N'Oui : Vous devez joindre le courriel du BNR*',NULL,NULL,N'dbo','2020-01-17T09:12:09.043',NULL,NULL)
 ) AS [Source] ([RELOCATION_EXPENSE_ID],[RELOCATION_EXPENSE_CODE],[RELOCATION_EXPENSE_NAME_EN],[RELOCATION_EXPENSE_NAME_FR],[RELOCATION_EXPENSE_DESC_EN],[RELOCATION_EXPENSE_DESC_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[DATE_CREATED],[USER_UPDATED],[DATE_UPDATED])

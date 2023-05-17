@@ -10,13 +10,13 @@ SET IDENTITY_INSERT [HRSC].[CD_ACTION_TYPE] ON
 DECLARE @mergeOutput58483287 TABLE ( [DMLAction] VARCHAR(6) );
 MERGE INTO [HRSC].[CD_ACTION_TYPE] AS [Target]
 USING (VALUES
-  (1,N'PAR Resent',N'DIP ré-envoyée',N'PAR Resent',N'DIP ré-envoyée',NULL,N'SYSTEM',NULL,'2016-07-12T08:36:19.157',NULL,N'RSENT','2016-04-15T00:00:00')
- ,(2,N'Acknowledgment receipt received',N'Accusé de réception reçu',N'Acknowledgment receipt received',N'Accusé de réception reçu',NULL,N'SYSTEM',NULL,'2016-07-12T08:36:19.247',NULL,N'ACKNO','2016-04-15T00:00:00')
- ,(3,N'Pay Action Not Processed',N'Mouvement non traité',N'Pay Action Not Processed',N'Mouvement non traité',NULL,N'SYSTEM',NULL,'2016-07-12T08:36:19.247',NULL,N'NOPRO','2016-04-15T00:00:00')
- ,(4,N'PAR Confirmed',N'DIP confirmée',N'PAR Confirmed',N'DIP confirmée',NULL,N'SYSTEM',NULL,'2016-07-12T08:36:19.250',NULL,N'CONFI','2016-04-15T00:00:00')
- ,(5,N'Action entered in PeopleSoft – Request to send to Pay Center',N'Action entrée dans PeopleSoft – Demande à envoyer à la paye',N'Action entered in PeopleSoft – Request to send to Pay Center',N'Action entrée dans PeopleSoft – Demande à envoyer à la paye',NULL,N'yves.robichaud',NULL,'2017-07-06T12:48:09.963',NULL,N'PAct1','2017-07-06T00:00:00')
- ,(6,N'Action entered in PeopleSoft - Resolved Request',N'Action entrée dans PeopleSoft – Demande résolue',N'Action entered in PeopleSoft - Resolved Request',N'Action entrée dans PeopleSoft – Demande résolue',NULL,N'yves.robichaud',NULL,'2017-07-06T12:48:40.890',NULL,N'PAct2','2017-07-06T00:00:00')
- ,(7,N'Update position with an existing job code',N'Mise à jour de numéro de poste avec numéro d''emploi existant',N'Update position with an existing job code',N'Mise à jour de numéro de poste avec numéro d''emploi existant',NULL,N'tony.paradis',NULL,'2017-07-14T07:42:44.037',NULL,N'UDPOS','2017-07-14T07:42:44.037')
+  (1,N'PAR Resent',N'DIP rÃ©-envoyÃ©e',N'PAR Resent',N'DIP rÃ©-envoyÃ©e',NULL,N'SYSTEM',NULL,'2016-07-12T08:36:19.157',NULL,N'RSENT','2016-04-15T00:00:00')
+ ,(2,N'Acknowledgment receipt received',N'AccusÃ© de rÃ©ception reÃ§u',N'Acknowledgment receipt received',N'AccusÃ© de rÃ©ception reÃ§u',NULL,N'SYSTEM',NULL,'2016-07-12T08:36:19.247',NULL,N'ACKNO','2016-04-15T00:00:00')
+ ,(3,N'Pay Action Not Processed',N'Mouvement non traitÃ©',N'Pay Action Not Processed',N'Mouvement non traitÃ©',NULL,N'SYSTEM',NULL,'2016-07-12T08:36:19.247',NULL,N'NOPRO','2016-04-15T00:00:00')
+ ,(4,N'PAR Confirmed',N'DIP confirmÃ©e',N'PAR Confirmed',N'DIP confirmÃ©e',NULL,N'SYSTEM',NULL,'2016-07-12T08:36:19.250',NULL,N'CONFI','2016-04-15T00:00:00')
+ ,(5,N'Action entered in PeopleSoft â€“ Request to send to Pay Center',N'Action entrÃ©e dans PeopleSoft â€“ Demande Ã  envoyer Ã  la paye',N'Action entered in PeopleSoft â€“ Request to send to Pay Center',N'Action entrÃ©e dans PeopleSoft â€“ Demande Ã  envoyer Ã  la paye',NULL,N'yves.robichaud',NULL,'2017-07-06T12:48:09.963',NULL,N'PAct1','2017-07-06T00:00:00')
+ ,(6,N'Action entered in PeopleSoft - Resolved Request',N'Action entrÃ©e dans PeopleSoft â€“ Demande rÃ©solue',N'Action entered in PeopleSoft - Resolved Request',N'Action entrÃ©e dans PeopleSoft â€“ Demande rÃ©solue',NULL,N'yves.robichaud',NULL,'2017-07-06T12:48:40.890',NULL,N'PAct2','2017-07-06T00:00:00')
+ ,(7,N'Update position with an existing job code',N'Mise Ã  jour de numÃ©ro de poste avec numÃ©ro d''emploi existant',N'Update position with an existing job code',N'Mise Ã  jour de numÃ©ro de poste avec numÃ©ro d''emploi existant',NULL,N'tony.paradis',NULL,'2017-07-14T07:42:44.037',NULL,N'UDPOS','2017-07-14T07:42:44.037')
 ) AS [Source] ([ACTION_TYPE_ID],[ACTION_TYPE_NAME_EN],[ACTION_TYPE_NAME_FR],[ACTION_TYPE_DESC_EN],[ACTION_TYPE_DESC_FR],[EXPIRY_DATE],[USER_CREATED],[USER_UPDATED],[DATE_CREATED],[DATE_UPDATED],[ACTION_TYPE_CODE],[EFFECTIVE_DATE])
 ON ([Target].[ACTION_TYPE_ID] = [Source].[ACTION_TYPE_ID])
 WHEN MATCHED AND (

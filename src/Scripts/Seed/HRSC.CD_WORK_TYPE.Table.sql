@@ -10,19 +10,19 @@ SET IDENTITY_INSERT [HRSC].[CD_WORK_TYPE] ON
 DECLARE @mergeOutput425768574 TABLE ( [DMLAction] VARCHAR(6) );
 MERGE INTO [HRSC].[CD_WORK_TYPE] AS [Target]
 USING (VALUES
-  (9,N'EFull',N'Full-time',N'À plein temps',N'Full-time',N'À plein temps','2013-01-11T10:45:11.787',NULL,N'HRDC-DRHC\elena.akhmentova',N'Robichaud, Yves [NC]','2013-01-11T10:45:11.787','2015-03-30T07:42:48.427',1,0,NULL,1)
- ,(10,N'EPart',N'Part-time',N'À temps partiel',N'Part-time',N'À temps partiel','2013-01-11T10:45:11.793',NULL,N'HRDC-DRHC\elena.akhmentova',N'Robichaud, Yves [NC]','2013-01-11T10:45:11.793','2015-03-30T07:42:48.430',1,0,NULL,1)
+  (9,N'EFull',N'Full-time',N'Ã€ plein temps',N'Full-time',N'Ã€ plein temps','2013-01-11T10:45:11.787',NULL,N'HRDC-DRHC\elena.akhmentova',N'Robichaud, Yves [NC]','2013-01-11T10:45:11.787','2015-03-30T07:42:48.427',1,0,NULL,1)
+ ,(10,N'EPart',N'Part-time',N'Ã€ temps partiel',N'Part-time',N'Ã€ temps partiel','2013-01-11T10:45:11.793',NULL,N'HRDC-DRHC\elena.akhmentova',N'Robichaud, Yves [NC]','2013-01-11T10:45:11.793','2015-03-30T07:42:48.430',1,0,NULL,1)
  ,(11,N'Seas',N'Seasonal',N'Saisonnier',N'Seasonal',N'Saisonnier','2013-01-11T10:45:11.797',NULL,N'HRDC-DRHC\elena.akhmentova',NULL,'2013-01-11T10:45:11.797',NULL,1,0,NULL,NULL)
- ,(12,N'Subst',N'Same as substantive',N'Même que substantif',N'Same as substantive',N'Même que substantif','2013-01-11T10:45:11.800',NULL,N'HRDC-DRHC\elena.akhmentova',NULL,'2013-01-11T10:45:11.800',NULL,0,1,NULL,NULL)
+ ,(12,N'Subst',N'Same as substantive',N'MÃªme que substantif',N'Same as substantive',N'MÃªme que substantif','2013-01-11T10:45:11.800',NULL,N'HRDC-DRHC\elena.akhmentova',NULL,'2013-01-11T10:45:11.800',NULL,0,1,NULL,NULL)
  ,(13,N'WFull',N'Full-time (standard Mon-Fri)',N'Temps plein (standard du lundi au vendredi)',N'Full-time (standard Mon-Fri)',N'Temps plein (standard du lundi au vendredi)','2013-01-11T10:45:11.810',NULL,N'HRDC-DRHC\elena.akhmentova',NULL,'2013-01-11T10:45:11.810',NULL,0,1,NULL,NULL)
- ,(14,N'WPart',N'Part-time',N'À temps partiel',N'Part-time',N'À temps partiel','2013-01-11T10:45:11.813',NULL,N'HRDC-DRHC\elena.akhmentova',NULL,'2013-01-11T10:45:11.813',NULL,0,1,NULL,NULL)
+ ,(14,N'WPart',N'Part-time',N'Ã€ temps partiel',N'Part-time',N'Ã€ temps partiel','2013-01-11T10:45:11.813',NULL,N'HRDC-DRHC\elena.akhmentova',NULL,'2013-01-11T10:45:11.813',NULL,0,1,NULL,NULL)
  ,(15,N'SW',N'Shift Work',N'Quart de travail',N'Shift Work',N'Quart de travail','2013-01-11T10:45:11.820',NULL,N'HRDC-DRHC\elena.akhmentova',NULL,'2013-01-11T10:45:11.820',NULL,0,1,NULL,NULL)
  ,(16,N'VarSW',N'Variable Shift Work',N'Quarts de travail variables',N'Variable Shift Work',N'Quarts de travail variables','2013-01-11T10:45:11.823',NULL,N'HRDC-DRHC\elena.akhmentova',NULL,'2013-01-11T10:45:11.823',NULL,0,1,NULL,NULL)
- ,(17,N'Reg',N'Regular',N'Régulier',NULL,NULL,'2015-03-30T07:42:48.390',NULL,N'1',NULL,'2015-03-30T07:42:48.390',NULL,0,0,1,NULL)
+ ,(17,N'Reg',N'Regular',N'RÃ©gulier',NULL,NULL,'2015-03-30T07:42:48.390',NULL,N'1',NULL,'2015-03-30T07:42:48.390',NULL,0,0,1,NULL)
  ,(18,N'AWA',N'AWA',N'ATT',NULL,NULL,'2015-03-30T07:42:48.407',NULL,N'1',NULL,'2015-03-30T07:42:48.407',NULL,0,0,1,NULL)
  ,(19,N'Shift',N'Shift',N'Poste',NULL,NULL,'2015-03-30T07:42:48.413',NULL,N'1',NULL,'2015-03-30T07:42:48.413',NULL,0,0,1,NULL)
  ,(21,N'OnCal',N'On call',N'Sur appel',N'On call',N'Sur appel','2017-07-14T07:42:44.610',NULL,N'tony.paradis',NULL,'2017-07-14T07:42:44.610',NULL,0,1,0,0)
- ,(22,N'FSONH',N'Fixed schedule outside normal hours',N'Horaire fixe à l’extérieur des heures normales',N'Fixed schedule outside normal hours',N'Horaire fixe à l’extérieur des heures normales','2020-01-17T09:12:09.107',NULL,N'dbo',NULL,'2020-01-17T09:12:09.107',NULL,0,1,NULL,NULL)
+ ,(22,N'FSONH',N'Fixed schedule outside normal hours',N'Horaire fixe Ã  lâ€™extÃ©rieur des heures normales',N'Fixed schedule outside normal hours',N'Horaire fixe Ã  lâ€™extÃ©rieur des heures normales','2020-01-17T09:12:09.107',NULL,N'dbo',NULL,'2020-01-17T09:12:09.107',NULL,0,1,NULL,NULL)
 ) AS [Source] ([WORK_TYPE_ID],[WORK_TYPE_CODE],[WORK_TYPE_NAME_EN],[WORK_TYPE_NAME_FR],[WORK_TYPE_DESC_EN],[WORK_TYPE_DESC_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[USER_UPDATED],[DATE_CREATED],[DATE_UPDATED],[EMPLOYMENT_IND],[SCHEDULE_IND],[OVERTIME_SCHEDULE_IND],[OVERTIME_TIME_IND])
 ON ([Target].[WORK_TYPE_ID] = [Source].[WORK_TYPE_ID])
 WHEN MATCHED AND (

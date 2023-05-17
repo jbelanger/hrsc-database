@@ -10,16 +10,16 @@ SET IDENTITY_INSERT [HRSC].[CD_COI_DECLARATION_TYPE] ON
 DECLARE @mergeOutput1706489158 TABLE ( [DMLAction] VARCHAR(6) );
 MERGE INTO [HRSC].[CD_COI_DECLARATION_TYPE] AS [Target]
 USING (VALUES
-  (1,N'OEA',N'Outside Employment or Activities:',N'Emploi à l''extérieur ou Activités:',N'Outside Employment or Activities:',N'Emploi à l''extérieur ou Activités:','2016-11-04T08:03:55.470',NULL,N'System',NULL,'2016-11-04T08:03:55.470',NULL,2)
- ,(2,N'PA',N'Political Activities:',N'Activités politiques:',N'Political Activities:',N'Activités politiques:','2016-11-04T08:03:55.470',NULL,N'System',NULL,'2016-11-04T08:03:55.470',NULL,2)
- ,(3,N'NPACE',N'Non-Partisan Activities in Connection with Elections:',N'Activités non partisane dans le cadre des élections:',N'Non-Partisan Activities in Connection with Elections:',N'Activités non partisane dans le cadre des élections:','2016-11-04T08:03:55.470',NULL,N'System',NULL,'2016-11-04T08:03:55.470',NULL,2)
+  (1,N'OEA',N'Outside Employment or Activities:',N'Emploi Ã  l''extÃ©rieur ou ActivitÃ©s:',N'Outside Employment or Activities:',N'Emploi Ã  l''extÃ©rieur ou ActivitÃ©s:','2016-11-04T08:03:55.470',NULL,N'System',NULL,'2016-11-04T08:03:55.470',NULL,2)
+ ,(2,N'PA',N'Political Activities:',N'ActivitÃ©s politiques:',N'Political Activities:',N'ActivitÃ©s politiques:','2016-11-04T08:03:55.470',NULL,N'System',NULL,'2016-11-04T08:03:55.470',NULL,2)
+ ,(3,N'NPACE',N'Non-Partisan Activities in Connection with Elections:',N'ActivitÃ©s non partisane dans le cadre des Ã©lections:',N'Non-Partisan Activities in Connection with Elections:',N'ActivitÃ©s non partisane dans le cadre des Ã©lections:','2016-11-04T08:03:55.470',NULL,N'System',NULL,'2016-11-04T08:03:55.470',NULL,2)
  ,(4,N'GHOB',N'Gift, Hospitality and Others Benefits:',N'Cadeaux, d''accueil et de Autres avantages:',N'Gift, Hospitality and Others Benefits:',N'Cadeaux, d''accueil et de Autres avantages:','2016-11-04T08:03:55.470',NULL,N'System',NULL,'2016-11-04T08:03:55.470',NULL,2)
  ,(5,N'AL',N'Assets & Liabilities:',N'Actif et passif:',N'Assets & Liabilities:',N'Actif et passif:','2016-11-04T08:03:55.470',NULL,N'System',NULL,'2016-11-04T08:03:55.470',NULL,2)
  ,(6,N'PE',N'Post-Employment:',N'Post-emploi:',N'Post-Employment:',N'Post-emploi:','2016-11-04T08:03:55.470',NULL,N'System',NULL,'2016-11-04T08:03:55.470',NULL,2)
- ,(7,N'PT',N'Personal Relationships/Preferential Treatment:',N'Relations personnelles/traitement préférentiel',N'Preferential Treatment:',N'Traitement préférentiel:','2016-11-04T08:03:55.470',NULL,N'System',NULL,'2016-11-04T08:03:55.470',NULL,2)
+ ,(7,N'PT',N'Personal Relationships/Preferential Treatment:',N'Relations personnelles/traitement prÃ©fÃ©rentiel',N'Preferential Treatment:',N'Traitement prÃ©fÃ©rentiel:','2016-11-04T08:03:55.470',NULL,N'System',NULL,'2016-11-04T08:03:55.470',NULL,2)
  ,(8,N'SOLIC',N'Solicitation:',N'Sollicitation:',N'Solicitation:',N'Sollicitation:','2016-11-04T08:03:55.470',NULL,N'System',NULL,'2016-11-04T08:03:55.470',NULL,2)
  ,(9,N'LGC',N'Lotteries and Games of Chance:',N'Loteries et jeux de hasard:',N'Lotteries and Games of Chance:',N'Loteries et jeux de hasard:','2016-11-04T08:03:55.470',NULL,N'System',NULL,'2016-11-04T08:03:55.470',NULL,2)
- ,(10,N'COID',N'Declaration:',N'Déclaration:',N'Declaration:',N'Déclaration:','2016-11-22T00:00:00',NULL,N'eric.nolet',NULL,'2016-11-22T14:16:41.820',NULL,1)
+ ,(10,N'COID',N'Declaration:',N'DÃ©claration:',N'Declaration:',N'DÃ©claration:','2016-11-22T00:00:00',NULL,N'eric.nolet',NULL,'2016-11-22T14:16:41.820',NULL,1)
 ) AS [Source] ([COI_DECLARATION_TYPE_ID],[COI_DECLARATION_TYPE_CODE],[COI_DECLARATION_TYPE_NAME_EN],[COI_DECLARATION_TYPE_NAME_FR],[COI_DECLARATION_TYPE_DESC_EN],[COI_DECLARATION_TYPE_DESC_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[USER_UPDATED],[DATE_CREATED],[DATE_UPDATED],[VERSION_ID])
 ON ([Target].[COI_DECLARATION_TYPE_ID] = [Source].[COI_DECLARATION_TYPE_ID])
 WHEN MATCHED AND (
