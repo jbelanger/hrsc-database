@@ -12,6 +12,6 @@ A quick overview about SSDT:
 
 You can find the information about each steps involved in the process.
 
-- [Overview of SSDT and importing the HRSC database from an existing one](/Importing-the-HRSC-Database-into-the-SSDT-Project.md)
-- [Reference data](/Reference-Data.md)
-- [Azure DevOps pipelines](/ADO-Pipelines.md)
+- [Overview of SSDT and importing the HRSC database from an existing one](docs/Importing-the-HRSC-Database-into-the-SSDT-Project.md)
+- [Reference data](docs/Reference-Data.md)
+- [Azure DevOps pipelines](docs/ADO-Pipelines.md)
