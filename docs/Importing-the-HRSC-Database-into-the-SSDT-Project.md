@@ -4,7 +4,7 @@
 The purpose of this document is to provide technical instructions on importing the HRSC database into an SSDT (SQL Server Data Tools) project. This process allows for efficient management, version control, and streamlined development of the HRSC database schema. 
 
 ## Prerequisites
-- Visual Studio with SSDT installed
+- Visual Studio with SSDT installed (SSDT is installed with VS2022)
 - Access to the HRSC database
 - Connection details for the HRSC database (server name, authentication method, username, and password)
 
@@ -28,3 +28,13 @@ Upon completion of the import process, SSDT will analyze the HRSC database schem
 
 ## Conclusion
 By importing the HRSC database into the SSDT project, we enhance our development process by centralizing database schema management, version control, and deployment. This technical documentation provides the necessary instructions to successfully import the HRSC database into the SSDT project, empowering our team to effectively work with and develop the HRSC database.
+
+## Additional information
+
+Some procedures will not compile when fetching the HRSC database from the production environment. One of them is usp_CORPTABDATATRANSFER and this is because it uses a DB Link to the CorpTables DB that the other environments do not have.
+
+To fix this, one option is to Set the Build Action to None on this stored procedure.
+
+Be careful with this approach though if you use the DropObjectsNotInSource option. The publish operation will try to delete this stored procedure in the target. 
+
+
