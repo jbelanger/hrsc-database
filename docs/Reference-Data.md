@@ -1,7 +1,11 @@
 # Generating merge scripts for Reference Data
 
 
-## Stored Procedure usp_generate_merge
+## Overview
+This document explains the process of importing lookup data from a post-deployment script in an SSDT (SQL Server Data Tools) project. The lookup data files are located in the Scripts/Seed folder within the project structure. 
+
+
+## Prerequisites - Stored Procedure usp_generate_merge
 The [HRSC_APP].[usp_generate_merge] stored procedure generates a MERGE statement based on existing data in a specified table or view. The generated MERGE statement can be used to synchronize data between the source and target tables by inserting new rows, updating existing rows, and optionally deleting unmatched rows.
 
 Example Usage:
@@ -88,11 +92,11 @@ SET NOCOUNT OFF
 The code and documentation for the usp_generate_merge stored procedure can be found on GitHub [here](https://github.com/readyroll/generate-sql-merge/tree/master). Credits to [readyroll](https://github.com/readyroll).
 
 
-## Generate scripts for the reference data
+## Generate MERGE scripts into files
 
-To ease the process of creating all of the sql files in the project, a Powershell script has been created to automate all of this. The tool can be found in the [hrsc-database repository](../utils/GenerateReferenceData.ps1).
+To ease the process of creating all of the sql files in the project, a Powershell script has been created to automate all of this. The script can be found in the utils directory of the project and you can with it [here](../utils/GenerateReferenceData.ps1).
 
-To use this tool, open a Powershell window and execute the following, using the connection string of the source database:
+To use the script, open a Powershell window and execute the following, using the connection string of the source database:
 
 Example:
 ```Powershell
@@ -122,3 +126,8 @@ begin
 The condition **@@servername <> 'MLDBSQL16CL01'** ensures this code is not ran on a production environment. 
 
 See [PostDeployment.sql](../src/Scripts/PostDeployment.sql) for more details.
+
+
+## Additional information
+
+If, when publishing, you see that all of the french accents have been replaced with a "?", make sure all of the seed files are saved using the UTF-8 encoding. You need to open each file, select the small dropdown in the "Save as" button, and choose "Save with encoding".
