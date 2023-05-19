@@ -1,4 +1,4 @@
-# Pipeline YAML Description
+# Main Pipeline YAML
 
 This YAML pipeline in Azure DevOps is designed to build and deploy the "hrsc-database" databse project. It consists of several stages, each responsible for a specific deployment target.
 
