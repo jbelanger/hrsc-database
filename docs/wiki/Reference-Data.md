@@ -96,7 +96,7 @@ The code and documentation for the usp_generate_merge stored procedure can be fo
 
 ## Generate MERGE scripts into files
 
-To ease the process of creating all of the sql files in the project, a Powershell script has been created to automate all of this. The script can be found in the utils directory of the project and you can with it [here](../utils/GenerateReferenceData.ps1).
+To ease the process of creating all of the sql files in the project, a Powershell script has been created to automate all of this. The script can be found in the utils directory of the project and you can with it [here](../../utils/GenerateReferenceData.ps1).
 
 To use the script, open a Powershell window and execute the following, using the connection string of the source database:
 
@@ -132,7 +132,7 @@ begin
 
 The condition **@@servername <> 'MLDBSQL16CL01'** ensures this code is not ran on a production environment. 
 
-See [PostDeployment.sql](../src/Scripts/PostDeployment.sql) for more details.
+See [PostDeployment.sql](../../src/Scripts/PostDeployment.sql) for more details.
 
 
 ## Additional information
