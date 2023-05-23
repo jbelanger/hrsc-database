@@ -2,7 +2,9 @@
 
 
 ## Overview
-This document explains the process of importing lookup data from a post-deployment script in an SSDT (SQL Server Data Tools) project. The lookup data files are located in the Scripts/Seed folder within the project structure. 
+Reference data in a database is static information used for validation and categorization of other data, providing consistency and context.
+
+This document explains the process of copying and synchronizing reference data. In this project, the reference data is imported in new databases but is also used to update an existing database, making sure the reference data is the same in each environment. 
 
 
 ## Prerequisites - Stored Procedure usp_generate_merge
@@ -103,11 +105,16 @@ Example:
 PS C:\_DEV\hrsc-database\utils> .\GenerateReferenceData.ps1  "Data Source=localhost\SQLEXPRESS;Initial Catalog=HRSC;Integrated Security=true;"
 ```
 
-The files will be generated under C:\Temp\ReferenceData. You can edit the script to output the files to a diferent place.
+The files will be generated under C:\Temp\ReferenceData. You can edit the script to output the files to a diferent place. 
+
+Once the files have been created, they need to be copied into the Scripts/Seed folder inside the project.
+
 
 ## Execute merge script through the Post-Deployment script
 
-Those generated files can be used through a post-deployment script in the SSDT project to synchronize the data. **This should only be used in developement environments**.
+The reference data files are located in the Scripts/Seed folder within the project structure. 
+
+These generated files are used through the post-deployment script in the project to synchronize the data. **This should only be used in developement environments**.
 
 ```SQL
 if @@servername <> 'MLDBSQL16CL01' -- Production and training

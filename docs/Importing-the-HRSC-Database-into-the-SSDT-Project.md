@@ -1,7 +1,7 @@
 # Importing the HRSC Database into the SSDT Project
 
 ## Overview
-The purpose of this document is to provide technical instructions on importing the HRSC database into an SSDT (SQL Server Data Tools) project. This process allows for efficient management, version control, and streamlined development of the HRSC database schema. 
+The purpose of this document is to provide technical instructions on importing the HRSC database into an SSDT (SQL Server Data Tools) project. This gives information about how the project has been created. 
 
 ## Prerequisites
 - Visual Studio with SSDT installed (SSDT is installed with VS2022)
@@ -27,7 +27,7 @@ Upon completion of the import process, SSDT will analyze the HRSC database schem
 3. Deployment: Having the HRSC database as an SSDT project enables streamlined deployments, ensuring consistency and reliability across different environments.
 
 ## Conclusion
-By importing the HRSC database into the SSDT project, we enhance our development process by centralizing database schema management, version control, and deployment. This technical documentation provides the necessary instructions to successfully import the HRSC database into the SSDT project, empowering our team to effectively work with and develop the HRSC database.
+By importing the HRSC database into the SSDT project, we enhance our development process by centralizing database schema management, version control, and deployment. 
 
 ## Additional information
 

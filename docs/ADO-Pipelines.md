@@ -1,6 +1,6 @@
 # Main Pipeline YAML
 
-This YAML pipeline in Azure DevOps is designed to build and deploy the "hrsc-database" databse project. It consists of several stages, each responsible for a specific deployment target.
+This YAML pipeline in Azure DevOps is designed to build and deploy the "hrsc-database" database project. It consists of several stages, each responsible for a specific deployment target.
 
 ## Parameters
 - `GitBranch`: Specifies the Git branch on dev.azure.com. Default value is set to `main`.
@@ -35,14 +35,12 @@ Each stage depends on the successful completion of the previous stage and is con
 - `pipeline-job-deploy-template.yml`: A reusable template for deploying to a specific environment.
 - `pipeline-job-publishartifact-template.yml`: A reusable template for creating an SQL script for a specific environment.
 
-Please refer to the provided links for more details about pipeline artifacts and the specific templates used in this pipeline.
-
 
 # pipeline-job-deploy-template.yml
 
-This YAML template file `pipeline-job-deploy-template.yml` is designed to deploy an SSDT (SQL Server Data Tools) project to a specific environment. It performs the following steps:
+This YAML template file `pipeline-job-deploy-template.yml` is designed to deploy the SSDT (SQL Server Data Tools) project to a specific environment. It performs the following steps:
 
-## Overview
+## Steps
 1. ExtractFiles: This task extracts files from the build artifact, which is a zip file generated in a previous build step. The extracted files are placed in the specified destination folder.
 
 2. CmdLine: This task generates a publish preview and a database script using SqlPackage.exe. It executes the following commands:
