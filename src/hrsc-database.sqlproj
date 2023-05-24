@@ -258,7 +258,6 @@
     <Build Include="HRSC_APP\Stored Procedures\usp_CD_Announcement_Type_GetListActive.sql" />
     <Build Include="HRSC_APP\Stored Procedures\usp_Position_Insert.sql" />
     <Build Include="HRSC_APP\Stored Procedures\usp_CD_BusinessCenter_Insert.sql" />
-    <Build Include="HRSC_APP\Stored Procedures\usp_Position_SelectByID.sql" />
     <Build Include="HRSC_APP\Stored Procedures\usp_CD_Business_Center_Update.sql" />
     <Build Include="HRSC_APP\Stored Procedures\usp_Position_SelectByIDForDisplay.sql" />
     <Build Include="HRSC_APP\Stored Procedures\usp_Position_SelectByIDForDisplayISP.sql" />
