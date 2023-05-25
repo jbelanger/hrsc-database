@@ -1,7 +1,7 @@
 ﻿CREATE TABLE [HRSC].[SLE_REQUEST] (
     [SLE_REQUEST_ID]                 BIGINT          IDENTITY (1, 1) NOT NULL,
-    [REASON_FOR_SLE_ID]              INT             NULL,
-    [TYPE_OF_STAFFING_ACTION_ID]     INT             NULL,
+    [REASON_FOR_SLE_ID]              BIGINT          NULL,
+    [TYPE_OF_STAFFING_ACTION_ID]     BIGINT          NULL,
     [SELECTION_PROCESS_NUMBER]       NVARCHAR (30)   NULL,
     [LANGUAGE_SCHOOL]                NVARCHAR (250)  NULL,
     [LANGUAGE_ID]                    BIGINT          NULL,
