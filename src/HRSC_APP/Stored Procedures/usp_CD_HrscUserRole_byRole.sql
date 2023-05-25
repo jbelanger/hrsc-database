@@ -14,49 +14,49 @@ AS
 ------------------------------------------------------
 if @pRoleCode = 'Management' 
 
-SELECT  hrsc_user_role_id AS id,
-        hrsc_user_role_name_en AS name_en,
-        hrsc_user_role_name_fr AS name_fr,
-        hrsc_user_role_desc_en AS desc_en,
-        hrsc_user_role_desc_fr AS desc_fr,
-        hrsc_user_role_code AS code,
-        effective_date,
-        expiry_date,
-        user_created,
-        user_updated,
-        date_created,
-        date_updated
-FROM    hrsc.cd_hrsc_user_role
-WHERE  Upper(cd_hrsc_user_role.hrsc_user_role_code) = 'BCE'
+SELECT  HRSC_USER_ROLE_ID AS ID,
+        HRSC_USER_ROLE_NAME_EN AS NAME_EN,
+        HRSC_USER_ROLE_NAME_FR AS NAME_FR,
+        HRSC_USER_ROLE_DESC_EN AS DESC_EN,
+        HRSC_USER_ROLE_DESC_FR AS DESC_FR,
+        HRSC_USER_ROLE_CODE AS CODE,
+        EFFECTIVE_DATE,
+        EXPIRY_DATE,
+        USER_CREATED,
+        USER_UPDATED,
+        DATE_CREATED,
+        DATE_UPDATED
+FROM    HRSC.CD_HRSC_USER_ROLE
+WHERE  UPPER(CD_HRSC_USER_ROLE.HRSC_USER_ROLE_CODE) = 'BCE'
 
 Else if @pRoleCode = 'Admin' 
 
-SELECT  hrsc_user_role_id AS id,
-        hrsc_user_role_name_en AS name_en,
-        hrsc_user_role_name_fr AS name_fr,
-        hrsc_user_role_desc_en AS desc_en,
-        hrsc_user_role_desc_fr AS desc_fr,
-        hrsc_user_role_code AS code,
-        effective_date,
-        expiry_date,
-        user_created,
-        user_updated,
-        date_created,
-        date_updated
-FROM    hrsc.cd_hrsc_user_role
-WHERE Upper(cd_hrsc_user_role.hrsc_user_role_code) != 'IITB'
+SELECT  HRSC_USER_ROLE_ID AS ID,
+        HRSC_USER_ROLE_NAME_EN AS NAME_EN,
+        HRSC_USER_ROLE_NAME_FR AS NAME_FR,
+        HRSC_USER_ROLE_DESC_EN AS DESC_EN,
+        HRSC_USER_ROLE_DESC_FR AS DESC_FR,
+        HRSC_USER_ROLE_CODE AS CODE,
+        EFFECTIVE_DATE,
+        EXPIRY_DATE,
+        USER_CREATED,
+        USER_UPDATED,
+        DATE_CREATED,
+        DATE_UPDATED
+FROM    HRSC.CD_HRSC_USER_ROLE
+WHERE UPPER(CD_HRSC_USER_ROLE.HRSC_USER_ROLE_CODE) != 'IITB'
 
 else
-SELECT  hrsc_user_role_id AS id,
-        hrsc_user_role_name_en AS name_en,
-        hrsc_user_role_name_fr AS name_fr,
-        hrsc_user_role_desc_en AS desc_en,
-        hrsc_user_role_desc_fr AS desc_fr,
-        hrsc_user_role_code AS code,
-        effective_date,
-        expiry_date,
-        user_created,
-        user_updated,
-        date_created,
-        date_updated
-FROM    hrsc.cd_hrsc_user_role
+SELECT  HRSC_USER_ROLE_ID AS ID,
+        HRSC_USER_ROLE_NAME_EN AS NAME_EN,
+        HRSC_USER_ROLE_NAME_FR AS NAME_FR,
+        HRSC_USER_ROLE_DESC_EN AS DESC_EN,
+        HRSC_USER_ROLE_DESC_FR AS DESC_FR,
+        HRSC_USER_ROLE_CODE AS CODE,
+        EFFECTIVE_DATE,
+        EXPIRY_DATE,
+        USER_CREATED,
+        USER_UPDATED,
+        DATE_CREATED,
+        DATE_UPDATED
+FROM    HRSC.CD_HRSC_USER_ROLE

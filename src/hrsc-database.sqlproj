@@ -49,6 +49,7 @@
     <DefineTrace>true</DefineTrace>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <SuppressTSqlWarnings>71558</SuppressTSqlWarnings>
   </PropertyGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
@@ -318,7 +319,6 @@
     <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_INTERVENTION_ListLeadsAndCollabos.sql" />
     <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_INTERVENTION_SelectMyAssigned_Active.sql" />
     <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_INTERVENTION_SelectOne.sql" />
-    <Build Include="HRSC\Stored Procedures\usp_PS_MESSAGE_QUEUE_Insert.sql" />
     <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_INTERVENTION_SelectStatus.sql" />
     <Build Include="HRSC_AGENT\Stored Procedures\usp_CMSExtract.sql" />
     <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_INTERVENTION_Update.sql" />
