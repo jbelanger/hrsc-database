@@ -75,7 +75,7 @@ function Invoke-GenerateMergeProcedure {
 			$xmlResult = $xmlResult -replace '\?>$', ''
 			
             $fileNamePath = "$OutputPath\HRSC.$TableName.Table.sql"
-			$xmlResult | Set-Content -Path $fileNamePath -Encoding [System.Text.Encoding]::UTF8
+			$xmlResult | Set-Content -Path $fileNamePath 
 			Write-Host "File $fileNamePath written successfully."
         }
     }
