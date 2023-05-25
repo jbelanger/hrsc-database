@@ -147,7 +147,7 @@
     [SUNSET_FUNDING_TYPE_ID]              BIGINT                     NULL,
     [WILL_EMPL_BE_TRAVEL_STATUS_IND]      BIT                        NULL,
     [LOC_WORK_MATCH_WITH_PEOPLESOFT_IND]  BIT                        NULL,
-    [DOUBLE_BANKING_ID]                   INT                        NULL,
+    [DOUBLE_BANKING_ID]                   BIGINT                     NULL,
     [EXCLUSION_OPT_HOST_ID]               BIGINT                     NULL,
     [TENURE_TYPE_ID]                      BIGINT                     NULL,
     [EXERCISE_SAME_FN_BEFORE_IND]         BIT                        DEFAULT ((0)) NOT NULL,
