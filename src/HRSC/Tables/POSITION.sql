@@ -38,7 +38,7 @@
     [ACTIVITY_CODE]                       NVARCHAR (3)               NULL,
     [PROJECT_CODE]                        NVARCHAR (5)               NULL,
     [LINE_OBJECT_CODE]                    NVARCHAR (4)               NULL,
-    [COLLECTIVE_STAFFING_PROCESS_IN]      BIT                        CONSTRAINT [DF__POSITION__COLSTAFFPROC_IN] DEFAULT ((0)) NULL,
+    [COLLECTIVE_STAFFING_PROCESS_IN]      BIT                         NULL,
     [DEPLOYMENT_TYPE_ID]                  BIGINT                     NULL,
     [EMPLYMNT_CNDTN_MET_BY_EMP_IND]       [HRSC].[INDICATOR_BIT]     NULL,
     [INTRNL_ADVRTSD_PRCS_IND]             [HRSC].[INDICATOR_BIT]     NULL,
@@ -161,6 +161,7 @@
     [STUDENT_ELIGIBLE_PROGRAM_IND]        BIT                        NULL,
     [TELEWORK_IND]                        BIT                        NULL,
     [CONFIRMED_FUNDS_IND]                 BIT                        NULL,
+    [APPLICANT_INVENTORY_IND]             BIT                        NULL    
     CONSTRAINT [PSTN_PK] PRIMARY KEY CLUSTERED ([POSITION_ID] ASC) WITH (FILLFACTOR = 80),
     CONSTRAINT [PSTN_CK1] CHECK ([FTE_HOME_ORG_IND]=(0) OR [FTE_HOME_ORG_IND]=(1) OR [FTE_HOME_ORG_IND]=(2) OR [FTE_HOME_ORG_IND] IS NULL),
     CONSTRAINT [PSTN_CK2] CHECK ([FTE_HOME_ORG_IND]=(0) OR [FTE_HOME_ORG_IND]=(1) OR [FTE_HOME_ORG_IND]=(2) OR [FTE_HOME_ORG_IND] IS NULL),
