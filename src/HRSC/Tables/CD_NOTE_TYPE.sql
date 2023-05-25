@@ -1,5 +1,5 @@
 ﻿CREATE TABLE [HRSC].[CD_NOTE_TYPE] (
-    [NOTE_TYPE_ID]           INT            IDENTITY (1, 1) NOT NULL,
+    [NOTE_TYPE_ID]           BIGINT            IDENTITY (1, 1) NOT NULL,
     [NOTE_TYPE_CODE]         NVARCHAR (6)   NOT NULL,
     [NOTE_TYPE_NAME_EN]      NVARCHAR (25)  NOT NULL,
     [NOTE_TYPE_NAME_FR]      NVARCHAR (25)  NULL,
