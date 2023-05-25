@@ -75,8 +75,7 @@ AS
            ,[REQUEST_STATUS_ID]
            ,[EFFECTIVE_DATE]
            ,[SUBMITTER_TYPE_ID]
-           ,[REQUEST_STATUS_DATE]
-           ,[LANGUAGE_ID]
+           ,[REQUEST_STATUS_DATE]         
            ,[NEXT_EMAIL_REMINDER_DATE]
            ,[EMAIL_REMINDER_COUNT]
 		   ,[HR_REQUEST_CLIENT_ID]
@@ -115,8 +114,7 @@ AS
            @pEffectiveDate,
            @pSubmitterTypeId,
            GetDate(),
-           null,
-           null,
+           null,          
            null,
 		   @pRequestClientId,
 		   @pTempData,

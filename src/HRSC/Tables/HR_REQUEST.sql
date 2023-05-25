@@ -31,7 +31,6 @@
     [EFFECTIVE_DATE]             DATE            NULL,
     [FORM_TYPE_IND]              BIT             CONSTRAINT [DF__HR_REQUES__FORM___69F19A7E] DEFAULT ((1)) NOT NULL,
     [REQUEST_STATUS_DATE]        DATETIME        NULL,
-    [LANGUAGE_ID]                BIGINT          NULL,
     [NEXT_EMAIL_REMINDER_DATE]   DATETIME        NULL,
     [EMAIL_REMINDER_COUNT]       TINYINT         NULL,
     [HR_REQUEST_CLIENT_ID]       BIGINT          NULL,
