@@ -5,15 +5,6 @@
 UPDATE [HRSC].[CD_HR_REQUEST_TYPE] SET [EXPIRY_DATE] = getdate()
 WHERE [HR_REQUEST_TYPE_ID] = CAST(80 AS bigint);
 
-UPDATE [HRSC].[CD_HR_REQUEST_TYPE] SET [EXPIRY_DATE] = getdate()
-WHERE [HR_REQUEST_TYPE_ID] = CAST(88 AS bigint);
-
-UPDATE [HRSC].[CD_HR_REQUEST_TYPE] SET [EXPIRY_DATE] = getdate()
-WHERE [HR_REQUEST_TYPE_ID] = CAST(102 AS bigint);
-
-UPDATE [HRSC].[CD_HR_REQUEST_TYPE] SET [EXPIRY_DATE] = getdate()
-WHERE [HR_REQUEST_TYPE_ID] = CAST(104 AS bigint);
-
 -------------------------------------------
 -- New annoncement type, insert if not exists
 -------------------------------------------
