@@ -23,7 +23,7 @@ AS
 	set @EmployeeID = 0;
 
 	-- Default language to English
-	select @LanguageID = LANGUAGE_ID FROM HRSC.CD_LANGUAGE where LANGUAGE_CODE = 1
+	select @LanguageID = LANGUAGE_ID FROM HRSC.CD_LANGUAGE where LANGUAGE_CODE2 = '1'
 
 	-- Check if user exists.
 	select @EmployeeID = employee_id 

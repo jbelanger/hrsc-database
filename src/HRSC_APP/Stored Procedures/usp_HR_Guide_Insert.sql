@@ -28,8 +28,8 @@ DECLARE @Error int, @LanguageEnID int, @LanguageFrID int--, @count
 
 	--SELECT @LanguageEnID = HRSC_APP.GetLanguage('1')
 	--SELECT @LanguageFrID = HRSC_APP.GetLanguage('2')
-	SELECT @LanguageEnID = [LANGUAGE_ID]  FROM [HRSC].[CD_LANGUAGE] where [LANGUAGE_CODE] = 1
-	SELECT @LanguageFrID = [LANGUAGE_ID]  FROM [HRSC].[CD_LANGUAGE] where [LANGUAGE_CODE] = 2
+	SELECT @LanguageEnID = [LANGUAGE_ID]  FROM [HRSC].[CD_LANGUAGE] where [LANGUAGE_CODE2] = '1'
+	SELECT @LanguageFrID = [LANGUAGE_ID]  FROM [HRSC].[CD_LANGUAGE] where [LANGUAGE_CODE2] = '2'
 	--s id n = par 
 	
 	IF 

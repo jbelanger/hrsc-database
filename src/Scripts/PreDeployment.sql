@@ -13,5 +13,16 @@
 begin
     PRINT 'BEGIN Pre-deployment script'
 
+    -- #1670 
+    -- Column as created a while ago in the goal of replacing the LANGUAGE_CODE column which was created as an integer. 
+    -- Migrate data before dropping
+    IF NOT COL_LENGTH('HRSC.CD_LANGUAGE','LANGUAGE_CODE') IS NULL
+    BEGIN
+        -- USING sp_executesql to be able to run this script again even if column has been dropped previously.
+        -- Otherwise, we get "Invalid column name 'LANGUAGE_CODE'."
+        DECLARE @sql nvarchar(max)
+        SET @sql = 'UPDATE HRSC.CD_LANGUAGE SET LANGUAGE_CODE2 = LANGUAGE_CODE'
+        EXECUTE sp_executesql @sql
+    END
     PRINT 'END Pre-deployment script'
 end
