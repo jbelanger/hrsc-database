@@ -551,6 +551,7 @@
     <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_APPROVAL_Delete.sql" />
     <None Include="HRSC_AGENT\Stored Procedures\usp_CORPTABDATATRANSFER.sql" />
     <Build Include="HRSC_APP\Stored Procedures\usp_generate_merge.sql" />
+    <Build Include="HRSC_APP\Stored Procedures\usp_Employee_GetUserRoleBCWithInterventionsCountByStatus.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\RunAfter.sql" />
