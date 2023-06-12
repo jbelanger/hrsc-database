@@ -120,7 +120,6 @@
     <Build Include="HRSC\Tables\COI_ANSWER.sql" />
     <Build Include="HRSC\Tables\CD_COI_DECLARATION_TYPE.sql" />
     <Build Include="HRSC\Tables\COI.sql" />
-    <Build Include="HRSC\Tables\CD_DOCUMENT_TYPE.sql" />
     <Build Include="HRSC\Tables\CMS_EXTRACT_ERRORS.sql" />
     <Build Include="HRSC\Tables\CMS_EXTRACT.sql" />
     <Build Include="HRSC\Tables\CD_CLASSIFICATION_SUB_GROUP.sql" />
