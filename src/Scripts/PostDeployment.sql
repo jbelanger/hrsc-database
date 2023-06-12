@@ -29,7 +29,6 @@ begin
     :r ./"Seed/HRSC.CD_COMMUNICATION_REQ.Table.sql"
     :r ./"Seed/HRSC.CD_DEPARTMENT.Table.sql"
     :r ./"Seed/HRSC.CD_DEPLOYMENT_TYPE.Table.sql"
-    :r ./"Seed/HRSC.CD_DOCUMENT_TYPE.Table.sql"
     :r ./"Seed/HRSC.CD_DOUBLE_BANKING.Table.sql"
     :r ./"Seed/HRSC.CD_EMAIL_TEMPLATE_TYPE.Table.sql"
     :r ./"Seed/HRSC.CD_EMPLOYEE_ROLE.Table.sql"

@@ -475,7 +475,6 @@
     <None Include="Scripts\Seed\HRSC.CD_COMMUNICATION_REQ.Table.sql" />
     <None Include="Scripts\Seed\HRSC.CD_DEPARTMENT.Table.sql" />
     <None Include="Scripts\Seed\HRSC.CD_DEPLOYMENT_TYPE.Table.sql" />
-    <None Include="Scripts\Seed\HRSC.CD_DOCUMENT_TYPE.Table.sql" />
     <None Include="Scripts\Seed\HRSC.CD_DOUBLE_BANKING.Table.sql" />
     <None Include="Scripts\Seed\HRSC.CD_EMAIL_TEMPLATE_TYPE.Table.sql" />
     <None Include="Scripts\Seed\HRSC.CD_EMPLOYEE_ROLE.Table.sql" />
