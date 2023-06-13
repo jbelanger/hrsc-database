@@ -8,6 +8,7 @@ CREATE   PROCEDURE [HRSC_APP].[usp_HR_DOCUMENT_Update] @pDocumentId BIGINT
 	,@pDescFR NVARCHAR(250)
 	,@pPublicInd BIT
 	,@pRequestID BIGINT
+	,@pInterventionID BIGINT
 	,@pExpiryDate DATETIME
 	,@pUserID NVARCHAR(30)
 	WITH
@@ -19,6 +20,7 @@ SET PUBLIC_DOCUMENT_IND = @pPublicInd
 	--USER_UPDATED = @pUserID, TODO: Stores file size for now, create separate column and reestablish original purpose
 	,DATE_UPDATED = GetDate()
 	,HR_REQUEST_ID = @pRequestID
+	,HR_REQUEST_INTERVENTION_ID = @pInterventionID
 	,HR_DOCUMENT_NAME = @pName
 	,HR_DOCUMENT_DESC_EN = @pDescEN
 	,HR_DOCUMENT_DESC_FR = @pDescFR
