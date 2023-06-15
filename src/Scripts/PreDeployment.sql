@@ -24,5 +24,17 @@ begin
         SET @sql = 'UPDATE HRSC.CD_LANGUAGE SET LANGUAGE_CODE2 = LANGUAGE_CODE'
         EXECUTE sp_executesql @sql
     END
+
+
+    -- Add missing FK on HR_CONTRACT.SIGNED_CONTRACT_ID. 
+    -- Fix bad data.
+    UPDATE HRSC.HR_CONTRACT SET
+	    SIGNED_CONTRACT_ID = null
+    WHERE SIGNED_CONTRACT_ID in(
+	    select orig.SIGNED_CONTRACT_ID from hrsc.hr_contract orig
+	    left join hrsc.hr_contract signed on orig.SIGNED_CONTRACT_ID = signed.HR_CONTRACT_ID 
+	    where orig.SIGNED_CONTRACT_ID is not null and signed.HR_CONTRACT_ID is null
+    )
+
     PRINT 'END Pre-deployment script'
 end
