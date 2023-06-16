@@ -5,17 +5,17 @@
 
 SET NOCOUNT ON
 
-DECLARE @mergeOutput1522104463 TABLE ( [DMLAction] VARCHAR(6) );
+DECLARE @mergeOutput1485248346 TABLE ( [DMLAction] VARCHAR(6) );
 MERGE INTO [HRSC].[CD_CHKLST_STATUS] AS [Target]
 USING (VALUES
   (1,N'NONAP',N'Non Applicable',N'Non applicable',NULL,NULL,'2013-05-30T00:00:00',NULL,N'yves.robichaud','2013-05-30T00:00:00',NULL,NULL)
- ,(2,N'RECOV',N'Recovered',N'R?cup?r?',NULL,NULL,'2013-05-30T00:00:00',NULL,N'yves.robichaud','2013-05-30T00:00:00',NULL,NULL)
- ,(3,N'RECNE',N'Recovery Necessary',N'Recouvrement n?cessaire',NULL,NULL,'2013-05-30T00:00:00',NULL,N'yves.robichaud','2013-05-30T00:00:00',NULL,NULL)
- ,(4,N'UPDAT',N'Reviewed and/or Updated (Comments Required) ',N'Revu et/ou mis ? jour (commentaires requis)',NULL,NULL,'2013-05-30T00:00:00',NULL,N'yves.robichaud','2013-05-30T00:00:00',NULL,NULL)
+ ,(2,N'RECOV',N'Recovered',N'Récupéré',NULL,NULL,'2013-05-30T00:00:00',NULL,N'yves.robichaud','2013-05-30T00:00:00',NULL,NULL)
+ ,(3,N'RECNE',N'Recovery Necessary',N'Recouvrement nécessaire',NULL,NULL,'2013-05-30T00:00:00',NULL,N'yves.robichaud','2013-05-30T00:00:00',NULL,NULL)
+ ,(4,N'UPDAT',N'Reviewed and/or Updated (Comments Required) ',N'Revu et/ou mis à jour (commentaires requis)',NULL,NULL,'2013-05-30T00:00:00',NULL,N'yves.robichaud','2013-05-30T00:00:00',NULL,NULL)
  ,(5,N'YES',N'Yes',N'Oui',N'Yes',N'Oui','2013-05-30T00:00:00',NULL,N'tony.paradis','2013-05-30T00:00:00',NULL,NULL)
  ,(6,N'NO',N'No',N'Non',N'No',N'Non','2013-05-30T00:00:00',NULL,N'tony.paradis','2013-05-30T00:00:00',NULL,NULL)
- ,(7,N'RTND',N'Returned',N'Retourn?s',N'Returned',N'Retourn?s','2015-03-30T07:42:47.407',NULL,N'Tony.paradis','2015-03-30T07:42:47.407',NULL,NULL)
- ,(8,N'CANC',N'Cancelled',N'Annul?',N'Cancelled',N'Annul?','2015-03-30T07:42:47.440',NULL,N'Tont.Paradis','2015-03-30T07:42:47.440',NULL,NULL)
+ ,(7,N'RTND',N'Returned',N'Retournés',N'Returned',N'Retournés','2015-03-30T07:42:47.407',NULL,N'Tony.paradis','2015-03-30T07:42:47.407',NULL,NULL)
+ ,(8,N'CANC',N'Cancelled',N'Annulé',N'Cancelled',N'Annulé','2015-03-30T07:42:47.440',NULL,N'Tont.Paradis','2015-03-30T07:42:47.440',NULL,NULL)
 ) AS [Source] ([CHKLST_STATUS_ID],[CHKLST_STATUS_CODE],[CHKLST_STATUS_NAME_EN],[CHKLST_STATUS_NAME_FR],[CHKLST_STATUS_DESC_EN],[CHKLST_STATUS_DESC_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[DATE_CREATED],[USER_UPDATED],[DATE_UPDATED])
 ON ([Target].[CHKLST_STATUS_ID] = [Source].[CHKLST_STATUS_ID])
 WHEN MATCHED AND (
@@ -45,22 +45,22 @@ WHEN MATCHED AND (
 WHEN NOT MATCHED BY TARGET THEN
  INSERT([CHKLST_STATUS_ID],[CHKLST_STATUS_CODE],[CHKLST_STATUS_NAME_EN],[CHKLST_STATUS_NAME_FR],[CHKLST_STATUS_DESC_EN],[CHKLST_STATUS_DESC_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[DATE_CREATED],[USER_UPDATED],[DATE_UPDATED])
  VALUES([Source].[CHKLST_STATUS_ID],[Source].[CHKLST_STATUS_CODE],[Source].[CHKLST_STATUS_NAME_EN],[Source].[CHKLST_STATUS_NAME_FR],[Source].[CHKLST_STATUS_DESC_EN],[Source].[CHKLST_STATUS_DESC_FR],[Source].[EFFECTIVE_DATE],[Source].[EXPIRY_DATE],[Source].[USER_CREATED],[Source].[DATE_CREATED],[Source].[USER_UPDATED],[Source].[DATE_UPDATED])
-OUTPUT $action INTO @mergeOutput1522104463;
+OUTPUT $action INTO @mergeOutput1485248346;
 
-DECLARE @mergeError1522104463 int,
-@mergeCount1522104463 int,
-@mergeCountIns1522104463 int,
-@mergeCountUpd1522104463 int,
-@mergeCountDel1522104463 int
-SELECT @mergeError1522104463 = @@ERROR
-SELECT @mergeCount1522104463 = COUNT(1), @mergeCountIns1522104463 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd1522104463 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel1522104463 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput1522104463
-IF @mergeError1522104463 != 0
+DECLARE @mergeError1485248346 int,
+@mergeCount1485248346 int,
+@mergeCountIns1485248346 int,
+@mergeCountUpd1485248346 int,
+@mergeCountDel1485248346 int
+SELECT @mergeError1485248346 = @@ERROR
+SELECT @mergeCount1485248346 = COUNT(1), @mergeCountIns1485248346 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd1485248346 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel1485248346 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput1485248346
+IF @mergeError1485248346 != 0
  BEGIN
- PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_CHKLST_STATUS]. Rows affected: ' + CAST(@mergeCount1522104463 AS VARCHAR(100)); -- SQL should always return zero rows affected
+ PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_CHKLST_STATUS]. Rows affected: ' + CAST(@mergeCount1485248346 AS VARCHAR(100)); -- SQL should always return zero rows affected
  END
 ELSE
  BEGIN
- PRINT '[HRSC].[CD_CHKLST_STATUS] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount1522104463,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns1522104463,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd1522104463,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel1522104463,0) AS VARCHAR(100)) + ')' ;
+ PRINT '[HRSC].[CD_CHKLST_STATUS] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount1485248346,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns1485248346,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd1485248346,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel1485248346,0) AS VARCHAR(100)) + ')' ;
  END
 
 

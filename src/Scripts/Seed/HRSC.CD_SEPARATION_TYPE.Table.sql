@@ -7,21 +7,21 @@ SET NOCOUNT ON
 
 SET IDENTITY_INSERT [HRSC].[CD_SEPARATION_TYPE] ON
 
-DECLARE @mergeOutput354100302 TABLE ( [DMLAction] VARCHAR(6) );
+DECLARE @mergeOutput201767776 TABLE ( [DMLAction] VARCHAR(6) );
 MERGE INTO [HRSC].[CD_SEPARATION_TYPE] AS [Target]
 USING (VALUES
   (1,N'ASSGM',N'Assignment',N'Affectation',N'Assignment',N'Affectation',NULL,'2019-07-29T09:48:57.070',N'tony.paradis','2013-05-16T09:43:15.683',NULL,NULL)
- ,(2,N'INTCG',N'Interchange',N'?change Canada',N'Interchange',N'?change Canada',NULL,NULL,N'tony.paradis','2013-05-16T09:44:55.467',N'michel.tardif','2018-09-24T15:04:31.900')
+ ,(2,N'INTCG',N'Interchange',N'Échange Canada',N'Interchange',N'Échange Canada',NULL,NULL,N'tony.paradis','2013-05-16T09:44:55.467',N'michel.tardif','2018-09-24T15:04:31.900')
  ,(3,N'INTDP',N'Internal Deployment ',N'Mutation interne',N'Internal Deployment ',N'Mutation interne',NULL,'2019-07-29T09:48:57.070',N'tony.paradis','2013-05-16T09:46:40.500',N'tony.paradis','2013-05-16T10:42:54.963')
- ,(4,N'LGTLV',N'Leave Without Pay',N'Cong? non pay?',N'Leave Without Pay',N'Cong? non pay?',NULL,NULL,N'tony.paradis','2013-05-16T09:48:00.993',NULL,NULL)
- ,(5,N'RESGN',N'Resignation',N'D?mission',N'Resignation',N'D?mission',NULL,NULL,N'tony.paradis','2013-05-16T09:49:26.530',NULL,NULL)
+ ,(4,N'LGTLV',N'Leave Without Pay',N'Congé non payé',N'Leave Without Pay',N'Congé non payé',NULL,NULL,N'tony.paradis','2013-05-16T09:48:00.993',NULL,NULL)
+ ,(5,N'RESGN',N'Resignation',N'Démission',N'Resignation',N'Démission',NULL,NULL,N'tony.paradis','2013-05-16T09:49:26.530',NULL,NULL)
  ,(6,N'RTMNT',N'Retirement',N'Retraite',N'Retirement',N'Retraite',NULL,NULL,N'tony.paradis','2013-05-16T09:50:38.777',NULL,NULL)
- ,(7,N'SCDMT',N'Secondment',N'D?tachement',N'Secondment',N'D?tachement',NULL,NULL,N'tony.paradis','2013-05-16T09:51:40.233',NULL,NULL)
+ ,(7,N'SCDMT',N'Secondment',N'Détachement',N'Secondment',N'Détachement',NULL,NULL,N'tony.paradis','2013-05-16T09:51:40.233',NULL,NULL)
  ,(8,N'TERMN',N'Termination',N'Cessation d''emploi',N'Termination',N'Cessation d''emploi',NULL,NULL,N'tony.paradis','2013-05-16T09:52:55.153',N'tony.paradis','2013-05-16T10:44:28.243')
- ,(9,N'TFODP',N'Transfer to Another Department ',N'Transfert vers un autre minist?re',N'Transfer to Another Department ',N'Transfert vers un autre minist?re',NULL,NULL,N'tony.paradis','2013-05-16T09:54:16.683',N'tony.paradis','2013-05-16T10:45:43.090')
- ,(10,N'DTHSV',N'Death in Service',N'D?c?s en cours de service',N'Death in Service',N'D?c?s en cours de service',NULL,NULL,N'yves.robichaud','2015-03-30T07:42:48.373',NULL,NULL)
+ ,(9,N'TFODP',N'Transfer to Another Department ',N'Transfert vers un autre ministère',N'Transfer to Another Department ',N'Transfert vers un autre ministère',NULL,NULL,N'tony.paradis','2013-05-16T09:54:16.683',N'tony.paradis','2013-05-16T10:45:43.090')
+ ,(10,N'DTHSV',N'Death in Service',N'Décès en cours de service',N'Death in Service',N'Décès en cours de service',NULL,NULL,N'yves.robichaud','2015-03-30T07:42:48.373',NULL,NULL)
  ,(11,N'SICK',N'Illness',N'Maladie',N'Illness',N'Maladie','2018-08-30T00:00:00',NULL,N'tony.paradis','2018-08-31T08:24:07.143',N'yves.robichaud','2018-09-05T13:02:31.023')
- ,(12,N'NA',N'Not specified',N'Non sp?cifi?',N'Not specified',N'Non sp?cifi?','2020-01-17T07:58:16.593','2020-01-17T07:58:16.593',N'HRSC 4.9','2020-01-17T07:58:16.593',NULL,NULL)
+ ,(12,N'NA',N'Not specified',N'Non spécifié',N'Not specified',N'Non spécifié','2020-01-17T07:58:16.593','2020-01-17T07:58:16.593',N'HRSC 4.9','2020-01-17T07:58:16.593',NULL,NULL)
 ) AS [Source] ([SEPARATION_TYPE_ID],[SEPARATION_TYPE_CODE],[SEPARATION_TYPE_NAME_EN],[SEPARATION_TYPE_NAME_FR],[SEPARATION_TYPE_DESC_EN],[SEPARATION_TYPE_DESC_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[DATE_CREATED],[USER_UPDATED],[DATE_UPDATED])
 ON ([Target].[SEPARATION_TYPE_ID] = [Source].[SEPARATION_TYPE_ID])
 WHEN MATCHED AND (
@@ -51,22 +51,22 @@ WHEN MATCHED AND (
 WHEN NOT MATCHED BY TARGET THEN
  INSERT([SEPARATION_TYPE_ID],[SEPARATION_TYPE_CODE],[SEPARATION_TYPE_NAME_EN],[SEPARATION_TYPE_NAME_FR],[SEPARATION_TYPE_DESC_EN],[SEPARATION_TYPE_DESC_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[DATE_CREATED],[USER_UPDATED],[DATE_UPDATED])
  VALUES([Source].[SEPARATION_TYPE_ID],[Source].[SEPARATION_TYPE_CODE],[Source].[SEPARATION_TYPE_NAME_EN],[Source].[SEPARATION_TYPE_NAME_FR],[Source].[SEPARATION_TYPE_DESC_EN],[Source].[SEPARATION_TYPE_DESC_FR],[Source].[EFFECTIVE_DATE],[Source].[EXPIRY_DATE],[Source].[USER_CREATED],[Source].[DATE_CREATED],[Source].[USER_UPDATED],[Source].[DATE_UPDATED])
-OUTPUT $action INTO @mergeOutput354100302;
+OUTPUT $action INTO @mergeOutput201767776;
 
-DECLARE @mergeError354100302 int,
-@mergeCount354100302 int,
-@mergeCountIns354100302 int,
-@mergeCountUpd354100302 int,
-@mergeCountDel354100302 int
-SELECT @mergeError354100302 = @@ERROR
-SELECT @mergeCount354100302 = COUNT(1), @mergeCountIns354100302 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd354100302 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel354100302 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput354100302
-IF @mergeError354100302 != 0
+DECLARE @mergeError201767776 int,
+@mergeCount201767776 int,
+@mergeCountIns201767776 int,
+@mergeCountUpd201767776 int,
+@mergeCountDel201767776 int
+SELECT @mergeError201767776 = @@ERROR
+SELECT @mergeCount201767776 = COUNT(1), @mergeCountIns201767776 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd201767776 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel201767776 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput201767776
+IF @mergeError201767776 != 0
  BEGIN
- PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_SEPARATION_TYPE]. Rows affected: ' + CAST(@mergeCount354100302 AS VARCHAR(100)); -- SQL should always return zero rows affected
+ PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_SEPARATION_TYPE]. Rows affected: ' + CAST(@mergeCount201767776 AS VARCHAR(100)); -- SQL should always return zero rows affected
  END
 ELSE
  BEGIN
- PRINT '[HRSC].[CD_SEPARATION_TYPE] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount354100302,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns354100302,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd354100302,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel354100302,0) AS VARCHAR(100)) + ')' ;
+ PRINT '[HRSC].[CD_SEPARATION_TYPE] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount201767776,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns201767776,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd201767776,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel201767776,0) AS VARCHAR(100)) + ')' ;
  END
 
 

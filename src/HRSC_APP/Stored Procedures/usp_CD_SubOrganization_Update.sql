@@ -1,4 +1,8 @@
-﻿CREATE   PROCEDURE [HRSC_APP].[usp_CD_SubOrganization_Update]
+﻿
+
+
+
+CREATE   PROCEDURE [HRSC_APP].[usp_CD_SubOrganization_Update]
 	@pSubOrganization_ID bigint,
 	@pName_en nvarchar(250),
 	@pName_fr nvarchar(250),
@@ -15,9 +19,8 @@
 		
 WITH EXEC AS CALLER
 AS	
- 
-	UPDATE HRSC.CD_SUB_ORGANIZATION	
-
+	UPDATE HRSC.CD_SUB_ORGANIZATION
+	
      SET
             SUB_ORGANIZATION_NAME_EN = @pName_en    ,
             SUB_ORGANIZATION_NAME_FR = @pName_fr    ,
@@ -29,6 +32,6 @@ AS
             SUB_ORGANIZATION_CODE	 = @pCode 		,
 			USER_UPDATED    = @pUser				,
 			DATE_UPDATED    = GETDATE()				,
-			FORCED_REGION_ID = iif(@pForcedRegionId = 0, null, @pForcedRegionId)
+			FORCED_REGION_ID = @pForcedRegionId
 
 			WHERE SUB_ORGANIZATION_ID = @pSubOrganization_ID

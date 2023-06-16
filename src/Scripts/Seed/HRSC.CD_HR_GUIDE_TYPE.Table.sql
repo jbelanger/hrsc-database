@@ -7,11 +7,11 @@ SET NOCOUNT ON
 
 SET IDENTITY_INSERT [HRSC].[CD_HR_GUIDE_TYPE] ON
 
-DECLARE @mergeOutput1374627940 TABLE ( [DMLAction] VARCHAR(6) );
+DECLARE @mergeOutput1901249828 TABLE ( [DMLAction] VARCHAR(6) );
 MERGE INTO [HRSC].[CD_HR_GUIDE_TYPE] AS [Target]
 USING (VALUES
   (2,N'MG',N'Guide',N'Guide',N'Manager''s Guide',N'Guide du gestionnaire',NULL,NULL,N'Jan  9 2013  3:08PM','2013-01-09T15:08:59.977',NULL,NULL)
- ,(3,N'PR',N'Procedure',N'Proc?dure',N'HR Desk Procedure',N'Proc?dure HR',NULL,NULL,N'Jan  9 2013  3:10PM','2013-01-09T15:10:30.047',NULL,NULL)
+ ,(3,N'PR',N'Procedure',N'Procédure',N'HR Desk Procedure',N'Procédure HR',NULL,NULL,N'Jan  9 2013  3:10PM','2013-01-09T15:10:30.047',NULL,NULL)
  ,(4,N'FI',N'Form Instructions',N'Instructions du Formulaire',N'Form Instructions',N'Instructions du Formulaire',NULL,NULL,N'system','2021-02-05T07:35:50.540',NULL,NULL)
 ) AS [Source] ([HR_GUIDE_TYPE_ID],[HR_GUIDE_TYPE_CODE],[HR_GUIDE_TYPE_NAME_EN],[HR_GUIDE_TYPE_NAME_FR],[HR_GUIDE_TYPE_DESC_EN],[HR_GUIDE_TYPE_DESC_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[DATE_CREATED],[USER_UPDATED],[DATE_UPDATED])
 ON ([Target].[HR_GUIDE_TYPE_ID] = [Source].[HR_GUIDE_TYPE_ID])
@@ -42,22 +42,22 @@ WHEN MATCHED AND (
 WHEN NOT MATCHED BY TARGET THEN
  INSERT([HR_GUIDE_TYPE_ID],[HR_GUIDE_TYPE_CODE],[HR_GUIDE_TYPE_NAME_EN],[HR_GUIDE_TYPE_NAME_FR],[HR_GUIDE_TYPE_DESC_EN],[HR_GUIDE_TYPE_DESC_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[DATE_CREATED],[USER_UPDATED],[DATE_UPDATED])
  VALUES([Source].[HR_GUIDE_TYPE_ID],[Source].[HR_GUIDE_TYPE_CODE],[Source].[HR_GUIDE_TYPE_NAME_EN],[Source].[HR_GUIDE_TYPE_NAME_FR],[Source].[HR_GUIDE_TYPE_DESC_EN],[Source].[HR_GUIDE_TYPE_DESC_FR],[Source].[EFFECTIVE_DATE],[Source].[EXPIRY_DATE],[Source].[USER_CREATED],[Source].[DATE_CREATED],[Source].[USER_UPDATED],[Source].[DATE_UPDATED])
-OUTPUT $action INTO @mergeOutput1374627940;
+OUTPUT $action INTO @mergeOutput1901249828;
 
-DECLARE @mergeError1374627940 int,
-@mergeCount1374627940 int,
-@mergeCountIns1374627940 int,
-@mergeCountUpd1374627940 int,
-@mergeCountDel1374627940 int
-SELECT @mergeError1374627940 = @@ERROR
-SELECT @mergeCount1374627940 = COUNT(1), @mergeCountIns1374627940 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd1374627940 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel1374627940 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput1374627940
-IF @mergeError1374627940 != 0
+DECLARE @mergeError1901249828 int,
+@mergeCount1901249828 int,
+@mergeCountIns1901249828 int,
+@mergeCountUpd1901249828 int,
+@mergeCountDel1901249828 int
+SELECT @mergeError1901249828 = @@ERROR
+SELECT @mergeCount1901249828 = COUNT(1), @mergeCountIns1901249828 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd1901249828 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel1901249828 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput1901249828
+IF @mergeError1901249828 != 0
  BEGIN
- PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_HR_GUIDE_TYPE]. Rows affected: ' + CAST(@mergeCount1374627940 AS VARCHAR(100)); -- SQL should always return zero rows affected
+ PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_HR_GUIDE_TYPE]. Rows affected: ' + CAST(@mergeCount1901249828 AS VARCHAR(100)); -- SQL should always return zero rows affected
  END
 ELSE
  BEGIN
- PRINT '[HRSC].[CD_HR_GUIDE_TYPE] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount1374627940,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns1374627940,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd1374627940,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel1374627940,0) AS VARCHAR(100)) + ')' ;
+ PRINT '[HRSC].[CD_HR_GUIDE_TYPE] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount1901249828,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns1901249828,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd1901249828,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel1901249828,0) AS VARCHAR(100)) + ')' ;
  END
 
 

@@ -7,16 +7,16 @@ SET NOCOUNT ON
 
 SET IDENTITY_INSERT [HRSC].[CD_ACTION_TYPE] ON
 
-DECLARE @mergeOutput850102069 TABLE ( [DMLAction] VARCHAR(6) );
+DECLARE @mergeOutput58483287 TABLE ( [DMLAction] VARCHAR(6) );
 MERGE INTO [HRSC].[CD_ACTION_TYPE] AS [Target]
 USING (VALUES
-  (1,N'PAR Resent',N'DIP r?-envoy?e',N'PAR Resent',N'DIP r?-envoy?e',NULL,N'SYSTEM',NULL,'2016-07-12T08:36:19.157',NULL,N'RSENT','2016-04-15T00:00:00')
- ,(2,N'Acknowledgment receipt received',N'Accus? de r?ception re?u',N'Acknowledgment receipt received',N'Accus? de r?ception re?u',NULL,N'SYSTEM',NULL,'2016-07-12T08:36:19.247',NULL,N'ACKNO','2016-04-15T00:00:00')
- ,(3,N'Pay Action Not Processed',N'Mouvement non trait?',N'Pay Action Not Processed',N'Mouvement non trait?',NULL,N'SYSTEM',NULL,'2016-07-12T08:36:19.247',NULL,N'NOPRO','2016-04-15T00:00:00')
- ,(4,N'PAR Confirmed',N'DIP confirm?e',N'PAR Confirmed',N'DIP confirm?e',NULL,N'SYSTEM',NULL,'2016-07-12T08:36:19.250',NULL,N'CONFI','2016-04-15T00:00:00')
- ,(5,N'Action entered in PeopleSoft ? Request to send to Pay Center',N'Action entr?e dans PeopleSoft ? Demande ? envoyer ? la paye',N'Action entered in PeopleSoft ? Request to send to Pay Center',N'Action entr?e dans PeopleSoft ? Demande ? envoyer ? la paye',NULL,N'yves.robichaud',NULL,'2017-07-06T12:48:09.963',NULL,N'PAct1','2017-07-06T00:00:00')
- ,(6,N'Action entered in PeopleSoft - Resolved Request',N'Action entr?e dans PeopleSoft ? Demande r?solue',N'Action entered in PeopleSoft - Resolved Request',N'Action entr?e dans PeopleSoft ? Demande r?solue',NULL,N'yves.robichaud',NULL,'2017-07-06T12:48:40.890',NULL,N'PAct2','2017-07-06T00:00:00')
- ,(7,N'Update position with an existing job code',N'Mise ? jour de num?ro de poste avec num?ro d''emploi existant',N'Update position with an existing job code',N'Mise ? jour de num?ro de poste avec num?ro d''emploi existant',NULL,N'tony.paradis',NULL,'2017-07-14T07:42:44.037',NULL,N'UDPOS','2017-07-14T07:42:44.037')
+  (1,N'PAR Resent',N'DIP ré-envoyée',N'PAR Resent',N'DIP ré-envoyée',NULL,N'SYSTEM',NULL,'2016-07-12T08:36:19.157',NULL,N'RSENT','2016-04-15T00:00:00')
+ ,(2,N'Acknowledgment receipt received',N'Accusé de réception reçu',N'Acknowledgment receipt received',N'Accusé de réception reçu',NULL,N'SYSTEM',NULL,'2016-07-12T08:36:19.247',NULL,N'ACKNO','2016-04-15T00:00:00')
+ ,(3,N'Pay Action Not Processed',N'Mouvement non traité',N'Pay Action Not Processed',N'Mouvement non traité',NULL,N'SYSTEM',NULL,'2016-07-12T08:36:19.247',NULL,N'NOPRO','2016-04-15T00:00:00')
+ ,(4,N'PAR Confirmed',N'DIP confirmée',N'PAR Confirmed',N'DIP confirmée',NULL,N'SYSTEM',NULL,'2016-07-12T08:36:19.250',NULL,N'CONFI','2016-04-15T00:00:00')
+ ,(5,N'Action entered in PeopleSoft – Request to send to Pay Center',N'Action entrée dans PeopleSoft – Demande à envoyer à la paye',N'Action entered in PeopleSoft – Request to send to Pay Center',N'Action entrée dans PeopleSoft – Demande à envoyer à la paye',NULL,N'yves.robichaud',NULL,'2017-07-06T12:48:09.963',NULL,N'PAct1','2017-07-06T00:00:00')
+ ,(6,N'Action entered in PeopleSoft - Resolved Request',N'Action entrée dans PeopleSoft – Demande résolue',N'Action entered in PeopleSoft - Resolved Request',N'Action entrée dans PeopleSoft – Demande résolue',NULL,N'yves.robichaud',NULL,'2017-07-06T12:48:40.890',NULL,N'PAct2','2017-07-06T00:00:00')
+ ,(7,N'Update position with an existing job code',N'Mise à jour de numéro de poste avec numéro d''emploi existant',N'Update position with an existing job code',N'Mise à jour de numéro de poste avec numéro d''emploi existant',NULL,N'tony.paradis',NULL,'2017-07-14T07:42:44.037',NULL,N'UDPOS','2017-07-14T07:42:44.037')
 ) AS [Source] ([ACTION_TYPE_ID],[ACTION_TYPE_NAME_EN],[ACTION_TYPE_NAME_FR],[ACTION_TYPE_DESC_EN],[ACTION_TYPE_DESC_FR],[EXPIRY_DATE],[USER_CREATED],[USER_UPDATED],[DATE_CREATED],[DATE_UPDATED],[ACTION_TYPE_CODE],[EFFECTIVE_DATE])
 ON ([Target].[ACTION_TYPE_ID] = [Source].[ACTION_TYPE_ID])
 WHEN MATCHED AND (
@@ -46,22 +46,22 @@ WHEN MATCHED AND (
 WHEN NOT MATCHED BY TARGET THEN
  INSERT([ACTION_TYPE_ID],[ACTION_TYPE_NAME_EN],[ACTION_TYPE_NAME_FR],[ACTION_TYPE_DESC_EN],[ACTION_TYPE_DESC_FR],[EXPIRY_DATE],[USER_CREATED],[USER_UPDATED],[DATE_CREATED],[DATE_UPDATED],[ACTION_TYPE_CODE],[EFFECTIVE_DATE])
  VALUES([Source].[ACTION_TYPE_ID],[Source].[ACTION_TYPE_NAME_EN],[Source].[ACTION_TYPE_NAME_FR],[Source].[ACTION_TYPE_DESC_EN],[Source].[ACTION_TYPE_DESC_FR],[Source].[EXPIRY_DATE],[Source].[USER_CREATED],[Source].[USER_UPDATED],[Source].[DATE_CREATED],[Source].[DATE_UPDATED],[Source].[ACTION_TYPE_CODE],[Source].[EFFECTIVE_DATE])
-OUTPUT $action INTO @mergeOutput850102069;
+OUTPUT $action INTO @mergeOutput58483287;
 
-DECLARE @mergeError850102069 int,
-@mergeCount850102069 int,
-@mergeCountIns850102069 int,
-@mergeCountUpd850102069 int,
-@mergeCountDel850102069 int
-SELECT @mergeError850102069 = @@ERROR
-SELECT @mergeCount850102069 = COUNT(1), @mergeCountIns850102069 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd850102069 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel850102069 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput850102069
-IF @mergeError850102069 != 0
+DECLARE @mergeError58483287 int,
+@mergeCount58483287 int,
+@mergeCountIns58483287 int,
+@mergeCountUpd58483287 int,
+@mergeCountDel58483287 int
+SELECT @mergeError58483287 = @@ERROR
+SELECT @mergeCount58483287 = COUNT(1), @mergeCountIns58483287 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd58483287 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel58483287 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput58483287
+IF @mergeError58483287 != 0
  BEGIN
- PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_ACTION_TYPE]. Rows affected: ' + CAST(@mergeCount850102069 AS VARCHAR(100)); -- SQL should always return zero rows affected
+ PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_ACTION_TYPE]. Rows affected: ' + CAST(@mergeCount58483287 AS VARCHAR(100)); -- SQL should always return zero rows affected
  END
 ELSE
  BEGIN
- PRINT '[HRSC].[CD_ACTION_TYPE] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount850102069,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns850102069,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd850102069,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel850102069,0) AS VARCHAR(100)) + ')' ;
+ PRINT '[HRSC].[CD_ACTION_TYPE] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount58483287,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns58483287,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd58483287,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel58483287,0) AS VARCHAR(100)) + ')' ;
  END
 
 

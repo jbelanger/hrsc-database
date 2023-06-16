@@ -16,6 +16,9 @@ CREATE     PROCEDURE [HRSC_APP].[usp_Announcements_Insert]
 	@Expiry_Date datetime,
 	@User nvarchar(100),
 	@Announcement_Type_ID bigint,
+	@Icon nvarchar(100),
+	@Icon_Level nvarchar(100),
+	@Sort_Order bigint,
 	@ReturnCode int OUTPUT
 
 		
@@ -46,7 +49,10 @@ DECLARE @Error int
 			DATE_CREATED				  ,
 			USER_UPDATED				  ,
 			DATE_UPDATED				  ,
-			ANNOUNCEMENT_TYPE_ID 
+			ANNOUNCEMENT_TYPE_ID		  ,
+			ICON						  ,
+			ICON_LEVEL					  ,
+			SORT_ORDER
           ) 
      VALUES 
           ( 
@@ -62,7 +68,10 @@ DECLARE @Error int
 			GETDATE()			   ,
 			@User                  ,
 			GETDATE()			   ,
-			@Announcement_Type_ID)	
+			@Announcement_Type_ID  ,
+			@Icon				   ,
+			@Icon_Level			   ,
+			@Sort_Order)	
 
 		SELECT @Error = @@ERROR
 

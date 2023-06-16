@@ -11,6 +11,7 @@ Post-Deployment Script Template
 */
 if @@servername <> 'MLDBSQL16CL01' -- Production and training
 begin 
+    PRINT 'BEGIN Merge lookup data scripts'
     /*
     Insert lookup data. Allowed on dev environments only.
     */
@@ -18,15 +19,16 @@ begin
     :r ./"Seed/HRSC.CD_ACCOMODATION_REQUIRED.Table.sql"
     :r ./"Seed/HRSC.CD_ACTION_TYPE.Table.sql"
     :r ./"Seed/HRSC.CD_ANNOUNCEMENT_TYPE.Table.sql"
+    :r ./"Seed/HRSC.CD_ATTRIBUTE.Table.sql"
     :r ./"Seed/HRSC.CD_BUSINESS_CENTER.Table.sql"
     :r ./"Seed/HRSC.CD_CHKLST_STATUS.Table.sql"
+    :r ./"Seed/HRSC.CD_CANDIDATE_TYPE.Table.sql"
     :r ./"Seed/HRSC.CD_CLASSIFICATION_GROUP.Table.sql"
     :r ./"Seed/HRSC.CD_CLASSIFICATION_LEVEL.Table.sql"
     :r ./"Seed/HRSC.CD_CLASSIFICATION_SUB_GROUP.Table.sql"    
     :r ./"Seed/HRSC.CD_COMMUNICATION_REQ.Table.sql"
     :r ./"Seed/HRSC.CD_DEPARTMENT.Table.sql"
     :r ./"Seed/HRSC.CD_DEPLOYMENT_TYPE.Table.sql"
-    :r ./"Seed/HRSC.CD_DOCUMENT_TYPE.Table.sql"
     :r ./"Seed/HRSC.CD_DOUBLE_BANKING.Table.sql"
     :r ./"Seed/HRSC.CD_EMAIL_TEMPLATE_TYPE.Table.sql"
     :r ./"Seed/HRSC.CD_EMPLOYEE_ROLE.Table.sql"
@@ -72,6 +74,8 @@ begin
     :r ./"Seed/HRSC.CD_COI_DECLARATION_TYPE.Table.sql"
     :r ./"Seed/HRSC.CD_COI_QUESTION.Table.sql"
     :r ./"Seed/HRSC.CD_WORK_TYPE.Table.sql"
+    :r ./"Seed/HRSC.APPROVAL_TRANSFER_RULE.Table.sql"
+    :r ./"Seed/HRSC.BUSINESS_CENTER_ATTR.Table.sql"
     :r ./"Seed/HRSC.EMAIL_TEMPLATE.Table.sql"
     :r ./"Seed/HRSC.GD_ACCOUNT_EMAIL.Table.sql"
     :r ./"Seed/HRSC.HR_AGREEMENT_TERM.Table.sql"
@@ -81,11 +85,12 @@ begin
     :r ./"Seed/HRSC.REQ_STATUS_JUSTIFICATION.Table.sql"
     :r ./"Seed/HRSC.SEPARATION_CHKLST_TYPE.Table.sql"
     :r ./"Seed/HRSC.BC_CATEGORY.Table.sql"
+    PRINT 'END Merge lookup data scripts'
 end
 
 
 begin
     PRINT 'BEGIN Post-deployment script'
-    :r ./"Db Changes.sql"
+    :r ./"RunAfter.sql"
     PRINT 'END Post-deployment script'
 end

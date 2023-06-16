@@ -16,6 +16,9 @@ CREATE     PROCEDURE [HRSC_APP].[usp_Announcements_Update]
 	@Expiry_Date datetime,
 	@User nvarchar(100),
 	@Announcement_Type_ID bigint,
+	@Icon nvarchar(100),
+	@Icon_Level nvarchar(100),
+	@Sort_Order bigint,
 	@ReturnCode int OUTPUT
 
 		
@@ -45,7 +48,10 @@ DECLARE @Error int
 			EXPIRY_DATE		= @Expiry_Date			  ,
 			USER_UPDATED    = @User				  ,
 			DATE_UPDATED    = GETDATE(),
-			ANNOUNCEMENT_TYPE_ID = @Announcement_Type_ID
+			ANNOUNCEMENT_TYPE_ID = @Announcement_Type_ID,
+			ICON = @Icon,
+			ICON_LEVEL = @Icon_Level,
+			SORT_ORDER = @Sort_Order
 			
 			WHERE HRSC_ANNOUNCEMENTS_ID = @Announcements_ID  				   
           

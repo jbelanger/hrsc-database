@@ -7,26 +7,26 @@ SET NOCOUNT ON
 
 SET IDENTITY_INSERT [HRSC].[CD_PRIORITY_TYPE] ON
 
-DECLARE @mergeOutput1982630106 TABLE ( [DMLAction] VARCHAR(6) );
+DECLARE @mergeOutput2125250626 TABLE ( [DMLAction] VARCHAR(6) );
 MERGE INTO [HRSC].[CD_PRIORITY_TYPE] AS [Target]
 USING (VALUES
   (1,N'NA',N'Not Applicable',N'Non applicable',N'Not Applicable',N'Non applicable','2013-01-11T10:16:25.347',NULL,N'HRDC-DRHC\elena.akhmentova','2013-01-11T10:16:25.347',NULL,NULL,1,1)
- ,(2,N'Leave',N'PSC Priority ? Leave of Absence Returnee or Replacement',N'Priorit? (CFP) - Fonctionnaires qui reviennent d''un cong? et rempla?ant et rempla?ante',N'PSC Priority ? Leave of Absence Returnee or Replacement',N'Priorit? (CFP) - Fonctionnaires qui reviennent d''un cong? et rempla?ant et rempla?ante','2013-01-11T10:17:15.857',NULL,N'HRDC-DRHC\elena.akhmentova','2013-01-11T10:17:15.857',NULL,NULL,1,0)
- ,(3,N'Disab',N'PSC Priority ? Employee who Becomes Disabled',N'Priorit? (CFP) - Fonctionnaires qui deviennent handicap?s',N'PSC Priority ? Employee who Becomes Disabled',N'Priorit? (CFP) - Fonctionnaires qui deviennent handicap?s','2013-01-11T10:17:25.527',NULL,N'HRDC-DRHC\elena.akhmentova','2013-01-11T10:17:25.527',NULL,NULL,1,0)
- ,(4,N'Force',N'PSC Priority ? Canadian Forces/RCMP Members Released/Discharged Medical Reasons',N'Priorit? (CFP) - Membres des Forces canadiennes et/ou de la GRC lib?r?s ou renvoy?s pour des raisons 
-m?dicales',N'PSC Priority ? Canadian Forces/RCMP Members Released/Discharged Medical Reasons',N'Priorit? (CFP) - Membres des Forces canadiennes et/ou de la GRC lib?r?s ou renvoy?s pour des 
-raisons m?dicales','2013-01-11T10:18:11.953',NULL,N'HRDC-DRHC\elena.akhmentova','2013-01-11T10:18:11.953',NULL,NULL,1,0)
- ,(5,N'RelSp',N'PSC Priority ? Relocation of Spouse or Common-Law Partner',N'Priorit? (CFP) - R?installation de l''?poux ou ?pouse ou du conjoint ou conjointe de fait',N'PSC Priority ? Relocation of Spouse or Common-Law Partner',N'Priorit? (CFP) - R?installation de l''?poux ou ?pouse ou du conjoint ou conjointe de fait','2013-01-11T10:18:19.860',NULL,N'HRDC-DRHC\elena.akhmentova','2013-01-11T10:18:19.860',NULL,NULL,1,0)
- ,(6,N'Reins',N'PSC Priority ? Reinstatement',N'Priorit? (CFP) - R?int?gration',N'PSC Priority ? Reinstatement',N'Priorit? (CFP) - R?int?gration','2013-01-11T10:18:19.867',NULL,N'HRDC-DRHC\elena.akhmentova','2013-01-11T10:18:19.867',NULL,NULL,1,0)
- ,(7,N'SurSp',N'PSC Priority ? Surviving Spouse or Common-Law Partner',N'Priorit? (CFP) - ?poux ou conjoints de fait survivants',N'PSC Priority ? Surviving Spouse or Common-Law Partner',N'Priorit? (CFP) - ?poux ou conjoints de fait survivants','2013-01-11T10:18:19.867',NULL,N'HRDC-DRHC\elena.akhmentova','2013-01-11T10:18:19.867',NULL,NULL,1,0)
+ ,(2,N'Leave',N'PSC Priority – Leave of Absence Returnee or Replacement',N'Priorité (CFP) - Fonctionnaires qui reviennent d''un congé et remplaçant et remplaçante',N'PSC Priority – Leave of Absence Returnee or Replacement',N'Priorité (CFP) - Fonctionnaires qui reviennent d''un congé et remplaçant et remplaçante','2013-01-11T10:17:15.857',NULL,N'HRDC-DRHC\elena.akhmentova','2013-01-11T10:17:15.857',NULL,NULL,1,0)
+ ,(3,N'Disab',N'PSC Priority – Employee who Becomes Disabled',N'Priorité (CFP) - Fonctionnaires qui deviennent handicapés',N'PSC Priority – Employee who Becomes Disabled',N'Priorité (CFP) - Fonctionnaires qui deviennent handicapés','2013-01-11T10:17:25.527',NULL,N'HRDC-DRHC\elena.akhmentova','2013-01-11T10:17:25.527',NULL,NULL,1,0)
+ ,(4,N'Force',N'PSC Priority – Canadian Forces/RCMP Members Released/Discharged Medical Reasons',N'Priorité (CFP) - Membres des Forces canadiennes et/ou de la GRC libérés ou renvoyés pour des raisons 
+médicales',N'PSC Priority – Canadian Forces/RCMP Members Released/Discharged Medical Reasons',N'Priorité (CFP) - Membres des Forces canadiennes et/ou de la GRC libérés ou renvoyés pour des 
+raisons médicales','2013-01-11T10:18:11.953',NULL,N'HRDC-DRHC\elena.akhmentova','2013-01-11T10:18:11.953',NULL,NULL,1,0)
+ ,(5,N'RelSp',N'PSC Priority – Relocation of Spouse or Common-Law Partner',N'Priorité (CFP) - Réinstallation de l''époux ou épouse ou du conjoint ou conjointe de fait',N'PSC Priority – Relocation of Spouse or Common-Law Partner',N'Priorité (CFP) - Réinstallation de l''époux ou épouse ou du conjoint ou conjointe de fait','2013-01-11T10:18:19.860',NULL,N'HRDC-DRHC\elena.akhmentova','2013-01-11T10:18:19.860',NULL,NULL,1,0)
+ ,(6,N'Reins',N'PSC Priority – Reinstatement',N'Priorité (CFP) - Réintégration',N'PSC Priority – Reinstatement',N'Priorité (CFP) - Réintégration','2013-01-11T10:18:19.867',NULL,N'HRDC-DRHC\elena.akhmentova','2013-01-11T10:18:19.867',NULL,NULL,1,0)
+ ,(7,N'SurSp',N'PSC Priority – Surviving Spouse or Common-Law Partner',N'Priorité (CFP) - Époux ou conjoints de fait survivants',N'PSC Priority – Surviving Spouse or Common-Law Partner',N'Priorité (CFP) - Époux ou conjoints de fait survivants','2013-01-11T10:18:19.867',NULL,N'HRDC-DRHC\elena.akhmentova','2013-01-11T10:18:19.867',NULL,NULL,1,0)
  ,(8,N'Other',N'Other',N'Autre',N'Other',N'Autre','2013-01-11T10:18:19.870',NULL,N'HRDC-DRHC\elena.akhmentova','2013-01-11T10:18:19.870',NULL,NULL,1,1)
- ,(9,N'Affec',N'Departmental Priority ? Affected',N'Employ? prioritaire du Minist?re - employ? touch?',N'Departmental Priority ? Affected',N'Employ? prioritaire du Minist?re - employ? touch?','2013-01-11T10:18:36.193',NULL,N'HRDC-DRHC\elena.akhmentova','2013-01-11T10:18:36.193',NULL,NULL,0,1)
- ,(11,N'RelWI',N'Departmental Priority ? Relocation of Work Unit',N'Employ? prioritaire du Minist?re - r?installation d?une unit? de travail',N'Departmental Priority ? Relocation of Work Unit',N'Employ? prioritaire du Minist?re - r?installation d?une unit? de travail','2013-01-11T10:18:36.270',NULL,N'HRDC-DRHC\elena.akhmentova','2013-01-11T10:18:36.270',NULL,NULL,0,1)
- ,(12,N'DSurp',N'Departmental Priority ? Surplus',N'Employ? prioritaire du Minist?re - exc?dentaire',N'Departmental Priority ? Surplus',N'Employ? prioritaire du Minist?re - exc?dentaire','2013-01-11T10:18:36.273',NULL,N'HRDC-DRHC\elena.akhmentova','2013-01-11T10:18:36.273',NULL,NULL,0,1)
- ,(13,N'PSurp',N'PSC Priority ? Surplus',N'Priorit? (CFP) - Fonctionnaires exc?dentaires',N'PSC Priority ? Surplus',N'Priorit? (CFP) - Fonctionnaires exc?dentaires','2013-01-11T10:18:36.273',NULL,N'HRDC-DRHC\elena.akhmentova','2013-01-11T10:18:36.273',NULL,NULL,0,1)
- ,(14,N'Layof',N'PSC Priority ? Lay-off',N'Priorit? (CFP) - Personnes mises en disponibilit?',N'PSC Priority ? Lay-off',N'Priorit? (CFP) - Personnes mises en disponibilit?','2013-01-11T10:18:36.273',NULL,N'HRDC-DRHC\elena.akhmentova','2013-01-11T10:18:36.273',NULL,NULL,0,1)
- ,(16,N'Opt',N'Departmental Priority ? Opting',N'Employ? prioritaire du Minist?re - optant',N'Departmental Priority ? Opting',N'Employ? prioritaire du Minist?re - optant','2013-01-11T10:21:35.053',NULL,N'HRDC-DRHC\elena.akhmentova','2013-01-11T10:21:35.053',NULL,NULL,0,1)
- ,(17,N'CAFM2',N'PSC Priority - Canadian Forces Member Released-Medical Reasons Attributable to Military Service',N'Priorit? (CFP) -  Membres des Forces canadiennes lib?r?s pour des raisons m?dicales li?es au service ',N'Priorit? (CFP) -  Membres des Forces canadiennes lib?r?s pour des raisons m?dicales li?es au service ',N'Priorit? (CFP) -  Membres des Forces canadiennes lib?r?s pour des raisons m?dicales li?es au service ','2015-03-30T07:42:48.160',NULL,N'yves.robichaud','2015-03-30T07:42:48.160',NULL,NULL,1,0)
+ ,(9,N'Affec',N'Departmental Priority – Affected',N'Employé prioritaire du Ministère - employé touché',N'Departmental Priority – Affected',N'Employé prioritaire du Ministère - employé touché','2013-01-11T10:18:36.193',NULL,N'HRDC-DRHC\elena.akhmentova','2013-01-11T10:18:36.193',NULL,NULL,0,1)
+ ,(11,N'RelWI',N'Departmental Priority – Relocation of Work Unit',N'Employé prioritaire du Ministère - réinstallation d’une unité de travail',N'Departmental Priority – Relocation of Work Unit',N'Employé prioritaire du Ministère - réinstallation d’une unité de travail','2013-01-11T10:18:36.270',NULL,N'HRDC-DRHC\elena.akhmentova','2013-01-11T10:18:36.270',NULL,NULL,0,1)
+ ,(12,N'DSurp',N'Departmental Priority – Surplus',N'Employé prioritaire du Ministère - excédentaire',N'Departmental Priority – Surplus',N'Employé prioritaire du Ministère - excédentaire','2013-01-11T10:18:36.273',NULL,N'HRDC-DRHC\elena.akhmentova','2013-01-11T10:18:36.273',NULL,NULL,0,1)
+ ,(13,N'PSurp',N'PSC Priority – Surplus',N'Priorité (CFP) - Fonctionnaires excédentaires',N'PSC Priority – Surplus',N'Priorité (CFP) - Fonctionnaires excédentaires','2013-01-11T10:18:36.273',NULL,N'HRDC-DRHC\elena.akhmentova','2013-01-11T10:18:36.273',NULL,NULL,0,1)
+ ,(14,N'Layof',N'PSC Priority – Lay-off',N'Priorité (CFP) - Personnes mises en disponibilité',N'PSC Priority – Lay-off',N'Priorité (CFP) - Personnes mises en disponibilité','2013-01-11T10:18:36.273',NULL,N'HRDC-DRHC\elena.akhmentova','2013-01-11T10:18:36.273',NULL,NULL,0,1)
+ ,(16,N'Opt',N'Departmental Priority – Opting',N'Employé prioritaire du Ministère - optant',N'Departmental Priority – Opting',N'Employé prioritaire du Ministère - optant','2013-01-11T10:21:35.053',NULL,N'HRDC-DRHC\elena.akhmentova','2013-01-11T10:21:35.053',NULL,NULL,0,1)
+ ,(17,N'CAFM2',N'PSC Priority - Canadian Forces Member Released-Medical Reasons Attributable to Military Service',N'Priorité (CFP) -  Membres des Forces canadiennes libérés pour des raisons médicales liées au service ',N'Priorité (CFP) -  Membres des Forces canadiennes libérés pour des raisons médicales liées au service ',N'Priorité (CFP) -  Membres des Forces canadiennes libérés pour des raisons médicales liées au service ','2015-03-30T07:42:48.160',NULL,N'yves.robichaud','2015-03-30T07:42:48.160',NULL,NULL,1,0)
 ) AS [Source] ([PRIORITY_TYPE_ID],[PRIORITY_TYPE_CODE],[PRIORITY_TYPE_NAME_EN],[PRIORITY_TYPE_NAME_FR],[PRIORITY_TYPE_DESC_EN],[PRIORITY_TYPE_DESC_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[DATE_CREATED],[USER_UPDATED],[DATE_UPDATED],[PSC_PRIORITY_IND],[DEPARTMENT_IND])
 ON ([Target].[PRIORITY_TYPE_ID] = [Source].[PRIORITY_TYPE_ID])
 WHEN MATCHED AND (
@@ -60,22 +60,22 @@ WHEN MATCHED AND (
 WHEN NOT MATCHED BY TARGET THEN
  INSERT([PRIORITY_TYPE_ID],[PRIORITY_TYPE_CODE],[PRIORITY_TYPE_NAME_EN],[PRIORITY_TYPE_NAME_FR],[PRIORITY_TYPE_DESC_EN],[PRIORITY_TYPE_DESC_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[DATE_CREATED],[USER_UPDATED],[DATE_UPDATED],[PSC_PRIORITY_IND],[DEPARTMENT_IND])
  VALUES([Source].[PRIORITY_TYPE_ID],[Source].[PRIORITY_TYPE_CODE],[Source].[PRIORITY_TYPE_NAME_EN],[Source].[PRIORITY_TYPE_NAME_FR],[Source].[PRIORITY_TYPE_DESC_EN],[Source].[PRIORITY_TYPE_DESC_FR],[Source].[EFFECTIVE_DATE],[Source].[EXPIRY_DATE],[Source].[USER_CREATED],[Source].[DATE_CREATED],[Source].[USER_UPDATED],[Source].[DATE_UPDATED],[Source].[PSC_PRIORITY_IND],[Source].[DEPARTMENT_IND])
-OUTPUT $action INTO @mergeOutput1982630106;
+OUTPUT $action INTO @mergeOutput2125250626;
 
-DECLARE @mergeError1982630106 int,
-@mergeCount1982630106 int,
-@mergeCountIns1982630106 int,
-@mergeCountUpd1982630106 int,
-@mergeCountDel1982630106 int
-SELECT @mergeError1982630106 = @@ERROR
-SELECT @mergeCount1982630106 = COUNT(1), @mergeCountIns1982630106 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd1982630106 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel1982630106 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput1982630106
-IF @mergeError1982630106 != 0
+DECLARE @mergeError2125250626 int,
+@mergeCount2125250626 int,
+@mergeCountIns2125250626 int,
+@mergeCountUpd2125250626 int,
+@mergeCountDel2125250626 int
+SELECT @mergeError2125250626 = @@ERROR
+SELECT @mergeCount2125250626 = COUNT(1), @mergeCountIns2125250626 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd2125250626 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel2125250626 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput2125250626
+IF @mergeError2125250626 != 0
  BEGIN
- PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_PRIORITY_TYPE]. Rows affected: ' + CAST(@mergeCount1982630106 AS VARCHAR(100)); -- SQL should always return zero rows affected
+ PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_PRIORITY_TYPE]. Rows affected: ' + CAST(@mergeCount2125250626 AS VARCHAR(100)); -- SQL should always return zero rows affected
  END
 ELSE
  BEGIN
- PRINT '[HRSC].[CD_PRIORITY_TYPE] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount1982630106,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns1982630106,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd1982630106,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel1982630106,0) AS VARCHAR(100)) + ')' ;
+ PRINT '[HRSC].[CD_PRIORITY_TYPE] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount2125250626,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns2125250626,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd2125250626,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel2125250626,0) AS VARCHAR(100)) + ')' ;
  END
 
 

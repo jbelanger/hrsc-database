@@ -8,7 +8,7 @@ CREATE     PROCEDURE [HRSC_APP].[usp_HR_Document_Insert] @pDocumentFile VARBINAR
 	,@pDescFR NVARCHAR(250)
 	,@pPublicInd BIT
 	,@pRequestID BIGINT
-	,@pDocumentTypeID BIGINT
+	,@pBusinessCenterID BIGINT
 	,@pDocumentSize INT
 	,@pUserID NVARCHAR(30)
 	,@pNewRowID BIGINT OUTPUT
@@ -24,7 +24,7 @@ INSERT INTO HRSC.HR_DOCUMENT (
 	,USER_CREATED
 	,DATE_CREATED
 	,HR_REQUEST_ID
-	,DOCUMENT_TYPE_ID
+	,CREATED_BY_BC_ID
 	,HR_DOCUMENT_NAME
 	,HR_DOCUMENT_DESC_EN
 	,HR_DOCUMENT_DESC_FR
@@ -37,7 +37,7 @@ VALUES (
 	,@pUserID
 	,GetDate()
 	,@pRequestID
-	,@pDocumentTypeID
+	,@pBusinessCenterID
 	,@pName
 	,@pDescEN
 	,@pDescFR

@@ -7,24 +7,24 @@ SET NOCOUNT ON
 
 SET IDENTITY_INSERT [HRSC].[CD_REQUEST_STATUS] ON
 
-DECLARE @mergeOutput1781581385 TABLE ( [DMLAction] VARCHAR(6) );
+DECLARE @mergeOutput276196034 TABLE ( [DMLAction] VARCHAR(6) );
 MERGE INTO [HRSC].[CD_REQUEST_STATUS] AS [Target]
 USING (VALUES
-  (15,N'New Request',N'Nouvelle demande',N'New Request',N'Nouvelle demande','2011-12-09T00:00:00',NULL,N'Ga?tan',NULL,'2011-12-09T00:00:00',NULL,N'NEW',0)
- ,(16,N'Processing',N'En traitement',N'Processing',N'En traitement','2011-12-09T00:00:00',NULL,N'Ga?tan',NULL,'2011-12-09T00:00:00',NULL,N'PROC',0)
- ,(17,N'Resolved',N'R?solue',N'Resolved',N'R?solue','2011-12-09T00:00:00',NULL,N'Ga?tan',NULL,'2011-12-09T00:00:00',NULL,N'CLOSE',0)
- ,(18,N'Transferred',N'Transf?r?e',N'Transferred',N'Transf?r?e','2011-12-09T00:00:00',NULL,N'Ga?tan',NULL,'2011-12-09T00:00:00',NULL,N'TSF',0)
- ,(19,N'Assigned',N'Assign?e',N'Assigned',N'Assign?e','2012-02-04T00:00:00',NULL,N'?ric Nolet',NULL,'2012-02-04T00:00:00',NULL,N'ASGN',0)
- ,(20,N'Pending',N'En Attente',N'Pending',N'En Attente','2012-02-04T00:00:00',NULL,N'?ric Nolet',NULL,'2012-02-04T00:00:00',NULL,N'WAIT',0)
- ,(21,N'No Action',N'Sans Action',N'No Action',N'Sans Action','2012-02-04T00:00:00',NULL,N'?ric Nolet',NULL,'2012-02-04T00:00:00',NULL,N'NOACT',0)
- ,(28,N'Declined',N'Refus?e',N'Declined',N'Refus?e','2012-02-04T00:00:00',NULL,N'?ric Nolet',NULL,'2012-02-04T00:00:00',NULL,N'REJ',0)
- ,(33,N'Auto-Transferred',N'Auto-Transf?r?e',N'Auto-Transferred',N'Auto-Transf?r?e','2012-02-14T00:00:00',NULL,N'?ric Nolet',NULL,'2012-02-14T00:00:00',NULL,N'ATSF',0)
- ,(34,N'New',N'Nouvelle',N'New - Updated',N'Nouv. - Mise ? jour ','2012-02-14T00:00:00',NULL,N'?ric Nolet',NULL,'2012-02-14T00:00:00',NULL,N'NUPD',0)
- ,(37,N'Cancelled',N'Annul?e',N'Cancelled',N'Annul?e','2012-02-14T00:00:00',NULL,N'?ric Nolet',NULL,'2012-02-14T00:00:00',NULL,N'CANC',0)
- ,(38,N'Returned to client',N'Retourn?e au client',N'Returned to client',N'Retourn?e au client','2013-01-31T16:42:44.497',NULL,N'HRDC-DRHC\oksana.zhukova',NULL,'2013-01-31T16:42:44.497',NULL,N'RTRNC',0)
+  (15,N'New Request',N'Nouvelle demande',N'New Request',N'Nouvelle demande','2011-12-09T00:00:00',NULL,N'Gaétan',NULL,'2011-12-09T00:00:00',NULL,N'NEW',0)
+ ,(16,N'Processing',N'En traitement',N'Processing',N'En traitement','2011-12-09T00:00:00',NULL,N'Gaétan',NULL,'2011-12-09T00:00:00',NULL,N'PROC',0)
+ ,(17,N'Resolved',N'Résolue',N'Resolved',N'Résolue','2011-12-09T00:00:00',NULL,N'Gaétan',NULL,'2011-12-09T00:00:00',NULL,N'CLOSE',0)
+ ,(18,N'Transferred',N'Transférée',N'Transferred',N'Transférée','2011-12-09T00:00:00',NULL,N'Gaétan',NULL,'2011-12-09T00:00:00',NULL,N'TSF',0)
+ ,(19,N'Assigned',N'Assignée',N'Assigned',N'Assignée','2012-02-04T00:00:00',NULL,N'Éric Nolet',NULL,'2012-02-04T00:00:00',NULL,N'ASGN',0)
+ ,(20,N'Pending',N'En Attente',N'Pending',N'En Attente','2012-02-04T00:00:00',NULL,N'Éric Nolet',NULL,'2012-02-04T00:00:00',NULL,N'WAIT',0)
+ ,(21,N'No Action',N'Sans Action',N'No Action',N'Sans Action','2012-02-04T00:00:00',NULL,N'Éric Nolet',NULL,'2012-02-04T00:00:00',NULL,N'NOACT',0)
+ ,(28,N'Declined',N'Refusée',N'Declined',N'Refusée','2012-02-04T00:00:00',NULL,N'Éric Nolet',NULL,'2012-02-04T00:00:00',NULL,N'REJ',0)
+ ,(33,N'Auto-Transferred',N'Auto-Transférée',N'Auto-Transferred',N'Auto-Transférée','2012-02-14T00:00:00',NULL,N'Éric Nolet',NULL,'2012-02-14T00:00:00',NULL,N'ATSF',0)
+ ,(34,N'New',N'Nouvelle',N'New - Updated',N'Nouv. - Mise à jour ','2012-02-14T00:00:00',NULL,N'Éric Nolet',NULL,'2012-02-14T00:00:00',NULL,N'NUPD',0)
+ ,(37,N'Cancelled',N'Annulée',N'Cancelled',N'Annulée','2012-02-14T00:00:00',NULL,N'Éric Nolet',NULL,'2012-02-14T00:00:00',NULL,N'CANC',0)
+ ,(38,N'Returned to client',N'Retournée au client',N'Returned to client',N'Retournée au client','2013-01-31T16:42:44.497',NULL,N'HRDC-DRHC\oksana.zhukova',NULL,'2013-01-31T16:42:44.497',NULL,N'RTRNC',0)
  ,(39,N'Pending Signature',N'En attente de signature',N'Pending Signature',N'En attente de signature','2013-01-31T16:42:44.527',NULL,N'HRDC-DRHC\oksana.zhukova',NULL,'2013-01-31T16:42:44.527',NULL,N'WSIGN',0)
- ,(40,N'Modified',N'Modifi?e',N'Modified',N'Modifi?e','2013-03-01T11:42:22.240',NULL,N'tony.paradis',NULL,'2013-03-01T11:42:22.240',NULL,N'RTNFC',0)
- ,(42,N'Signed document',N'Document sign?',N'Signed document',N'Document sign?','2013-03-04T09:12:54.230',NULL,N'tony.paradis',NULL,'2013-03-04T09:12:54.230',NULL,N'SIGND',0)
+ ,(40,N'Modified',N'Modifiée',N'Modified',N'Modifiée','2013-03-01T11:42:22.240',NULL,N'tony.paradis',NULL,'2013-03-01T11:42:22.240',NULL,N'RTNFC',0)
+ ,(42,N'Signed document',N'Document signé',N'Signed document',N'Document signé','2013-03-04T09:12:54.230',NULL,N'tony.paradis',NULL,'2013-03-04T09:12:54.230',NULL,N'SIGND',0)
 ) AS [Source] ([REQUEST_STATUS_ID],[REQUEST_STATUS_NAME_EN],[REQUEST_STATUS_NAME_FR],[REQUEST_STATUS_DESC_EN],[REQUEST_STATUS_DESC_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[USER_UPDATED],[DATE_CREATED],[DATE_UPDATED],[REQUEST_STATUS_CODE],[PRODUCTIVITY_IND])
 ON ([Target].[REQUEST_STATUS_ID] = [Source].[REQUEST_STATUS_ID])
 WHEN MATCHED AND (
@@ -56,22 +56,22 @@ WHEN MATCHED AND (
 WHEN NOT MATCHED BY TARGET THEN
  INSERT([REQUEST_STATUS_ID],[REQUEST_STATUS_NAME_EN],[REQUEST_STATUS_NAME_FR],[REQUEST_STATUS_DESC_EN],[REQUEST_STATUS_DESC_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[USER_UPDATED],[DATE_CREATED],[DATE_UPDATED],[REQUEST_STATUS_CODE],[PRODUCTIVITY_IND])
  VALUES([Source].[REQUEST_STATUS_ID],[Source].[REQUEST_STATUS_NAME_EN],[Source].[REQUEST_STATUS_NAME_FR],[Source].[REQUEST_STATUS_DESC_EN],[Source].[REQUEST_STATUS_DESC_FR],[Source].[EFFECTIVE_DATE],[Source].[EXPIRY_DATE],[Source].[USER_CREATED],[Source].[USER_UPDATED],[Source].[DATE_CREATED],[Source].[DATE_UPDATED],[Source].[REQUEST_STATUS_CODE],[Source].[PRODUCTIVITY_IND])
-OUTPUT $action INTO @mergeOutput1781581385;
+OUTPUT $action INTO @mergeOutput276196034;
 
-DECLARE @mergeError1781581385 int,
-@mergeCount1781581385 int,
-@mergeCountIns1781581385 int,
-@mergeCountUpd1781581385 int,
-@mergeCountDel1781581385 int
-SELECT @mergeError1781581385 = @@ERROR
-SELECT @mergeCount1781581385 = COUNT(1), @mergeCountIns1781581385 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd1781581385 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel1781581385 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput1781581385
-IF @mergeError1781581385 != 0
+DECLARE @mergeError276196034 int,
+@mergeCount276196034 int,
+@mergeCountIns276196034 int,
+@mergeCountUpd276196034 int,
+@mergeCountDel276196034 int
+SELECT @mergeError276196034 = @@ERROR
+SELECT @mergeCount276196034 = COUNT(1), @mergeCountIns276196034 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd276196034 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel276196034 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput276196034
+IF @mergeError276196034 != 0
  BEGIN
- PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_REQUEST_STATUS]. Rows affected: ' + CAST(@mergeCount1781581385 AS VARCHAR(100)); -- SQL should always return zero rows affected
+ PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_REQUEST_STATUS]. Rows affected: ' + CAST(@mergeCount276196034 AS VARCHAR(100)); -- SQL should always return zero rows affected
  END
 ELSE
  BEGIN
- PRINT '[HRSC].[CD_REQUEST_STATUS] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount1781581385,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns1781581385,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd1781581385,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel1781581385,0) AS VARCHAR(100)) + ')' ;
+ PRINT '[HRSC].[CD_REQUEST_STATUS] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount276196034,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns276196034,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd276196034,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel276196034,0) AS VARCHAR(100)) + ')' ;
  END
 
 

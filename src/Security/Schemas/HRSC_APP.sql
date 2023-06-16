@@ -4,6 +4,8 @@ CREATE SCHEMA [HRSC_APP]
 
 
 
+
+
 GO
 GRANT EXECUTE
     ON SCHEMA::[HRSC_APP] TO [db_executor];

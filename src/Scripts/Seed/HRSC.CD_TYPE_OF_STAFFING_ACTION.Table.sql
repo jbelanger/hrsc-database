@@ -7,14 +7,14 @@ SET NOCOUNT ON
 
 SET IDENTITY_INSERT [HRSC].[CD_TYPE_OF_STAFFING_ACTION] ON
 
-DECLARE @mergeOutput1634104862 TABLE ( [DMLAction] VARCHAR(6) );
+DECLARE @mergeOutput1975014117 TABLE ( [DMLAction] VARCHAR(6) );
 MERGE INTO [HRSC].[CD_TYPE_OF_STAFFING_ACTION] AS [Target]
 USING (VALUES
-  (1,N'TSA01',N'Term/Indeterminate Advertised',N'Annonc?e - Terme/Ind?termin?',N'Term/Indeterminate Advertised',N'Annonc?e - Terme/Ind?termin?','2017-07-14T07:42:44.443',NULL,N'tony.paradis','2017-07-14T07:42:44.443',NULL,NULL)
- ,(2,N'TSA02',N'Term/Indeterminate Non-Advertised',N'Non-annonc?e - Terme/Ind?termin?',N'Term/Indeterminate Non-Advertised',N'Non-annonc?e - Terme/Ind?termin?','2017-07-14T07:42:44.443',NULL,N'tony.paradis','2017-07-14T07:42:44.443',NULL,NULL)
+  (1,N'TSA01',N'Term/Indeterminate Advertised',N'Annoncée - Terme/Indéterminé',N'Term/Indeterminate Advertised',N'Annoncée - Terme/Indéterminé','2017-07-14T07:42:44.443',NULL,N'tony.paradis','2017-07-14T07:42:44.443',NULL,NULL)
+ ,(2,N'TSA02',N'Term/Indeterminate Non-Advertised',N'Non-annoncée - Terme/Indéterminé',N'Term/Indeterminate Non-Advertised',N'Non-annoncée - Terme/Indéterminé','2017-07-14T07:42:44.443',NULL,N'tony.paradis','2017-07-14T07:42:44.443',NULL,NULL)
  ,(3,N'TSA03',N'Deployment',N'Mutation',N'Deployment',N'Mutation','2017-07-14T07:42:44.443',NULL,N'tony.paradis','2017-07-14T07:42:44.443',NULL,NULL)
- ,(4,N'TSA04',N'Hiring of a former student',N'Embauche d''un ancien ?tudiant',N'Hiring of a former student',N'Embauche d''un ancien ?tudiant','2017-07-14T07:42:44.443',NULL,N'tony.paradis','2017-07-14T07:42:44.443',NULL,NULL)
- ,(5,N'TSA05',N'Acting',N'Int?rimaire',N'Acting',N'Int?rimaire','2017-07-14T07:42:44.443',NULL,N'tony.paradis','2017-07-14T07:42:44.443',NULL,NULL)
+ ,(4,N'TSA04',N'Hiring of a former student',N'Embauche d''un ancien étudiant',N'Hiring of a former student',N'Embauche d''un ancien étudiant','2017-07-14T07:42:44.443',NULL,N'tony.paradis','2017-07-14T07:42:44.443',NULL,NULL)
+ ,(5,N'TSA05',N'Acting',N'Intérimaire',N'Acting',N'Intérimaire','2017-07-14T07:42:44.443',NULL,N'tony.paradis','2017-07-14T07:42:44.443',NULL,NULL)
 ) AS [Source] ([TYPE_OF_STAFFING_ACTION_ID],[TYPE_OF_STAFFING_ACTION_CODE],[TYPE_OF_STAFFING_ACTION_NAME_EN],[TYPE_OF_STAFFING_ACTION_NAME_FR],[TYPE_OF_STAFFING_ACTION_DESC_EN],[TYPE_OF_STAFFING_ACTION_DESC_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[DATE_CREATED],[USER_UPDATED],[DATE_UPDATED])
 ON ([Target].[TYPE_OF_STAFFING_ACTION_ID] = [Source].[TYPE_OF_STAFFING_ACTION_ID])
 WHEN MATCHED AND (
@@ -44,22 +44,22 @@ WHEN MATCHED AND (
 WHEN NOT MATCHED BY TARGET THEN
  INSERT([TYPE_OF_STAFFING_ACTION_ID],[TYPE_OF_STAFFING_ACTION_CODE],[TYPE_OF_STAFFING_ACTION_NAME_EN],[TYPE_OF_STAFFING_ACTION_NAME_FR],[TYPE_OF_STAFFING_ACTION_DESC_EN],[TYPE_OF_STAFFING_ACTION_DESC_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[DATE_CREATED],[USER_UPDATED],[DATE_UPDATED])
  VALUES([Source].[TYPE_OF_STAFFING_ACTION_ID],[Source].[TYPE_OF_STAFFING_ACTION_CODE],[Source].[TYPE_OF_STAFFING_ACTION_NAME_EN],[Source].[TYPE_OF_STAFFING_ACTION_NAME_FR],[Source].[TYPE_OF_STAFFING_ACTION_DESC_EN],[Source].[TYPE_OF_STAFFING_ACTION_DESC_FR],[Source].[EFFECTIVE_DATE],[Source].[EXPIRY_DATE],[Source].[USER_CREATED],[Source].[DATE_CREATED],[Source].[USER_UPDATED],[Source].[DATE_UPDATED])
-OUTPUT $action INTO @mergeOutput1634104862;
+OUTPUT $action INTO @mergeOutput1975014117;
 
-DECLARE @mergeError1634104862 int,
-@mergeCount1634104862 int,
-@mergeCountIns1634104862 int,
-@mergeCountUpd1634104862 int,
-@mergeCountDel1634104862 int
-SELECT @mergeError1634104862 = @@ERROR
-SELECT @mergeCount1634104862 = COUNT(1), @mergeCountIns1634104862 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd1634104862 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel1634104862 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput1634104862
-IF @mergeError1634104862 != 0
+DECLARE @mergeError1975014117 int,
+@mergeCount1975014117 int,
+@mergeCountIns1975014117 int,
+@mergeCountUpd1975014117 int,
+@mergeCountDel1975014117 int
+SELECT @mergeError1975014117 = @@ERROR
+SELECT @mergeCount1975014117 = COUNT(1), @mergeCountIns1975014117 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd1975014117 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel1975014117 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput1975014117
+IF @mergeError1975014117 != 0
  BEGIN
- PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_TYPE_OF_STAFFING_ACTION]. Rows affected: ' + CAST(@mergeCount1634104862 AS VARCHAR(100)); -- SQL should always return zero rows affected
+ PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_TYPE_OF_STAFFING_ACTION]. Rows affected: ' + CAST(@mergeCount1975014117 AS VARCHAR(100)); -- SQL should always return zero rows affected
  END
 ELSE
  BEGIN
- PRINT '[HRSC].[CD_TYPE_OF_STAFFING_ACTION] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount1634104862,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns1634104862,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd1634104862,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel1634104862,0) AS VARCHAR(100)) + ')' ;
+ PRINT '[HRSC].[CD_TYPE_OF_STAFFING_ACTION] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount1975014117,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns1975014117,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd1975014117,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel1975014117,0) AS VARCHAR(100)) + ')' ;
  END
 
 

@@ -7,24 +7,24 @@ SET NOCOUNT ON
 
 SET IDENTITY_INSERT [HRSC].[CD_NOTE_TYPE] ON
 
-DECLARE @mergeOutput1365579903 TABLE ( [DMLAction] VARCHAR(6) );
+DECLARE @mergeOutput875866187 TABLE ( [DMLAction] VARCHAR(6) );
 MERGE INTO [HRSC].[CD_NOTE_TYPE] AS [Target]
 USING (VALUES
   (1,N'NOTE',N'Note',N'Note',N'Note',N'Note','2015-05-27T07:39:58.560',NULL,N'yves.robichaud',NULL,'2015-05-27T07:39:58.560',NULL)
- ,(2,N'STATUS',N'Status Change',N'Changement de statut',N'Status updated to: {STATUSNAME} <br />Justification: {JUSTIFICATIONDESC} <br />Other Justification: {OTHERJUSTIFICATION}',N'Statut chang? ?: {STATUSNAME} <br />Justification: {JUSTIFICATIONDESC} <br />Autre justification: {OTHERJUSTIFICATION}','2015-05-27T00:00:00',NULL,N'yves.robichaud',N'eric.nolet','2015-05-27T07:39:58.573','2016-04-21T07:27:11.407')
- ,(3,N'S34Y',N'Section 34 Checked',N'Section 34 coch?e',N'Section 34 has been checked',N'La section 34 a ?t? coch?e','2015-05-27T07:39:58.583',NULL,N'yves.robichaud',NULL,'2015-05-27T07:39:58.583',NULL)
- ,(4,N'S34N',N'Section 34 Unchecked',N'Section 34 d?coch?e',N'Section 34 has been unchecked',N'La section 34 a ?t? d?coch?e','2015-05-27T07:39:58.597',NULL,N'yves.robichaud',NULL,'2015-05-27T07:39:58.597',NULL)
- ,(5,N'EMAIL',N'Email Sent',N'Courriel envoy?',N'An email of the following type has been sent:',N'Un courriel du type suivant a ?t? envoy?','2015-05-27T07:39:58.607',NULL,N'yves.robichaud',NULL,'2015-05-27T07:39:58.607',NULL)
- ,(6,N'UNASS',N'Intervention unassigned',N'Intervention d?-assign?e',N'Lead and Collaborator roles have been removed from this intervention ',N'Les r?les de Leader et Collaborateur ont ?t? enlev?s de cette intervention','2015-05-27T07:39:58.620',NULL,N'yves.robichaud',NULL,'2015-05-27T07:39:58.620',NULL)
- ,(7,N'ASGN',N'Intervention assigned',N'Intervention assign?e',N'Intervention assigned to:',N'Intervention assign?e ?:','2015-05-27T07:39:58.630',NULL,N'yves.robichaud',NULL,'2015-05-27T07:39:58.630',NULL)
- ,(8,N'DOCA',N'Document added',N'Document ajout?',N'Document added: ',N'Document ajout?: ','2015-06-25T00:00:00',NULL,N'yves.robichaud',NULL,'2015-06-25T00:00:00',NULL)
- ,(9,N'DOCD',N'Document deleted',N'Document effac?',N'Document deleted: ',N'Document effac?: ','2015-06-25T00:00:00',NULL,N'yves.robichaud',NULL,'2015-06-25T00:00:00',NULL)
- ,(10,N'CONA',N'Contract added',N'Contrat ajout?',N'Contract added: ',N'Contrat ajout?: ','2015-06-25T00:00:00',NULL,N'yves.robichaud',NULL,'2015-06-25T00:00:00',NULL)
- ,(11,N'SCONA',N'Signed contract added',N'Contrat sign? ajout?',N'Signed contract added: ',N'Contrat sign? ajout?: ','2015-06-25T00:00:00',NULL,N'yves.robichaud',NULL,'2015-06-25T00:00:00',NULL)
- ,(12,N'SCOND',N'Signed contract deleted',N'Contrat sign? effac?',N'Signed contract deleted: ',N'Contrat sign? effac?: ','2015-06-25T00:00:00',NULL,N'yves.robichaud',NULL,'2015-06-25T00:00:00',NULL)
- ,(13,N'NEWMAN',N'New Alternate Contact ',N'Nouveau Alt Contact',N'Alternate Contact has been changed to : ',N'Autre personne-ressource chang? ? : ','2015-08-06T13:53:30',NULL,N'HRDC-DRHC\claude.a.mukam',NULL,'2015-08-06T13:53:30',NULL)
- ,(14,N'MODLC',N'Roles updated',N'R?les modifi?s',N'The roles have been updated',N'Les r?les ont ?t? modifi?s','2018-11-16T07:16:29.980',NULL,N'System',NULL,'2018-11-16T07:16:29.980',NULL)
- ,(15,N'CATCHG',N'Cat\Sub-Cat changed',N'Cat\Sous-Cat chang?e',N'The Category\Sub-Category was changed. The interventions were set to No Action and the automatic transfer rules were applied.',N'La Cat?gorie\Sous-Cat?gorie ? ?t? chang?e. Les interventions ont ?t? d?finies ? Sans Action et les r?gles de transfert automatique ont ?t? appliqu?es','2020-01-17T09:12:09.107',NULL,N'HRSC 4.9',NULL,'2020-01-17T09:12:09.107',NULL)
+ ,(2,N'STATUS',N'Status Change',N'Changement de statut',N'Status updated to: {STATUSNAME} <br />Justification: {JUSTIFICATIONDESC} <br />Other Justification: {OTHERJUSTIFICATION}',N'Statut changé à: {STATUSNAME} <br />Justification: {JUSTIFICATIONDESC} <br />Autre justification: {OTHERJUSTIFICATION}','2015-05-27T00:00:00',NULL,N'yves.robichaud',N'eric.nolet','2015-05-27T07:39:58.573','2016-04-21T07:27:11.407')
+ ,(3,N'S34Y',N'Section 34 Checked',N'Section 34 cochée',N'Section 34 has been checked',N'La section 34 a été cochée','2015-05-27T07:39:58.583',NULL,N'yves.robichaud',NULL,'2015-05-27T07:39:58.583',NULL)
+ ,(4,N'S34N',N'Section 34 Unchecked',N'Section 34 décochée',N'Section 34 has been unchecked',N'La section 34 a été décochée','2015-05-27T07:39:58.597',NULL,N'yves.robichaud',NULL,'2015-05-27T07:39:58.597',NULL)
+ ,(5,N'EMAIL',N'Email Sent',N'Courriel envoyé',N'An email of the following type has been sent:',N'Un courriel du type suivant a été envoyé','2015-05-27T07:39:58.607',NULL,N'yves.robichaud',NULL,'2015-05-27T07:39:58.607',NULL)
+ ,(6,N'UNASS',N'Intervention unassigned',N'Intervention dé-assignée',N'Lead and Collaborator roles have been removed from this intervention ',N'Les rôles de Leader et Collaborateur ont été enlevés de cette intervention','2015-05-27T07:39:58.620',NULL,N'yves.robichaud',NULL,'2015-05-27T07:39:58.620',NULL)
+ ,(7,N'ASGN',N'Intervention assigned',N'Intervention assignée',N'Intervention assigned to:',N'Intervention assignée à:','2015-05-27T07:39:58.630',NULL,N'yves.robichaud',NULL,'2015-05-27T07:39:58.630',NULL)
+ ,(8,N'DOCA',N'Document added',N'Document ajouté',N'Document added: ',N'Document ajouté: ','2015-06-25T00:00:00',NULL,N'yves.robichaud',NULL,'2015-06-25T00:00:00',NULL)
+ ,(9,N'DOCD',N'Document deleted',N'Document effacé',N'Document deleted: ',N'Document effacé: ','2015-06-25T00:00:00',NULL,N'yves.robichaud',NULL,'2015-06-25T00:00:00',NULL)
+ ,(10,N'CONA',N'Contract added',N'Contrat ajouté',N'Contract added: ',N'Contrat ajouté: ','2015-06-25T00:00:00',NULL,N'yves.robichaud',NULL,'2015-06-25T00:00:00',NULL)
+ ,(11,N'SCONA',N'Signed contract added',N'Contrat signé ajouté',N'Signed contract added: ',N'Contrat signé ajouté: ','2015-06-25T00:00:00',NULL,N'yves.robichaud',NULL,'2015-06-25T00:00:00',NULL)
+ ,(12,N'SCOND',N'Signed contract deleted',N'Contrat signé effacé',N'Signed contract deleted: ',N'Contrat signé effacé: ','2015-06-25T00:00:00',NULL,N'yves.robichaud',NULL,'2015-06-25T00:00:00',NULL)
+ ,(13,N'NEWMAN',N'New Alternate Contact ',N'Nouveau Alt Contact',N'Alternate Contact has been changed to : ',N'Autre personne-ressource changé à : ','2015-08-06T13:53:30',NULL,N'HRDC-DRHC\claude.a.mukam',NULL,'2015-08-06T13:53:30',NULL)
+ ,(14,N'MODLC',N'Roles updated',N'Rôles modifiés',N'The roles have been updated',N'Les rôles ont été modifiés','2018-11-16T07:16:29.980',NULL,N'System',NULL,'2018-11-16T07:16:29.980',NULL)
+ ,(15,N'CATCHG',N'Cat\Sub-Cat changed',N'Cat\Sous-Cat changée',N'The Category\Sub-Category was changed. The interventions were set to No Action and the automatic transfer rules were applied.',N'La Catégorie\Sous-Catégorie à été changée. Les interventions ont été définies à Sans Action et les règles de transfert automatique ont été appliquées','2020-01-17T09:12:09.107',NULL,N'HRSC 4.9',NULL,'2020-01-17T09:12:09.107',NULL)
 ) AS [Source] ([NOTE_TYPE_ID],[NOTE_TYPE_CODE],[NOTE_TYPE_NAME_EN],[NOTE_TYPE_NAME_FR],[NOTE_TYPE_NAME_DESC_EN],[NOTE_TYPE_NAME_DESC_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[USER_UPDATED],[DATE_CREATED],[DATE_UPDATED])
 ON ([Target].[NOTE_TYPE_ID] = [Source].[NOTE_TYPE_ID])
 WHEN MATCHED AND (
@@ -54,22 +54,22 @@ WHEN MATCHED AND (
 WHEN NOT MATCHED BY TARGET THEN
  INSERT([NOTE_TYPE_ID],[NOTE_TYPE_CODE],[NOTE_TYPE_NAME_EN],[NOTE_TYPE_NAME_FR],[NOTE_TYPE_NAME_DESC_EN],[NOTE_TYPE_NAME_DESC_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[USER_UPDATED],[DATE_CREATED],[DATE_UPDATED])
  VALUES([Source].[NOTE_TYPE_ID],[Source].[NOTE_TYPE_CODE],[Source].[NOTE_TYPE_NAME_EN],[Source].[NOTE_TYPE_NAME_FR],[Source].[NOTE_TYPE_NAME_DESC_EN],[Source].[NOTE_TYPE_NAME_DESC_FR],[Source].[EFFECTIVE_DATE],[Source].[EXPIRY_DATE],[Source].[USER_CREATED],[Source].[USER_UPDATED],[Source].[DATE_CREATED],[Source].[DATE_UPDATED])
-OUTPUT $action INTO @mergeOutput1365579903;
+OUTPUT $action INTO @mergeOutput875866187;
 
-DECLARE @mergeError1365579903 int,
-@mergeCount1365579903 int,
-@mergeCountIns1365579903 int,
-@mergeCountUpd1365579903 int,
-@mergeCountDel1365579903 int
-SELECT @mergeError1365579903 = @@ERROR
-SELECT @mergeCount1365579903 = COUNT(1), @mergeCountIns1365579903 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd1365579903 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel1365579903 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput1365579903
-IF @mergeError1365579903 != 0
+DECLARE @mergeError875866187 int,
+@mergeCount875866187 int,
+@mergeCountIns875866187 int,
+@mergeCountUpd875866187 int,
+@mergeCountDel875866187 int
+SELECT @mergeError875866187 = @@ERROR
+SELECT @mergeCount875866187 = COUNT(1), @mergeCountIns875866187 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd875866187 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel875866187 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput875866187
+IF @mergeError875866187 != 0
  BEGIN
- PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_NOTE_TYPE]. Rows affected: ' + CAST(@mergeCount1365579903 AS VARCHAR(100)); -- SQL should always return zero rows affected
+ PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_NOTE_TYPE]. Rows affected: ' + CAST(@mergeCount875866187 AS VARCHAR(100)); -- SQL should always return zero rows affected
  END
 ELSE
  BEGIN
- PRINT '[HRSC].[CD_NOTE_TYPE] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount1365579903,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns1365579903,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd1365579903,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel1365579903,0) AS VARCHAR(100)) + ')' ;
+ PRINT '[HRSC].[CD_NOTE_TYPE] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount875866187,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns875866187,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd875866187,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel875866187,0) AS VARCHAR(100)) + ')' ;
  END
 
 

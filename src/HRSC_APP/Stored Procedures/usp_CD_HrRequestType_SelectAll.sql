@@ -12,17 +12,17 @@ AS
 -- Gaétan Demers  2011-12-13
 -- Eric Nolet     2011-12-15 Added Aliases
 ------------------------------------------------------
-SELECT  hr_request_type_id AS id,
-        hr_request_type_name_en AS name_en,
-        hr_request_type_name_fr AS name_fr,
-        hr_request_type_desc_en AS desc_en,
-        hr_request_type_desc_fr AS desc_fr,
-        hr_request_type_code AS code,
-        effective_date,
-        expiry_date,
-        user_created,
-        user_updated,
-        date_created,
-        date_updated
-FROM    hrsc.cd_hr_request_type
+SELECT  HR_REQUEST_TYPE_ID AS ID,
+        HR_REQUEST_TYPE_NAME_EN AS NAME_EN,
+        HR_REQUEST_TYPE_NAME_FR AS NAME_FR,
+        HR_REQUEST_TYPE_DESC_EN AS DESC_EN,
+        HR_REQUEST_TYPE_DESC_FR AS DESC_FR,
+        HR_REQUEST_TYPE_CODE AS CODE,
+        EFFECTIVE_DATE,
+        EXPIRY_DATE,
+        USER_CREATED,
+        USER_UPDATED,
+        DATE_CREATED,
+        DATE_UPDATED
+FROM    HRSC.CD_HR_REQUEST_TYPE
 

@@ -7,13 +7,13 @@ SET NOCOUNT ON
 
 SET IDENTITY_INSERT [HRSC].[CD_EXCLUSION_OPTION] ON
 
-DECLARE @mergeOutput1006626629 TABLE ( [DMLAction] VARCHAR(6) );
+DECLARE @mergeOutput1805249486 TABLE ( [DMLAction] VARCHAR(6) );
 MERGE INTO [HRSC].[CD_EXCLUSION_OPTION] AS [Target]
 USING (VALUES
   (9,N'NotEx',N'Not Excluded',N'Non Exclu',N'Not Excluded',N'Non Exclu','2013-01-10T11:15:52.090',NULL,N'HRDC-DRHC\elena.akhmentova','2013-01-10T11:15:52.090',NULL,NULL)
  ,(10,N'Ex',N'Excluded',N'Exclu',N'Excluded',N'Exclu','2013-01-10T11:15:52.090',NULL,N'HRDC-DRHC\elena.akhmentova','2013-01-10T11:15:52.090',NULL,NULL)
- ,(11,N'Prop',N'Proposed for Exclusion',N'Propos? pour l''exclusion',N'Proposed for Exclusion',N'Propos? pour l''exclusion','2013-01-10T11:15:52.090',NULL,N'HRDC-DRHC\elena.akhmentova','2013-01-10T11:15:52.090',NULL,NULL)
- ,(12,N'NotRe',N'Not Represented',N'Non repr?sent?',N'Not Represented',N'Non repr?sent?','2018-06-13T07:21:20.330',NULL,N'System','2018-06-13T07:21:20.330',NULL,NULL)
+ ,(11,N'Prop',N'Proposed for Exclusion',N'Proposé pour l''exclusion',N'Proposed for Exclusion',N'Proposé pour l''exclusion','2013-01-10T11:15:52.090',NULL,N'HRDC-DRHC\elena.akhmentova','2013-01-10T11:15:52.090',NULL,NULL)
+ ,(12,N'NotRe',N'Not Represented',N'Non représenté',N'Not Represented',N'Non représenté','2018-06-13T07:21:20.330',NULL,N'System','2018-06-13T07:21:20.330',NULL,NULL)
 ) AS [Source] ([EXCLUSION_OPT_ID],[EXCLUSION_OPT_CODE],[EXCLUSION_OPT_NAME_EN],[EXCLUSION_OPT_NAME_FR],[EXCLUSION_OPT_DESC_EN],[EXCLUSION_OPT_DESC_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[DATE_CREATED],[USER_UPDATED],[DATE_UPDATED])
 ON ([Target].[EXCLUSION_OPT_ID] = [Source].[EXCLUSION_OPT_ID])
 WHEN MATCHED AND (
@@ -43,22 +43,22 @@ WHEN MATCHED AND (
 WHEN NOT MATCHED BY TARGET THEN
  INSERT([EXCLUSION_OPT_ID],[EXCLUSION_OPT_CODE],[EXCLUSION_OPT_NAME_EN],[EXCLUSION_OPT_NAME_FR],[EXCLUSION_OPT_DESC_EN],[EXCLUSION_OPT_DESC_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[DATE_CREATED],[USER_UPDATED],[DATE_UPDATED])
  VALUES([Source].[EXCLUSION_OPT_ID],[Source].[EXCLUSION_OPT_CODE],[Source].[EXCLUSION_OPT_NAME_EN],[Source].[EXCLUSION_OPT_NAME_FR],[Source].[EXCLUSION_OPT_DESC_EN],[Source].[EXCLUSION_OPT_DESC_FR],[Source].[EFFECTIVE_DATE],[Source].[EXPIRY_DATE],[Source].[USER_CREATED],[Source].[DATE_CREATED],[Source].[USER_UPDATED],[Source].[DATE_UPDATED])
-OUTPUT $action INTO @mergeOutput1006626629;
+OUTPUT $action INTO @mergeOutput1805249486;
 
-DECLARE @mergeError1006626629 int,
-@mergeCount1006626629 int,
-@mergeCountIns1006626629 int,
-@mergeCountUpd1006626629 int,
-@mergeCountDel1006626629 int
-SELECT @mergeError1006626629 = @@ERROR
-SELECT @mergeCount1006626629 = COUNT(1), @mergeCountIns1006626629 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd1006626629 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel1006626629 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput1006626629
-IF @mergeError1006626629 != 0
+DECLARE @mergeError1805249486 int,
+@mergeCount1805249486 int,
+@mergeCountIns1805249486 int,
+@mergeCountUpd1805249486 int,
+@mergeCountDel1805249486 int
+SELECT @mergeError1805249486 = @@ERROR
+SELECT @mergeCount1805249486 = COUNT(1), @mergeCountIns1805249486 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd1805249486 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel1805249486 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput1805249486
+IF @mergeError1805249486 != 0
  BEGIN
- PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_EXCLUSION_OPTION]. Rows affected: ' + CAST(@mergeCount1006626629 AS VARCHAR(100)); -- SQL should always return zero rows affected
+ PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_EXCLUSION_OPTION]. Rows affected: ' + CAST(@mergeCount1805249486 AS VARCHAR(100)); -- SQL should always return zero rows affected
  END
 ELSE
  BEGIN
- PRINT '[HRSC].[CD_EXCLUSION_OPTION] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount1006626629,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns1006626629,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd1006626629,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel1006626629,0) AS VARCHAR(100)) + ')' ;
+ PRINT '[HRSC].[CD_EXCLUSION_OPTION] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount1805249486,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns1805249486,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd1805249486,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel1805249486,0) AS VARCHAR(100)) + ')' ;
  END
 
 

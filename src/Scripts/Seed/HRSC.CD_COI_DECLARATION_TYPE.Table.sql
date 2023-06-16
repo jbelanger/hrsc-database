@@ -7,19 +7,19 @@ SET NOCOUNT ON
 
 SET IDENTITY_INSERT [HRSC].[CD_COI_DECLARATION_TYPE] ON
 
-DECLARE @mergeOutput78623323 TABLE ( [DMLAction] VARCHAR(6) );
+DECLARE @mergeOutput1706489158 TABLE ( [DMLAction] VARCHAR(6) );
 MERGE INTO [HRSC].[CD_COI_DECLARATION_TYPE] AS [Target]
 USING (VALUES
-  (1,N'OEA',N'Outside Employment or Activities:',N'Emploi ? l''ext?rieur ou Activit?s:',N'Outside Employment or Activities:',N'Emploi ? l''ext?rieur ou Activit?s:','2016-11-04T08:03:55.470',NULL,N'System',NULL,'2016-11-04T08:03:55.470',NULL,2)
- ,(2,N'PA',N'Political Activities:',N'Activit?s politiques:',N'Political Activities:',N'Activit?s politiques:','2016-11-04T08:03:55.470',NULL,N'System',NULL,'2016-11-04T08:03:55.470',NULL,2)
- ,(3,N'NPACE',N'Non-Partisan Activities in Connection with Elections:',N'Activit?s non partisane dans le cadre des ?lections:',N'Non-Partisan Activities in Connection with Elections:',N'Activit?s non partisane dans le cadre des ?lections:','2016-11-04T08:03:55.470',NULL,N'System',NULL,'2016-11-04T08:03:55.470',NULL,2)
+  (1,N'OEA',N'Outside Employment or Activities:',N'Emploi à l''extérieur ou Activités:',N'Outside Employment or Activities:',N'Emploi à l''extérieur ou Activités:','2016-11-04T08:03:55.470',NULL,N'System',NULL,'2016-11-04T08:03:55.470',NULL,2)
+ ,(2,N'PA',N'Political Activities:',N'Activités politiques:',N'Political Activities:',N'Activités politiques:','2016-11-04T08:03:55.470',NULL,N'System',NULL,'2016-11-04T08:03:55.470',NULL,2)
+ ,(3,N'NPACE',N'Non-Partisan Activities in Connection with Elections:',N'Activités non partisane dans le cadre des élections:',N'Non-Partisan Activities in Connection with Elections:',N'Activités non partisane dans le cadre des élections:','2016-11-04T08:03:55.470',NULL,N'System',NULL,'2016-11-04T08:03:55.470',NULL,2)
  ,(4,N'GHOB',N'Gift, Hospitality and Others Benefits:',N'Cadeaux, d''accueil et de Autres avantages:',N'Gift, Hospitality and Others Benefits:',N'Cadeaux, d''accueil et de Autres avantages:','2016-11-04T08:03:55.470',NULL,N'System',NULL,'2016-11-04T08:03:55.470',NULL,2)
  ,(5,N'AL',N'Assets & Liabilities:',N'Actif et passif:',N'Assets & Liabilities:',N'Actif et passif:','2016-11-04T08:03:55.470',NULL,N'System',NULL,'2016-11-04T08:03:55.470',NULL,2)
  ,(6,N'PE',N'Post-Employment:',N'Post-emploi:',N'Post-Employment:',N'Post-emploi:','2016-11-04T08:03:55.470',NULL,N'System',NULL,'2016-11-04T08:03:55.470',NULL,2)
- ,(7,N'PT',N'Personal Relationships/Preferential Treatment:',N'Relations personnelles/traitement pr?f?rentiel',N'Preferential Treatment:',N'Traitement pr?f?rentiel:','2016-11-04T08:03:55.470',NULL,N'System',NULL,'2016-11-04T08:03:55.470',NULL,2)
+ ,(7,N'PT',N'Personal Relationships/Preferential Treatment:',N'Relations personnelles/traitement préférentiel',N'Preferential Treatment:',N'Traitement préférentiel:','2016-11-04T08:03:55.470',NULL,N'System',NULL,'2016-11-04T08:03:55.470',NULL,2)
  ,(8,N'SOLIC',N'Solicitation:',N'Sollicitation:',N'Solicitation:',N'Sollicitation:','2016-11-04T08:03:55.470',NULL,N'System',NULL,'2016-11-04T08:03:55.470',NULL,2)
  ,(9,N'LGC',N'Lotteries and Games of Chance:',N'Loteries et jeux de hasard:',N'Lotteries and Games of Chance:',N'Loteries et jeux de hasard:','2016-11-04T08:03:55.470',NULL,N'System',NULL,'2016-11-04T08:03:55.470',NULL,2)
- ,(10,N'COID',N'Declaration:',N'D?claration:',N'Declaration:',N'D?claration:','2016-11-22T00:00:00',NULL,N'eric.nolet',NULL,'2016-11-22T14:16:41.820',NULL,1)
+ ,(10,N'COID',N'Declaration:',N'Déclaration:',N'Declaration:',N'Déclaration:','2016-11-22T00:00:00',NULL,N'eric.nolet',NULL,'2016-11-22T14:16:41.820',NULL,1)
 ) AS [Source] ([COI_DECLARATION_TYPE_ID],[COI_DECLARATION_TYPE_CODE],[COI_DECLARATION_TYPE_NAME_EN],[COI_DECLARATION_TYPE_NAME_FR],[COI_DECLARATION_TYPE_DESC_EN],[COI_DECLARATION_TYPE_DESC_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[USER_UPDATED],[DATE_CREATED],[DATE_UPDATED],[VERSION_ID])
 ON ([Target].[COI_DECLARATION_TYPE_ID] = [Source].[COI_DECLARATION_TYPE_ID])
 WHEN MATCHED AND (
@@ -51,22 +51,22 @@ WHEN MATCHED AND (
 WHEN NOT MATCHED BY TARGET THEN
  INSERT([COI_DECLARATION_TYPE_ID],[COI_DECLARATION_TYPE_CODE],[COI_DECLARATION_TYPE_NAME_EN],[COI_DECLARATION_TYPE_NAME_FR],[COI_DECLARATION_TYPE_DESC_EN],[COI_DECLARATION_TYPE_DESC_FR],[EFFECTIVE_DATE],[EXPIRY_DATE],[USER_CREATED],[USER_UPDATED],[DATE_CREATED],[DATE_UPDATED],[VERSION_ID])
  VALUES([Source].[COI_DECLARATION_TYPE_ID],[Source].[COI_DECLARATION_TYPE_CODE],[Source].[COI_DECLARATION_TYPE_NAME_EN],[Source].[COI_DECLARATION_TYPE_NAME_FR],[Source].[COI_DECLARATION_TYPE_DESC_EN],[Source].[COI_DECLARATION_TYPE_DESC_FR],[Source].[EFFECTIVE_DATE],[Source].[EXPIRY_DATE],[Source].[USER_CREATED],[Source].[USER_UPDATED],[Source].[DATE_CREATED],[Source].[DATE_UPDATED],[Source].[VERSION_ID])
-OUTPUT $action INTO @mergeOutput78623323;
+OUTPUT $action INTO @mergeOutput1706489158;
 
-DECLARE @mergeError78623323 int,
-@mergeCount78623323 int,
-@mergeCountIns78623323 int,
-@mergeCountUpd78623323 int,
-@mergeCountDel78623323 int
-SELECT @mergeError78623323 = @@ERROR
-SELECT @mergeCount78623323 = COUNT(1), @mergeCountIns78623323 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd78623323 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel78623323 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput78623323
-IF @mergeError78623323 != 0
+DECLARE @mergeError1706489158 int,
+@mergeCount1706489158 int,
+@mergeCountIns1706489158 int,
+@mergeCountUpd1706489158 int,
+@mergeCountDel1706489158 int
+SELECT @mergeError1706489158 = @@ERROR
+SELECT @mergeCount1706489158 = COUNT(1), @mergeCountIns1706489158 = SUM(IIF([DMLAction] = 'INSERT', 1, 0)), @mergeCountUpd1706489158 = SUM(IIF([DMLAction] = 'UPDATE', 1, 0)), @mergeCountDel1706489158 = SUM (IIF([DMLAction] = 'DELETE', 1, 0)) FROM @mergeOutput1706489158
+IF @mergeError1706489158 != 0
  BEGIN
- PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_COI_DECLARATION_TYPE]. Rows affected: ' + CAST(@mergeCount78623323 AS VARCHAR(100)); -- SQL should always return zero rows affected
+ PRINT 'ERROR OCCURRED IN MERGE FOR [HRSC].[CD_COI_DECLARATION_TYPE]. Rows affected: ' + CAST(@mergeCount1706489158 AS VARCHAR(100)); -- SQL should always return zero rows affected
  END
 ELSE
  BEGIN
- PRINT '[HRSC].[CD_COI_DECLARATION_TYPE] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount78623323,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns78623323,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd78623323,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel78623323,0) AS VARCHAR(100)) + ')' ;
+ PRINT '[HRSC].[CD_COI_DECLARATION_TYPE] rows affected by MERGE: ' + CAST(COALESCE(@mergeCount1706489158,0) AS VARCHAR(100)) + ' (Inserted: ' + CAST(COALESCE(@mergeCountIns1706489158,0) AS VARCHAR(100)) + '; Updated: ' + CAST(COALESCE(@mergeCountUpd1706489158,0) AS VARCHAR(100)) + '; Deleted: ' + CAST(COALESCE(@mergeCountDel1706489158,0) AS VARCHAR(100)) + ')' ;
  END
 
 
