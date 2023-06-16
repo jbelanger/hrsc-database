@@ -95,7 +95,3 @@ WHERE HR_REQUEST_INTERVENTION_ID = @lngID;
 EXEC HRSC_APP.usp_REQUEST_INTERVENTION_SelectStatus @lngREQid;
 
 EXEC HRSC_APP.usp_REQUEST_INTERVENTION_ListLeadsAndCollabos @lngId;
-
-EXEC HRSC_APP.usp_EMPLOYEE_ROLE_FOR_REQ_Get_Manager_And_Alts @lngREQid;
-
-EXEC HRSC_APP.usp_Position_SelectByIDForDisplay @lngREQid;
