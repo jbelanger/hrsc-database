@@ -9,13 +9,13 @@ DECLARE @mergeOutput1767013376 TABLE ( [DMLAction] VARCHAR(6) );
 MERGE INTO [HRSC].[CD_ACCOMODATION_REQUIRED] AS [Target]
 USING (VALUES
   (1,N'ACC01',N'None',N'Aucune',N'None',N'Aucune',NULL,NULL,N'Michel Tardif','2017-02-07T00:00:00',NULL,NULL)
- ,(2,N'ACC02',N'ADHD / ADD',N'TDAH / TDA',N'ADHD / ADD',N'TDAH / TDA',NULL,NULL,N'Michel Tardif','2017-02-07T00:00:00',NULL,NULL)
- ,(3,N'ACC03',N'Chronic / Medical Disabilities',N'Maladies chroniques et troubles médicaux',N'Chronic / Medical Disabilities',N'Maladies chroniques et troubles médicaux',NULL,NULL,N'Michel Tardif','2017-02-07T00:00:00',NULL,NULL)
+ ,(2,N'ACC02',N'Attention Disorders',N'Troubles de l''attention',N'Attention Disorders',N'Troubles de l''attention',NULL,NULL,N'Michel Tardif','2017-02-07T00:00:00',N'M-A','2023-07-27T00:00:00')
+ ,(3,N'ACC03',N'Chronic and/or Medical Disabilities',N'Maladies chroniques et/ou troubles médicaux',N'Chronic and/or Medical Disabilities',N'Maladies chroniques et/ou troubles médicaux',NULL,NULL,N'Michel Tardif','2017-02-07T00:00:00',N'M-A','2023-07-27T00:00:00')
  ,(4,N'ACC04',N'Hearing Disabilities',N'Handicap auditif',N'Hearing Disabilities',N'Handicap auditif',NULL,NULL,N'Michel Tardif','2017-02-07T00:00:00',NULL,NULL)
  ,(5,N'ACC05',N'Learning Disabilities',N'Troubles d’apprentissage',N'Learning Disabilities',N'Troubles d’apprentissage',NULL,NULL,N'Michel Tardif','2017-02-07T00:00:00',NULL,NULL)
- ,(6,N'ACC06',N'Mobility / Physical Disabilities',N'Déficience physique ou de mobilité',N'Mobility / Physical Disabilities',N'Déficience physique ou de mobilité',NULL,NULL,N'Michel Tardif','2017-02-07T00:00:00',NULL,NULL)
+ ,(6,N'ACC06',N'Mobility or Physical Disabilities',N'Déficience physique ou de mobilité',N'Mobility or Physical Disabilities',N'Déficience physique ou de mobilité',NULL,NULL,N'Michel Tardif','2017-02-07T00:00:00',N'M-A','2023-07-27T00:00:00')
  ,(7,N'ACC07',N'Neurological Disorders',N'Troubles neurologiques',N'Neurological Disorders',N'Troubles neurologiques',NULL,NULL,N'Michel Tardif','2017-02-07T00:00:00',NULL,NULL)
- ,(8,N'ACC08',N'Psychiatric / Psychological / Emotional Disabilities',N'Handicap psychiatrique / psychologique / émotionnel',N'Psychiatric / Psychological / Emotional Disabilities',N'Handicap psychiatrique / psychologique / émotionnel',NULL,NULL,N'Michel Tardif','2017-02-07T00:00:00',NULL,NULL)
+ ,(8,N'ACC08',N'Psychiatric, Psychological, and/or Emotional Disabilities',N'Handicap psychiatrique, psychologique, et/ou émotionnel',N'Psychiatric, Psychological, and/or Emotional Disabilities',N'Handicap psychiatrique, psychologique, et/ou émotionnel',NULL,NULL,N'Michel Tardif','2017-02-07T00:00:00',N'M-A','2023-07-27T00:00:00')
  ,(9,N'ACC09',N'Speech and Language Disabilities',N'Troubles phonologiques et troubles du langage',N'Speech and Language Disabilities',N'Troubles phonologiques et troubles du langage',NULL,NULL,N'Michel Tardif','2017-02-07T00:00:00',NULL,NULL)
  ,(10,N'ACC10',N'Temporary Conditions and Other',N'Conditions temporaires et autres',N'Temporary Conditions and Other',N'Conditions temporaires et autres',NULL,NULL,N'Michel Tardif','2017-02-07T00:00:00',NULL,NULL)
  ,(11,N'ACC11',N'Visual Condition',N'Condition visuelle',N'Visual Condition',N'Condition visuelle',NULL,NULL,N'Michel Tardif','2017-02-07T00:00:00',NULL,NULL)
