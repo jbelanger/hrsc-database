@@ -555,6 +555,7 @@
     <None Include="Scripts\RunAfter.sql" />
     <None Include="INT-TST-UAT.publish.xml" />
     <None Include="PROD-TRN.publish.xml" />
+    <None Include="local-dev.publish.xml" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Scripts\PostDeployment.sql" />

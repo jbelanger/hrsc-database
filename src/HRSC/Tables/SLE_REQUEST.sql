@@ -32,7 +32,7 @@
     [FI_POSTAL_CODE]                 NVARCHAR (6)    NULL,
     [FI_MUNICIPALITY_ID]             NUMERIC (10)    NULL,
     [FI_PROVINCE_ID]                 NUMERIC (10)    NULL,
-    [COMMENTS]                       NVARCHAR (4000) NULL,
+    [COMMENTS]                       NVARCHAR (MAX) NULL,
     [EFFECTIVE_DATE]                 DATETIME        NULL,
     [EXPIRY_DATE]                    DATETIME        NULL,
     [USER_CREATED]                   NVARCHAR (120)  NOT NULL,

@@ -83,7 +83,7 @@
     [PERMNT_DPLYMNT_INDTRMNT_IND]         [HRSC].[INDICATOR_BIT]     CONSTRAINT [DF__POSITION__PERMNT__4CAB505A] DEFAULT ((0)) NULL,
     [HRSDC_EMPLOYEE_IND]                  [HRSC].[INDICATOR_BIT]     NULL,
     [STAFF_LOCATION]                      [HRSC].[TEXT_4000]         NULL,
-    [COMMENTS]                            [HRSC].[TEXT_4000]         NULL,        
+    [COMMENTS]                            NVARCHAR(MAX)         NULL,        
     [USER_CREATED]                        [HRSC].[TEXT_60]           NOT NULL,
     [DATE_CREATED]                        [HRSC].[DEFAULT_SYSDATE]   CONSTRAINT [DF__POSITION__DATE_C__125EB334] DEFAULT (getdate()) NOT NULL,
     [USER_UPDATED]                        [HRSC].[TEXT_60]           NULL,
