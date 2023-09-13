@@ -3,7 +3,7 @@
 WITH EXEC AS CALLER
 AS
   SELECT E.EMPLOYEE_ID AS Id, E.EMPLOYEE_EMAIL_ADDRESS AS EmailAddress, E.EMPLOYEE_GIVEN_NAME AS GivenName, E.EMPLOYEE_SURNAME AS Surname, 
-         E.WORK_PHONE_NUMBER AS WorkPhoneNumber, L.LANGUAGE_CODE2 AS LanguageCode, E.DISPLAY_NAME,
+         E.WORK_PHONE_NUMBER AS WorkPhoneNumber, L.LANGUAGE_CODE2 AS LanguageCode, E.DISPLAY_NAME as DisplayName,
 		 ET.TotalLeadActives, ET.TotalCollActives, ET.TotalLeadPending, ET.TotalCollPending
   FROM
   (SELECT ERBC.EMPLOYEE_ID,
