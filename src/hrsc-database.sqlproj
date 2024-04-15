@@ -550,6 +550,10 @@
     <None Include="HRSC_AGENT\Stored Procedures\usp_CORPTABDATATRANSFER.sql" />
     <Build Include="HRSC_APP\Stored Procedures\usp_generate_merge.sql" />
     <Build Include="HRSC_APP\Stored Procedures\usp_Employee_GetUserRoleBCWithInterventionsCountByStatus.sql" />
+    <None Include="Scripts\Seed\HRSC.APPROVAL_TRANSFER_RULE.Table.sql" />
+    <None Include="Scripts\Seed\HRSC.BUSINESS_CENTER_ATTR.Table.sql" />
+    <None Include="Scripts\Seed\HRSC.CD_ATTRIBUTE.Table.sql" />
+    <None Include="Scripts\Seed\HRSC.CD_CANDIDATE_TYPE.Table.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\RunAfter.sql" />
