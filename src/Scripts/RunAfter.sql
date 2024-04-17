@@ -105,7 +105,7 @@ DBCC CHECKIDENT ('[HRSC].[CD_BUSINESS_CENTER]', RESEED, 156)
 --*************************************************************************************************************************
 
 --------------------------------------------------------------------------------------
---#2129 : Add Attributes for new BC's
+--#2129 : Add Attributes to new BC's
 --------------------------------------------------------------------------------------
 --*************************************************************************************************************************
 --Delete duplicate attributes for bc's
@@ -196,3 +196,14 @@ SELECT 3, 156, 'HRSC 4.15', GETDATE() WHERE NOT EXISTS(SELECT 1 FROM [HRSC].[BUS
 SELECT 6, 156, 'HRSC 4.15', GETDATE() WHERE NOT EXISTS(SELECT 1 FROM [HRSC].[BUSINESS_CENTER_ATTR] WHERE BUSINESS_CENTER_ID = 156 AND ATTRIBUTE_ID = 6) UNION
 SELECT 7, 156, 'HRSC 4.15', GETDATE() WHERE NOT EXISTS(SELECT 1 FROM [HRSC].[BUSINESS_CENTER_ATTR] WHERE BUSINESS_CENTER_ID = 156 AND ATTRIBUTE_ID = 7)
 --*************************************************************************************************************************
+
+--------------------------------------------------------------------------------------
+--#2130 : Update approval transfer rule with new BC (Cyber and IT Security (Dispatch))
+--------------------------------------------------------------------------------------
+--*************************************************************************************************************************
+UPDATE [HRSC].[APPROVAL_TRANSFER_RULE]
+SET BUSINESS_CENTER_ID = 145, DATE_UPDATED = GETDATE(), USER_UPDATED = 'HRSC 4.15'
+WHERE SUB_ORGANIZATION_ID = 851
+--*************************************************************************************************************************
+
+
