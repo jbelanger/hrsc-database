@@ -206,4 +206,27 @@ SET BUSINESS_CENTER_ID = 145, DATE_UPDATED = GETDATE(), USER_UPDATED = 'HRSC 4.1
 WHERE SUB_ORGANIZATION_ID = 851
 --*************************************************************************************************************************
 
+--------------------------------------------------------------------------------------
+--#2113 : Populate new CD_RECRUITMENT_TYPE table
+--------------------------------------------------------------------------------------
+--*************************************************************************************************************************
+INSERT INTO [HRSC].[CD_RECRUITMENT_TYPE] ( RECRUITMENT_TYPE_ID, RECRUITMENT_TYPE_CODE, RECRUITMENT_TYPE_NAME_EN, RECRUITMENT_TYPE_NAME_FR, USER_CREATED, DATE_CREATED, EFFECTIVE_DATE)
+VALUES	(1,'COOP', 'Post-Secondary Co-operative Education and Internship Program (COOP)', 'Programme postsecondaire d''enseignement coopératif / de stages (COOP)', SYSTEM_USER, GETDATE(),GETDATE()),
+		(2,'FSWEP', 'Federal Student Work Experience Program (FSWEP)', 'Programme fédéral d''expérience de travail étudiant (PFETÉ)', SYSTEM_USER, GETDATE(),GETDATE()),
+		(3,'RAP', 'Research Affiliate Program (RAP)', 'Programme des adjoints de recherche (PAR)', SYSTEM_USER, GETDATE(),GETDATE()),
+		(4,'SDI', 'Students with Disabilities Inventory', 'Répertoire d''étudiants en situation de handicap', SYSTEM_USER, GETDATE(),GETDATE()),
+		(5,'ISI', 'Indigenous Students Inventory', 'Répertoire d''étudiants autochtones', SYSTEM_USER, GETDATE(),GETDATE()),
+		(6,'GCTP', 'GC Talent Pools', 'Bassins de Talents numériques GC ', SYSTEM_USER, GETDATE(),GETDATE()),
+		(7,'MEDIA', 'Social Media posting', 'Publication sur les réseaux sociaux', SYSTEM_USER, GETDATE(),GETDATE()),
+		(8,'NTICE', 'Notice of Interest', 'Avis d''intérêt', SYSTEM_USER, GETDATE(),GETDATE()),
+		(9,'IITB', 'IITB Marketplace', 'Marché de la DGIIT', SYSTEM_USER, GETDATE(),GETDATE()),
+		(10,'DORRA', 'DORRA Team (GoC Students, Newly Graduated Students Inventory, and Persons with Disabilities Inventory)', 'Équipe SRRAD (étudiants du GdC, répertoires d’étudiants nouvellement diplômés, et répertoire de personnes en situation de handicap)', SYSTEM_USER, GETDATE(),GETDATE()),
+		(11,'SRDB', 'Database of candidates from the Strategic Recruitment team', 'Base de données de candidats de l''Équipe de recrutement stratégique', SYSTEM_USER, GETDATE(),GETDATE()),
+		(12,'FINP', 'Federal Internship for Newcomers Program (FINP)', 'Programme fédéral de stage pour les nouveaux arrivants (PFSNA)', SYSTEM_USER, GETDATE(),GETDATE()),
+		(13,'RSSCT', 'Resource Centre', 'Centre de ressources', SYSTEM_USER, GETDATE(),GETDATE()),
+		(14,'GCJOB', 'GC Jobs', 'Emplois GC', SYSTEM_USER, GETDATE(),GETDATE()),
+		(15,'OTHER', 'Other', 'Autre', SYSTEM_USER, GETDATE(),GETDATE())
+
+--*************************************************************************************************************************
+
 

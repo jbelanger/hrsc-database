@@ -554,6 +554,7 @@
     <None Include="Scripts\Seed\HRSC.BUSINESS_CENTER_ATTR.Table.sql" />
     <None Include="Scripts\Seed\HRSC.CD_ATTRIBUTE.Table.sql" />
     <None Include="Scripts\Seed\HRSC.CD_CANDIDATE_TYPE.Table.sql" />
+    <Build Include="HRSC\Tables\CD_RECRUITMENT_TYPE.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\RunAfter.sql" />
