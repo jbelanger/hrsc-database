@@ -2,8 +2,6 @@
 --#2128 : Create "Cyber and IT Security" Dispatch and QA BC's and 5 new BC's
 --------------------------------------------------------------------------------------
 --*************************************************************************************************************************
-SET IDENTITY_INSERT [HRSC].[CD_BUSINESS_CENTER] ON;
-
 INSERT INTO [HRSC].[CD_BUSINESS_CENTER] 
 (BUSINESS_CENTER_ID, BUSINESS_CENTER_NAME_EN, BUSINESS_CENTER_NAME_FR, BUSINESS_CENTER_DESC_EN, BUSINESS_CENTER_DESC_FR,
 EFFECTIVE_DATE, EXPIRY_DATE, USER_CREATED, DATE_CREATED,
@@ -99,9 +97,6 @@ BUSINESS_CENTER_CODE, BUSINESS_CENTER_NAME_SHORT_EN, BUSINESS_CENTER_NAME_SHORT_
 SELECT CAST(156 AS bigint), 'ITQ05 (QA)', 'ITQ05 (AQ)', 'ITQ05 (QA)', 'ITQ05 (AQ)',
 GETDATE(), GETDATE(), 'HRSC 4.15', GETDATE(), 'ITQ05', 'ITQ05 QA', 'ITQ05 AQ', 'ITQ05-QA', 'ITQ05-AQ'
 WHERE NOT EXISTS(SELECT 1 FROM [HRSC].[CD_BUSINESS_CENTER]  WHERE BUSINESS_CENTER_ID = 156)
-
-SET IDENTITY_INSERT [HRSC].[CD_BUSINESS_CENTER] OFF;
-DBCC CHECKIDENT ('[HRSC].[CD_BUSINESS_CENTER]', RESEED, 156)
 --*************************************************************************************************************************
 
 --------------------------------------------------------------------------------------
