@@ -16,5 +16,6 @@
     <DropObjectsNotInSource>True</DropObjectsNotInSource>
     <IgnoreColumnOrder>True</IgnoreColumnOrder>
     <IgnoreComments>True</IgnoreComments>
+    <IgnoreAuthorizer>True</IgnoreAuthorizer>
   </PropertyGroup>
 </Project>
