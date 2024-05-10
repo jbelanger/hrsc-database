@@ -1,8 +1,8 @@
 ﻿CREATE TABLE [HRSC].[HR_REQUEST_CLIENT] (
     [HR_REQUEST_CLIENT_ID] BIGINT         IDENTITY (1, 1) NOT FOR REPLICATION NOT NULL,
     [PRI]                  NVARCHAR (9)   NOT NULL,
-    [GIVEN_NAME]           NVARCHAR (50)  NOT NULL,
-    [SURNAME]              NVARCHAR (50)  NOT NULL,
+    [GIVEN_NAME]           NVARCHAR (50)  COLLATE Latin1_General_CI_AI NOT NULL,
+    [SURNAME]              NVARCHAR (50)  COLLATE Latin1_General_CI_AI NOT NULL,
     [EMAIL]                NVARCHAR (250) NULL,
     [HOME_PHONE]           NVARCHAR (25)  NULL,
     [WORK_PHONE]           NVARCHAR (25)  NULL,
