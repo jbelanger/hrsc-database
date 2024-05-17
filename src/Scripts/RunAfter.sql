@@ -215,27 +215,57 @@ SELECT 3,'RAP', 'Research Affiliate Program (RAP)', 'Programme des adjoints de r
 SYSTEM_USER, GETDATE(),GETDATE() WHERE NOT EXISTS(SELECT 1 FROM [HRSC].CD_RECRUITMENT_TYPE WHERE RECRUITMENT_TYPE_ID = 3 AND RECRUITMENT_TYPE_CODE ='RAP') UNION
 SELECT 4,'SDI', 'Students with Disabilities Inventory', 'Répertoire d''étudiants en situation de handicap',
 SYSTEM_USER, GETDATE(),GETDATE() WHERE NOT EXISTS(SELECT 1 FROM [HRSC].CD_RECRUITMENT_TYPE WHERE RECRUITMENT_TYPE_ID = 4 AND RECRUITMENT_TYPE_CODE ='SDI') UNION
-SELECT 5,'ISI', 'Indigenous Students Inventory', 'Répertoire d''étudiants autochtones',
+SELECT 5,'ITIP', 'IT Apprenticeship Program for Indigenous Peoples', 'Le Programme d''apprentissage en TI pour les personnes autochtones',
 SYSTEM_USER, GETDATE(),GETDATE() WHERE NOT EXISTS(SELECT 1 FROM [HRSC].CD_RECRUITMENT_TYPE WHERE RECRUITMENT_TYPE_ID = 5 AND RECRUITMENT_TYPE_CODE ='ISI') UNION
-SELECT 6,'GCTP', 'GC Talent Pools', 'Bassins de Talents numériques GC ',
+SELECT 6,'GCTP', 'GC Digital Talent Pools', 'Bassins de Talents numériques GC ',
 SYSTEM_USER, GETDATE(),GETDATE() WHERE NOT EXISTS(SELECT 1 FROM [HRSC].CD_RECRUITMENT_TYPE WHERE RECRUITMENT_TYPE_ID = 6 AND RECRUITMENT_TYPE_CODE ='GCTP') UNION
 SELECT 7,'MEDIA', 'Social Media posting', 'Publication sur les réseaux sociaux',
 SYSTEM_USER, GETDATE(),GETDATE() WHERE NOT EXISTS(SELECT 1 FROM [HRSC].CD_RECRUITMENT_TYPE WHERE RECRUITMENT_TYPE_ID = 7 AND RECRUITMENT_TYPE_CODE ='MEDIA') UNION
-SELECT 8,'NTICE', 'Notice of Interest', 'Avis d''intérêt', 
+SELECT 8,'GCON', 'GCconnex', 'GCconnex', 
 SYSTEM_USER, GETDATE(),GETDATE() WHERE NOT EXISTS(SELECT 1 FROM [HRSC].CD_RECRUITMENT_TYPE WHERE RECRUITMENT_TYPE_ID = 8 AND RECRUITMENT_TYPE_CODE ='NTICE') UNION
 SELECT 9,'IITB', 'IITB Marketplace', 'Marché de la DGIIT',
 SYSTEM_USER, GETDATE(),GETDATE() WHERE NOT EXISTS(SELECT 1 FROM [HRSC].CD_RECRUITMENT_TYPE WHERE RECRUITMENT_TYPE_ID = 9 AND RECRUITMENT_TYPE_CODE ='IITB') UNION
 SELECT 10,'DORRA', 'DORRA Team (GoC Students, Newly Graduated Students Inventory, and Persons with Disabilities Inventory)', 'Équipe SRRAD (étudiants du GdC, répertoires d’étudiants nouvellement diplômés, et répertoire de personnes en situation de handicap)', 
 SYSTEM_USER, GETDATE(),GETDATE() WHERE NOT EXISTS(SELECT 1 FROM [HRSC].CD_RECRUITMENT_TYPE WHERE RECRUITMENT_TYPE_ID = 10 AND RECRUITMENT_TYPE_CODE ='DORRA') UNION
-SELECT 11,'SRDB', 'Database of candidates from the Strategic Recruitment team', 'Base de données de candidats de l''Équipe de recrutement stratégique',
+SELECT 11,'SRDB', 'Database of candidates from the IITB Strategic Recruitment team', 'Base de données de candidats de l''Équipe de recrutement stratégique de la DGIIT',
 SYSTEM_USER, GETDATE(),GETDATE() WHERE NOT EXISTS(SELECT 1 FROM [HRSC].CD_RECRUITMENT_TYPE WHERE RECRUITMENT_TYPE_ID = 11 AND RECRUITMENT_TYPE_CODE ='SRDB') UNION
 SELECT 12,'FINP', 'Federal Internship for Newcomers Program (FINP)', 'Programme fédéral de stage pour les nouveaux arrivants (PFSNA)', 
 SYSTEM_USER, GETDATE(),GETDATE() WHERE NOT EXISTS(SELECT 1 FROM [HRSC].CD_RECRUITMENT_TYPE WHERE RECRUITMENT_TYPE_ID = 12 AND RECRUITMENT_TYPE_CODE ='FINP') UNION
-SELECT 13,'RSSCT', 'Resource Centre', 'Centre de ressources', 
+SELECT 13,'RSSCT', 'IITB Resource Centre', 'Centre de ressources de la DGIIT', 
 SYSTEM_USER, GETDATE(),GETDATE() WHERE NOT EXISTS(SELECT 1 FROM [HRSC].CD_RECRUITMENT_TYPE WHERE RECRUITMENT_TYPE_ID = 13 AND RECRUITMENT_TYPE_CODE ='RSSCT') UNION
-SELECT 14,'GCJOB', 'GC Jobs', 'Emplois GC', 
+SELECT 14,'GCJOB', 'Selection Process (GC Jobs)', 'Processus de sélection (Emplois GC)', 
 SYSTEM_USER, GETDATE(),GETDATE() WHERE NOT EXISTS(SELECT 1 FROM [HRSC].CD_RECRUITMENT_TYPE WHERE RECRUITMENT_TYPE_ID = 14 AND RECRUITMENT_TYPE_CODE ='GCJOB') UNION
 SELECT 15,'OTHER', 'Other', 'Autre', 
 SYSTEM_USER, GETDATE(),GETDATE() WHERE NOT EXISTS(SELECT 1 FROM [HRSC].CD_RECRUITMENT_TYPE WHERE RECRUITMENT_TYPE_ID = 15 AND RECRUITMENT_TYPE_CODE ='OTHER')
 
 --*************************************************************************************************************************
+
+UPDATE [HRSC].[CD_RECRUITMENT_TYPE] 
+SET RECRUITMENT_TYPE_CODE = 'ITIP', RECRUITMENT_TYPE_NAME_EN = 'IT Apprenticeship Program for Indigenous Peoples'
+, RECRUITMENT_TYPE_NAME_FR = 'Le Programme d''apprentissage en TI pour les personnes autochtones'
+WHERE RECRUITMENT_TYPE_ID = 5
+
+UPDATE [HRSC].[CD_RECRUITMENT_TYPE] 
+SET RECRUITMENT_TYPE_CODE = 'GCTP', RECRUITMENT_TYPE_NAME_EN = 'GC Digital Talent Pools'
+, RECRUITMENT_TYPE_NAME_FR = 'Bassins de Talents numériques GC'
+WHERE RECRUITMENT_TYPE_ID = 6
+
+UPDATE [HRSC].[CD_RECRUITMENT_TYPE] 
+SET RECRUITMENT_TYPE_CODE = 'GCON', RECRUITMENT_TYPE_NAME_EN = 'GCconnex'
+, RECRUITMENT_TYPE_NAME_FR = 'GCconnex'
+WHERE RECRUITMENT_TYPE_ID = 8
+
+UPDATE [HRSC].[CD_RECRUITMENT_TYPE] 
+SET RECRUITMENT_TYPE_CODE = 'SRDB', RECRUITMENT_TYPE_NAME_EN = 'Database of candidates from the IITB Strategic Recruitment team'
+, RECRUITMENT_TYPE_NAME_FR = 'Base de données de candidats de l''Équipe de recrutement stratégique de la DGIIT'
+WHERE RECRUITMENT_TYPE_ID = 11
+
+UPDATE [HRSC].[CD_RECRUITMENT_TYPE] 
+SET RECRUITMENT_TYPE_CODE = 'RSSCT', RECRUITMENT_TYPE_NAME_EN = 'IITB Resource Centre'
+, RECRUITMENT_TYPE_NAME_FR = 'Centre de ressources de la DGIIT'
+WHERE RECRUITMENT_TYPE_ID = 13
+
+UPDATE [HRSC].[CD_RECRUITMENT_TYPE] 
+SET RECRUITMENT_TYPE_CODE = 'GCJOB', RECRUITMENT_TYPE_NAME_EN = 'Selection Process (GC Jobs)'
+, RECRUITMENT_TYPE_NAME_FR = 'Processus de sélection (Emplois GC)'
+WHERE RECRUITMENT_TYPE_ID = 14
