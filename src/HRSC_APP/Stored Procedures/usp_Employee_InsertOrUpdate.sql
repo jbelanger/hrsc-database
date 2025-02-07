@@ -14,6 +14,7 @@ CREATE   PROCEDURE [HRSC_APP].[usp_Employee_InsertOrUpdate]
 	@pExpiryDate datetime, 
 	@pDisplayName nvarchar(120), 
 	@pUserCreated nvarchar(30),
+	@pPRI nvarchar(10),
 	@pNewRowID bigint OUTPUT
 WITH EXEC AS CALLER
 AS
@@ -46,7 +47,8 @@ AS
 			  USER_CREATED,
 			  DATE_CREATED,
 			  LANGUAGE_ID,
-			  DISPLAY_NAME
+			  DISPLAY_NAME,
+			  EMPLOYEE_PRI
 			)
 			VALUES (
 			  @pUserGuid,
@@ -61,7 +63,8 @@ AS
 			  @pUserCreated,
 			  GetDate(),
 			  @LanguageID,
-			  @pDisplayName
+			  @pDisplayName,
+			  @pPRI
 			);
 
 			set @EmployeeID = @@IDENTITY;
@@ -78,7 +81,8 @@ AS
 				USER_UPDATED = @pUserCreated,
 				DATE_UPDATED= GetDate(),
 				DISPLAY_NAME = @pDisplayName,
-				LANGUAGE_ID = @LanguageID
+				LANGUAGE_ID = @LanguageID,
+				EMPLOYEE_PRI = @pPri
 			where USER_AD_GUID = @pUserGuid;
 		END;
       
