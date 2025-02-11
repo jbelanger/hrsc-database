@@ -6,7 +6,8 @@
 CREATE   PROCEDURE [HRSC_APP].[usp_Employee_CheckIfExist]
 @pUserGuid nvarchar(50), @pGivenName nvarchar(30), @pSurname nvarchar(64), @pEmailAddress nvarchar(240), @pWorkPhone nvarchar(25), @pCellPhone nvarchar(25), @pTermOfUse bit, @pActiveInd bit, @pExpiryDate datetime, @pDisplayName nvarchar(120),
 @pRcCode varchar(10),
-@pUserCreated nvarchar(30)
+@pUserCreated nvarchar(30),
+@pPri varchar(10)
 WITH EXEC AS CALLER
 AS
 ------------------------------------------------------
@@ -44,7 +45,8 @@ if @EmployeeID = 0
       DATE_CREATED,
       LANGUAGE_ID,
       DISPLAY_NAME,
-	  RC_CODE
+	  RC_CODE,
+      EMPLOYEE_PRI
       )
     values
       (
@@ -61,7 +63,8 @@ if @EmployeeID = 0
       GetDate(),
       @LanguageID,
       @pDisplayName,
-	  @pRcCode
+	  @pRcCode,
+      @pPri
       );
 else
  -- Employee Exists... Update it while we are here with the info from WSED -- YR 2016/01/13
@@ -77,7 +80,8 @@ else
     DATE_UPDATED= GetDate(),
     DISPLAY_NAME = @pDisplayName,
 	LANGUAGE_ID = @LanguageID,
-	RC_CODE = @pRcCode
+	RC_CODE = @pRcCode,
+    EMPLOYEE_PRI = @pPri
     where USER_AD_GUID = @pUserGuid;
       
 set @Error = @@ERROR;

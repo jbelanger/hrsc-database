@@ -225,7 +225,6 @@
     <Build Include="HRSC_APP\Functions\udf_TABLE_DATE.sql" />
     <Build Include="HRSC_APP\Stored Procedures\usp_LanguageChangeJustification_Delete.sql" />
     <Build Include="HRSC_APP\Stored Procedures\usp_Announcements_Get.sql" />
-    <Build Include="HRSC_APP\Stored Procedures\usp_UpdateEmployeeFromCMSExtract.sql" />
     <Build Include="HRSC_APP\Stored Procedures\usp_LanguageChangeJustification_Insert.sql" />
     <Build Include="HRSC_APP\Stored Procedures\usp_Announcements_GetAllActive.sql" />
     <Build Include="HRSC_APP\Stored Procedures\usp_Language_Profile_Insert.sql" />
@@ -319,10 +318,8 @@
     <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_INTERVENTION_SelectMyAssigned_Active.sql" />
     <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_INTERVENTION_SelectOne.sql" />
     <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_INTERVENTION_SelectStatus.sql" />
-    <Build Include="HRSC_AGENT\Stored Procedures\usp_CMSExtract.sql" />
     <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_INTERVENTION_Update.sql" />
     <Build Include="HRSC_APP\Stored Procedures\usp_EMAIL_TEMPLATE_Update.sql" />
-    <Build Include="HRSC_AGENT\Stored Procedures\usp_UpdateEmployeeFromCMSExtract.sql" />
     <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_INTERVENTION_Update2.sql" />
     <Build Include="HRSC_APP\Stored Procedures\usp_EmployeePreviousPosition_InsertUpdate.sql" />
     <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_INTERVENTION_UpdateStatus.sql" />
@@ -332,12 +329,9 @@
     <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_INTERVENTION_Validate_Cancel.sql" />
     <Build Include="HRSC_APP\Stored Procedures\usp_Employee_CheckIfExist.sql" />
     <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_NOTE_Delete.sql" />
-    <Build Include="HRSC_APP\Stored Procedures\usp_Employee_Extended_Update_by_Id.sql" />
     <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_NOTE_Insert.sql" />
-    <Build Include="HRSC_APP\Stored Procedures\usp_Employee_GetEmployeeIDandPRIWithGuid.sql" />
     <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_NOTE_Insert2.sql" />
     <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_Note_InsertBulk.sql" />
-    <Build Include="HRSC_APP\Stored Procedures\usp_Employee_GetNamesfromEmpExtendedWithPRI.sql" />
     <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_Note_Insert_AssignToLeadAndCollaborator_XML.sql" />
     <Build Include="HRSC_APP\Stored Procedures\usp_Employee_GetUserProfileByGuid.sql" />
     <Build Include="HRSC_APP\Stored Procedures\usp_REQUEST_Note_Insert_forStatusChange.sql" />

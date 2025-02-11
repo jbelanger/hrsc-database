@@ -15,6 +15,7 @@ CREATE   PROCEDURE [HRSC_APP].[usp_Employee_UpdateUserProfileFromAD]
 	@pUser nvarchar(30), 
 	@pDisplayName nvarchar(120), 
 	@pRcCode varchar(10),
+	@pPri nvarchar(20),
 	@pReturnCode bigint OUTPUT
 WITH EXEC AS CALLER
 AS
@@ -29,5 +30,6 @@ AS
 		DATE_UPDATED= GetDate(),
 		DISPLAY_NAME = @pDisplayName,
 		LAST_LOGIN_DATE = GETDATE(),
-		RC_CODE = @pRcCode
+		RC_CODE = @pRcCode,
+		EMPLOYEE_PRI = @pPri
     where USER_AD_GUID = @pGuidID;
