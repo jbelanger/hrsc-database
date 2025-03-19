@@ -557,7 +557,7 @@
     <None Include="local-dev.publish.xml" />
   </ItemGroup>
   <ItemGroup>
-    <PostDeploy Include="Scripts\PostDeployment.sql" />
+    <None Include="Scripts\PostDeployment.sql" />
   </ItemGroup>
   <ItemGroup>
     <PreDeploy Include="Scripts\PreDeployment.sql" />
